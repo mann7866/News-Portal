@@ -1,115 +1,137 @@
- <!-- Topbar Start -->
- <div class="navbar-custom">
-     <ul class="list-unstyled topnav-menu float-right mb-0">
+<header class="app-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link sidebartoggler nav-icon-hover ms-n3" id="headerCollapse"
+                    href="javascript:void(0)">
+                    <i class="ti ti-menu-2"></i>
+                </a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="ti ti-search"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="d-block d-lg-none">
+            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+                class="dark-logo" width="180" alt="" />
+            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
+                class="light-logo" width="180" alt="" />
+        </div>
+        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="p-2">
+                <i class="ti ti-dots fs-7"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="javascript:void(0)"
+                    class="nav-link d-flex d-lg-none align-items-center justify-content-center"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar"
+                    aria-controls="offcanvasWithBothOptions">
+                    <i class="ti ti-align-justified fs-7"></i>
+                </a>
+                <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ti ti-bell-ringing"></i>
+                            <div class="notification bg-primary rounded-circle"></div>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up"
+                            aria-labelledby="drop2">
+                            <div class="d-flex align-items-center justify-content-between py-3 px-7">
+                                <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
+                            </div>
+                            <div class="message-body" data-simplebar>
+                                <a href="javascript:void(0)"
+                                    class="py-6 px-7 d-flex align-items-center dropdown-item">
+                                    <span class="me-3">
+                                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="user"
+                                            class="rounded-circle" width="48" height="48" />
+                                    </span>
+                                    <div class="w-75 d-inline-block v-middle">
+                                        <h6 class="mb-1 fw-semibold">Roman Joined the Team!</h6>
+                                        <span class="d-block">Congratulate him</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="py-6 px-7 mb-1">
+                                <button class="btn btn-outline-primary w-100"> See All Notifications
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link pe-0" href="javascript:void(0)" id="drop1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <div class="user-profile-img">
+                                    <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                        class="rounded-circle" width="35" height="35"
+                                        alt="" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up"
+                            aria-labelledby="drop1">
+                            <div class="profile-dropdown position-relative" data-simplebar>
+                                <div class="py-3 px-7 pb-0">
+                                    <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
+                                </div>
+                                <div class="d-flex align-items-center py-9 mx-7 border-bottom">
+                                    <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                        class="rounded-circle" width="80" height="80"
+                                        alt="" />
+                                    <div class="ms-3">
+                                        <h5 class="mb-1 fs-3">Mathew Anderson</h5>
+                                        <span class="mb-1 d-block text-dark">Designer</span>
+                                        <p class="mb-0 d-flex text-dark align-items-center gap-2">
+                                            <i class="ti ti-mail fs-4"></i> info@modernize.com
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="message-body">
+                                    <a href="page-user-profile.html"
+                                        class="py-8 px-7 mt-8 d-flex align-items-center">
+                                        <span
+                                            class="d-flex align-items-center justify-content-center bg-light rounded-1 p-6">
+                                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/svgs/icon-account.svg"
+                                                alt="" width="24" height="24">
+                                        </span>
+                                        <div class="w-75 d-inline-block v-middle ps-3">
+                                            <h6 class="mb-1 bg-hover-primary fw-semibold"> My Profile
+                                            </h6>
+                                            <span class="d-block text-dark">Account Settings</span>
+                                        </div>
+                                    </a>
+                                    <a href="app-email.html"
+                                        class="py-8 px-7 d-flex align-items-center">
+                                        <span
+                                            class="d-flex align-items-center justify-content-center bg-light rounded-1 p-6">
+                                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/svgs/icon-inbox.svg"
+                                                alt="" width="24" height="24">
+                                        </span>
+                                        <div class="w-75 d-inline-block v-middle ps-3">
+                                            <h6 class="mb-1 bg-hover-primary fw-semibold">My Inbox</h6>
+                                            <span class="d-block text-dark">Messages & Emails</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-grid py-4 px-7 pt-8">
 
-         <li class="d-none d-sm-block">
-             <form class="app-search">
-                 <div class="app-search-box">
-                     <div class="input-group">
-                         <input type="text" class="form-control" placeholder="Search...">
-                         <div class="input-group-append">
-                             <button class="btn" type="submit">
-                                 <i class="fe-search"></i>
-                             </button>
-                         </div>
-                     </div>
-                 </div>
-             </form>
-         </li>
-
-         <li class="dropdown notification-list">
-             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
-                 role="button" aria-haspopup="false" aria-expanded="false">
-                 <img src="{{ asset('admin-assets/images/users/user-1.jpg') }}" alt="user-image" class="rounded-circle">
-                 <span class="pro-user-name ml-1">
-                     Admin<i class="mdi mdi-chevron-down"></i>
-                 </span>
-             </a>
-             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-
-
-                 <!-- item-->
-                 <a href="{{route('profile.edit')}}" class="dropdown-item notify-item">
-                     <i class="fe-user"></i>
-                     <span>My Account</span>
-                 </a>
-
-                 <div class="dropdown-divider"></div>
-
-                 <!-- Logout Button -->
-                 <a href="" class="dropdown-item notify-item"
-                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                     <i class="fe-log-out"></i>
-                     <span>Logout</span>
-                 </a>
-
-                 <!-- Logout Form -->
-                 <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
-                     @csrf
-                 </form>
-
-             </div>
-         </li>
-
-     </ul>
-
-     <!-- LOGO -->
-     <div class="logo-box">
-         <a href="/dashboard" class="logo text-center">
-             <span class="logo-lg">
-                 <img src="{{ asset('admin-assets/images/logo-light.png') }}" alt="" height="24">
-                 <!-- <span class="logo-lg-text-light">Upvex</span> -->
-             </span>
-             <span class="logo-sm">
-                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                 <img src="{{ asset('admin-assets/images/logo-sm.png') }}" alt="" height="28">
-             </span>
-         </a>
-     </div>
-
-     <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
-         <li>
-             <button class="button-menu-mobile waves-effect">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-             </button>
-         </li>
-
-         <li class="dropdown d-none d-lg-block">
-             <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button"
-                 aria-haspopup="false" aria-expanded="false">
-                 Reports
-                 <i class="mdi mdi-chevron-down"></i>
-             </a>
-             <div class="dropdown-menu">
-                 <!-- item-->
-                 <a href="javascript:void(0);" class="dropdown-item">
-                     Finance Report
-                 </a>
-
-                 <!-- item-->
-                 <a href="javascript:void(0);" class="dropdown-item">
-                     Monthly Report
-                 </a>
-
-                 <!-- item-->
-                 <a href="javascript:void(0);" class="dropdown-item">
-                     Revenue Report
-                 </a>
-
-                 <!-- item-->
-                 <a href="javascript:void(0);" class="dropdown-item">
-                     Settings
-                 </a>
-
-                 <!-- item-->
-                 <a href="javascript:void(0);" class="dropdown-item">
-                     Help & Support
-                 </a>
-
-             </div>
-         </li>
-     </ul>
- </div>
- <!-- end Topbar -->
+                                    <a href="authentication-login.html"
+                                        class="btn btn-outline-primary">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

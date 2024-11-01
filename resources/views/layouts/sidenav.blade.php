@@ -1,56 +1,100 @@
-<div class="left-side-menu">
-
-    <div class="slimscroll-menu">
-
-        <!--- Sidemenu -->
-        <div id="sidebar-menu">
-
-            <ul class="metismenu" id="side-menu">
-
-                <li class="menu-title">Navigation</li>
-
-                <li>
-                    <a href="/dashboard">
-                        <i class="la la-dashboard"></i>
-                        <span> Dashboards </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);">
-                        <i class="la la-cube"></i>
-                        <span> Apps </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);">
-                        <i class="la la-clone"></i>
-                        <span> Layouts </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);">
-                        <i class="la la-envelope"></i>
-                        <span> Email </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);">
-                        <i class="la la-file-text-o"></i>
-                        <span> Pages </span>
-                    </a>
-                </li>
-            </ul>
-
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+            <a href="index-2.html" class="text-nowrap logo-img">
+                <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+                    class="dark-logo" width="180" alt="" />
+                <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
+                    class="light-logo" width="180" alt="" />
+            </a>
+            <div class="close-btn d-lg-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                <i class="ti ti-x fs-8 text-muted"></i>
+            </div>
         </div>
-        <!-- End Sidebar -->
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+            <ul id="sidebarnav">
+                <!-- ============================= -->
+                <!-- Home -->
+                <!-- ============================= -->
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">Home</span>
+                </li>
+                <!-- =================== -->
+                <!-- Dashboard -->
+                <!-- =================== -->
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index-2.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-aperture"></i>
+                        </span>
+                        <span class="hide-menu">Modern</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index2.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-shopping-cart"></i>
+                        </span>
+                        <span class="hide-menu">eCommerce</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index3.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-currency-dollar"></i>
+                        </span>
+                        <span class="hide-menu">NFT</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index4.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-cpu"></i>
+                        </span>
+                        <span class="hide-menu">Crypto</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index5.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-activity-heartbeat"></i>
+                        </span>
+                        <span class="hide-menu">General</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index6.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-playlist"></i>
+                        </span>
+                        <span class="hide-menu">Music</span>
+                    </a>
+                </li>
 
-        <div class="clearfix"></div>
-
+            </ul>
+            
+        </nav>
+        <div class="fixed-profile p-3 bg-light-secondary rounded sidebar-ad mt-3">
+            <div class="hstack gap-3">
+                <div class="john-img">
+                    <img src="../../dist/images/profile/user-1.jpg" class="rounded-circle" width="40"
+                        height="40" alt="">
+                </div>
+                <div class="john-title">
+                    <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
+                    <span class="fs-2 text-dark">Designer</span>
+                </div>
+                <button class="border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button"
+                    aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="logout">
+                    <i class="ti ti-power fs-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- End Sidebar navigation -->
     </div>
-    <!-- Sidebar -left -->
-
-</div>
+    <!-- End Sidebar scroll-->
+</aside>
