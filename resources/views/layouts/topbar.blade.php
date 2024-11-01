@@ -37,7 +37,7 @@
                  <div class="dropdown-divider"></div>
 
                  <!-- Logout Button -->
-                 <a href="#" class="dropdown-item notify-item"
+                 <a href="" class="dropdown-item notify-item"
                      onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                      <i class="fe-log-out"></i>
                      <span>Logout</span>
@@ -55,7 +55,7 @@
 
      <!-- LOGO -->
      <div class="logo-box">
-         <a href="index.html" class="logo text-center">
+         <a href="/dashboard" class="logo text-center">
              <span class="logo-lg">
                  <img src="{{ asset('admin-assets/images/logo-light.png') }}" alt="" height="24">
                  <!-- <span class="logo-lg-text-light">Upvex</span> -->
