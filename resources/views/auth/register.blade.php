@@ -14,6 +14,24 @@
                 color: rgba(209, 213, 219, var(--tw-text-opacity)) !important;
             }
         }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-register:hover {
+            background-color: #4c51bf;
+            transform: translateY(-2px);
+        }
     </style>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -21,10 +39,10 @@
 <body class="bg-white dark:bg-gray-800">
 
 <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-md w-full bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden mx-8 border border-gray-300 dark:border-gray-600">
+    <div class="max-w-md w-full bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-300 dark:border-gray-600 mx-8 card">
         <div class="px-6 py-8">
             <div class="flex justify-center mb-4">
-                <img src="logo/smkAlazhar.jpeg" alt="Logo" class="h-12"> <!-- Ganti path_to_your_logo.png dengan path logo Anda -->
+                <img src="logo/smkAlazhar.jpeg" alt="Logo" class="h-12">
             </div>
             <div>
                 @if(session('status'))
@@ -82,7 +100,7 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-gray-800">Register</button>
+                    <button type="submit" class="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-gray-800 btn-register">Register</button>
                 </div>
             </form>
 

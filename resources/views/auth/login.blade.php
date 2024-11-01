@@ -23,7 +23,6 @@
 
         .card {
             transition: all 0.3s ease-in-out;
-            animation: fadeIn 1s ease-in;
         }
 
         .card:hover {
@@ -35,20 +34,6 @@
             background-color: #4c51bf;
             transform: translateY(-2px);
         }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
     </style>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -58,7 +43,7 @@
 
     <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800">
         <div
-            class="max-w-md w-full bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 overflow-hidden mx-8 fade-in card">
+            class="max-w-md w-full bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 overflow-hidden mx-8 card">
             <div class="px-6 py-8">
                 <!-- Logo -->
                 <div class="flex justify-center mb-4">
