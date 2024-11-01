@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="index-2.html" class="text-nowrap logo-img">
+            <a href="/dashboard" class="text-nowrap logo-img">
                 <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
                     class="dark-logo" width="180" alt="" />
                 <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
@@ -25,12 +25,12 @@
                 <!-- =================== -->
                 <!-- Dashboard -->
                 <!-- =================== -->
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="index-2.html" aria-expanded="false">
+                <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
+                    <a class="sidebar-link" href="/dashboard" aria-expanded="false">
                         <span>
                             <i class="ti ti-aperture"></i>
                         </span>
-                        <span class="hide-menu">Modern</span>
+                        <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -75,7 +75,7 @@
                 </li>
 
             </ul>
-            
+
         </nav>
         <div class="fixed-profile p-3 bg-light-secondary rounded sidebar-ad mt-3">
             <div class="hstack gap-3">
