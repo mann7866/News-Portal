@@ -33,12 +33,12 @@
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="index2.html" aria-expanded="false">
+                <li class="sidebar-item {{ Request::is('/news') ? 'selected' : '' }}">
+                    <a class="sidebar-link" href="/news" aria-expanded="false">
                         <span>
-                            <i class="ti ti-shopping-cart"></i>
+                            <i class="ti ti-news"></i>
                         </span>
-                        <span class="hide-menu">eCommerce</span>
+                        <span class="hide-menu">Berita</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
