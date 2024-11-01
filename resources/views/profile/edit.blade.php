@@ -33,10 +33,6 @@
 
             <!-- Delete Account Section -->
             <div class="card mb-4">
-                <div class="card-header bg-white">
-                    <h3 class="h5 mb-0">{{ __('Delete Account') }}</h3>
-                    <p class="small text-muted mb-0">Permanently delete your account.</p>
-                </div>
                 <div class="card-body">
                     @include('profile.partials.delete-user-form')
                 </div>
