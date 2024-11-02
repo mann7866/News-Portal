@@ -36,7 +36,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        
+        return view('pages.super-admin.news.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         try {
-            
+
         } catch (\Throwable $e) {
             # code...
         }

@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                    <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-info d-flex align-items-center">
+                    <a href="{{ route('news.create') }}" id="btn-add-contact" class="btn btn-info d-flex align-items-center" >
                         <i class="ti ti-news text-white me-1 fs-5"></i> Add Berita
                     </a>
                 </div>
@@ -51,13 +51,14 @@
                 <div class="card rounded-2 overflow-hidden hover-img">
                     <div class="position-relative">
                         <a href="javascript:void(0)">
-                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}"
-                                class="card-img-top rounded-0" alt="...">
+                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}" class="card-img-top rounded-0"
+                                alt="...">
                         </a>
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -69,8 +70,7 @@
 
                         <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
                             class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
-                            height="40" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-title="Addie Keller">
+                            height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
                     </div>
                     <div class="card-body p-4">
                         <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Gadget</span>
@@ -92,13 +92,14 @@
                 <div class="card rounded-2 overflow-hidden hover-img">
                     <div class="position-relative">
                         <a href="javascript:void(0)">
-                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}"
-                                class="card-img-top rounded-0" alt="...">
+                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}" class="card-img-top rounded-0"
+                                alt="...">
                         </a>
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -139,7 +140,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -180,7 +182,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -221,7 +224,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -262,7 +266,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -303,7 +308,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -344,7 +350,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -385,7 +392,8 @@
 
 
                         <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -457,6 +465,64 @@
             </li>
         </ul>
     </nav>
+@endsection
+
+@section('modal')
+
+{{--  create news  --}}
+    <div class="modal fade" id="add-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                              <form class="mt-4" novalidate>
+                                <div class="mb-3 form-group">
+                                  <label>Basic Text Input
+                                    <span class="text-danger">*</span></label>
+                                  <div class="controls">
+                                    <input type="text" name="text" class="form-control" required
+                                      data-validation-required-message="This field is required" />
+                                  </div>
+                                  <div class="form-control-feedback">
+
+                                  </div>
+                                </div>
+
+                                <div class="mb-3 form-group">
+                                  <label>Password Input Field
+                                    <span class="text-danger">*</span></label>
+                                  <div class="controls">
+                                    <input type="password" name="password" class="form-control" required
+                                      data-validation-required-message="This field is required" />
+                                  </div>
+                                </div>
+                                <div class="mb-3 form-group">
+                                  <label>Textarea <span class="text-danger">*</span></label>
+                                  <div class="controls">
+                                    <textarea name="textarea" id="textarea" class="form-control" required
+                                      placeholder="Textarea text"></textarea>
+                                  </div>
+                                </div>
+
+                              </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-xs-right">
+                        <button type="submit" class="btn btn-info rounded-pill px-4">
+                          Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger rounded-pill px-4">
+                          Cancel
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 <style>
