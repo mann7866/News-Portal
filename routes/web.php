@@ -17,8 +17,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
+    Route::get('/teacher', function () {
+        return view('pages.teacher.index');
+    });
     Route::get('/news', function () {
         return view('pages.news.index');
+    });
+    Route::get('/account', function () {
+        return view('pages.account.index');
     });
 });
 

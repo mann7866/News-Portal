@@ -46,8 +46,10 @@
         <div class="body-wrapper">
             <!--  Header Start -->
             @include('layouts.topbar')
+            <div class="container-fluid">
+                @yield('content')
+            </div>
             <!--  Header End -->
-            @yield('content')
         </div>
     </div>
 
