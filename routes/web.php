@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('pages.dashboard');
+    return view('pages.super-admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -17,8 +17,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
+    Route::get('/teacher', function () {
+        return view('pages.super-admin.teacher.index');
+    });
     Route::get('/news', function () {
-        return view('pages.news.index');
+        return view('pages.super-admin.news.index');
+    });
+    Route::get('/account', function () {
+        return view('pages.super-admin.account.index');
     });
 });
 

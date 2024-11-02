@@ -39,15 +39,17 @@
         data-sidebar-position="fixed" data-header-position="fixed">
 
         <!-- Sidebar Start -->
-        @include('layouts.sidenav')
+        @include('layouts.super-admin.sidenav')
         <!--  Sidebar End -->
 
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
-            @include('layouts.topbar')
+            @include('layouts.super-admin.topbar')
+            <div class="container-fluid">
+                @yield('content')
+            </div>
             <!--  Header End -->
-            @yield('content')
         </div>
     </div>
 

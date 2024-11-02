@@ -1,7 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.super-admin.app')
 
 @section('content')
-<div class="container-fluid">
     <!--  Owl carousel -->
     <div class="owl-carousel counter-carousel owl-theme">
         <div class="item">
@@ -77,5 +76,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
