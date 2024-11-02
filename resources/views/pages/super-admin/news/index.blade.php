@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.super-admin.app')
 @section('content')
     <div class="card bg-light-info shadow-none position-relative overflow-hidden">
         <div class="card-body px-4 py-3">
@@ -32,7 +32,7 @@
                 <div class="col-md-4 col-xl-3">
                     <form class="position-relative">
                         <input type="text" class="form-control product-search ps-5" id="input-search"
-                            placeholder="cari Berita..." />
+                            placeholder="Cari Berita..." />
                         <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                     </form>
                 </div>
@@ -61,9 +61,9 @@
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Hapus</a></li>
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Detail</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Edit</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
                             </ul>
                         </div>
 

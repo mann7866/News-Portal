@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.super-admin.app')
 @section('content')
     <div class="card bg-light-info shadow-none position-relative overflow-hidden">
         <div class="card-body px-4 py-3">
@@ -35,14 +35,12 @@
                             <h5 class="card-title fw-semibold">Akun Admin</h5>
                         </div>
 
-                        <div style="margin-left: 550px" class="col-md-4 col-xl-3">
+                        <div class="col-md-6 col-xl-5 d-flex gap-3 justify-content-end">
                             <form class="position-relative">
                                 <input type="text" class="form-control product-search ps-5" id="input-search"
                                     placeholder="Cari Akun..." />
                                 <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                             </form>
-                        </div>
-                        <div>
                             <button class="btn btn-primary">Create Akun</button>
                         </div>
                     </div>
