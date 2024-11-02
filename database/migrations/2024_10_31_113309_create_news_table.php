@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->enum('status',['ongoing','completed']);
+            $table->enum('status',['pending','ongoing','completed'])->default('pending');
             $table->timestamps();
         });
     }
