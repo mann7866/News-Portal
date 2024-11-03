@@ -30,7 +30,7 @@ trait EloquentTrait
      * method store() digunakan untuk menyimpan data ke dalam sebuah model.
      *
      * @param array $data Data yang akan disimpan
-     * @return \Illuminate\Database\Modelw
+     * @return \Illuminate\Database\Model
      */
     public function store(array $data): mixed
     {

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Contracts\Interfaces\NewsInterface;
+use App\Contracts\Repositories\CategoryRepository;
+use App\Http\Requests\NewsRequest;
 use App\Models\News;
+use App\Services\NewsService;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
 
     private NewsInterface $news;
+    private NewsService $service;
+    private CategoryRepository $categories;
 
     /**
      * Constructor.
@@ -17,9 +22,14 @@ class NewsController extends Controller
      * @param  App\Contracts\Interfaces\NewsInterface  $example
      * @return void
      */
-    public function __construct(NewsInterface $news)
-    {
+    public function __construct(
+        NewsInterface $news,
+        NewsService $service,
+        CategoryRepository $categories
+    ) {
         $this->news = $news;
+        $this->service = $service;
+        $this->categories = $categories;
     }
     /**
      * Display a listing of the resource.
@@ -36,20 +46,25 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('pages.super-admin.news.create');
+        $categories = $this->categories->get();
+
+        return view('pages.super-admin.news.create', compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
         try {
+            $this->service->store($request);
 
+            return to_route('news.index')->with('success', 'Berhasil menambahkan berita!');
         } catch (\Throwable $e) {
-            # code...
+            return to_route('news.create')->with('error', 'Gagal tambah berita. ' . $e->getMessage());
         }
     }
+
 
     /**
      * Display the specified resource.
