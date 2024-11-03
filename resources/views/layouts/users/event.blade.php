@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Site Meta -->
-    <title>Sekolah Demonic</title>
+    <title>Edulogy</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,21 +20,21 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
-	<!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
-	
+    
     <!-- Custom & Default Styles -->
-	<link rel="stylesheet" href="{{asset('users-assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/style.css')}}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/style.css">
 
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body>  
@@ -65,7 +65,8 @@
             </div>
         </div>
         <!-- END # MODAL LOGIN -->
-            @include('layouts.users.topbar')
+
+       @include('topbar')
 
             <div class="container">
                 <nav class="navbar navbar-default yamm">
@@ -121,7 +122,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="">Events</a></li>
+                            <li><a href="event">Events</a></li>
                             <li class="dropdown hassubmenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop <span class="fa fa-angle-down"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -148,124 +149,140 @@
             </div><!-- end container -->
         </header>
 
-        <section id="home" class="video-section js-height-full">
-            <div class="overlay"></div>
-            <div class="home-text-wrapper relative container">
-                <div class="home-message">
-                    <p>Learning Management System</p>
-                    <small>Sekolah is the ideal choice for your organization, your business and your online education system. Create your online course now with unlimited page templates, color options, and menu features.</small>
-                    <div class="btn-wrapper">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-default wow slideInRight">Buy Now</a>
+        <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url('upload/parallax_01.jpeg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message event-title text-center">
+                            <h3>Edulogy Meetup Event 2018</h3>
+                            <p>21 - 26 Aug, 2018, San Francisco, CA - Limited number of guests</p>
+                            <a href="#" class="btn btn-primary">GET TICKETS</a>
                         </div>
-                    </div><!-- end row -->
-                </div>
-            </div>
-            <div class="slider-bottom">
-                <span>Explore <i class="fa fa-angle-down"></i></span>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 hidden-sm hidden-xs">
-                        <div class="custom-module">
-                            <img src="assets/images/p1.jpeg" alt="" class="img-responsive wow slideInLeft">
-                        </div><!-- end module -->
                     </div><!-- end col -->
-                    <div class="col-md-8">
-                        <div class="custom-module p40l">
-                            <h2>Kami adalah <mark>sistem pembelajaran</mark> yang berdedikasi<br>
-                                dari Banyuwangi. Menyediakan desain digital & pengembangan web <br>
-                                yang mudah digunakan untuk pendidikan.</h2>
-                        
-                            <p>Temukan pengalaman belajar yang lebih baik. Kami menawarkan platform yang didesain untuk memudahkan siswa dan guru. Akses berbagai fitur dan konten pendidikan yang berkualitas.</p>
-                        
-                            <hr class="invis">
-                        
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
-                                    <ul class="check">
-                                        <li>Modul Pembelajaran Kustom</li>
-                                        <li>Pembangun Halaman Visual</li>
-                                        <li>Materi Tak Terbatas</li>
-                                        <li>Tema Responsif</li>
-                                        <li>Berbagai Tata Letak Kelas</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <ul class="check">
-                                        <li>Ikon Pendidikan Font Awesome</li>
-                                        <li>Warna yang Telah Ditentukan</li>
-                                        <li>Transisi Halaman Interaktif</li>
-                                        <li>Dukungan Berkualitas Tinggi</li>
-                                        <li>Pengaturan Tak Terbatas</li>
-                                    </ul><!-- end check -->    
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
-                                    <ul class="check">
-                                        <li>Tata Letak e-Learning</li>
-                                        <li>Font untuk Pendidikan</li>
-                                        <li>Pengubah Gaya Tema</li>
-                                        <li>Gaya Footer Sekolah</li>
-                                        <li>Gaya Header Sekolah</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 --> 
-                            </div><!-- end row -->   
-                        
-                            <hr class="invis">
-                        
-                            <div class="btn-wrapper">
-                                <a href="##" class="btn btn-primary">Pelajari Lebih Lanjut Tentang Kami</a>
-                            </div>
-                        
-                        </div><!-- end module -->
-                        
-                    </div><!-- end col -->
-                </div>
+                </div><!-- end row -->
             </div><!-- end container -->
-        </section>
+        </section><!-- end section -->
 
-  @include('layouts.users.kursus')
-        
-        
-
-      @include('layouts.users.service')
-
-        <section class="section db">
+        <section class="section gb nopadtop">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">2346</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Total murid sekolah</h3>
-                            <p>Ini adalah data jumlah murid yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
+                <div class="row event-boxes">
+                    <div class="col-md-4">
+                        <div class="box m30">
+                            <img src="assets/upload/blog_01.jpg" alt="" class="img-responsive">
+                            <div class="event-desc">
+                            <small>Day 1</small>
+                            <h4>Gathering & welcome speech</h4>
+                            <p>Ut volutpat elementum venenatis. In id neque nec tellus iaculis semper. Aenean fringilla velit ut leo luctus, blandit aliquet turpis dictum.</p>
+                            </div>
+                        </div>
                     </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">331</h4>
-                            <h3><i class="flaticon-online-course"></i> Penghargaan sekolah</h3>
-                            <p>Ini adalah jumlah penghargaan yang didapatkan sekolah. </p>
-                        </div><!-- stat-count -->
+                    <div class="col-md-4">
+                        <div class="box m30">
+                            <img src="assets/upload/blog_02.jpg" alt="" class="img-responsive">
+                            <div class="event-desc">
+                            <small>Day 2</small>
+                            <h4>Successful Marketing Strategy</h4>
+                            <p>Morbi nec ornare ipsum. Curabitur tortor sapien, faucibus commodo metus porta, venenatis lobortis nibh. Proin molestie est et nunc aliquam iaculis.</p>
+                            </div>
+                        </div>
                     </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">120</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Jumlah guru pengajar di sekolah</h3>
-                            <p>Ini adalah data guru pengajar yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
+                    <div class="col-md-4">
+                        <div class="box m30">
+                            <img src="assets/upload/blog_03.jpg" alt="" class="img-responsive">
+                            <div class="event-desc">
+                            <small>Day 3</small>
+                            <h4>Award and certificate distribution</h4>
+                            <p> Mauris cursus, ipsum eget mollis pretium, nisl felis rhoncus nulla, sed dignissim ligula lorem ac enim. Pellentesque quis libero feugiat, lacinia.</p>
+                            </div>
+                        </div>
                     </div><!-- end col -->
                 </div><!-- end row -->
             </div><!-- end container -->
         </section>
 
-        @include('layouts.users.review')
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Meet Our Speakers</h3>
+                    <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.</p>
+                </div><!-- end title -->
 
-        @include('layouts.users.news')
+                <div class="row text-center">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="assets/upload/01_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <div class="social-links">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-skype"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>Ruben Franklin</h4>
+                                <p>Web Design Builder & Seo Specialist</p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="assets/upload/02_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <div class="social-links">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-skype"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>Martin Juhnson</h4>
+                                <p>Web Design Builder & Seo Specialist</p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="assets/upload/03_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <div class="social-links">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-skype"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>Bob Dylean</h4>
+                                <p>Web Design Builder & Seo Specialist</p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+
         <section class="section bgcolor1">
             <div class="container">
                 <a href="#">
@@ -283,7 +300,7 @@
             </div><!-- end container -->  
         </section>
 
- @include('layouts.users.footer')
+        @include('footer')
 
         <div class="copyrights">
             <div class="container">
@@ -307,13 +324,13 @@
     </div><!-- end wrapper -->
 
     <!-- jQuery Files -->
-    <script src="{{asset('users-assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/carousel.js')}}"></script>
-    <script src="{{asset('users-assets/js/animate.js')}}"></script>
-    <script src="{{asset('users-assets/js/custom.js')}}"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/animate.js"></script>
+    <script src="assets/js/custom.js"></script>
     <!-- VIDEO BG PLUGINS -->
-    <script src="{{asset('users-assets/js/videobg.js')}}"></script>
+    <script src="assets/js/videobg.js"></script>
 
 </body>
 </html>
