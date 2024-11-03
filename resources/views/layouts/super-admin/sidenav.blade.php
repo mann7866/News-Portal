@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item {{ Request::is('/news') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/news" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('news.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-news"></i>
                         </span>

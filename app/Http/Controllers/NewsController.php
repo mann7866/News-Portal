@@ -2,17 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\Interfaces\NewsInterface;
 use App\Models\News;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+
+    private NewsInterface $news;
+
+    /**
+     * Constructor.
+     *
+     * @param  App\Contracts\Interfaces\NewsInterface  $example
+     * @return void
+     */
+    public function __construct(NewsInterface $news)
+    {
+        $this->news = $news;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data = $this->news->get();
+
+        return view('pages.super-admin.news.index', compact('data'));
     }
 
     /**
@@ -20,7 +36,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.super-admin.news.create');
     }
 
     /**
@@ -28,7 +44,11 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+
+        } catch (\Throwable $e) {
+            # code...
+        }
     }
 
     /**

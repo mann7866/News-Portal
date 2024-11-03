@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('title');
             $table->text('description');
             $table->string('image');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->enum('status',['ongoing','completed']);
+            $table->enum('status',['pending','ongoing','completed'])->default('pending');
             $table->timestamps();
         });
     }
