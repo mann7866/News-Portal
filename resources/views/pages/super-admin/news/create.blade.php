@@ -26,6 +26,16 @@
         </div>
     </div>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="">
         <div class="card rounded-2 overflow-hidden">
             <div class="position-relative">
@@ -40,77 +50,79 @@
 
 
             <div class="row">
-
-                <div class="col-12">
-                    <div class="card">
-
-                        <div class="border-bottom title-part-padding">
-                            <div class="floating-labels mt-4">
-                                <div class="form-group mb-5 focused">
-                                    <input type="text" class="form-control" id="input1" style="font-weight: bold;" />
-                                    <span class="bar"></span>
-                                    <label class="" for="input1" style="font-weight: bold;">
-                                        <h4>
-                                            Judul Berita
-                                        </h4>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <h5 for="input1">Deskripsi Berita</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="summernote">
-                                <h4></h4>
-                            </div>
+                <div class="border-bottom title-part-padding">
+                    <div class="floating-labels mt-4">
+                        <div class="form-group mb-5 focused">
+                            <input type="text" class="form-control" id="input1" style="font-weight: bold;" />
+                            <span class="bar"></span>
+                            <label class="" for="input1" style="font-weight: bold;">
+                                <h4>
+                                    Judul Berita
+                                </h4>
+                            </label>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="border-bottom title-part-padding">
-                            <div class="">
-                                <label>Kategori Berita <span class="text-danger">*</span></label>
-                                <select class="select2 form-control" multiple="multiple" style="height: 36px; width: 100%">
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>
-                                </select>
-                            </div>
 
-                            <div class="d-flex flex-column mt-3">
-                                <div class="mb-3 form-group">
-                                    <label>Start Date
-                                        <span class="text-danger">*</span></label>
-                                    <div class="controls">
-                                        <input type="date" name="start_date" class="form-control" required
-                                            data-validation-required-message="This field is required" />
-                                    </div>
-                                    <div class="form-control-feedback">
-                                        <small><code>Opsional</code></small>
-                                    </div>
-                                </div>
-                                <div class="mb-3 form-group">
-                                    <label>End Date
-                                        <span class="text-danger">*</span></label>
-                                    <div class="controls">
-                                        <input type="date" name="end_date" class="form-control" required
-                                            data-validation-required-message="This field is required" />
-                                    </div>
-                                    <div class="form-control-feedback">
-                                        <small><code>Opsional</code></small>
-                                    </div>
-                                </div>
+                <div style="margin-bottom: 10px; margin-top: 10px; margin-left: 10px">
+                    <label>
+                        <h5>Kategori Berita</h5>
+                    </label>
+                </div>
+
+                <div class="summernote">
+                    <h4>
+
+                    </h4>
+                </div>
+                <div class="border-bottom title-part-padding">
+                    <div class="">
+                        <label>Kategori Berita <span class="text-danger">*</span></label>
+                        <select class="select2 form-control" multiple="multiple" style="height: 36px; width: 100%">
+                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                <option value="AK">Alaska</option>
+                                <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="Pacific Time Zone">
+                                <option value="CA">California</option>
+                                <option value="NV">Nevada</option>
+                                <option value="OR">Oregon</option>
+                                <option value="WA">Washington</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="d-flex flex-column mt-3">
+                        <div class="mb-3 form-group">
+                            <label>Start Date
+                                <span class="text-danger">*</span></label>
+                            <div class="controls">
+                                <input type="date" name="start_date" class="form-control" required
+                                    data-validation-required-message="This field is required" />
+                            </div>
+                            <div class="form-control-feedback">
+                                <small><code>Opsional</code></small>
                             </div>
                         </div>
-
+                        <div class="mb-3 form-group">
+                            <label>End Date
+                                <span class="text-danger">*</span></label>
+                            <div class="controls">
+                                <input type="date" name="end_date" class="form-control" required
+                                    data-validation-required-message="This field is required" />
+                            </div>
+                            <div class="form-control-feedback">
+                                <small><code>Opsional</code></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ route('news.index') }}">
+                            <button type="button" class="btn btn-danger me-2">
+                                <i class="ti ti-arrow-left"></i>
+                            </button>
+                        </a>
+                        <button type="submit" class="btn btn-primary"> <i class="ti ti-send"></i></button>
                     </div>
                 </div>
             </div>
