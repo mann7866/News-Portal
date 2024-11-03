@@ -8,21 +8,11 @@
             </li>
             <li class="nav-item d-none d-lg-block">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal" id="ShourCut" >
+                    data-bs-target="#exampleModal">
                     <i class="ti ti-search"></i>
                 </a>
             </li>
         </ul>
-        {{-- Shourcut Ctrl + S --}}
-        <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.ctrlKey && event.key === 'g') {
-                    event.preventDefault();
-                    document.getElementById('ShourCut').click(); // Klik elemen untuk membuka modal
-                }
-            });
-        </script>
-        
         <div class="d-block d-lg-none">
             <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
                 class="dark-logo" width="180" alt="" />
