@@ -47,46 +47,48 @@
 
         <div class="row">
             {{--  data 1  --}}
-            <div class="col-md-6 col-lg-4">
-                <div class="card rounded-2 overflow-hidden hover-img">
-                    <div class="position-relative">
-                        <a href="javascript:void(0)">
-                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}" class="card-img-top rounded-0"
-                                alt="...">
-                        </a>
-
-
-                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
+            @if ($data->isEmpty())
+            <p class="text-center">Data tidak ditemukan.</p>
+        @else
+            @foreach ($data as $as)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card rounded-2 overflow-hidden hover-img">
+                        <div class="position-relative">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('storage/'. $as->image) }}" class="card-img-top rounded-0"
+                                    alt="...">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Edit</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
-                            </ul>
+                            <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
+                                <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
+                                </ul>
+                            </div>
+        
+                            <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
+                                class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                                height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
                         </div>
-
-                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
-                            class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
-                            height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Gadget</span>
-                        <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">As yen tumbles, gadget-loving
-                            Japan goes for secondhand iPhones</a>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $as->title }}</span>
+                            <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">{{ $as->description }}</a>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
+                                </div>
+                                <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
+                                </div>
+                                <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>{{ $as->start_date }}</div>
                             </div>
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
-                            </div>
-                            <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Mon,
-                                Jan 16</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+        @endif        
             {{--  data 2  --}}
             <div class="col-md-6 col-lg-4">
                 <div class="card rounded-2 overflow-hidden hover-img">
