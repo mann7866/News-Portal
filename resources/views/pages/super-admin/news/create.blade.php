@@ -25,6 +25,12 @@
             </div>
         </div>
     </div>
+    @if ($message = Session::get('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong class="text-success">{{ $message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -36,10 +42,11 @@
         </div>
     @endif
 
-    <form action="">
+    <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="card rounded-2 overflow-hidden">
             <div class="position-relative">
-                <input type="file" accept="image/*" id="imageInput" style="display: none;"
+                <input type="file" accept="image/*" id="imageInput" name="image" style="display: none;"
                     onchange="previewImage(event)">
                 <label for="imageInput">
                     <img id="imagePreview" src="{{ asset('admin-assets/images/blog/blog-img5.jpg') }}"
@@ -53,9 +60,9 @@
                 <div class="border-bottom title-part-padding">
                     <div class="floating-labels mt-4">
                         <div class="form-group mb-5 focused">
-                            <input type="text" class="form-control" id="input1" style="font-weight: bold;" />
+                            <input type="text" class="form-control" name="title" id="title" style="font-weight: bold;" />
                             <span class="bar"></span>
-                            <label class="" for="input1" style="font-weight: bold;">
+                            <label class="" for="title" style="font-weight: bold;">
                                 <h4>
                                     Judul Berita
                                 </h4>
@@ -66,29 +73,18 @@
 
                 <div style="margin-bottom: 10px; margin-top: 10px; margin-left: 10px">
                     <label>
-                        <h5>Kategori Berita</h5>
+                        <h5>Deskripsi Berita</h5>
                     </label>
                 </div>
 
-                <div class="summernote">
-                    <h4>
-
-                    </h4>
-                </div>
+                <textarea name="description" class="summernote"></textarea>
                 <div class="border-bottom title-part-padding">
                     <div class="">
                         <label>Kategori Berita <span class="text-danger">*</span></label>
-                        <select class="select2 form-control" multiple="multiple" style="height: 36px; width: 100%">
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
-                                <option value="OR">Oregon</option>
-                                <option value="WA">Washington</option>
-                            </optgroup>
+                        <select class="select2 form-control" multiple="multiple" style="height: 36px; width: 100%" name="category_id">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
                         </select>
                     </div>
 
@@ -97,8 +93,7 @@
                             <label>Start Date
                                 <span class="text-danger">*</span></label>
                             <div class="controls">
-                                <input type="date" name="start_date" class="form-control" required
-                                    data-validation-required-message="This field is required" />
+                                <input type="date" name="start_date" class="form-control"/>
                             </div>
                             <div class="form-control-feedback">
                                 <small><code>Opsional</code></small>
@@ -108,8 +103,7 @@
                             <label>End Date
                                 <span class="text-danger">*</span></label>
                             <div class="controls">
-                                <input type="date" name="end_date" class="form-control" required
-                                    data-validation-required-message="This field is required" />
+                                <input type="date" name="end_date" class="form-control"/>
                             </div>
                             <div class="form-control-feedback">
                                 <small><code>Opsional</code></small>
