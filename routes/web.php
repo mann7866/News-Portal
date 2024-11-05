@@ -29,18 +29,16 @@ Route::middleware('auth')->group(function () {
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         
         // Category Route
-        Route::get('category', [CategoryController::class, 'index'])->name('category.index');
-        Route::get('category/create', [CategoryController::class, 'create'])->name('category.create');
-        Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-        Route::post('category', [CategoryController::class, 'store'])->name('category.store');
-        Route::put('category/{category}', [CategoryController::class, 'update'])->name('category.update');
+        Route::get('category', [CategoryController::class, 'index'])->name('categories.index');
+        Route::get('category/create', [CategoryController::class, 'create'])->name('categories.create');
+        Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
+        Route::post('category', [CategoryController::class, 'store'])->name('categories.store');
+        Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
+        Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
         
     });
     Route::get('/approval', function () {
         return view('pages.super-admin.approval.index');
-    });
-    Route::get('/category', function () {
-        return view('pages.super-admin.category.index');
     });
     Route::get('/teacher', function () {
         return view('pages.super-admin.teacher.index');
