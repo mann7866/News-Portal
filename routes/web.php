@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeacherController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('pages.user.landing-pages.index');
@@ -15,13 +16,27 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
+
     Route::prefix('administrator')->group(function () {
+
+        Route::get('dashboard', function () {
+            return view('pages.super-admin.dashboard');
+        })->name('dashboard');
+
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
         Route::get('news/edit', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');
+
+         // Category Route
+         Route::get('category', [CategoryController::class, 'index'])->name('categories.index');
+         Route::get('category/create', [CategoryController::class, 'create'])->name('categories.create');
+         Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
+         Route::post('category', [CategoryController::class, 'store'])->name('categories.store');
+         Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
+         Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
         // route Teacher
         Route::get('teacher', action: [TeacherController::class, 'index'])->name('teacher.index');
