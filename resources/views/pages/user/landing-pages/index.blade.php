@@ -1,6 +1,5 @@
-@extends('layouts.users.topbar')
+@extends('layouts.users.app')
 @section('content')
-
 <section id="home" class="video-section js-height-full">
     <div class="overlay"></div>
     <div class="home-text-wrapper relative container">
