@@ -44,15 +44,16 @@
     <div class="card p-4">
         <!-- News Icon and Title -->
         <div class="text-center mb-4">
-            <i class="fas fa-newspaper news-icon"></i>
-            <h2 class="login-title mt-2">School News Portal Login</h2>
-            <p class="login-subtitle">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
-        </div>
-        
-        <!-- Logo -->
+           <!-- Logo -->
         <div class="text-center mb-4">
             <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle" style="width: 80px; height: 80px;">
         </div>
+            <h2 class="login-title mt-2">School News Portal Login</h2>
+            <p class="login-subtitle">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
+
+        </div>
+        
+       
 
         <!-- Session Status -->
         @if (session('status'))
@@ -67,7 +68,7 @@
 
             <!-- Email Address -->
             <div class="form-group">
-                <label for="email" class="text-success font-weight-bold">{{ __('Email') }}</label>
+                <label for="email" class="text-success font-weight-bolder">{{ __('Email') }}</label>
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                 @error('email')
                     <small class="text-danger">{{ $message }}</small>
@@ -76,7 +77,7 @@
 
             <!-- Password -->
             <div class="form-group mt-3">
-                <label for="password" class="text-success font-weight-bold">{{ __('Password') }}</label>
+                <label for="password" class="text-success font-weight-bolder">{{ __('Password') }}</label>
                 <input id="password" type="password" class="form-control" name="password" required>
                 @error('password')
                     <small class="text-danger">{{ $message }}</small>

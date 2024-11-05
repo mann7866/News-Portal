@@ -37,6 +37,12 @@
             background-color: #ffffff;
             color: #4CAF50;
         }
+        /* Custom Logo for Title */
+        .custom-logo {
+            width: 30px; /* Adjust size as needed */
+            height: 30px; /* Adjust size as needed */
+            vertical-align: middle; /* Center vertically */
+        }
     </style>
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
@@ -44,7 +50,10 @@
     <div class="card p-4">
         <!-- Title -->
         <div class="text-center mb-4">
-            <i class="fas fa-user-plus news-icon"></i>
+            <!-- Logo -->
+            <div class="text-center mb-4">
+                <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle" style="width: 80px; height: 80px;">
+            </div>
             <h2 class="register-title mt-2">Register for School News Portal</h2>
             <p class="register-subtitle">Silakan daftar untuk mengakses berita dan informasi terkini dari sekolah.</p>
         </div>
@@ -55,7 +64,7 @@
 
             <!-- Name -->
             <div class="form-group">
-                <label for="name" class="text-success font-weight-bold">Name</label>
+                <label for="name" class="text-success font-weight-bolder">Name</label>
                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                 @error('name')
                     <small class="text-danger">{{ $message }}</small>
@@ -64,7 +73,7 @@
 
             <!-- Email Address -->
             <div class="form-group mt-3">
-                <label for="email" class="text-success font-weight-bold">Email</label>
+                <label for="email" class="text-success font-weight-bolder">Email</label>
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                 @error('email')
                     <small class="text-danger">{{ $message }}</small>
@@ -73,7 +82,7 @@
 
             <!-- Password -->
             <div class="form-group mt-3">
-                <label for="password" class="text-success font-weight-bold">Password</label>
+                <label for="password" class="text-success font-weight-bolder">Password</label>
                 <input id="password" type="password" class="form-control" name="password" required>
                 @error('password')
                     <small class="text-danger">{{ $message }}</small>
@@ -82,7 +91,7 @@
 
             <!-- Confirm Password -->
             <div class="form-group mt-3">
-                <label for="password_confirmation" class="text-success font-weight-bold">Confirm Password</label>
+                <label for="password_confirmation" class="text-success font-weight-bolder">Confirm Password</label>
                 <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
                 @error('password_confirmation')
                     <small class="text-danger">{{ $message }}</small>
