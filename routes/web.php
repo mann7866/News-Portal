@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.user.landing-pages.index');
 });
 
 Route::get('/dashboard', function () {
@@ -21,8 +21,15 @@ Route::middleware('auth')->group(function () {
     Route::prefix('administrator')->group(function () {
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
+        Route::get('news/edit', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
+    });
+    Route::get('/approval', function () {
+        return view('pages.super-admin.approval.index');
+    });
+    Route::get('/category', function () {
+        return view('pages.super-admin.category.index');
     });
     Route::get('/teacher', function () {
         return view('pages.super-admin.teacher.index');

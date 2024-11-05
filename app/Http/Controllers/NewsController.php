@@ -64,7 +64,8 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        $news = News::findOrFail($news);
+        return view('pages.super-admin.news.edit', ['news']);
     }
 
     /**

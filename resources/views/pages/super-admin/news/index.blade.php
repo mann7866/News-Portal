@@ -4,14 +4,14 @@
         <div class="card-body px-4 py-3">
             <div class="row align-items-center">
                 <div class="col-9">
-                    <h4 class="fw-semibold mb-8">Table-Berita</h4>
+                    <h4 class="fw-semibold mb-8">Halaman-Berita</h4>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a class="text-muted " href="index-2.html">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item" aria-current="page">
-                                Table-Berita
+                                Halaman-Berita
                             </li>
                         </ol>
                     </nav>
@@ -37,7 +37,8 @@
                     </form>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                    <a href="{{ route('news.create') }}" id="btn-add-contact" class="btn btn-info d-flex align-items-center" >
+                    <a href="{{ route('news.create') }}" id="btn-add-contact"
+                        class="btn btn-info d-flex align-items-center">
                         <i class="ti ti-news text-white me-1 fs-5"></i> Add Berita
                     </a>
                 </div>
@@ -62,7 +63,7 @@
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Edit</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="{{ route('news.edit') }}">Edit</a></li>
                                 <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
                                 <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
                             </ul>
@@ -468,8 +469,7 @@
 @endsection
 
 @section('modal')
-
-{{--  create news  --}}
+    {{--  Delete news  --}}
     <div class="modal fade" id="add-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -478,47 +478,37 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
-                              <form class="mt-4" novalidate>
-                                <div class="mb-3 form-group">
-                                  <label>Basic Text Input
-                                    <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <input type="text" name="text" class="form-control" required
-                                      data-validation-required-message="This field is required" />
-                                  </div>
-                                  <div class="form-control-feedback">
-
-                                  </div>
-                                </div>
-
-                                <div class="mb-3 form-group">
-                                  <label>Password Input Field
-                                    <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <input type="password" name="password" class="form-control" required
-                                      data-validation-required-message="This field is required" />
-                                  </div>
-                                </div>
-                                <div class="mb-3 form-group">
-                                  <label>Textarea <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <textarea name="textarea" id="textarea" class="form-control" required
-                                      placeholder="Textarea text"></textarea>
-                                  </div>
-                                </div>
-
-                              </form>
+                  <h2>ApakahAnda Ingin Tetap Menghapus?</h2>
                 </div>
                 <div class="modal-footer">
                     <div class="text-xs-right">
                         <button type="submit" class="btn btn-info rounded-pill px-4">
-                          Submit
+                            Kembali
                         </button>
                         <button type="reset" class="btn btn-danger rounded-pill px-4">
-                          Cancel
+                            Tetap Hapus
                         </button>
-                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('modal')
+    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delete">Information!!!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div style="margin-left: 100px" class="modal-body">
+                    Apakah Anda Yakin Ingin Menghapus?
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ '/category' }}">
+                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
+                    </a>
                 </div>
             </div>
         </div>

@@ -6,24 +6,24 @@
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- Site Meta -->
     <title>Sekolah Demonic</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <!-- Site Icons -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
 	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
-	
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+
     <!-- Custom & Default Styles -->
 	<link rel="stylesheet" href="{{asset('users-assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('users-assets/css/font-awesome.min.css')}}">
@@ -37,7 +37,7 @@
 	<![endif]-->
 
 </head>
-<body>  
+<body>
 
     <!-- LOADER -->
     <div id="preloader">
@@ -179,11 +179,11 @@
                             <h2>Kami adalah <mark>sistem pembelajaran</mark> yang berdedikasi<br>
                                 dari Banyuwangi. Menyediakan desain digital & pengembangan web <br>
                                 yang mudah digunakan untuk pendidikan.</h2>
-                        
+
                             <p>Temukan pengalaman belajar yang lebih baik. Kami menawarkan platform yang didesain untuk memudahkan siswa dan guru. Akses berbagai fitur dan konten pendidikan yang berkualitas.</p>
-                        
+
                             <hr class="invis">
-                        
+
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
                                     <ul class="check">
@@ -201,7 +201,7 @@
                                         <li>Transisi Halaman Interaktif</li>
                                         <li>Dukungan Berkualitas Tinggi</li>
                                         <li>Pengaturan Tak Terbatas</li>
-                                    </ul><!-- end check -->    
+                                    </ul><!-- end check -->
                                 </div><!-- end col-lg-4 -->
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
                                     <ul class="check">
@@ -211,25 +211,25 @@
                                         <li>Gaya Footer Sekolah</li>
                                         <li>Gaya Header Sekolah</li>
                                     </ul><!-- end check -->
-                                </div><!-- end col-lg-4 --> 
-                            </div><!-- end row -->   
-                        
+                                </div><!-- end col-lg-4 -->
+                            </div><!-- end row -->
+
                             <hr class="invis">
-                        
+
                             <div class="btn-wrapper">
                                 <a href="##" class="btn btn-primary">Pelajari Lebih Lanjut Tentang Kami</a>
                             </div>
-                        
+
                         </div><!-- end module -->
-                        
+
                     </div><!-- end col -->
                 </div>
             </div><!-- end container -->
         </section>
 
   @include('layouts.users.kursus')
-        
-        
+
+
 
       @include('layouts.users.service')
 
@@ -280,7 +280,7 @@
                     </div>
                 </div><!-- end row -->
                 </a>
-            </div><!-- end container -->  
+            </div><!-- end container -->
         </section>
 
  @include('layouts.users.footer')
