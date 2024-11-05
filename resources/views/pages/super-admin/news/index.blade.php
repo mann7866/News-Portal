@@ -63,7 +63,7 @@
                                 <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="{{ route('news.edit') }}">Edit</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
                                 <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
                                 <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
                             </ul>
@@ -87,7 +87,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+        @endif        
             {{--  data 2  --}}
             <div class="col-md-6 col-lg-4">
                 <div class="card rounded-2 overflow-hidden hover-img">
