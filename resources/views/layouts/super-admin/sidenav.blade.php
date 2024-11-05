@@ -26,7 +26,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/dashboard" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-aperture"></i>
                         </span>
