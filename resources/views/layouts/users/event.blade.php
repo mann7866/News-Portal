@@ -17,19 +17,19 @@
     <meta name="author" content="">
     
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{asset('user-assets/images/favicon.ico" type="image/x-icon')}}">
+    <link rel="apple-touch-icon" href="{{asset('user-assets/images/apple-touch-icon.png')}}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
     
     <!-- Custom & Default Styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/carousel.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="{{asset('user-assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('user-assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('user-assets/css/carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('user-assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('user-assets/style.css')}}">
 
     <!--[if lt IE 9]>
         <script src="js/vendor/html5shiv.min.js"></script>
@@ -324,13 +324,13 @@
     </div><!-- end wrapper -->
 
     <!-- jQuery Files -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/parallax.js"></script>
-    <script src="assets/js/animate.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{asset('user-assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('user-assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('user-assets/js/parallax.js')}}"></script>
+    <script src="{{asset('user-assets/js/animate.js')}}"></script>
+    <script src="{{asset('user-assets/js/custom.js')}}"></script>
     <!-- VIDEO BG PLUGINS -->
-    <script src="assets/js/videobg.js"></script>
+    <script src="{{asset('user-assets/js/videobg.js')}}"></script>
 
 </body>
 </html>
