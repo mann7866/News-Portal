@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::prefix('administrator')->group(function () {
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
-        Route::get('news/edit', [NewsController::class, 'edit'])->name('news.edit');
+        Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
     });
