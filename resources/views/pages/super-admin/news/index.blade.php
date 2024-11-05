@@ -56,12 +56,6 @@
                                 <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}"
                                     class="card-img-top rounded-0" alt="...">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
-                            </ul>
-                        </div>
 
 
                             <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">

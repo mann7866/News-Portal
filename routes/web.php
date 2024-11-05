@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,21 +20,20 @@ Route::middleware('auth')->group(function () {
 
 
     Route::prefix('administrator')->group(function () {
-        
-        // News Route
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
-        Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
+        Route::get('news/edit', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
-        
-        // Category Route
-        Route::get('category', [CategoryController::class, 'index'])->name('category.index');
-        Route::get('category/create', [CategoryController::class, 'create'])->name('category.create');
-        Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-        Route::post('category', [CategoryController::class, 'store'])->name('category.store');
-        Route::put('category/{category}', [CategoryController::class, 'update'])->name('category.update');
-        
+
+        // route Teacher
+        Route::get('teacher', action: [TeacherController::class, 'index'])->name('teacher.index');
+        Route::get('teacher/create', [TeacherController::class, 'create'])->name('teacher.create');
+        Route::get('teacher/show', action: [TeacherController::class, 'show'])->name('teacher.show');
+        Route::get('teacher/edit', [TeacherController::class, 'edit'])->name('teacher.edit');
+        Route::post('teacher', [TeacherController::class, 'store'])->name('teacher.store');
+        Route::put('teacher/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
+
     });
     Route::get('/approval', function () {
         return view('pages.super-admin.approval.index');
@@ -51,4 +50,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-require __DIR__ . '/Zaky.php';
