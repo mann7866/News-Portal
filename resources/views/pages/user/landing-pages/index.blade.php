@@ -140,32 +140,39 @@
 
 <section class="section db">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6">
                 <div class="stat-count">
-                    <h4 class="stat-timer">2346</h4>
-                    <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Total murid
-                        sekolah</h3>
-                    <p>Ini adalah data jumlah murid yang ada di sekolah. </p>
+                    <h4 class="stat-timer">600</h4>
+                    <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Murid</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
 
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="stat-count">
-                    <h4 class="stat-timer">331</h4>
-                    <h3><i class="flaticon-online-course"></i> Penghargaan sekolah</h3>
-                    <p>Ini adalah jumlah penghargaan yang didapatkan sekolah. </p>
+                    <h4 class="stat-timer">5</h4>
+                    <h3>
+                        <i class="flaticon-online-course" style="font-size: 20px; margin-right: 8px; vertical-align: middle;"></i>
+                        Program Studi
+                    </h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-count">
+                    <h4 class="stat-timer">50</h4>
+                    <h3><i class="fa fa-users" style="font-size: 20px; margin-right: 8px; vertical-align: middle;"></i> Karyawan</h3>
+                </div><!-- stat-count -->
+            </div><!-- end col -->
+            
 
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="stat-count">
-                    <h4 class="stat-timer">120</h4>
-                    <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Jumlah guru
-                        pengajar di sekolah</h3>
-                    <p>Ini adalah data guru pengajar yang ada di sekolah. </p>
+                    <h4 class="stat-timer">5</h4>
+                    <h3><i class="fa fa-flask" style="font-size: 20px; margin-right: 8px; vertical-align: middle;"></i> Laboratorium</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
+            
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
