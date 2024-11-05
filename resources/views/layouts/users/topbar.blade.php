@@ -1,46 +1,3 @@
-<!doctype html>
-<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js " lang="en"> <!--<![endif]-->
-
-<head>
-
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <!-- Site Meta -->
-    <title>News Portal</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico" type="image/x-icon')}}" />
-    <link rel="apple-touch-icon" href="{{asset('assets/images/apple-touch-icon.png')}}">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
-
-    <!-- Custom & Default Styles -->
-    <link rel="stylesheet" href="{{ asset('users-assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('users-assets/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('users-assets/css/carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('users-assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('users-assets/style.css') }}">
-
-    <!--[if lt IE 9]>
-  <script src="js/vendor/html5shiv.min.js"></script>
-  <script src="js/vendor/respond.min.js"></script>
- <![endif]-->
-
-</head>
-
-<body>
 
     <!-- LOADER -->
     <div id="preloader">
@@ -50,6 +7,7 @@
 
     <div id="wrapper">
         <!-- BEGIN # MODAL LOGIN -->
+        {{-- Top bar --}}
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true"
             style="display: none;">
             <div class="modal-dialog">
@@ -164,29 +122,9 @@
         </header>
 
         @yield('content')
-
+        
         @include('layouts.users.footer')
 
-        <div class="copyrights">
-            <div class="container">
-                <div class="clearfix">
-                    <div class="logo-normal">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt="" style="width: 250px; height: auto;">
-                        </a>
-                    </div> 
-
-                    
-                    <div class="pull-right">
-                        <div class="footer-links">
-                            <ul class="list-inline">
-                                <li>Design : <a href="https://html.design">HTML.Design</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- end container -->
-        </div><!-- end copy -->
     </div><!-- end wrapper -->
 
     <!-- jQuery Files -->

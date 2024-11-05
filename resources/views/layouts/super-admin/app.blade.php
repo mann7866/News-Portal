@@ -179,6 +179,7 @@
     <script src="{{ asset('admin-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('admin-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/dashboard.js') }}"></script>
+    <script src="{{ asset('admin-assets/js/dashboard2.js') }}"></script>
 
     {{--  select2  --}}
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.full.min.js') }}"></script>

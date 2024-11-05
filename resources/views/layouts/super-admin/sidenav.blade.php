@@ -26,7 +26,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/dashboard" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-aperture"></i>
                         </span>
@@ -42,9 +42,9 @@
                     </a>
                 </li>
                 <li class="sidebar-item {{ Request::is('/category') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/category" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('categories.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-file"></i>
+                            <i class="ti ti-category"></i>
                         </span>
                         <span class="hide-menu">Kategori</span>
                     </a>

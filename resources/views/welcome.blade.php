@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
@@ -316,4 +316,4 @@
     <script src="{{asset('users-assets/js/videobg.js')}}"></script>
 
 </body>
-</html>
+</html> --}}
