@@ -19,8 +19,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico" type="image/x-icon')}}" />
-    <link rel="apple-touch-icon" href="{{asset('assets/images/apple-touch-icon.png')}}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico" type="image/x-icon') }}" />
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -46,7 +46,7 @@
 
     <!-- LOADER -->
     <div id="preloader">
-        <img class="preloader" src="{{asset('users-assets/images/loader.gif')}}" alt="">
+        <img class="preloader" src="{{ asset('users-assets/images/loader.gif') }}" alt="">
     </div><!-- end loader -->
     <!-- END LOADER -->
 
@@ -87,9 +87,10 @@
                         </button>
                         <div class="logo-normal">
                             <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt="" style="width: 250px; height: auto;">
+                                <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
+                                    style="width: 250px; height: auto;">
                             </a>
-                        </div>                        
+                        </div>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse">
@@ -118,8 +119,8 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="menu-widget text-center">
                                                         <div class="image-wrap entry">
-                                                            <img src="{{asset('assets/upload/course_01.jpg')}}" alt=""
-                                                                class="img-responsive">
+                                                            <img src="{{ asset('assets/upload/course_01.jpg') }}"
+                                                                alt="" class="img-responsive">
                                                             <div class="magnifier">
                                                                 <a href="#" title=""><i
                                                                         class="flaticon-add"></i></a>
@@ -167,41 +168,7 @@
         </header>
 
         @yield('content')
-        
+
         @include('layouts.users.footer')
 
-        <div class="copyrights">
-            <div class="container">
-                <div class="clearfix">
-                <div class="row">
-    <div class="col-md-5 col-sm-4 hidden-xs text-left">
-        <div class="footer-links d-flex align-items-center">
-            <p class="text-center m-0">SMK AL-Azhar Sempu</p>
-        </div>
-    </div>
-    <div class="col-md-5 col-sm-4 hidden-xs text-right">
-        <div class="social d-flex justify-content-center align-items-center">
-            <a class="facebook" href="facebook.com/smkalazharsempu" data-tooltip="tooltip" data-placement="bottom" title="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a class="twitter" href="twitter.com/smkalazharsempu" data-tooltip="tooltip" data-placement="bottom" title="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a class="google" href="www.smkalazhar.sch.id" data-tooltip="tooltip" data-placement="bottom" title="Google Plus">
-                <i class="fa fa-google-plus"></i>
-            </a>
-            <a class="instagram" href="instagram.com/smkalazharsempu" data-tooltip="tooltip" data-placement="bottom" title="instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a class="tiktok" href="tiktok.com/@smkalazharsempu" data-tooltip="tooltip" data-placement="bottom" title="tiktok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-        </div><!-- end social -->
-    </div><!-- end left -->
-</div>
-
-            </div><!-- end container -->
-        </div><!-- end copy -->
-    </div><!-- end wrapper -->
-
-
+       
