@@ -5,34 +5,38 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>Smk kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit
-                            usaha SMK kami.</p>
-                            <div style="display: flex; align-items: center; gap: 35px; flex-wrap: wrap;">
-                                <div style="display: flex; flex-direction: column; align-items: center;">
-                                    <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                    <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-top: 10px;">
-                                </div>
-                                <div style="display: flex; flex-direction: column; align-items: center; margin-left: -20px;">
-                                    <div style="display: flex; flex-direction: row; align-items: center;">
-                                        <img src="{{ asset('logo/Aljahit.png') }}" alt="Oma Mode"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                        <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-left: 10px;">
-                                    </div>
-                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 10px;">
-                                        <img src="{{ asset('logo/Altoko.png') }}" alt="Oma Mode"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                        <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-left: 10px;">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                    </div><!-- end newsletter -->
-                </div><!-- end widget -->
+                        <p>SMK kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
+                        
+                        <!-- Menggunakan CSS Grid untuk tampilan lebih rapi -->
+                        <div class="logo-grid">
+                            <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
+                            <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
+                            <img src="{{ asset('logo/Aljahit.png') }}" alt="Al Jahit" class="logo-img">
+                            <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo" class="logo-img">
+                            <img src="{{ asset('logo/Altoko.png') }}" alt="Al Toko" class="logo-img">
+                            <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo" class="logo-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CSS Styles -->
+                <style>
+                    .logo-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                        gap: 20px;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                    
+                    .logo-img {
+                        border-radius: 10%;
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                    }
+                </style>
+                
             </div><!-- end col -->
 
             <div class="col-lg-3 col-md-3">
@@ -51,11 +55,11 @@
                     <h3 class="widget-title">Popular Tags</h3>
                     <div class="tags-widget">
                         <ul class="list-inline">
-                            <li><a href="#">Kacaw</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#">Edan</a></li>
-                            <li><a href="#">Gacor</a></li>
-                            <li><a href="#">Alamak</a></li>
+                            <li><a href="#">Merdeka Indo</a></li>
+                            <li><a href="#">FufuFafa</a></li>
+                            <li><a href="#">Benjamin</a></li>
+                            <li><a href="#">SchoolHd</a></li>
+                            <li><a href="#">Podcasth</a></li>
                             <li><a href="#">CIhuuy</a></li>
                         </ul>
                     </div><!-- end list-widget -->
