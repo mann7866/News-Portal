@@ -42,62 +42,63 @@
                                 <i
                                     class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                             </form>
-                            <button class="btn btn-primary">add Kategori</button>
+                            <button type="button" class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#create-modal">
+                                Tambah
+                            </button>
                         </div>
                     </div>
                     <div class="table-responsive">
                         <table class="table align-middle text-nowrap mb-0">
                             <thead>
                                 <tr class="text-muted fw-semibold">
+                                    <th scope="col">No</th>
                                     <th scope="col" class="ps-0">Kategori</th>
-                                    <th scope="col">Opsi</th>
+                                    <th scope="col" class="text-center">Opsi</th>
                                 </tr>
                             </thead>
                             <tbody class="border-top">
-                                <tr>
-                                    <td class="ps-0">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <h6 class="fw-semibold mb-1">Yuvraj Sheth</h6>
+                                @forelse ($categories as $category)
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <h6 class="fw-semibold mb-1">{{ $loop->iteration }}.</h6>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="border-0">
-                                        <p class="fs-3 text-dark mb-0">
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#delete">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                                </svg>
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <h6 class="fw-semibold mb-1">{{ $category->name }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#edit-modal-{{ $category->id }}">
+                                                Edit
                                             </button>
-                                        </p>
+                                            <button class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#delete-{{ $category->id }}">
+                                            Hapus
+                                        </button>
                                     </td>
                                 </tr>
+                                @include('pages.super-admin.category.partials.edit-modal')
+                                @empty
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+                                            <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                                                style="width: clamp(150px, 50vw, 300px);">
+                                            <p class="mt-3">Tidak ada data tersedia</p>
+                                        </td>
+                                    </tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-@section('modal')
-    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="delete">Information!!!</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div style="margin-left: 100px" class="modal-body">
-                    Apakah Anda Yakin Ingin Menghapus?
-                </div>
-                <div class="modal-footer">
-                    <a href="{{ '/category' }}">
-                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
-                    </a>
+                    @include('pages.super-admin.category.partials.create-modal')
                 </div>
             </div>
         </div>
