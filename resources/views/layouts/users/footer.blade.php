@@ -5,32 +5,30 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>Smk kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit
+                        <p>SMK kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit
                             usaha SMK kami.</p>
-                            <div style="display: flex; align-items: center; gap: 35px; flex-wrap: wrap;">
-                                <div style="display: flex; flex-direction: column; align-items: center;">
-                                    <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology"
+                        <div style="display: flex; align-items: center; gap: 35px; flex-wrap: wrap;">
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <img src="{{ asset('logo/ALputer.jpg') }}" alt="ALputer Logo"
+                                    style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
+                                <img src="{{ asset('logo/Almotor.png') }}" alt="Almotor Logo"
+                                    style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; ">
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <div style="display: flex; flex-direction: row; align-items: center;">
+                                    <img src="{{ asset('logo/Aljahit.png') }}" alt="Aljahit Logo"
                                         style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                    <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-top: 10px;">
-                                </div>
-                                <div style="display: flex; flex-direction: column; align-items: center; margin-left: -20px;">
-                                    <div style="display: flex; flex-direction: row; align-items: center;">
-                                        <img src="{{ asset('logo/Aljahit.png') }}" alt="Oma Mode"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                        <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-left: 10px;">
-                                    </div>
-                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 10px;">
-                                        <img src="{{ asset('logo/Altoko.png') }}" alt="Oma Mode"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                        <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo"
-                                            style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; margin-left: 10px;">
-                                    </div>
+                                    <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo"
+                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
+                            </div>
+                            <div style="display: flex; flex-direction: row; align-items: center; margin-top: 10px;">
+                                    <img src="{{ asset('logo/Altoko.png') }}" alt="Altoko Logo"
+                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
+                                    <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo"
+                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
                                 </div>
                             </div>
-                            
-                            
+                        </div>
                     </div><!-- end newsletter -->
                 </div><!-- end widget -->
             </div><!-- end col -->
@@ -41,7 +39,7 @@
                     <p>Karena di SMK kami, kami memiliki unit usaha di setiap program studi, memberikan siswa kesempatan
                         untuk belajar dan praktik langsung di dunia industri! Bergabunglah bersama kami dan rasakan
                         pengalaman berharga ini yang akan mempersiapkan Anda menghadapi tantangan di dunia kerja. Yuk,
-                        jelajahi daftar unit usaha kami dan temukan peluang belajar yang menanti Anda</p>
+                        jelajahi daftar unit usaha kami dan temukan peluang belajar yang menanti Anda.</p>
                     <a href="#" class="readmore">Became a Teacher</a>
                 </div><!-- end widget -->
             </div><!-- end col -->
@@ -52,7 +50,6 @@
                     <div class="tags-widget">
                         <ul class="list-inline">
                             <li><a href="#">Kacaw</a></li>
-                            <li><a href="#"></a></li>
                             <li><a href="#">Edan</a></li>
                             <li><a href="#">Gacor</a></li>
                             <li><a href="#">Alamak</a></li>
@@ -100,22 +97,21 @@
                             data-placement="bottom" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="google" href="www.smkalazhar.sch.id" data-tooltip="tooltip" data-placement="bottom"
-                            title="Google Plus">
+                        <a class="google" href="http://www.smkalazhar.sch.id" data-tooltip="tooltip"
+                            data-placement="bottom" title="Google Plus">
                             <i class="fa fa-google-plus"></i>
                         </a>
                         <a class="instagram" href="https://instagram.com/smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="instagram">
+                            data-placement="bottom" title="Instagram">
                             <i class="fa fa-instagram"></i>
                         </a>
                         <a class="tiktok" href="https://tiktok.com/@smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="tiktok">
+                            data-placement="bottom" title="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
                     </div><!-- end social -->
-                </div><!-- end left -->
-            </div>
-
-        </div><!-- end container -->
-    </div><!-- end copy -->
-</div><!-- end wrapper -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end clearfix -->
+    </div><!-- end container -->
+</div><!-- end copyrights -->
