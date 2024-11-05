@@ -23,7 +23,7 @@ class NewsRequest extends FormRequest
     {
         return [
             'title' => 'required|max:250',
-            'category_id' => 'required',
+            'category_ids' => 'required',
             'description' => 'required',
             'image' => ['mimes:png,jpg,jpeg,webp', 'max:3048', $this->method() == 'PUT' ? 'nullable' : 'required'],
             'start_date' => 'nullable',
@@ -36,7 +36,7 @@ class NewsRequest extends FormRequest
         return [
             'title.required' => 'Judul harus diisi.',
             'title.max' => 'Judul tidak boleh lebih dari 250 karakter.',
-            'category_id.required' => 'Kategori harus dipilih.',
+            'category_ids.required' => 'Kategori harus dipilih.',
             'description.required' => 'Deskripsi harus diisi.',
             'image.required' => 'Gambar harus diunggah.',
             'image.mimes' => 'Gambar harus berupa file dengan format: png, jpg, jpeg, atau webp.',

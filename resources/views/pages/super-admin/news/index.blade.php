@@ -47,7 +47,6 @@
 
 
         <div class="row">
-            {{--  data 1  --}}
             @forelse ($data as $date)
                 <div class="col-md-6 col-lg-4">
                     <div class="card rounded-2 overflow-hidden hover-img">
@@ -99,7 +98,11 @@
                     </div>
                 </div>
             @empty
-                <p>Data Not Found</p>
+            <div class="col-12 text-center">
+                <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                    style="width: clamp(150px, 50vw, 300px);">
+                <p class="mt-3">Tidak ada data tersedia</p>
+            </div>
             @endforelse
         </div>
     </div>

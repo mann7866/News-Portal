@@ -8,9 +8,9 @@ class News extends Model
 {
     protected $guarded = [];
 
-    public function category()
+    public function categories()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsToMany(Category::class, 'news_categories', 'news_id', 'category_id');
     }
 
     public function user()
