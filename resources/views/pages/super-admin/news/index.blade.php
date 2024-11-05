@@ -1,4 +1,4 @@
-@extends('layouts.super-admin.app')
+    @extends('layouts.super-admin.app')
 @section('content')
     <div class="card bg-light-info shadow-none position-relative overflow-hidden">
         <div class="card-body px-4 py-3">
@@ -47,62 +47,53 @@
 
 
         <div class="row">
-            @forelse ($data as $date)
+            {{--  data 1  --}}
+            @forelse ($data as $news)
                 <div class="col-md-6 col-lg-4">
                     <div class="card rounded-2 overflow-hidden hover-img">
                         <div class="position-relative">
                             <a href="javascript:void(0)">
-                                <img src="{{ asset('storage/' . $date->image) }}"
-                                    class="card-img-top rounded-0 custom-style" alt="...">
+                                <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}"
+                                    class="card-img-top rounded-0" alt="...">
                             </a>
+
+
                             <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
                                 <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#" id="delete"
-                                            data-bs-toggle="modal" data-bs-target="#add-news">Hapus</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item"
+                                            href="{{ route('news.edit') }}">Edit</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
                                     <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
                                 </ul>
                             </div>
+
                             <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
                                 class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9"
                                 width="40" height="40" data-bs-toggle="tooltip" data-bs-placement="top"
                                 data-bs-title="Addie Keller">
                         </div>
                         <div class="card-body p-4">
-                            <span
-                                class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
-                            <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul: {{ $date->title }}</span>
-                            <p class="d-block my-4 fs-5 text-dark fw-semibold">
-                                {{ Str::limit(strip_tags($date->description), 60) }}
-                            </p>
+                            <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $news->category->name }}</span>
+                            <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">
+                                {{ $news->description }}
+                            </a>
                             <div class="d-flex align-items-center gap-4">
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="ti ti-eye text-dark fs-5"></i>9,125
+                                <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
                                 </div>
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="ti ti-message-2 text-dark fs-5"></i>3
+                                <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
                                 </div>
-                                <div class="d-flex align-items-center ms-auto">
-                                    <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">
-                                        <i class="ti ti-point"></i>
-                                        {{ \Carbon\Carbon::parse($date->created_at)->translatedFormat('d F Y') }}
-                                    </span>
-                                </div>
+                                <div class="d-flex align-items-center fs-2 ms-auto"><i
+                                        class="ti ti-point text-dark"></i>Mon,
+                                    Jan 16</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             @empty
-            <div class="col-12 text-center">
-                <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
-                    style="width: clamp(150px, 50vw, 300px);">
-                <p class="mt-3">Tidak ada data tersedia</p>
-            </div>
             @endforelse
         </div>
     </div>
@@ -116,8 +107,8 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Information!!!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div style="margin-left: 100px" class="modal-body">
-                    Apakah Anda Yakin Ingin Menghapus?
+                <div class="modal-body">
+                    <h2>ApakahAnda Ingin Tetap Menghapus?</h2>
                 </div>
                 <div class="modal-footer">
                     <a href="{{ '/category' }}">
@@ -152,7 +143,6 @@
         </div>
     </div>
 @endsection
-
 <style>
     .dropdown-menu a {
         color: #000000;

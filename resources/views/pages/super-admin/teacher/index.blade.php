@@ -36,7 +36,7 @@
                 </form>
             </div>
             <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-info d-flex align-items-center">
+                <a href="{{ route('teacher.create') }}" id="btn-add-contact" class="btn btn-info d-flex align-items-center">
                     <i class="ti ti-news text-white me-1 fs-5"></i> Add Guru
                 </a>
             </div>
