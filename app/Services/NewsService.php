@@ -7,6 +7,7 @@ use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use App\Enums\UploadDiskEnum;
 use App\Http\Requests\NewsRequest;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Contracts\Repositories\NewsRepository;
 use App\Base\Interface\Uploads\CustomUploadValidation;
@@ -30,34 +31,52 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
         return $this->upload($disk, $file);
     }
 
-    public function store(Request $request): array|bool
+
+    public function store(NewsRequest $request): array|bool
     {
-        $data = $request->validated();
-        $data['user_id'] = Auth::id();
-        $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));
+        return DB::transaction(function () use ($request) {
+            $data = $request->validated();
+            $data['user_id'] = Auth::id();
+            $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));
 
-        $storedNews = $this->newsRepository->store($data);
+            unset($data['category_ids']);
 
-        return $storedNews ? $storedNews->toArray() : false;
+            $storedNews = $this->newsRepository->store($data);
+
+            if ($storedNews) {
+                $storedNews->categories()->sync($request->input('category_ids', []));
+                return $storedNews->toArray();
+            }
+
+            return false;
+        });
     }
 
     public function update(Request $request, News $news): array|bool
     {
-        $data = $request->validated();
-        $data['user_id'] = Auth::id();
+        return DB::transaction(function () use ($request, $news) {
+            $data = $request->validated();
+            $data['user_id'] = Auth::id();
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $this->validateAndUpload(
-                UploadDiskEnum::NEWS_IMAGE->value,
-                $request->file('image'),
-                $news->image
-            );
-        } else {
-            $data['image'] = $news->image;
-        }
+            if ($request->hasFile('image')) {
+                $data['image'] = $this->validateAndUpload(
+                    UploadDiskEnum::NEWS_IMAGE->value,
+                    $request->file('image'),
+                    $news->image
+                );
+            } else {
+                $data['image'] = $news->image;
+            }
 
-        $isUpdated = $this->newsRepository->update($news->id, $data);
+            unset($data['category_ids']);
+            $isUpdated = $this->newsRepository->update($news->id, $data);
 
-        return $isUpdated ? $news->refresh()->toArray() : false;
+            if ($isUpdated) {
+                $news->categories()->sync($request->input('category_ids', []));
+                return $news->refresh()->toArray();
+            }
+
+            return false;
+        });
     }
 }
