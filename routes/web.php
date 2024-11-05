@@ -45,7 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/account', function () {
         return view('pages.super-admin.account.index');
     });
+
 });
 
 require __DIR__ . '/auth.php';
-// require __DIR__ . '/Zaky.php';
+require __DIR__ . '/Zaky.php';

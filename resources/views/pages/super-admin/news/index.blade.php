@@ -45,169 +45,67 @@
             </div>
         </div>
 
-        
+
         <div class="row">
-            {{--  data 1  --}}
             @forelse ($data as $date)
-            <div class="col-md-6 col-lg-4">
-                <div class="card rounded-2 overflow-hidden hover-img">
-                    <div class="position-relative">
-                        <a href="javascript:void(0)">
-                            <img src="{{ asset('storage/'. $date->image) }}" class="card-img-top rounded-0 custom-style" alt="...">
-                        </a>
-                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card rounded-2 overflow-hidden hover-img">
+                        <div class="position-relative">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('storage/' . $date->image) }}"
+                                    class="card-img-top rounded-0 custom-style" alt="...">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#" id="delete" data-bs-toggle="modal" data-bs-target="#add-news">Hapus</a></li>
-                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
-                            </ul>
+                            <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
+                                <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#" id="delete"
+                                            data-bs-toggle="modal" data-bs-target="#add-news">Hapus</a></li>
+                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
+                                </ul>
+                            </div>
+                            <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
+                                class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9"
+                                width="40" height="40" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Addie Keller">
                         </div>
-                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="" class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40" height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
-                        <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul:{{ $date->title }}</span>
-                        <p class="d-block my-4 fs-5 text-dark fw-semibold" href="#">Deskrip:{{ $date->description }}</p>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125</div>
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3</div>
-                            <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>{{ $date->start_date }}</div>
+                        <div class="card-body p-4">
+                            <span
+                                class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
+                            <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul: {{ $date->title }}</span>
+                            <p class="d-block my-4 fs-5 text-dark fw-semibold">
+                                {{ Str::limit(strip_tags($date->description), 60) }}
+                            </p>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="ti ti-eye text-dark fs-5"></i>9,125
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="ti ti-message-2 text-dark fs-5"></i>3
+                                </div>
+                                <div class="d-flex align-items-center ms-auto">
+                                    <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">
+                                        <i class="ti ti-point"></i>
+                                        {{ \Carbon\Carbon::parse($date->created_at)->translatedFormat('d F Y') }}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                </div>                
-            </div>
+                </div>
             @empty
-                <p>Data Not Found</p>
-            @endforelse            
-            {{--  data 2  --}}
-            <div class="col-md-6 col-lg-4">
-                <div class="card rounded-2 overflow-hidden hover-img">
-                    <div class="position-relative">
-                        <a href="javascript:void(0)">
-                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}" class="card-img-top rounded-0"
-                                alt="...">
-                        </a>
-
-
-                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Hapus</a></li>
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Detail</a></li>
-                            </ul>
-                        </div>
-
-                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
-                            class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
-                            height="40" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-title="Addie Keller">
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Gadget</span>
-                        <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">As yen tumbles, gadget-loving
-                            Japan goes for secondhand iPhones</a>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
-                            </div>
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
-                            </div>
-                            <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Mon,
-                                Jan 16</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                    style="width: clamp(150px, 50vw, 300px);">
+                <p class="mt-3">Tidak ada data tersedia</p>
             </div>
-            {{--  data 3  --}}
-            <div class="col-md-6 col-lg-4">
-                <div class="card rounded-2 overflow-hidden hover-img">
-                    <div class="position-relative">
-                        <a href="javascript:void(0)">
-                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}"
-                                class="card-img-top rounded-0" alt="...">
-                        </a>
-
-
-                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Hapus</a></li>
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Detail</a></li>
-                            </ul>
-                        </div>
-
-                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
-                            class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
-                            height="40" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-title="Addie Keller">
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Gadget</span>
-                        <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">As yen tumbles, gadget-loving
-                            Japan goes for secondhand iPhones</a>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
-                            </div>
-                            <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
-                            </div>
-                            <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Mon,
-                                Jan 16</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
-    <nav aria-label="...">
-        <ul class="pagination justify-content-center mb-0 mt-4">
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 d-flex align-items-center justify-content-center"
-                    href="#"><i class="ti ti-chevron-left"></i></a>
-            </li>
-            <li class="page-item active" aria-current="page">
-                <a class="page-link border-0 rounded-circle round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">4</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">5</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">...</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 mx-1 d-flex align-items-center justify-content-center"
-                    href="#">10</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link border-0 rounded-circle text-dark round-32 d-flex align-items-center justify-content-center"
-                    href="#"><i class="ti ti-chevron-right"></i></a>
-            </li>
-        </ul>
-    </nav>
 @endsection
 
 @section('modal')
@@ -223,7 +121,8 @@
                 </div>
                 <div class="modal-footer">
                     <a href="{{ '/category' }}">
-                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
+                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap
+                            Hapus!</button>
                     </a>
                 </div>
             </div>
@@ -245,7 +144,8 @@
                 </div>
                 <div class="modal-footer">
                     <a href="{{ '/category' }}">
-                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
+                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap
+                            Hapus!</button>
                     </a>
                 </div>
             </div>
@@ -269,11 +169,11 @@
         color: #dde3e9;
         /* Warna teks saat hover */
     }
-    .custom-style
-    {
+
+    .custom-style {
         width: 100%;
         height: 220px;
-        object-fit: cover; 
+        object-fit: cover;
         /* object-fix sesuaikan gambar */
         /* height tinggi ya  */
     }

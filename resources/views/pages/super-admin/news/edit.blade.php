@@ -83,7 +83,7 @@
                     <div class="">
                         <label>Kategori Berita <span class="text-danger">*</span></label>
                         <select class="select2 form-control" multiple="multiple" style="height: 36px; width: 100%"
-                            name="category_id">
+                            name="category_ids[]">
                             @foreach ($categories as $category)
                                 <option {{ $news->category_id == $category->id ? 'selected' : '' }}
                                     value="{{ $category->id }}">{{ $category->name }}</option>
