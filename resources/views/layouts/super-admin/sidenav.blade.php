@@ -41,6 +41,14 @@
                         <span class="hide-menu">Halaman Berita</span>
                     </a>
                 </li>
+                <li class="sidebar-item {{ Request::is('/category') ? 'selected' : '' }}">
+                    <a class="sidebar-link" href="/category" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-file"></i>
+                        </span>
+                        <span class="hide-menu">Kategori</span>
+                    </a>
+                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
                         <span class="d-flex">
@@ -58,7 +66,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="blog-detail.html" class="sidebar-link">
+                            <a href="/approval" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-user-share"></i>
                                 </div>
