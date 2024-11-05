@@ -1,65 +1,118 @@
-<x-guest-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - School News Portal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <form method="POST" action="{{ route('register') }}" class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-        @csrf
-
-        <!-- Name -->
-        <div class="mb-4">
-            <x-input-label for="name" :value="__('Name')" />
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                    <i class="fas fa-user"></i> <!-- Icon untuk Name -->
-                </span>
-                <x-text-input id="name" class="block mt-1 w-full pl-10 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for Card */
+        .card {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #f8f9fa; /* Warna putih sedikit abu agar shadow lebih kontras */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow lebih kuat */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Membesar saat hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Shadow lebih kuat saat hover */
+        }
+        .news-icon {
+            color: #4CAF50;
+            font-size: 2rem;
+        }
+        .register-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .register-subtitle {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        /* Centering and Background */
+        body {
+            background-color: #ffffff;
+            color: #4CAF50;
+        }
+        /* Custom Logo for Title */
+        .custom-logo {
+            width: 30px; /* Adjust size as needed */
+            height: 30px; /* Adjust size as needed */
+            vertical-align: middle; /* Center vertically */
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <!-- Card Wrapper -->
+    <div class="card p-4">
+        <!-- Title -->
+        <div class="text-center mb-4">
+            <!-- Logo -->
+            <div class="text-center mb-4">
+                <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle" style="width: 80px; height: 80px;">
             </div>
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <h2 class="register-title mt-2">Register for School News Portal</h2>
+            <p class="register-subtitle">Silakan daftar untuk mengakses berita dan informasi terkini dari sekolah.</p>
         </div>
 
-        <!-- Email Address -->
-        <div class="mb-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                    <i class="fas fa-envelope"></i> <!-- Icon untuk Email -->
-                </span>
-                <x-text-input id="email" class="block mt-1 w-full pl-10 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200" type="email" name="email" :value="old('email')" required autocomplete="username" />
+        <!-- Register Form -->
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name" class="text-success font-weight-bolder">Name</label>
+                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                @error('name')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
 
-        <!-- Password -->
-        <div class="mb-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                    <i class="fas fa-lock"></i> <!-- Icon untuk Password -->
-                </span>
-                <x-text-input id="password" class="block mt-1 w-full pl-10 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200" type="password" name="password" required autocomplete="new-password" />
+            <!-- Email Address -->
+            <div class="form-group mt-3">
+                <label for="email" class="text-success font-weight-bolder">Email</label>
+                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                @error('email')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
 
-        <!-- Confirm Password -->
-        <div class="mb-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                    <i class="fas fa-lock"></i> <!-- Icon untuk Confirm Password -->
-                </span>
-                <x-text-input id="password_confirmation" class="block mt-1 w-full pl-10 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <!-- Password -->
+            <div class="form-group mt-3">
+                <label for="password" class="text-success font-weight-bolder">Password</label>
+                <input id="password" type="password" class="form-control" name="password" required>
+                @error('password')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
 
-        <div class="flex items-center justify-between mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
+            <!-- Confirm Password -->
+            <div class="form-group mt-3">
+                <label for="password_confirmation" class="text-success font-weight-bolder">Confirm Password</label>
+                <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
+                @error('password_confirmation')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
+            </div>
 
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+            <!-- Action Buttons: Login, Already Registered -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a class="text-sm text-success" href="{{ route('login') }}">
+                    Already registered?
+                </a>
+                <button type="submit" class="btn btn-success text-white">
+                    Register
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
