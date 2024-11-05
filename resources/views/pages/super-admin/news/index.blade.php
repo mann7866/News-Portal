@@ -4,14 +4,14 @@
         <div class="card-body px-4 py-3">
             <div class="row align-items-center">
                 <div class="col-9">
-                    <h4 class="fw-semibold mb-8">Table-Berita</h4>
+                    <h4 class="fw-semibold mb-8">Halaman-Berita</h4>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a class="text-muted " href="index-2.html">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item" aria-current="page">
-                                Table-Berita
+                                Halaman-Berita
                             </li>
                         </ol>
                     </nav>
@@ -37,7 +37,8 @@
                     </form>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                    <a href="{{ route('news.create') }}" id="btn-add-contact" class="btn btn-info d-flex align-items-center" >
+                    <a href="{{ route('news.create') }}" id="btn-add-contact"
+                        class="btn btn-info d-flex align-items-center">
                         <i class="ti ti-news text-white me-1 fs-5"></i> Add Berita
                     </a>
                 </div>
@@ -47,43 +48,42 @@
 
         <div class="row">
             {{--  data 1  --}}
-            @if ($data->isEmpty())
-            <p class="text-center">Data tidak ditemukan.</p>
-        @else
-            @foreach ($data as $as)
-                <div class="col-md-6 col-lg-4">
-                    <div class="card rounded-2 overflow-hidden hover-img">
-                        <div class="position-relative">
-                            <a href="javascript:void(0)">
-                                <img src="{{ asset('storage/'. $as->image) }}" class="card-img-top rounded-0"
-                                    alt="...">
+            <div class="col-md-6 col-lg-4">
+                <div class="card rounded-2 overflow-hidden hover-img">
+                    <div class="position-relative">
+                        <a href="javascript:void(0)">
+                            <img src="{{ asset('admin-assets/images/blog/blog-img6.jpg') }}" class="card-img-top rounded-0"
+                                alt="...">
+                        </a>
+
+
+                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                             </a>
-                            <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
-                                <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Edit</a></li>
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
-                                </ul>
-                            </div>
-        
-                            <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
-                                class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
-                                height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Hapus</a></li>
+                                <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
+                            </ul>
                         </div>
-                        <div class="card-body p-4">
-                            <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $as->title }}</span>
-                            <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">{{ $as->description }}</a>
-                            <div class="d-flex align-items-center gap-4">
-                                <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
-                                </div>
-                                <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
-                                </div>
-                                <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>{{ $as->start_date }}</div>
+
+                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
+                            class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                            height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Addie Keller">
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Gadget</span>
+                        <a class="d-block my-4 fs-5 text-dark fw-semibold" href="#">As yen tumbles, gadget-loving
+                            Japan goes for secondhand iPhones</a>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
                             </div>
+                            <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3
+                            </div>
+                            <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Mon,
+                                Jan 16</div>
                         </div>
                     </div>
                 </div>
@@ -470,8 +470,7 @@
 @endsection
 
 @section('modal')
-
-{{--  create news  --}}
+    {{--  Delete news  --}}
     <div class="modal fade" id="add-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -480,47 +479,37 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
-                              <form class="mt-4" novalidate>
-                                <div class="mb-3 form-group">
-                                  <label>Basic Text Input
-                                    <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <input type="text" name="text" class="form-control" required
-                                      data-validation-required-message="This field is required" />
-                                  </div>
-                                  <div class="form-control-feedback">
-
-                                  </div>
-                                </div>
-
-                                <div class="mb-3 form-group">
-                                  <label>Password Input Field
-                                    <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <input type="password" name="password" class="form-control" required
-                                      data-validation-required-message="This field is required" />
-                                  </div>
-                                </div>
-                                <div class="mb-3 form-group">
-                                  <label>Textarea <span class="text-danger">*</span></label>
-                                  <div class="controls">
-                                    <textarea name="textarea" id="textarea" class="form-control" required
-                                      placeholder="Textarea text"></textarea>
-                                  </div>
-                                </div>
-
-                              </form>
+                  <h2>ApakahAnda Ingin Tetap Menghapus?</h2>
                 </div>
                 <div class="modal-footer">
                     <div class="text-xs-right">
                         <button type="submit" class="btn btn-info rounded-pill px-4">
-                          Submit
+                            Kembali
                         </button>
                         <button type="reset" class="btn btn-danger rounded-pill px-4">
-                          Cancel
+                            Tetap Hapus
                         </button>
-                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('modal')
+    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delete">Information!!!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div style="margin-left: 100px" class="modal-body">
+                    Apakah Anda Yakin Ingin Menghapus?
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ '/category' }}">
+                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
+                    </a>
                 </div>
             </div>
         </div>

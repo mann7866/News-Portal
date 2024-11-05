@@ -1,3 +1,4 @@
+
 <footer class="section footer noover">
     <div class="container">
         <div class="row">
@@ -28,7 +29,7 @@
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
                     <h3 class="widget-title">Popular Tags</h3>
-                    <div class="tags-widget">   
+                    <div class="tags-widget">
                         <ul class="list-inline">
                             <li><a href="#">course</a></li>
                             <li><a href="#">web design</a></li>
@@ -48,7 +49,7 @@
             <div class="col-lg-2 col-md-2">
                 <div class="widget clearfix">
                     <h3 class="widget-title">Support</h3>
-                    <div class="list-widget">   
+                    <div class="list-widget">
                         <ul>
                             <li><a href="#">Terms of Use</a></li>
                             <li><a href="#">Copyrights</a></li>

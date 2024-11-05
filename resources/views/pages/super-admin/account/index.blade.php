@@ -41,7 +41,7 @@
                                     placeholder="Cari Akun..." />
                                 <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                             </form>
-                            <button class="btn btn-primary">Create Akun</button>
+                            <button class="btn btn-primary">Add Akun</button>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -71,6 +71,7 @@
                                         <span
                                             class="badge fw-semibold py-1 w-85 bg-light-success text-success">Online</span>
                                     </td>
+
                                     <td>
                                         <p class="fs-3 text-dark mb-0">
                                             <button class="btn btn-danger btn-sm">
@@ -142,6 +143,26 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('modal')
+    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delete">Information!!!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div style="margin-left: 100px" class="modal-body">
+                    Apakah Anda Yakin Ingin Menghapus?
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ '/category' }}">
+                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap Hapus!</button>
+                    </a>
                 </div>
             </div>
         </div>

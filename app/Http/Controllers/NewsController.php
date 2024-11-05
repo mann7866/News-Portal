@@ -79,16 +79,25 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        $categories = $this->categories->get();
+
+        return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, News $news)
+    public function update(NewsRequest $request, News $news)
     {
-        //
+        try {
+            $this->service->update($request, $news);
+
+            return to_route('news.index')->with('success', 'Berita berhasil diperbarui!');
+        } catch (\Throwable $e) {
+            return to_route('news.edit', $news->id)->with('error', 'Gagal memperbarui berita. ' . $e->getMessage());
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
