@@ -275,5 +275,6 @@
         height: 220px;
         object-fit: cover; 
         /* object-fix sesuaikan gambar */
+        /* height tinggi ya  */
     }
 </style>
