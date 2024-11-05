@@ -3,7 +3,6 @@
 namespace App\Contracts\Interfaces;
 
 use App\Contracts\Interfaces\Eloquents\EloquentInterface;
-
 /**
  * Interface CategoryInterface
  *

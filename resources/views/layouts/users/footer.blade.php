@@ -64,3 +64,24 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </footer><!-- end footer -->
+
+<div class="copyrights">
+    <div class="container">
+        <div class="clearfix">
+            <div class="logo-normal">
+                <a class="navbar-brand" href="index.html">
+                    <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt="" style="width: 250px; height: auto;">
+                </a>
+            </div> 
+
+            
+            <div class="pull-right">
+                <div class="footer-links">
+                    <ul class="list-inline">
+                        <li>Design : <a href="https://html.design">HTML.Design</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- end container -->
+</div><!-- end copy -->

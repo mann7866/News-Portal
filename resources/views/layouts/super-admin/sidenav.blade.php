@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="/dashboard" class="text-nowrap logo-img">
+            <a href="/" class="text-nowrap logo-img">
                 <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
                     class="dark-logo" width="180" alt="" />
                 <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
@@ -26,7 +26,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/dashboard" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-aperture"></i>
                         </span>
@@ -42,9 +42,9 @@
                     </a>
                 </li>
                 <li class="sidebar-item {{ Request::is('/category') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/category" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('categories.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-file"></i>
+                            <i class="ti ti-category"></i>
                         </span>
                         <span class="hide-menu">Kategori</span>
                     </a>
