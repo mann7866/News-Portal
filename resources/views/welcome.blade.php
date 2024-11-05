@@ -17,8 +17,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{asset('users-assets/images/favicon.ico" type="image/x-icon')}}" />
+    <link rel="apple-touch-icon" href="{{asset('users-assets/images/apple-touch-icon.png')}}">
 
 	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -41,7 +41,7 @@
 
     <!-- LOADER -->
     <div id="preloader">
-        <img class="preloader" src="assets/images/loader.gif" alt="">
+        <img class="preloader" src="{{asset('users-assets/images/loader.gif')}}" alt="">
     </div><!-- end loader -->
     <!-- END LOADER -->
 
@@ -83,7 +83,7 @@
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="welcome">Home</a></li>
+                            <li><a href="">Home</a></li>
                             <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Mega Menu <b class="fa fa-angle-down"></b></a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -106,7 +106,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="menu-widget text-center">
                                                         <div class="image-wrap entry">
-                                                            <img src="assets/upload/course_01.jpg" alt="" class="img-responsive">
+                                                            <img src="{{asset('users-assets/upload/course_01.jpg')}}" alt="" class="img-responsive">
                                                             <div class="magnifier">
                                                                  <a href="#" title=""><i class="flaticon-add"></i></a>
                                                             </div>
@@ -290,7 +290,7 @@
                 <div class="clearfix">
                     <div class="pull-left">
                         <div class="cop-logo">
-                            <a href="#"><img src="assets/images/logo.png" alt=""></a>
+                            <a href="#"><img src="{{asset('users-assets/images/logo.png')}}" alt=""></a>
                         </div>
                     </div>
 

@@ -23,10 +23,11 @@ class NewsRequest extends FormRequest
     {
         return [
             'title' => 'required|max:250',
-            'decription' => 'required',
+            'category_id' => 'required',
+            'description' => 'required',
             'image' => ['mimes:png,jpg,jpeg,webp', 'max:3048', $this->method() == 'PUT' ? 'nullable' : 'required' ],
-            'start_date' => 'date',
-            'end_date' => 'date|after_or_equal:start_date',
+            'start_date' => 'nullable',
+            'end_date' => 'nullable|after_or_equal:start_date',
         ];
     }
 }
