@@ -1,4 +1,4 @@
-@extends('layouts.super-admin.app')
+    @extends('layouts.super-admin.app')
 @section('content')
     <div class="card bg-light-info shadow-none position-relative overflow-hidden">
         <div class="card-body px-4 py-3">
@@ -55,6 +55,8 @@
                                 <img src="{{ asset('storage/' . $item->image) }}"
                                     class="card-img-top rounded-0 custom-style" alt="...">
                             </a>
+
+
                             <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
                                 <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                     aria-expanded="false">
@@ -74,6 +76,7 @@
                                     </li>
                                 </ul>
                             </div>
+
                             <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
                                 class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9"
                                 width="40" height="40" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -87,8 +90,7 @@
                                 {{ Str::limit(strip_tags($item->description), 60) }}
                             </p>
                             <div class="d-flex align-items-center gap-4">
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="ti ti-eye text-dark fs-5"></i>9,125
+                                <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125
                                 </div>
                                 <div class="d-flex align-items-center gap-2">
                                     <i class="ti ti-message-2 text-dark fs-5"></i>3
@@ -99,9 +101,11 @@
                                         {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                                     </span>
                                 </div>
+                                <div class="d-flex align-items-center fs-2 ms-auto"><i
+                                        class="ti ti-point text-dark"></i>Mon,
+                                    Jan 16</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 @include('pages.super-admin.news.partials.delete-modal')
