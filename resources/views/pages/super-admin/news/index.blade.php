@@ -47,12 +47,12 @@
 
 
         <div class="row">
-            @forelse ($data as $date)
+            @forelse ($data as $item)
                 <div class="col-md-6 col-lg-4">
                     <div class="card rounded-2 overflow-hidden hover-img">
                         <div class="position-relative">
                             <a href="javascript:void(0)">
-                                <img src="{{ asset('storage/' . $date->image) }}"
+                                <img src="{{ asset('storage/' . $item->image) }}"
                                     class="card-img-top rounded-0 custom-style" alt="...">
                             </a>
                             <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
@@ -61,10 +61,17 @@
                                     <i style="font-size: 25px;" class="ti ti-dots-vertical"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="">Edit</a></li>
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#" id="delete"
-                                            data-bs-toggle="modal" data-bs-target="#add-news">Hapus</a></li>
-                                    <li><a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a></li>
+                                    <li>
+                                        <a style="font-size: 12px;" class="dropdown-item"
+                                            href="{{ route('news.edit', $item->id) }}">Edit</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: 12px;" class="dropdown-item" href="#"
+                                            data-bs-toggle="modal" data-bs-target="#delete-{{ $item->id }}">Hapus</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: 12px;" class="dropdown-item" href="#">Detail</a>
+                                    </li>
                                 </ul>
                             </div>
                             <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
@@ -75,9 +82,9 @@
                         <div class="card-body p-4">
                             <span
                                 class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
-                            <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul: {{ $date->title }}</span>
+                            <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul: {{ $item->title }}</span>
                             <p class="d-block my-4 fs-5 text-dark fw-semibold">
-                                {{ Str::limit(strip_tags($date->description), 60) }}
+                                {{ Str::limit(strip_tags($item->description), 60) }}
                             </p>
                             <div class="d-flex align-items-center gap-4">
                                 <div class="d-flex align-items-center gap-2">
@@ -89,7 +96,7 @@
                                 <div class="d-flex align-items-center ms-auto">
                                     <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">
                                         <i class="ti ti-point"></i>
-                                        {{ \Carbon\Carbon::parse($date->created_at)->translatedFormat('d F Y') }}
+                                        {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                                     </span>
                                 </div>
                             </div>
@@ -97,58 +104,14 @@
 
                     </div>
                 </div>
+                @include('pages.super-admin.news.partials.delete-modal')
             @empty
-            <div class="col-12 text-center">
-                <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
-                    style="width: clamp(150px, 50vw, 300px);">
-                <p class="mt-3">Tidak ada data tersedia</p>
-            </div>
+                <div class="col-12 text-center">
+                    <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                        style="width: clamp(150px, 50vw, 300px);">
+                    <p class="mt-3">Tidak ada data tersedia</p>
+                </div>
             @endforelse
-        </div>
-    </div>
-@endsection
-
-@section('modal')
-    <div class="modal fade" id="add-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Information!!!</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div style="margin-left: 100px" class="modal-body">
-                    Apakah Anda Yakin Ingin Menghapus?
-                </div>
-                <div class="modal-footer">
-                    <a href="{{ '/category' }}">
-                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap
-                            Hapus!</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
-
-@section('modal')
-    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="delete">Information!!!</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div style="margin-left: 100px" class="modal-body">
-                    Apakah Anda Yakin Ingin Menghapus?
-                </div>
-                <div class="modal-footer">
-                    <a href="{{ '/category' }}">
-                        <button type="button" style="margin-right: 170px" class="btn btn-danger">Ya! Tetap
-                            Hapus!</button>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

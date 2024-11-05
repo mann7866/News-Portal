@@ -104,6 +104,16 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
-        //
+        try {
+            $news->categories()->detach();
+
+            $this->news->delete($news->id);
+
+            $this->service->remove($news->image);
+
+            return to_route('news.index')->with('success', 'Berita berhasil dihapus!');
+        } catch (\Throwable $e) {
+            return to_route('news.index')->with('error', 'Gagal menghapus berita. ' . $e->getMessage());
+        }
     }
 }

@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
         Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
+        Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');
 
         // Category Route
         Route::get('category', [CategoryController::class, 'index'])->name('categories.index');
