@@ -95,7 +95,7 @@
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="welcome">Home</a></li>
+                            <li><a href="{{route('dashboard')}}">Home</a></li>
                          
                            
                             <li><a href="page-contact.html">Contact</a></li>
