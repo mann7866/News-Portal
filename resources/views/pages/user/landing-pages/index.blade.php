@@ -1,5 +1,6 @@
 @extends('layouts.users.topbar')
 @section('content')
+
 <section id="home" class="video-section js-height-full">
     <div class="overlay"></div>
     <div class="home-text-wrapper relative container">
@@ -25,7 +26,7 @@
         <div class="row">
             <div class="col-md-4 hidden-sm hidden-xs">
                 <div class="custom-module">
-                    <img src="assets/images/p1.jpeg" alt="" class="img-responsive wow slideInLeft">
+                    <img src="{{asset('users-assets/images/p1.jpeg')}}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
             </div><!-- end col -->
             <div class="col-md-8">

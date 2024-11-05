@@ -19,8 +19,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico" type="image/x-icon')}}" />
+    <link rel="apple-touch-icon" href="{{asset('assets/images/apple-touch-icon.png')}}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <!-- LOADER -->
     <div id="preloader">
-        <img class="preloader" src="assets/images/loader.gif" alt="">
+        <img class="preloader" src="{{asset('users-assets/images/loader.gif')}}" alt="">
     </div><!-- end loader -->
     <!-- END LOADER -->
 
@@ -115,7 +115,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="logo-normal">
-                            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
+                            <a class="navbar-brand" href="index.html"><img src="{{asset('users-assets/images/logo.png')}}"
                                     alt=""></a>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="menu-widget text-center">
                                                         <div class="image-wrap entry">
-                                                            <img src="assets/upload/course_01.jpg" alt=""
+                                                            <img src="{{asset('assets/upload/course_01.jpg')}}" alt=""
                                                                 class="img-responsive">
                                                             <div class="magnifier">
                                                                 <a href="#" title=""><i
@@ -203,7 +203,7 @@
                 <div class="clearfix">
                     <div class="pull-left">
                         <div class="cop-logo">
-                            <a href="#"><img src="assets/images/logo.png" alt=""></a>
+                            <a href="#"><img src="{{asset('users-assets/images/logo.png')}}" alt=""></a>
                         </div>
                     </div>
 
