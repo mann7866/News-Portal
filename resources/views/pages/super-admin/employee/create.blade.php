@@ -85,7 +85,7 @@
                                                 <textarea class="form-control" id="notes" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum diam. In et tristique mauris. Ut id ornare metus, sed auctor enim. Pellentesque nisi magna, laoreet a augue eget, tempor volutpat diam.</textarea>
                                                 <div class="d-flex justify-content-end mt-3">
                                                     <a class="d-block text-danger px-2 fs-8 bg-hover-danger nav-icon-hover position-relative z-index-5"
-                                                        href="{{ route('teacher.index') }}">
+                                                        href="{{ route('employee.index') }}">
                                                         <button class="btn btn-danger">
                                                             Kembali
                                                         </button>
@@ -93,7 +93,7 @@
                                                     </a>
                                                     <a type="submit"
                                                         class="text-Primary px-2 fs-8 bg-hover-primary nav-icon-hover position-relative z-index-5"
-                                                        href="{{ route('teacher.store') }}">
+                                                        href="{{ route('employee.store') }}">
                                                         <button class="btn btn-primary">
                                                             Kirim <i class="ti ti-brand-telegram"></i>
                                                         </button>
