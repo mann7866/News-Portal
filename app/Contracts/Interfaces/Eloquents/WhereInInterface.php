@@ -11,6 +11,7 @@ namespace App\Contracts\Interfaces\Eloquents;
  */
 interface WhereInInterface
 {
+    
     /**
      * Method whereIn() digunakan untuk membuat query whereIn() pada sebuah model.
      *
