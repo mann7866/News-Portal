@@ -82,7 +82,6 @@ class NewsController extends Controller
     public function edit(News $news)
     {
         $categories = $this->categories->get();
-        $news = News::findOrFail($news);
 
         return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }
