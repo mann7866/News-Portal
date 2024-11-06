@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
         NewsInterface::class => NewsRepository::class,
         CategoryInterface::class => CategoryRepository::class
     ];
-
+    
     /**
      * Register any application services.
      */
