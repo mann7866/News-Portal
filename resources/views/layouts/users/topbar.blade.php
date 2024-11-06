@@ -99,8 +99,13 @@
                          
                            
                             <li><a href="page-contact.html">Contact</a></li>
-                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i
-                                        class="fa fa-search"></i></a></li>
+                            <li><a href="{{route('login')}}">Login</a></li>
+                            <li><a href="{{route('register')}}">Register</a></li>
+                            <li class="iconitem">
+                                <a href="#" data-toggle="modal" data-target="#login-modal" id="shour">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </li>
                             
                         </ul>
                     </div>
@@ -112,4 +117,14 @@
 
         @include('layouts.users.footer')
 
+
+        {{-- script Src --}}
+        <script>
+           document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'h') {
+            event.preventDefault();
+            document.getElementById('shour').click(); // Mengklik elemen untuk membuka modal
+        }
+    });
+        </script>
        

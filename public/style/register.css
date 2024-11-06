@@ -1,0 +1,150 @@
+.card {
+  max-width: 800px; /* Menyesuaikan ukuran */
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f0f9f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: row;
+}
+/* Left and Right Sections */
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  border-right: 4px solid #e0e0e0; /* Optional: border between sections */
+}
+.left-section > img {
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
+.left-section > h2,
+.left-section > p {
+  margin: 0; /* Resets any default margin */
+  text-align: center; /* Centers the text */
+}
+.right-section {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    width: 95%; /* Adjust width */
+  }
+  
+  .left-section,
+  .right-section {
+    padding: 15px; /* Adjust padding */
+    border-right: none; /* Remove border for vertical layout */
+  }
+}
+
+
+/* Style tambahan */
+.register-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #4caf50;
+}
+
+.register-subtitle {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+button.btn-success {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.custom-logo {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* Centering and Background */
+body {
+    background-color: #ffffff;
+    color: #4caf50;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+
+
+
+/* Decorative Boxes */
+.decorative-box {
+    position: absolute;
+    background: linear-gradient(135deg, #58388e, #b466bb);
+    border-radius: 75px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.decorative-box-1 {
+    top: 5%;
+    right: 0%;
+    width: 80px;
+    height: 270px;
+    transform: rotate(45deg) translate(25%, 0%);
+    opacity: 0.7;
+}
+.decorative-box-2 {
+    top: 0%;
+    right: 0%;
+    width: 100px;
+    height: 390px;
+    transform: rotate(45deg) translate(-100%, 0%);
+    opacity: 0.7;
+}
+.decorative-box-3 {
+    top: 0%;
+    right: 0%;
+    width: 80px;
+    height: 270px;
+    transform: rotate(45deg) translate(-220%, 0%);
+    opacity: 0.7;
+}
+.decorative-box-4 {
+    bottom: 0%;
+    left: 0%;
+    width: 100px;
+    height: 390px;
+    transform: rotate(45deg) translate(100%, 10%);
+    opacity: 0.7;
+}
+.decorative-box-5 {
+    bottom: 0%;
+    left: 0%;
+    width: 80px;
+    height: 270px;
+    transform: rotate(45deg) translate(220%, 0%);
+    opacity: 0.7;
+}
+.decorative-box-6 {
+    bottom: 0%;
+    left: 0%;
+    width: 80px;
+    height: 270px;
+    transform: rotate(45deg) translate(-60%, 0%);
+    opacity: 0.7;
+}
+/* responfive */

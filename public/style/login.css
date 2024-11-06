@@ -1,0 +1,125 @@
+body {
+  background-color: #f5f7f5;
+  color: #4CAF50;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-boxes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.background-box {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.3) 100%);
+  border-radius: 15px;
+  transform: rotate(45deg);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.background-box:hover {
+  transform: rotate(60deg) scale(1.1);
+  opacity: 0.9;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  background-color: rgba(248, 249, 250, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.login-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4CAF50;
+}
+
+.login-subtitle {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.btn-success {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.btn-success:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+}
+
+.form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+  /* Styles for mobile devices */
+  @media (max-width: 767px) {
+    .card {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .login-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Styles for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        padding: 20px;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .login-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Additional Styles for larger screens */
+@media (min-width: 1025px) {
+    .card {
+        padding: 25px;
+    }
+}
