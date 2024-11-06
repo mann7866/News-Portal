@@ -17,18 +17,26 @@
                                             <div
                                                 class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-\ gap-5">
                                                 <!-- Gambar diubah menjadi kotak persegi panjang yang memenuhi ruang -->
-                                                <div class="d-flex align-items-center justify-content-center gap-5"
+                                                <div class="d-flex align-items-center justify-content-center gap-5 col-lg-6"
                                                     style="width: 40%; height: 300px;">
                                                     <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}"
                                                         alt="user4" class="rounded"
                                                         style="width: 100%; height: 100%; object-fit: cover;" />
                                                 </div>
                                                 <!-- Teks akan diganti dengan input di bawah -->
-                                                <div>
+                                                <div class="col-lg-6">
                                                     <div class="mb-3">
                                                         <label for="fullName" class="form-label">Nama Lengkap</label>
                                                         <input type="text" class="form-control" id="fullName"
                                                             value="Dr. Bonnie Barstow" />
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="company" class="form-label">Kategori Pekerjaan</label>
+                                                        <select class="form-control" id="company">
+                                                            <option value="staf" selected>Staf</option>
+                                                            <option value="staf" selected>Staf tu</option>
+                                                            <option value="guru">Guru</option>
+                                                        </select>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="jobTitle" class="form-label">Status Pangkat</label>
@@ -36,24 +44,21 @@
                                                             value="Sales Manager" />
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="company" class="form-label">Pekerjaan</label>
-                                                        <select class="form-control" id="company">
-                                                            <option value="staf" selected>Staf</option>
-                                                            <option value="staf" selected>Staf tu</option>
-                                                            <option value="guru">Guru</option>
-                                                        </select>
+                                                        <label for="jobTitle" class="form-label">Mapel Keahlian</label>
+                                                        <input type="text" class="form-control" id="jobTitle"
+                                                            value="Sales Manager" />
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <!-- Teks dan alamat diganti dengan input -->
                                             <div class="row">
-                                                <div class="col-4 mb-7">
+                                                <div class="col-6 mb-7">
                                                     <label for="phone" class="mb-1 fs-2">Nomor Telpon</label>
                                                     <input type="text" class="form-control" id="phone"
                                                         value="+6281235117136" />
                                                 </div>
-                                                <div class="col-8 mb-7">
+                                                <div class="col-6 mb-7">
                                                     <label for="email" class="mb-1 fs-2">Alamat Email</label>
                                                     <input type="email" class="form-control" id="email"
                                                         value="alexandra@modernize.com" />
@@ -64,7 +69,7 @@
                                                         value="Awu-Awu Kampung Baru, kec.Sempu" />
                                                 </div>
                                                 <div class="col-4 mb-7" id="cityField">
-                                                    <label for="city" class="mb-1 fs-2">Kota</label>
+                                                    <label for="city" class="mb-1 fs-2">Riwayat Pendidikan</label>
                                                     <input type="text" class="form-control" id="city"
                                                         value="New York" />
                                                 </div>
