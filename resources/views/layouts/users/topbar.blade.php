@@ -52,6 +52,11 @@
     /* Warna dengan transparansi */
 }
 
+.navbar-brand {
+    margin-left: 5px;
+    opacity: 90%;
+}
+
 </style>
 <body>
     <!-- LOADER -->
@@ -97,8 +102,8 @@
                         </button>
                         <div class="logo-normal">
                             <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
-                                    style="width: 250px; height: auto;">
+                                    <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
+                                    style=" width: 250px; height: auto; margin-left: 20px;">
                             </a>
                         </div>
                     </div>
