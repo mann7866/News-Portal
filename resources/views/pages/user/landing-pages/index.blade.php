@@ -1,74 +1,18 @@
 @extends('layouts.users.app')
 @section('content')
-<style>
-    /* Animasi untuk card masuk dari kiri */
-@keyframes slideInLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-/* Animasi untuk card masuk dari kanan */
-@keyframes slideInRight {
-    0% { transform: translateX(100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-/* Animasi untuk card masuk dari atas */
-@keyframes slideInTop {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-/* Animasi untuk card masuk dari bawah */
-@keyframes slideInBottom {
-    0% { transform: translateY(100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-/* Menambahkan animasi ke elemen */
-.box {
-    animation-duration: 1.5s; /* Durasi lebih lama */
-    animation-timing-function: ease-in-out; /* Efek ease-in-out untuk kelancaran */
-    animation-fill-mode: both; /* Agar animasi tetap pada posisi akhir setelah selesai */
-}
-
-/* Menambahkan animasi untuk masing-masing card */
-.box-akuntansi {
-    animation-name: slideInLeft;
-    animation-delay: 0.5s; /* Penundaan agar tidak muncul bersamaan */
-}
-
-.box-tata-busana {
-    animation-name: slideInRight;
-    animation-delay: 1s; /* Penundaan agar tidak muncul bersamaan */
-}
-
-.box-rekayasa {
-    animation-name: slideInTop;
-    animation-delay: 1.5s; /* Penundaan agar tidak muncul bersamaan */
-}
-
-.box-komputer {
-    animation-name: slideInBottom;
-    animation-delay: 2s; /* Penundaan agar tidak muncul bersamaan */
-}
-
-.box-otomotif {
-    animation-name: slideInBottom;
-    animation-delay: 2.5s; /* Penundaan agar tidak muncul bersamaan */
-}
-
-</style>
-<section style="background-color: gray" id="home" class="video-section js-height-full">
-    <div class="home-text-wrapper relative container">
-        <div style="background-color: gray" class="home-message">
-            <p>Learning Management System</p>
-            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
-        </div>
-    </div>
-    <div class="slider-bottom">
-        <span>Explore <i class="fa fa-angle-down"></i></span>
-    </div>
+<section style="background-image: url('users-assets/images/al-azhar.jpeg'); background-size: cover; color: rgb(255, 255, 255);" id="home" class="video-section js-height-full">     
+    <!-- Background hitam transparan -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    
+    <div class="home-text-wrapper relative container" style="position: relative; z-index: 2;">         
+        <div class="home-message">             
+            <p style="color: rgb(241, 241, 241);">Learning Management System</p>             
+            <small style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>         
+        </div>     
+    </div>     
+    <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2;">         
+        <span>Explore <i class="fa fa-angle-down"></i></span>     
+    </div> 
 </section>
 
 <section class="section">
