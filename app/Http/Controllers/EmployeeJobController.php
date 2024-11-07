@@ -14,20 +14,17 @@ class EmployeeJobController extends Controller
      * Display a listing of the resource.
      */
     private EmployeeJobInterface $interface;
-    private EmployeeJobService $service;
 
     /**
      * Constructor.
      *
-     * @param  App\Contracts\Interfaces\NewsInterface  $example
+     * @param  App\Contracts\Interfaces\EmployeeJobInterface  $example
      * @return void
      */
     public function __construct(
         EmployeeJobInterface $interface,
-        EmployeeJobService $service,
     ) {
         $this->interface = $interface;
-        $this->service = $service;
     }
     public function index()
     {
@@ -47,9 +44,9 @@ class EmployeeJobController extends Controller
      */
     public function store(EmployeJobRequest $request)
     {
-
         try {
             $this->interface->store($request->validated());
+
             return to_route(route: 'employeeJob.store')->with('success', 'Berhasil menambahkan Job!');
         } catch (\Throwable $e) {
             return to_route('employeeJob.create')->with('error', 'Gagal menambahkan job. ' . $e->getMessage());

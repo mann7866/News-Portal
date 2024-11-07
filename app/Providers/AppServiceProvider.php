@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use App\Contracts\Interfaces\CategoryInterface;
+use App\Contracts\Interfaces\EmployeeJobInterface;
 use Illuminate\Support\ServiceProvider;
 use App\Contracts\Interfaces\NewsInterface;
 use App\Contracts\Repositories\CategoryRepository;
+use App\Contracts\Repositories\EmployeeJobRepository;
 use App\Contracts\Repositories\NewsRepository;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,9 +15,10 @@ class AppServiceProvider extends ServiceProvider
 
     private array $register = [
         NewsInterface::class => NewsRepository::class,
-        CategoryInterface::class => CategoryRepository::class
+        CategoryInterface::class => CategoryRepository::class,
+        EmployeeJobInterface::class => EmployeeJobRepository::class
     ];
-    
+
     /**
      * Register any application services.
      */

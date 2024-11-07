@@ -26,7 +26,6 @@
         </div>
     </div>
     <div class="row">
-
         <div class="col-lg-14 d-flex align-items-strech">
             <div class="card w-100">
                 <div class="card-body">

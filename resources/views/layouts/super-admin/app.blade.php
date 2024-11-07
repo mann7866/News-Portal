@@ -46,24 +46,57 @@
         <!-- Sidebar Start -->
         @include('layouts.super-admin.sidenav')
         <!--  Sidebar End -->
-
+        @include('layouts.super-admin.partials.css')
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
             @include('layouts.super-admin.topbar')
             <div class="container-fluid">
                 @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong class="text-success">{{ $message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
-            @if ($message = Session::get('error'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong class="text-success">{{ $message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
+                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-s" role="alert"
+                        aria-live="assertive" aria-atomic="true"
+                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+                        <div class="toast-header toast-header-success">
+                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
+                            <strong class="me-auto">Success</strong>
+                            <small id="toast-time"></small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('error'))
+                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-d" role="alert"
+                        aria-live="assertive" aria-atomic="true"
+                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+                        <div class="toast-header toast-header-danger">
+                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
+                            <strong class="me-auto">Success</strong>
+                            <small id="toast-time"></small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong class="text-dark">Ada kesalahan:</strong><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 @yield('content')
             </div>
             <!--  Header End -->
@@ -81,86 +114,7 @@
                         <i class="ti ti-x fs-5 ms-3"></i>
                     </span>
                 </div>
-                <div class="modal-body message-body" data-simplebar="">
-                    <h5 class="mb-0 fs-5 p-1">Quick Page Links</h5>
-                    <ul class="list mb-0 py-2">
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Modern</span>
-                                <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Dashboard</span>
-                                <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Contacts</span>
-                                <span class="fs-3 text-muted d-block">/apps/contacts</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Posts</span>
-                                <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Detail</span>
-
-                                <span
-                                    class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Shop</span>
-                                <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Modern</span>
-                                <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Dashboard</span>
-                                <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Contacts</span>
-                                <span class="fs-3 text-muted d-block">/apps/contacts</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Posts</span>
-                                <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Detail</span>
-                                <span
-                                    class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
-                            </a>
-                        </li>
-                        <li class="p-1 mb-1 bg-hover-light-black">
-                            <a href="#">
-                                <span class="fs-3 text-black fw-normal d-block">Shop</span>
-                                <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -189,48 +143,50 @@
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
     <script>
-      /************************************/
-      //default editor
-      /************************************/
-      $(".summernote").summernote({
-        height: 350, // set editor height
-        minHeight: null, // set minimum height of editor
-        maxHeight: null, // set maximum height of editor
-        focus: false, // set focus to editable area after initializing summernote
-      });
-
-      /************************************/
-      //inline-editor
-      /************************************/
-      $(".inline-editor").summernote({
-        airMode: true,
-      });
-
-      /************************************/
-      //edit and save mode
-      /************************************/
-      (window.edit = function () {
-        $(".click2edit").summernote();
-      }),
-        (window.save = function () {
-          $(".click2edit").summernote("destroy");
+        /************************************/
+        //default editor
+        /************************************/
+        $(".summernote").summernote({
+            height: 350, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: false, // set focus to editable area after initializing summernote
         });
 
-      var edit = function () {
-        $(".click2edit").summernote({ focus: true });
-      };
+        /************************************/
+        //inline-editor
+        /************************************/
+        $(".inline-editor").summernote({
+            airMode: true,
+        });
 
-      var save = function () {
-        var markup = $(".click2edit").summernote("code");
-        $(".click2edit").summernote("destroy");
-      };
+        /************************************/
+        //edit and save mode
+        /************************************/
+        (window.edit = function() {
+            $(".click2edit").summernote();
+        }),
+        (window.save = function() {
+            $(".click2edit").summernote("destroy");
+        });
 
-      /************************************/
-      //airmode editor
-      /************************************/
-      $(".airmode-summer").summernote({
-        airMode: true,
-      });
+        var edit = function() {
+            $(".click2edit").summernote({
+                focus: true
+            });
+        };
+
+        var save = function() {
+            var markup = $(".click2edit").summernote("code");
+            $(".click2edit").summernote("destroy");
+        };
+
+        /************************************/
+        //airmode editor
+        /************************************/
+        $(".airmode-summer").summernote({
+            airMode: true,
+        });
     </script>
     @yield('modal')
 </body>
