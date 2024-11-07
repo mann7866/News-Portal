@@ -5,8 +5,9 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>SMK kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
-                        
+                        <p>SMK kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit
+                            usaha SMK kami.</p>
+
                         <!-- Menggunakan CSS Grid untuk tampilan lebih rapi -->
                         <div class="logo-grid">
                             <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
@@ -18,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- CSS Styles -->
                 <style>
                     .logo-grid {
@@ -28,15 +29,19 @@
                         justify-items: center;
                         align-items: center;
                     }
-                    
+
                     .logo-img {
                         border-radius: 10%;
                         width: 100px;
                         height: 100px;
                         object-fit: cover;
                     }
+
+                    .instagram i {
+                        color: #E4405F;
+                    }
                 </style>
-                
+
             </div><!-- end col -->
 
             <div class="col-lg-3 col-md-3">
@@ -90,8 +95,16 @@
         <div class="clearfix">
             <div class="row">
                 <div class="col-md-5 col-sm-4 hidden-xs text-left">
-                    <div class="footer-links d-flex align-items-center">
-                        <p class="text-center m-0">SMK AL-Azhar Sempu</p>
+                    <div class="footer-links d-flex flex-column align-items-start">
+                        <h3 style="color: white; margin-bottom: 10px;">SMKS Al-Azhar Sempu</h3>
+                        <p style="color: white; margin-bottom: 5px;">Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu,
+                            Kabupaten Banyuwangi, Jawa Timur</p>
+                        <p style="color: white; margin-bottom: 5px;">Kode Pos: 68468</p>
+                        <p style="color: white; margin-bottom: 5px;">Email: <a
+                                href="mailto:smkalazhar.sempubwi@gmail.com"
+                                style="color: white;">smkalazhar.sempubwi@gmail.com</a></p>
+                        <p style="color: white;">Phone: <a href="tel:+6285236553650" style="color: white;">+62 852 3655
+                                3650</a></p>
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-4 hidden-xs text-right">
@@ -102,19 +115,20 @@
                         </a>
                         <a class="twitter" href="https://x.com/smkalazharsempu" data-tooltip="tooltip"
                             data-placement="bottom" title="Twitter">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-twitter"></i> <!-- Ikon Twitter -->
                         </a>
+
                         <a class="google" href="www.smkalazhar.sch.id" data-tooltip="tooltip" data-placement="bottom"
                             title="Google Plus">
                             <i class="fa fa-google-plus"></i>
                         </a>
                         <a class="instagram" href="https://instagram.com/smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="instagram">
+                            data-placement="bottom" title="Instagram">
                             <i class="fa fa-instagram"></i>
                         </a>
                         <a class="tiktok" href="https://tiktok.com/@smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="tiktok">
-                            <i class="fab fa-tiktok"></i>
+                            data-placement="bottom" title="TikTok">
+                            <i class="fab fa-brands fa-tiktok"></i> <!-- Corrected TikTok icon -->
                         </a>
                     </div><!-- end social -->
                 </div><!-- end left -->
