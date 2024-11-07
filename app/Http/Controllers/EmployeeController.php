@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Teacher;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
-class TeacherController extends Controller
+class EmployeeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view ('pages.super-admin.teacher.index');
+        return view ('pages.super-admin.employee.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        return view ('pages.super-admin.teacher.create');
+        return view ('pages.super-admin.employee.create');
     }
 
     /**
@@ -28,21 +28,21 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        return view ('pages.super-admin.teacher.create');
+        return view ('pages.super-admin.employee.detail');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Teacher $teacher)
+    public function show(Employee $employee)
     {
-        return view ('pages.super-admin.teacher.create');
+        return view ('pages.super-admin.employee.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Teacher $teacher)
+    public function edit(Employee $employee)
     {
         //
     }
@@ -50,7 +50,7 @@ class TeacherController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Teacher $teacher)
+    public function update(Request $request, Employee $employee)
     {
         //
     }
@@ -58,7 +58,7 @@ class TeacherController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Teacher $teacher)
+    public function destroy(Employee $employee)
     {
         //
     }
