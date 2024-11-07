@@ -28,7 +28,7 @@ class EmployeeJobController extends Controller
     }
     public function index()
     {
-        //
+        return view('pages.super-admin.employee-job.index');
     }
 
     /**
@@ -49,7 +49,7 @@ class EmployeeJobController extends Controller
 
             return to_route(route: 'employeeJob.store')->with('success', 'Berhasil menambahkan Job!');
         } catch (\Throwable $e) {
-            return to_route('employeeJob.create')->with('error', 'Gagal menambahkan job. ' . $e->getMessage());
+            return to_route('employeeJob.index')->with('error', 'Gagal menambahkan job. ' . $e->getMessage());
         }
     }
 
