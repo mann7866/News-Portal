@@ -13,7 +13,7 @@ class EmployeeJobController extends Controller
     /**
      * Display a listing of the resource.
      */
-    private EmployeeJobInterface $interface;
+    private EmployeeJobInterface $employeeJob;
 
     /**
      * Constructor.
@@ -22,13 +22,15 @@ class EmployeeJobController extends Controller
      * @return void
      */
     public function __construct(
-        EmployeeJobInterface $interface,
+        EmployeeJobInterface $employeeJob,
     ) {
-        $this->interface = $interface;
+        $this->employeeJob = $employeeJob;
     }
     public function index()
     {
-        return view('pages.super-admin.employee-job.index');
+        $employeeJob = $this->employeeJob->get();
+
+        return view('pages.super-admin.employee-job.index', compact('employeeJob'));
     }
 
     /**
@@ -45,7 +47,7 @@ class EmployeeJobController extends Controller
     public function store(EmployeJobRequest $request)
     {
         try {
-            $this->interface->store($request->validated());
+            $this->employeeJob->store($request->validated());
 
             return to_route(route: 'employeeJob.store')->with('success', 'Berhasil menambahkan Job!');
         } catch (\Throwable $e) {

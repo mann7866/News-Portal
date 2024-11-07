@@ -21,10 +21,10 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="employment-status" class="control-label fw-semibold">Nama</label>
-                        <input type="text" class="form-control @error('employment-status') is-invalid @enderror"
-                            name="employment-status" id="employment-status" />
-                        @error('employment-status')
+                        <label for="employment_status" class="control-label fw-semibold">Nama</label>
+                        <input type="text" class="form-control @error('employment_status') is-invalid @enderror"
+                            name="employment_status" id="employment_status" />
+                        @error('employment_status')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

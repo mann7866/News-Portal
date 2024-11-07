@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employee_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('jobs');
-            $table->string('employment-status');
+            $table->string('employment_status');
             $table->timestamps();
         });
     }
