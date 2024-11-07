@@ -39,6 +39,7 @@ class CategoryController extends Controller
     {
         try {
             $this->category->store($request->validated());
+            
             return to_route('categories.index')->with('success', 'Berhasil manambah category!');
         } catch (\Throwable $e) {
             return to_route('categories.index')->with('error', 'Gagal menambah category. ' . $e->getMessage());
