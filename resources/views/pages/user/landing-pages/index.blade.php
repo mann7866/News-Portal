@@ -1,20 +1,5 @@
 @extends('layouts.users.app')
 @section('content')
-<<<<<<< Updated upstream
-<section style="background-image: url('users-assets/images/al-azhar.jpeg'); background-size: cover; color: rgb(255, 255, 255);" id="home" class="video-section js-height-full">     
-    <!-- Background hitam transparan -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-    
-    <div class="home-text-wrapper relative container" style="position: relative; z-index: 2;">         
-        <div class="home-message">             
-            <p style="color: rgb(241, 241, 241);">Learning Management System</p>             
-            <small style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>         
-        </div>     
-    </div>     
-    <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2;">         
-        <span>Explore <i class="fa fa-angle-down"></i></span>     
-    </div> 
-=======
 <style>
     /* Animasi untuk card masuk dari kiri */
 @keyframes slideInLeft {
@@ -84,7 +69,6 @@
     <div class="slider-bottom">
         <span>Explore <i class="fa fa-angle-down"></i></span>
     </div>
->>>>>>> Stashed changes
 </section>
 
 <section class="section">
