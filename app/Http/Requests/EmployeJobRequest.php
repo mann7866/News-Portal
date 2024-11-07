@@ -23,7 +23,7 @@ class EmployeJobRequest extends FormRequest
     {
         return [
             'jobs' => 'required|max:250|unique:Employee_jobs,jobs',
-            'employment-status' => 'required|max:250',
+            'employment_status' => 'required|max:250',
 
         ];
     }
@@ -33,8 +33,8 @@ class EmployeJobRequest extends FormRequest
             'jobs.required' => 'Pekerjaan harus diisi.',
             'jobs.unique' => 'Pekerjaan yang anda masukkan sudah tersedia.',
             'jobs.max' => 'Pekerjaan tidak boleh lebih dari 250 karakter.',
-            'employment-status.required' => 'Status Pekerjaan harus diisi.',
-            'employment-status.max' => 'Status Pekerjaan tidak boleh lebih dari 250 karakter.',
+            'employment_status.required' => 'Status Pekerjaan harus diisi.',
+            'employment_status.max' => 'Status Pekerjaan tidak boleh lebih dari 250 karakter.',
         ];
     }
 }

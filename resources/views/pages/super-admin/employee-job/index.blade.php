@@ -58,26 +58,26 @@
                                 </tr>
                             </thead>
                             <tbody class="border-top">
-
+                                @forelse ($employeeJob as $item)
                                     <tr>
                                         <td class="text-center">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">1.</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $loop->iteration }}</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">Staf Tu</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $item->jobs }}</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">Staf</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $item->employment_status }}</h6>
                                                 </div>
                                             </div>
                                         </td>
@@ -86,13 +86,21 @@
                                                 data-bs-target="#edit-modal-">
                                                 Edit
                                             </button>
-                                            <button class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#delete-">
-                                            Hapus
-                                        </button>
-                                    </td>
-                                </tr>
-                                {{-- @include('pages.super-admin.category.partials.edit-modal') --}}
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-">
+                                                Hapus
+                                            </button>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    {{-- @include('pages.super-admin.category.partials.edit-modal') --}}
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+                                            <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                                                style="width: clamp(150px, 50vw, 300px);">
+                                            <p class="mt-3">Tidak ada data tersedia</p>
+                                        </td>
+                                    </tr>
+                                @endforelse
 
                             </tbody>
                         </table>
