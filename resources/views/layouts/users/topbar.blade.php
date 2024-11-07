@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <header class="header">
+        <header class="header" style="top: 0; z-index: 1000; position: fixed">
             <!-- END # MODAL LOGIN -->
 
             <div class="container">

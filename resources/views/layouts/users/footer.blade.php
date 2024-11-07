@@ -28,6 +28,7 @@
                         gap: 20px;
                         justify-items: center;
                         align-items: center;
+                        
                     }
 
                     .logo-img {
@@ -35,11 +36,14 @@
                         width: 100px;
                         height: 100px;
                         object-fit: cover;
+                        transition: transform 0.3s ease;
+                        
                     }
 
-                    .instagram i {
-                        color: #E4405F;
-                    }
+                    .logo-img:hover {
+    transform: scale(1.1); /* Membesarkan gambar sebesar 10% saat hover */
+}
+                  
                 </style>
 
             </div><!-- end col -->
