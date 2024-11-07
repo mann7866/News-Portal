@@ -1,5 +1,6 @@
 @extends('layouts.users.app')
 @section('content')
+<<<<<<< Updated upstream
 <section style="background-image: url('users-assets/images/al-azhar.jpeg'); background-size: cover; color: rgb(255, 255, 255);" id="home" class="video-section js-height-full">     
     <!-- Background hitam transparan -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
@@ -13,6 +14,77 @@
     <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2;">         
         <span>Explore <i class="fa fa-angle-down"></i></span>     
     </div> 
+=======
+<style>
+    /* Animasi untuk card masuk dari kiri */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari kanan */
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari atas */
+@keyframes slideInTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari bawah */
+@keyframes slideInBottom {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Menambahkan animasi ke elemen */
+.box {
+    animation-duration: 1.5s; /* Durasi lebih lama */
+    animation-timing-function: ease-in-out; /* Efek ease-in-out untuk kelancaran */
+    animation-fill-mode: both; /* Agar animasi tetap pada posisi akhir setelah selesai */
+}
+
+/* Menambahkan animasi untuk masing-masing card */
+.box-akuntansi {
+    animation-name: slideInLeft;
+    animation-delay: 0.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-tata-busana {
+    animation-name: slideInRight;
+    animation-delay: 1s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-rekayasa {
+    animation-name: slideInTop;
+    animation-delay: 1.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-komputer {
+    animation-name: slideInBottom;
+    animation-delay: 2s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-otomotif {
+    animation-name: slideInBottom;
+    animation-delay: 2.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+</style>
+<section style="background-color: gray" id="home" class="video-section js-height-full">
+    <div class="home-text-wrapper relative container">
+        <div style="background-color: gray" class="home-message">
+            <p>Learning Management System</p>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
+        </div>
+    </div>
+    <div class="slider-bottom">
+        <span>Explore <i class="fa fa-angle-down"></i></span>
+    </div>
+>>>>>>> Stashed changes
 </section>
 
 <section class="section">
@@ -79,7 +151,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tagline-message text-center">
-                    <h3>Howdy, we are Sekolah, we have brought together the best quality services, offers, projects for you!</h3>
+                    <h3>Program studi  yang ada di Smk Al-Azhar</h3>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -90,27 +162,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="box m30">
-                    <i class="flaticon-computer-tool-for-education"></i>
-                    <h4>Learning system</h4>
+                <div class="box m30 box-akuntansi">
+                    <i class="bi bi-database icon-animation"></i>
+                    <h4>Akuntansi</h4>
                     <p>All sections required for online training are included to Sekolah.</p>
                     <a href="#" class="readmore">Read more</a>
                 </div>
             </div><!-- end col -->
 
             <div class="col-md-6">
-                <div class="box m30">
-                    <i class="flaticon-monitor-tablet-and-smartohone"></i>
-                    <h4>Works all mobile devices</h4>
+                <div class="box m30 box-rekayasa">
+                    <i class="bi bi-code-slash icon-animation"></i>
+                    <h4>Rekayasa Perangkat Lunak</h4>
                     <p>The most important feature of this template is that it is compatible with all mobile devices. Your customers can also visit your site easily from tablets and phones.</p>
                     <a href="#" class="readmore">Read more</a>
                 </div>
             </div><!-- end col -->
 
             <div class="col-md-3">
-                <div class="box m30">
-                    <i class="flaticon-download-business-statistics-symbol-of-a-graphic"></i>
-                    <h4>User Dashboard</h4>
+                <div class="box m30 box-tata-busana">
+                    <i class="bi bi-scissors icon-animation"></i> <!-- Ikon untuk Tata Busana -->
+                    <h4>Tata Busana</h4>
                     <p>We designed the design of all the sub-pages needed for the users.</p>
                     <a href="#" class="readmore">Read more</a>
                 </div>
@@ -121,18 +193,18 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="box">
-                    <i class="flaticon-html5"></i> <i class="flaticon-css-3"></i>
-                    <h4>Compatible HTML5 & CSS3</h4>
+                <div class="box box-komputer">
+                    <i class="bi bi-globe2 icon-animation"></i> <!-- Ikon untuk Teknik Komputer & Jaringan -->
+                    <h4>Teknik Komputer & Jaringan</h4>
                     <p>HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.</p>
                     <a href="#" class="readmore">Read more</a>
                 </div>
             </div><!-- end col -->
 
             <div class="col-md-6">
-                <div class="box">
-                    <i class="flaticon-html-coding"></i>
-                    <h4>Bootstrap Framework</h4>
+                <div class="box box-otomotif">
+                    <i class="bi bi-tools icon-animation"></i>
+                    <h4>Teknik Kendaraan Ringan Otomotif</h4>
                     <p>Bootstrap is a technique of loading a program into a computer by means of a few initial instructions which enable the introduction of the rest of the program from an input device.</p>
                     <a href="#" class="readmore">Read more</a>
                 </div>
@@ -140,6 +212,20 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
+
+
+<!-- CSS untuk animasi ikon -->
+<style>
+    .icon-animation {
+        transition: all 0.3s ease; /* Menambahkan efek transisi */
+    }
+
+    .icon-animation:hover {
+        color: #007bff; /* Ubah warna ikon saat hover */
+        transform: scale(1.2); /* Membesarkan ikon saat hover */
+    }
+</style>
+
 
 <section class="section db">
     <div class="container">
