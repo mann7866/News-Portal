@@ -38,8 +38,6 @@ class NewsController extends Controller
     {
         $data = $this->news->get();
 
-        // dd($data);
-
         return view('pages.super-admin.news.index', compact('data'));
     }
 
