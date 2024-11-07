@@ -1,97 +1,195 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Portal Berita Sekolah</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="{{asset('Logo/smkAlazhar.jpeg')}}">
-    <link rel="stylesheet" href="{{asset('style/login.css')}}">
-</head>
-<body>
-    <div class="background-boxes">
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-        <div class="background-box"></div>
-    </div>
+    <title>Login - School News Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for Card */
+        .card {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
 
-    <div class="card p-3">
-        <div class="text-center mb-3">
-            <img src="{{asset('Logo/smkAlazhar.jpeg')}}" alt="Logo Sekolah" class="logo rounded-circle mb-2">
-            <h2 class="login-title">Login Portal Berita Sekolah</h2>
-            <p class="login-subtitle">Masuk untuk akses berita terkini</p>
+        /* Background */
+        body {
+            background: linear-gradient(135deg, #f5f7f5 0%, #ffffff 100%);
+            color: #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+         /* Decorative Box */
+         .decorative-box-1 {
+            position: absolute;
+            top: 5%; /* Jarak dari atas */
+            right: 0%; /* Jarak dari kanan */
+            width: 80px; /* Sesuaikan lebar kotak */
+            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg, #388e3c, #66bb6a ); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(25%, 0%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        .decorative-box-2 {
+            position: absolute;
+            top: 0%; /* Jarak dari atas */
+            right: 0%; /* Jarak dari kanan */
+            width: 100px; /* Sesuaikan lebar kotak */
+            height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg, #388e3c, #66bb6a ); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(-100%, 0%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        .decorative-box-3 {
+            position: absolute;
+            top: 0%; /* Jarak dari atas */
+            right: 0%; /* Jarak dari kanan */
+            width: 80px; /* Sesuaikan lebar kotak */
+            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg,#388e3c, #66bb6a ); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(-220%, 0%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        .decorative-box-4 {
+            position: absolute;
+            bottom: 0%; /* Jarak dari atas */
+            left: 0%; /* Jarak dari kanan */
+            width: 100px; /* Sesuaikan lebar kotak */
+            height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(100%, 10%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        .decorative-box-5 {
+            position: absolute;
+            bottom: 0%; /* Jarak dari atas */
+            left: 0%; /* Jarak dari kanan */
+            width: 80px; /* Sesuaikan lebar kotak */
+            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(220%, 0%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        .decorative-box-6 {
+            position: absolute;
+            bottom: 0%; /* Jarak dari atas */
+            left: 0%; /* Jarak dari kanan */
+            width: 80px; /* Sesuaikan lebar kotak */
+            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
+            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            border-radius: 75px; /* Ujung lonjong */
+            transform: rotate(45deg) translate(-60%, 0%); /* Memutar dan menggeser kotak */
+            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
+        }
+        /* Resize decorative elements on smaller screens */
+        @media (max-width: 767px) {
+            .card {
+                max-width: 100%;
+                margin: 20px;
+            }
+
+            .decorative-box-1, .decorative-box-2, .decorative-box-3, 
+            .decorative-box-4, .decorative-box-5, .decorative-box-6 {
+                display: none;
+            }
+
+            .login-title {
+                font-size: 1.25rem;
+            }
+
+            .login-subtitle {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="decorative-box-1"></div>
+    <div class="decorative-box-2"></div>
+    <div class="decorative-box-3"></div>
+    <div class="decorative-box-4"></div>
+    <div class="decorative-box-5"></div>
+    <div class="decorative-box-6"></div>
+    <!-- ... Other decorative boxes ... -->
+
+    <div class="card p-4">
+        <div class="text-center mb-4">
+            <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle"
+                style="width: 80px; height: 80px;">
+            <h2 class="login-title mt-2">School News Portal Login</h2>
+            <p class="login-subtitle">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
         </div>
 
-        <!-- Display validation errors if any -->
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
+        <!-- Login Form -->
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <div class="mb-3">
-                <label for="email" class="form-label text-success fw-bold">Email</label>
-                <div class="input-group input-group-sm">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+
+            <div class="form-group">
+                <label for="email" class="text-success font-weight-bolder">
+                    <i class="fas fa-envelope"></i> {{ __('Email') }}
+                </label>
+                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
+                    placeholder="Masukkan email Anda" required autofocus>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="password" class="text-success font-weight-bolder">
+                    <i class="fas fa-lock"></i> {{ __('Password') }}
+                </label>
+                <div class="input-group">
+                    <input id="password" type="password" class="form-control" name="password"
+                        placeholder="Masukkan kata sandi Anda" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text" onclick="togglePassword()">
+                            <i id="togglePasswordIcon" class="fas fa-eye"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label text-success fw-bold">Kata Sandi</label>
-                <div class="input-group input-group-sm">
-                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan kata sandi" required>
-                </div>
-            </div>
-
-            <div class="mb-3 form-check">
-                <input type="checkbox" name="remember" class="form-check-input" id="remember_me">
-                <label class="form-check-label" for="remember_me">Ingat saya</label>
-            </div>
-
-            <button type="submit" class="btn btn-success btn-sm w-100 mb-2">
-                <i class="fas fa-sign-in-alt"></i> Masuk
-            </button>
-
-            <div class="d-flex gap-2 mb-2">
-                <button type="button" class="btn btn-outline-secondary btn-sm flex-grow-1">
-                    <i class="fab fa-google"></i> Google
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-block">
+                    <i class="fas fa-sign-in-alt"></i> {{ __('Login') }}
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm flex-grow-1">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </button>
-            </div>
-
-            <div class="text-center">
-                <a href="#" class="text-success">
-                    <small><i class="fas fa-user-plus"></i> Belum punya akun? Daftar</small>
-                </a>
             </div>
         </form>
-        <p class="login-subtitle mt-2 text-center"><small>Dapatkan berita dan informasi terbaru sekolah</small></p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.getElementById("togglePasswordIcon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
 </body>
+
 </html>
