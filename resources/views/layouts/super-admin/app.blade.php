@@ -46,24 +46,57 @@
         <!-- Sidebar Start -->
         @include('layouts.super-admin.sidenav')
         <!--  Sidebar End -->
-
+        @include('layouts.super-admin.partials.css')
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
             @include('layouts.super-admin.topbar')
             <div class="container-fluid">
                 @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong class="text-success">{{ $message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
-            @if ($message = Session::get('error'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong class="text-success">{{ $message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
+                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-s" role="alert"
+                        aria-live="assertive" aria-atomic="true"
+                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+                        <div class="toast-header toast-header-success">
+                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
+                            <strong class="me-auto">Success</strong>
+                            <small id="toast-time"></small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('error'))
+                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-d" role="alert"
+                        aria-live="assertive" aria-atomic="true"
+                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+                        <div class="toast-header toast-header-danger">
+                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
+                            <strong class="me-auto">Success</strong>
+                            <small id="toast-time"></small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong class="text-dark">Ada kesalahan:</strong><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 @yield('content')
             </div>
             <!--  Header End -->
@@ -189,48 +222,50 @@
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
     <script>
-      /************************************/
-      //default editor
-      /************************************/
-      $(".summernote").summernote({
-        height: 350, // set editor height
-        minHeight: null, // set minimum height of editor
-        maxHeight: null, // set maximum height of editor
-        focus: false, // set focus to editable area after initializing summernote
-      });
-
-      /************************************/
-      //inline-editor
-      /************************************/
-      $(".inline-editor").summernote({
-        airMode: true,
-      });
-
-      /************************************/
-      //edit and save mode
-      /************************************/
-      (window.edit = function () {
-        $(".click2edit").summernote();
-      }),
-        (window.save = function () {
-          $(".click2edit").summernote("destroy");
+        /************************************/
+        //default editor
+        /************************************/
+        $(".summernote").summernote({
+            height: 350, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: false, // set focus to editable area after initializing summernote
         });
 
-      var edit = function () {
-        $(".click2edit").summernote({ focus: true });
-      };
+        /************************************/
+        //inline-editor
+        /************************************/
+        $(".inline-editor").summernote({
+            airMode: true,
+        });
 
-      var save = function () {
-        var markup = $(".click2edit").summernote("code");
-        $(".click2edit").summernote("destroy");
-      };
+        /************************************/
+        //edit and save mode
+        /************************************/
+        (window.edit = function() {
+            $(".click2edit").summernote();
+        }),
+        (window.save = function() {
+            $(".click2edit").summernote("destroy");
+        });
 
-      /************************************/
-      //airmode editor
-      /************************************/
-      $(".airmode-summer").summernote({
-        airMode: true,
-      });
+        var edit = function() {
+            $(".click2edit").summernote({
+                focus: true
+            });
+        };
+
+        var save = function() {
+            var markup = $(".click2edit").summernote("code");
+            $(".click2edit").summernote("destroy");
+        };
+
+        /************************************/
+        //airmode editor
+        /************************************/
+        $(".airmode-summer").summernote({
+            airMode: true,
+        });
     </script>
     @yield('modal')
 </body>

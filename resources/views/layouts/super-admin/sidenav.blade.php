@@ -88,7 +88,7 @@
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-users"></i>
                                 </div>
-                                <span class="hide-menu">Profile Guru</span>
+                                <span class="hide-menu">Profile</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -97,6 +97,14 @@
                                     <i class="ti ti-user-share"></i>
                                 </div>
                                 <span class="hide-menu">Mata Pelajaran</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/approval" class="sidebar-link">
+                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                    <i class="ti ti-user-share"></i>
+                                </div>
+                                <span class="hide-menu">Status Job</span>
                             </a>
                         </li>
                     </ul>

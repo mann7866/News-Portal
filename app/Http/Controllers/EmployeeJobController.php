@@ -19,7 +19,7 @@ class EmployeeJobController extends Controller
     /**
      * Constructor.
      *
-     * @param  App\Contracts\Interfaces\NewsInterface  $example
+     * @param  App\Contracts\Interfaces\EmployeeJobInterface  $example
      * @return void
      */
     public function __construct(
@@ -47,7 +47,6 @@ class EmployeeJobController extends Controller
      */
     public function store(EmployeJobRequest $request)
     {
-
         try {
             $this->interface->store($request->validated());
             return to_route(route: 'employeeJob.store')->with('success', 'Berhasil menambahkan Job!');
