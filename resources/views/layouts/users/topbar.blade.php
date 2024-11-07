@@ -13,23 +13,13 @@
           <div class="modal-dialog">
               <div class="modal-content">
                   <!-- Begin # DIV Form -->
-                  <div id="div-forms">
-                      <form id="login-form">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span class="flaticon-add" aria-hidden="true"></span>
-                          </button>
-                          <div class="modal-body">
-                              <input class="form-control" type="text" placeholder="What you are looking for?"
-                                  required>
-                          </div>
-                      </form><!-- End # Login Form -->
-                  </div><!-- End # DIV Form -->
+                  
               </div>
           </div>
       </div>
-      <header class="header" style="top: 0; z-index: 1000;">
+      <header class="header" style="top: 0; z-index: 1000; position: fixed">
         <div class="container">
-            <nav class="navbar navbar-default yamm" style="background-color: rgb(255, 255, 255);margin-top: 15px;">
+            <nav class="navbar navbar-default yamm" style="background-color: rgb(255, 255, 255) !important;margin-top: 15px;">
                 <div class="navbar-header" style="background-color: rgb(0, 118, 47);">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,12 +43,6 @@
                         <li><a href="page-contact.html" style="color: rgb(0, 0, 0) !important;">Contact</a></li>
                         <li><a href="{{ route('login') }}" style="color: rgb(0, 0, 0) !important;">Login</a></li>
                         <li><a href="{{ route('register') }}" style="color: rgb(0, 0, 0) !important;">Register</a></li>
-                        <li class="iconitem">
-                            <a href="#" data-toggle="modal" data-target="#login-modal" id="shour"
-                                style="color: rgb(0, 0, 0) !important;">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -71,13 +55,5 @@
       @include('layouts.users.footer')
 
 
-      {{-- script Src --}}
-      <script>
-          document.addEventListener('keydown', function(event) {
-              if (event.ctrlKey && event.key === 'h') {
-                  event.preventDefault();
-                  document.getElementById('shour').click(); // Mengklik elemen untuk membuka modal
-              }
-          });
-      </script>
+
       
