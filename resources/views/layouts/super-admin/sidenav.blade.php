@@ -46,7 +46,7 @@
                         <span>
                             <i class="ti ti-category"></i>
                         </span>
-                        <span class="hide-menu">Kategori</span>
+                        <span class="hide-menu">Kategori Berita</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="/approval" class="sidebar-link">
+                            <a href="{{ route('subject.index') }}" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-user-share"></i>
                                 </div>
@@ -109,8 +109,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item {{ Request::is('/organisasi') ? 'selected' : '' }}">
-                    <a class="sidebar-link" href="/organisasi" aria-expanded="false">
+                <li class="sidebar-item {{ Request::is(route('organization.index') ) ? 'selected' : '' }}">
+                    <a class="sidebar-link" href="{{ route('organization.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-file"></i>
                         </span>

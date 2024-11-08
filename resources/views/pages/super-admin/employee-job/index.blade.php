@@ -96,13 +96,13 @@
                                 @include('pages.super-admin.employee-job.partials.edit-modal')
                                 @include('pages.super-admin.employee-job.partials.delete-modal')
                             @empty
-                                <tbody>
-                                    <tr>
-                                        <td colspan="4" class="text-center">
-                                            <h6 class="text-muted">Tidak ada data pekerjaan yang tersedia.</h6>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                            <tr>
+                                <td colspan="4" class="text-center">
+                                    <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
+                                        style="width: clamp(150px, 50vw, 300px);">
+                                    <p class="mt-3">Tidak ada data tersedia</p>
+                                </td>
+                            </tr>
                             @endforelse
 
                         </table>

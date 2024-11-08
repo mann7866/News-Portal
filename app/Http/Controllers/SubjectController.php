@@ -29,7 +29,8 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        return view('pages.super-admin.subject.index');
+        $subjects = $this->interface->get();
+        return view('pages.super-admin.subject.index',compact('subjects'));
     }
 
     /**
@@ -72,13 +73,13 @@ class SubjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Subject $subject)
+    public function update(SubjectRequest $request, Subject $subject)
     {
         try {
             $this->interface->update($subject->id,$request->validated());
-            return to_route('subject.index')->with('success', 'Berhasil Menambahkan Mata Pelajaran');
+            return to_route('subject.index')->with('success', 'Berhasil Memperbarui Mata Pelajaran');
         } catch (\Throwable $e) {
-            return to_route('subject.index')->with('error', 'Gagal Menambahkan Mata Pelajaran' . $e->getMessage());
+            return to_route('subject.index')->with('error', 'Gagal Memperbarui Mata Pelajaran' . $e->getMessage());
         }
     }
 
@@ -89,9 +90,9 @@ class SubjectController extends Controller
     {
         try {
             $this->interface->delete($subject->id);
-            return to_route('subject.index')->with('success', 'Berhasil Menambahkan Mata Pelajaran');
+            return to_route('subject.index')->with('success', 'Berhasil Menghapus Mata Pelajaran');
         } catch (\Throwable $e) {
-            return to_route('subject.index')->with('error', 'Gagal Menambahkan Mata Pelajaran' . $e->getMessage());
+            return to_route('subject.index')->with('error', 'Gagal Menghapus Mata Pelajaran' . $e->getMessage());
         }
     }
 }

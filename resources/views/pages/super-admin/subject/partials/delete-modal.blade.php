@@ -1,4 +1,4 @@
-<div class="modal fade" id="delete-{{ $category->id }}" tabindex="-1" aria-labelledby="createModal">
+<div class="modal fade" id="delete-{{ $subject->id }}" tabindex="-1" aria-labelledby="createModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header d-flex align-items-center">
@@ -12,7 +12,7 @@
                     Anda tidak dapat mengembalikan ini!!
                 </h5>
                 <h5 class="modal-title mt-2 text-center">
-                    <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
+                    <form action="{{ route('subject.destroy', $subject->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-success">Iya</button>
