@@ -68,11 +68,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div>
                                                     <h6 class="fw-semibold mb-1">{{ $counter++ }}.</h6>
-                                                </div>
                                             </div>
-                                        </td>
-                                        <td class="ps-0">
-                                            <div class="d-flex align-items-center">
                                                 <div>
                                                     <h6 class="fw-semibold mb-1">{{ $employeeJob->jobs }}</h6>
                                                 </div>

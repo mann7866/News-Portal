@@ -27,7 +27,7 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
         $data['user_id'] = Auth::id();
         $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));
         unset($data['category_ids']);
-        
+
         return $data;
     }
 
