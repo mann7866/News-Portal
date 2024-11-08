@@ -57,8 +57,12 @@ class NewsController extends Controller
     public function store(NewsRequest $request)
     {
         try {
-            $data = $this->service->store($request);
-            $this->news->store($data);
+            $result = $this->service->store($request);
+
+            $news = $this->news->store($result['data']);
+
+            $news->categories()->sync($result['category_ids']);
+
             return to_route('news.index')->with('success', 'Berhasil menambahkan berita!');
         } catch (\Throwable $e) {
             return to_route('news.create')->with('error', 'Gagal tambah berita. ' . $e->getMessage());
@@ -81,6 +85,7 @@ class NewsController extends Controller
     {
         $categories = $this->categories->get();
 
+
         return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }
 
@@ -90,9 +95,11 @@ class NewsController extends Controller
     public function update(NewsRequest $request, News $news)
     {
         try {
-            $data = $this->service->update($request, $news);
+            $result = $this->service->update($request, $news);
 
-            $this->news->update($news->id, $data);
+            $this->news->update($news->id, $result['data']);
+
+            $news->categories()->sync($result['category_ids']);
 
             return to_route('news.index')->with('success', 'Berita berhasil diperbarui!');
         } catch (\Throwable $e) {
