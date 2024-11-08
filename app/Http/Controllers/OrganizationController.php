@@ -6,11 +6,13 @@ use App\Models\organization;
 use Illuminate\Http\Request;
 use App\Http\Requests\OrganizationRequest;
 use App\Contracts\Interfaces\OrganizationInterface;
+use App\Services\OrganizationService;
 
 class OrganizationController extends Controller
 {
 
     private OrganizationInterface $interface;
+    private OrganizationService $service;
       /**
      * Constructor.
      *
@@ -19,8 +21,10 @@ class OrganizationController extends Controller
      */
     public function __construct(
         OrganizationInterface $interface,
+        OrganizationService $service,
     ){
-        $this->interface =$interface;
+        $this->interface = $interface;
+        $this->service = $service;
     }
     /**
      * Display a listing of the resource.
@@ -45,7 +49,8 @@ class OrganizationController extends Controller
     public function store(OrganizationRequest $request)
     {
         try {
-            $this->interface->store($request->validated());
+            $data = $this->service->store($request);
+            $this->interface->store($data);
             return redirect()->route('organization.index')->with('success','Berhasil menambah organisasi');
         } catch (\Throwable $e) {
             return redirect()->route('organization.index')->with('error','Gagal menambah organisasi' . $e->getMessage());
@@ -73,7 +78,8 @@ class OrganizationController extends Controller
     public function update(OrganizationRequest $request, organization $organization)
     {
         try {
-            $this->interface->update($organization->id, $request->validated());
+            $data = $this->service->update($request, $organization);
+            $this->interface->update($organization->id, $data);
             return redirect()->route('organization.index')->with('success','Berhasil memperbarui organisasi');
         } catch (\Throwable $e) {
             return redirect()->route('organization.index')->with('error','Gagal memperbarui organisasi' . $e->getMessage());
@@ -87,6 +93,7 @@ class OrganizationController extends Controller
     {
         try {
             $this->interface->delete($organization->id);
+            $this->service->remove($organization->image);
             return redirect()->route('organization.index')->with('success','Berhasil menghapus organisasi');
         } catch (\Throwable $e) {
             return redirect()->route('organization.index')->with('error','Gagal menghapus organisasi' . $e->getMessage());

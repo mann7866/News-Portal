@@ -58,9 +58,7 @@ class NewsController extends Controller
     {
         try {
             $data = $this->service->store($request);
-
             $this->news->store($data);
-
             return to_route('news.index')->with('success', 'Berhasil menambahkan berita!');
         } catch (\Throwable $e) {
             return to_route('news.create')->with('error', 'Gagal tambah berita. ' . $e->getMessage());
