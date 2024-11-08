@@ -92,75 +92,90 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </section><!-- end section -->
+<section class="section db p120">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="tagline-message text-center">
+                  <h3>Program Studi yang Ada di SMK Al-Azhar</h3>
+              </div>
+          </div><!-- end col -->
+      </div><!-- end row -->
+  </div><!-- end container -->
+</section><!-- end section -->
 
-<section class="section gb nopadtop">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="box m30 box-akuntansi">
-                    <i class="bi bi-database icon-animation"></i>
-                    <h4>Akuntansi</h4>
-                    <p>All sections required for online training are included to Sekolah.</p>
-                    <a href="#" class="readmore">Read more</a>
-                </div>
-            </div><!-- end col -->
+<section class="section gb nopadtop" style="margin:25px;">
+  <div class="container">
+      <div class="row">
+          <!-- Jurusan 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="box box-akuntansi">
+                  <i class="bi bi-database icon-animation"></i>
+                  <h4>Akuntansi</h4>
+                  <p>Menyediakan berbagai modul yang dibutuhkan untuk pembelajaran daring bidang akuntansi, membantu siswa memahami dasar-dasar pengelolaan keuangan dan pencatatan transaksi bisnis.</p>
+                  <a href="#" class="readmore">Baca selengkapnya</a>
+              </div>
+          </div><!-- end col -->
 
-            <div class="col-md-6">
-                <div class="box m30 box-rekayasa">
-                    <i class="bi bi-code-slash icon-animation"></i>
-                    <h4>Rekayasa Perangkat Lunak</h4>
-                    <p>The most important feature of this template is that it is compatible with all mobile devices. Your customers can also visit your site easily from tablets and phones.</p>
-                    <a href="#" class="readmore">Read more</a>
-                </div>
-            </div><!-- end col -->
+          <!-- Jurusan 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="box box-rekayasa">
+                  <i class="bi bi-code-slash icon-animation"></i>
+                  <h4>Rekayasa Perangkat Lunak</h4>
+                  <p>Didesain untuk mendukung pembelajaran dalam bidang pemrograman dan pengembangan perangkat lunak. Template ini responsif dan mendukung berbagai perangkat seluler.</p>
+                  <a href="#" class="readmore">Baca selengkapnya</a>
+              </div>
+          </div><!-- end col -->
 
-            <div class="col-md-3">
-                <div class="box m30 box-tata-busana">
-                    <i class="bi bi-scissors icon-animation"></i> <!-- Ikon untuk Tata Busana -->
-                    <h4>Tata Busana</h4>
-                    <p>We designed the design of all the sub-pages needed for the users.</p>
-                    <a href="#" class="readmore">Read more</a>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
+          <!-- Jurusan 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="box box-tata-busana">
+                  <i class="bi bi-scissors icon-animation"></i>
+                  <h4>Tata Busana</h4>
+                  <p>Merancang semua halaman pendukung yang dibutuhkan untuk pengguna, termasuk desain yang kreatif dan inovatif yang membantu siswa mengembangkan keterampilan dalam tata busana.</p>
+                  <a href="#" class="readmore">Baca selengkapnya</a>
+              </div>
+          </div><!-- end col -->
+      </div><!-- end row -->
 
-        <hr class="invis">
+      <div class="row">
+          <!-- Jurusan 4 -->
+          <div class="col-md-4 mb-4">
+              <div class="box box-komputer">
+                  <i class="bi bi-globe2 icon-animation"></i>
+                  <h4>Teknik Komputer & Jaringan</h4>
+                  <p>Program ini mencakup konsep dasar HTML5, yaitu bahasa markup yang digunakan untuk mengatur struktur dan menampilkan konten di web. Materi ini memberikan dasar yang kuat untuk memahami jaringan komputer.</p>
+                  <a href="#" class="readmore">Baca selengkapnya</a>
+              </div>
+          </div><!-- end col -->
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="box box-komputer">
-                    <i class="bi bi-globe2 icon-animation"></i> <!-- Ikon untuk Teknik Komputer & Jaringan -->
-                    <h4>Teknik Komputer & Jaringan</h4>
-                    <p>HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.</p>
-                    <a href="#" class="readmore">Read more</a>
-                </div>
-            </div><!-- end col -->
-
-            <div class="col-md-6">
-                <div class="box box-otomotif">
-                    <i class="bi bi-tools icon-animation"></i>
-                    <h4>Teknik Kendaraan Ringan Otomotif</h4>
-                    <p>Bootstrap is a technique of loading a program into a computer by means of a few initial instructions which enable the introduction of the rest of the program from an input device.</p>
-                    <a href="#" class="readmore">Read more</a>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
+          <!-- Jurusan 5 -->
+          <div class="col-md-4 mb-4">
+              <div class="box box-otomotif">
+                  <i class="bi bi-tools icon-animation"></i>
+                  <h4>Teknik Kendaraan Ringan Otomotif</h4>
+                  <p>Memperkenalkan teknik-teknik dasar dalam perawatan dan perbaikan kendaraan ringan, termasuk prinsip Bootstrap yang memudahkan pengenalan program ke dalam komputer untuk memulai instruksi awal.</p>
+                  <a href="#" class="readmore">Baca selengkapnya</a>
+              </div>
+          </div><!-- end col -->
+      </div><!-- end row -->
+  </div><!-- end container -->
 </section>
-
 
 <!-- CSS untuk animasi ikon -->
 <style>
-    .icon-animation {
-        transition: all 0.3s ease; /* Menambahkan efek transisi */
-    }
+  .icon-animation {
+      transition: all 0.3s ease;
+      /* Menambahkan efek transisi */
+  }
 
-    .icon-animation:hover {
-        color: #007bff; /* Ubah warna ikon saat hover */
-        transform: scale(1.2); /* Membesarkan ikon saat hover */
-    }
+  .icon-animation:hover {
+      color: #007b;
+      /* Ubah warna ikon saat hover */
+      transform: scale(1.2);
+      /* Membesarkan ikon saat hover */
+  }
 </style>
-
 
 <section class="section db">
     <div class="container">
