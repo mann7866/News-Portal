@@ -31,11 +31,18 @@
                                                             value="Dr. Bonnie Barstow" />
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="company" class="form-label">Kategori Pekerjaan</label>
-                                                        <select class="form-control" id="company">
-                                                            <option value="staf" selected>Staf</option>
-                                                            <option value="staf" selected>Staf tu</option>
-                                                            <option value="guru">Guru</option>
+                                                        <label for="company" class="form-label">Pekerjaan</label>
+                                                        <select class="select2 form-control"
+                                                            style="width: 100%; height: 36px">
+                                                            <option>Pilih Pekerjaan</option>
+                                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                                <option value="staf">Alaska</option>
+                                                                <option value="staf">Hawaii</option>
+                                                            </optgroup>
+                                                            <optgroup label="Pacific Time Zone">
+                                                                <option value="guru">California</option>
+                                                                <option value="guru">Nevada</option>
+                                                            </optgroup>
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
