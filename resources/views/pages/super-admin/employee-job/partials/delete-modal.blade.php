@@ -11,7 +11,7 @@
                 <h5 class="modal-title text-center">
                     Anda tidak dapat mengembalikan ini!!
                 </h5>
-                <h5 class="modal-title text-center">
+                <h5 class="modal-title mt-2 text-center">
                     <form action="{{ route('employeeJob.destroy', $employeeJob->id) }}" method="POST">
                         @csrf
                         @method('DELETE')

@@ -57,7 +57,7 @@
                                 </tr>
                             </thead>
                             <tbody class="border-top">
-                                @forelse ($subjects as $subject)
+                                @forelse ($organizations as $organization)
                                     <tr>
                                         <td class="text-center">
                                             <div class="d-flex align-items-center">
@@ -69,23 +69,30 @@
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">{{ $subject->subject }}</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $organization->name }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <h6 class="fw-semibold mb-1">{{ $organization->description }}</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="text-center">
                                             <button class="btn btn-warning" data-bs-toggle="modal"
-                                                data-bs-target="#edit-modal-{{ $subject->id }}">
+                                                data-bs-target="#edit-modal-{{ $organization->id }}">
                                                 Edit
                                             </button>
                                             <button class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#delete-{{ $subject->id }}">
+                                            data-bs-target="#delete-{{ $organization->id }}">
                                             Hapus
                                         </button>
                                     </td>
                                 </tr>
-                                @include('pages.super-admin.subject.partials.edit-modal')
-                                @include('pages.super-admin.subject.partials.delete-modal')
+                                @include('pages.super-admin.organization.partials.edit-modal')
+                                @include('pages.super-admin.organization.partials.delete-modal')
                                 @empty
                                     <tr>
                                         <td colspan="4" class="text-center">
@@ -98,7 +105,7 @@
                             </tbody>
                         </table>
                     </div>
-                    @include('pages.super-admin.subject.partials.create-modal')
+                    @include('pages.super-admin.organization.partials.create-modal')
                 </div>
             </div>
         </div>

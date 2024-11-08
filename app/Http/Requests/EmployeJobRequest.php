@@ -24,7 +24,7 @@ class EmployeJobRequest extends FormRequest
     {
         return [
             'jobs' => ['required','max:250',Rule::unique('employee_jobs', 'jobs')->ignore($this->EmployeeJob)],
-            'employmentStatus' => ['required', 'max:250', 'in:staff,guru'],
+            'employmentStatus' => 'required|max:250|in:staff,guru',
 
         ];
     }
