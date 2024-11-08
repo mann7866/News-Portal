@@ -105,9 +105,6 @@
                                             {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                                         </span>
                                     </div>
-                                    <div class="d-flex align-items-center fs-2 ms-auto"><i
-                                            class="ti ti-point text-dark"></i>Mon,
-                                        Jan 16</div>
                                 </div>
                             </div>
                         </div>
