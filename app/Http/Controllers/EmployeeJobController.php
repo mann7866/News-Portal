@@ -28,7 +28,8 @@ class EmployeeJobController extends Controller
     }
     public function index()
     {
-        //
+        $employeeJobs = $this->interface->get();
+        return view('pages.super-admin.employee-job.index', compact('employeeJobs'));
     }
 
     /**
@@ -47,9 +48,9 @@ class EmployeeJobController extends Controller
         try {
             $this->interface->store($request->validated());
 
-            return to_route(route: 'employeeJob.store')->with('success', 'Berhasil menambahkan Job!');
+            return to_route(route: 'employeeJob.index')->with('success', 'Berhasil menambahkan Job!');
         } catch (\Throwable $e) {
-            return to_route('employeeJob.create')->with('error', 'Gagal menambahkan job. ' . $e->getMessage());
+            return to_route('employeeJob.index')->with('error', 'Gagal menambahkan job. ' . $e->getMessage());
         }
     }
 
@@ -72,9 +73,14 @@ class EmployeeJobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, EmployeeJob $employeeJob)
+    public function update(EmployeJobRequest $request, EmployeeJob $employeeJob)
     {
-        //
+        try {
+            $this->interface->update($employeeJob->id, $request->validated());
+            return to_route(route: 'employeeJob.index')->with('success', 'Berhasil Memperbarui Job!');
+        } catch (\Throwable $e) {
+            return to_route('employeeJob.index')->with('error', 'Gagal Memperbarui job. ' . $e->getMessage());
+        }
     }
 
     /**
@@ -82,6 +88,12 @@ class EmployeeJobController extends Controller
      */
     public function destroy(EmployeeJob $employeeJob)
     {
-        //
+        try {
+            $this->interface->delete($employeeJob->id);
+            return to_route(route: 'employeeJob.index')->with('success', 'Berhasil Menghapus Job!');
+        } catch (\Throwable $e) {
+            return to_route('employeeJob.index')->with('error', 'Gagal Menghapus job. ' . $e->getMessage());
+        }
+
     }
 }

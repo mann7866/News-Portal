@@ -75,7 +75,7 @@
                         style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
                         <div class="toast-header toast-header-danger">
                             <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
-                            <strong class="me-auto">Success</strong>
+                            <strong class="me-auto">Error</strong>
                             <small id="toast-time"></small>
                             <button type="button" class="btn-close" data-bs-dismiss="toast"
                                 aria-label="Close"></button>
@@ -114,7 +114,7 @@
                         <i class="ti ti-x fs-5 ms-3"></i>
                     </span>
                 </div>
-                
+
             </div>
         </div>
     </div>

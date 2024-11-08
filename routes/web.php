@@ -47,6 +47,7 @@ Route::middleware('auth')->group(function () {
         Route::get('employee/edit', [EmployeeController::class, 'edit'])->name('employee.edit');
         Route::post('employee', [EmployeeController::class, 'store'])->name('employee.store');
         Route::put('employee/{employee}', [EmployeeController::class, 'update'])->name('employee.update');
+        Route::delete('employee/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
 
         // route employeeJob
         Route::get('employeeJob', action: [EmployeeJobController::class, 'index'])->name('employeeJob.index');
@@ -55,6 +56,10 @@ Route::middleware('auth')->group(function () {
         Route::get('employeeJob/edit', [EmployeeJobController::class, 'edit'])->name('employeeJob.edit');
         Route::post('employeeJob', [EmployeeJobController::class, 'store'])->name('employeeJob.store');
         Route::put('employeeJob/{employeeJob}', [EmployeeJobController::class, 'update'])->name('employeeJob.update');
+        Route::delete('employeeJob/{employeeJob}', [EmployeeJobController::class, 'destroy'])->name('employeeJob.destroy');
+
+        require __DIR__ . '/rohman.php';
+
     });
     Route::get('/approval', function () {
         return view('pages.super-admin.approval.index');
