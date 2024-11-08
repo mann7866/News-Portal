@@ -39,6 +39,12 @@
   <script src="js/vendor/html5shiv.min.js"></script>
   <script src="js/vendor/respond.min.js"></script>
  <![endif]-->
+{{-- swiipers --}}
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <style>
