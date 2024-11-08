@@ -1,6 +1,6 @@
 @extends('layouts.users.app')
 @section('content')
-<section style="background-image: url('bg/wkng.jpg'); background-size: cover; color: rgb(255, 255, 255);" id="home" class="video-section js-height-full">     
+<section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255);" id="home" class="video-section js-height-full">     
     <!-- Background hitam transparan -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
     
@@ -21,16 +21,17 @@
             <div class="col-md-12">
                 <div class="custom-module p40l">
                     <h2>Visi dan Misi Kami</h2>
+                    <hr>
                     <div class="visi-box mb-4">
                         <h3 class="mb-3">Visi:</h3>
-                        <div class="visi-content p-3" style="border-left: 4px solid #00A859 ; background: #f9f9f9;">
+                        <div class="visi-content p-3">
                             <p>Unggul dalam Prestasi Akademik dan Non Akademik serta menciptakan lulusan yang berkompeten sesuai kebutuhan industri berdasarkan IMTAQ.</p>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="misi-box">
                         <h3 class="mb-3">Misi:</h3>
-                        <ul class="misi-list" style="list-style: none; padding-left: 0;">
+                        <ul class="misi-list">
                             <li class="d-flex align-items-start mb-3">
                                 <i class="fa fa-check-circle text-success me-2 mt-1"></i>
                                 <span>Menghasilkan Lulusan yang Cerdas, Trampil, Kompetitif dan Mandiri Sehingga Mempunyai Nilai Juang yang Tinggi.</span>
@@ -66,11 +67,12 @@
                         <a href="##" class="btn btn-primary">Pelajari Lebih Lanjut Tentang Kami</a>
                     </div>
 
-                </div><!-- end module -->
-            </div><!-- end col -->
-        </div>
-    </div><!-- end container -->
+                </div> <!-- end custom-module -->
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container -->
 </section>
+
 
 
 
