@@ -42,15 +42,18 @@
 
 </head>
 <style>
-    .sticky-top {
+ .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
     transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
-}
+ }
 
 .sticky-top.scrolled {
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8); 
-    /* Warna dengan transparansi */
+    background-color:#000; /* Latar belakang putih dengan transparansi */
 }
+
 
 </style>
 <body>
@@ -109,8 +112,13 @@
                          
                            
                             <li><a href="page-contact.html">Contact</a></li>
-                            <li><a href="{{route('login')}}">Login</a></li>
-                            <li><a href="{{route('register')}}">Register</a></li>
+                            @if (Auth::check())
+                            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        @else
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @endif
+                        
                             <li class="iconitem">
                                 <a href="#" data-toggle="modal" data-target="#login-modal" id="shour">
                                     <i class="fa fa-search"></i>
@@ -138,14 +146,12 @@
     });
         </script>
        <script>
-        // Mendengarkan peristiwa scroll pada window
         window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) { // Jika scroll lebih dari 50px
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
-    
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) { // Jika scroll lebih dari 50px
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+       </script>
