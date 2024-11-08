@@ -6,12 +6,13 @@ use App\Contracts\Interfaces\CategoryInterface;
 use App\Contracts\Interfaces\EmployeeJobInterface;
 use Illuminate\Support\ServiceProvider;
 use App\Contracts\Interfaces\NewsInterface;
+use App\Contracts\Interfaces\OrganizationInterface;
 use App\Contracts\Repositories\CategoryRepository;
 use App\Contracts\Repositories\EmployeeJobRepository;
 use App\Contracts\Repositories\NewsRepository;
 use App\Contracts\Repositories\SubjectRepository;
 use App\Contracts\Interfaces\SubjectInterface;
-
+use App\Contracts\Repositories\OrganizationRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,7 +21,8 @@ class AppServiceProvider extends ServiceProvider
         NewsInterface::class => NewsRepository::class,
         CategoryInterface::class => CategoryRepository::class,
         EmployeeJobInterface::class => EmployeeJobRepository::class,
-        SubjectRepository::class => SubjectInterface::class,
+        SubjectInterface::class => SubjectRepository::class,
+        OrganizationInterface::class => OrganizationRepository::class,
     ];
 
     /**
