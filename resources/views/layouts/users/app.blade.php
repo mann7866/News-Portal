@@ -4,7 +4,28 @@
 <html class="no-js " lang="en"> <!--<![endif]-->
 
 <head>
+<style>
+    .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 5s ease;
+}
 
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+</style>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +64,7 @@
 
 </head>
 
-<body>
+<body id="top">
     @include('layouts.users.topbar')
     <script src="{{asset('users-assets/js/jquery.min.js')}}"></script>
     <script src="{{asset('users-assets/js/bootstrap.min.js')}}"></script>
@@ -53,5 +74,37 @@
     <!-- VIDEO BG PLUGINS -->
     <script src="{{asset('users-assets/js/videobg.js')}}"></script>
 
+    <a href="#top" class="scroll-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    
 </body>
+<script>
+    // Tampilkan tombol saat scroll ke bawah
+window.onscroll = function() {
+    const scrollButton = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+};
+
+// Tambahkan event klik pada tombol
+// Mengatur kecepatan scroll yang lebih lambat
+document.querySelector('.scroll-to-top').onclick = function(event) {
+    event.preventDefault();
+    const scrollDuration = 1000; // Durasi dalam milidetik
+    const scrollStep = -window.scrollY / (scrollDuration / 15); // Menentukan langkah scroll
+
+    function smoothScroll() {
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+            requestAnimationFrame(smoothScroll);
+        }
+    }
+    requestAnimationFrame(smoothScroll);
+};
+
+</script>
 </html>

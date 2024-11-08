@@ -54,6 +54,13 @@
     background-color:#000; /* Latar belakang putih dengan transparansi */
 }
 
+<<<<<<< HEAD
+=======
+.navbar-brand {
+    margin-left: 5px;
+    opacity: 90%;
+}
+>>>>>>> 89f29a2b05f134444d9b92ebfa4c64a60374463c
 
 </style>
 <body>
@@ -100,8 +107,8 @@
                         </button>
                         <div class="logo-normal">
                             <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
-                                    style="width: 250px; height: auto;">
+                                    <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
+                                    style=" width: 250px; height: auto; margin-left: 20px;">
                             </a>
                         </div>
                     </div>
