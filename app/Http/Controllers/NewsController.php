@@ -85,7 +85,6 @@ class NewsController extends Controller
     {
         $categories = $this->categories->get();
 
-
         return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }
 
