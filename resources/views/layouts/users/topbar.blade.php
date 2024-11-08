@@ -54,13 +54,6 @@
     background-color:#000; /* Latar belakang putih dengan transparansi */
 }
 
-<<<<<<< HEAD
-=======
-.navbar-brand {
-    margin-left: 5px;
-    opacity: 90%;
-}
->>>>>>> 89f29a2b05f134444d9b92ebfa4c64a60374463c
 
 </style>
 <body>
@@ -80,8 +73,8 @@
                     <!-- Begin # DIV Form -->
                     <div id="div-forms">
                         <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white;">
+                                <span class="flaticon-add" aria-hidden="true"  title="ctrl+h"></span>
                             </button>
                             <div class="modal-body">
                                 <input class="form-control" type="text" placeholder="What you are looking for?"
@@ -107,8 +100,8 @@
                         </button>
                         <div class="logo-normal">
                             <a class="navbar-brand" href="index.html">
-                                    <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
-                                    style=" width: 250px; height: auto; margin-left: 20px;">
+                                <img src="{{ asset('users-assets/images/logo-smk-putih.png') }}" alt=""
+                                    style="width: 250px; height: auto;">
                             </a>
                         </div>
                     </div>
