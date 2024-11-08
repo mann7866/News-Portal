@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class EmployeJobRequest extends FormRequest
 {
@@ -22,8 +23,8 @@ class EmployeJobRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'jobs' => 'required|max:250|unique:Employee_jobs,jobs',
-            'employment-status' => 'required|max:250',
+            'jobs' => ['required|max:250',Rule::unique('employee_jobs', 'jobs')->ignore($this->EmployeeJob)],
+            'employmentStatus' => 'required|max:250|in:staff,guru',
 
         ];
     }
@@ -33,8 +34,8 @@ class EmployeJobRequest extends FormRequest
             'jobs.required' => 'Pekerjaan harus diisi.',
             'jobs.unique' => 'Pekerjaan yang anda masukkan sudah tersedia.',
             'jobs.max' => 'Pekerjaan tidak boleh lebih dari 250 karakter.',
-            'employment-status.required' => 'Status Pekerjaan harus diisi.',
-            'employment-status.max' => 'Status Pekerjaan tidak boleh lebih dari 250 karakter.',
+            'employmentStatus.required' => 'Status Pekerjaan harus diisi.',
+            'employmentStatus.max' => 'Status Pekerjaan tidak boleh lebih dari 250 karakter.',
         ];
     }
 }

@@ -57,44 +57,58 @@
                                     <th scope="col" class="text-center">Opsi</th>
                                 </tr>
                             </thead>
-                            <tbody class="border-top">
+                            @php
+                                $counter = 1;
+                            @endphp
 
+                            @forelse ($employeeJobs as $employeeJob)
+                                <tbody class="border-top">
                                     <tr>
                                         <td class="text-center">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">1.</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $counter++ }}.</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">Staf Tu</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $employeeJob->jobs }}</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <h6 class="fw-semibold mb-1">Staf</h6>
+                                                    <h6 class="fw-semibold mb-1">{{ $employeeJob->employmentStatus }}</h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="text-center">
                                             <button class="btn btn-warning" data-bs-toggle="modal"
-                                                data-bs-target="#edit-modal-">
+                                                data-bs-target="#edit-modal-{{ $employeeJob->id }}">
                                                 Edit
                                             </button>
                                             <button class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#delete-">
-                                            Hapus
-                                        </button>
-                                    </td>
-                                </tr>
-                                {{-- @include('pages.super-admin.category.partials.edit-modal') --}}
+                                                data-bs-target="#delete-{{ $employeeJob->id }}">
+                                                Hapus
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @include('pages.super-admin.employee-job.partials.edit-modal')
+                                @include('pages.super-admin.employee-job.partials.delete-modal')
+                            @empty
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+                                            <h6 class="text-muted">Tidak ada data pekerjaan yang tersedia.</h6>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            @endforelse
 
-                            </tbody>
                         </table>
                     </div>
                     @include('pages.super-admin.employee-job.partials.create-modal')
