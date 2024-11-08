@@ -7,12 +7,22 @@
                 </h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('organization.update',$organization->id) }}" method="POST">
+            <form action="{{ route('organization.update',$organization->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT') <!-- This will simulate a PUT request -->
 
                 <!-- The rest of your form -->
                 <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="image" class="control-label fw-semibold">Mata Pelajaran</label>
+                        <input type="file" class="form-control @error('image') is-invalid @enderror" placeholder="masukkan Nama Organisasi..." name="image"
+                            id="image" />
+                        @error('image')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
                     <div class="mb-3">
                         <label for="name" class="control-label fw-semibold">Pekerjaan</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
