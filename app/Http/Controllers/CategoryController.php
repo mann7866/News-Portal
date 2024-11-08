@@ -39,7 +39,7 @@ class CategoryController extends Controller
     {
         try {
             $this->category->store($request->validated());
-            
+
             return to_route('categories.index')->with('success', 'Berhasil manambah category!');
         } catch (\Throwable $e) {
             return to_route('categories.index')->with('error', 'Gagal menambah category. ' . $e->getMessage());
@@ -83,7 +83,6 @@ class CategoryController extends Controller
     {
         try {
             $this->category->delete($category->id);
-
             return to_route('categories.index')->with('success', 'Berhasil menghapus category!');
         } catch (\Throwable $e) {
             return to_route('categories.index')->with('error', 'Gagal menghapus category. ' . $e->getMessage());

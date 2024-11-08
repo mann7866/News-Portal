@@ -9,6 +9,9 @@ use App\Contracts\Interfaces\NewsInterface;
 use App\Contracts\Repositories\CategoryRepository;
 use App\Contracts\Repositories\EmployeeJobRepository;
 use App\Contracts\Repositories\NewsRepository;
+use App\Contracts\Repositories\SubjectRepository;
+use App\Contracts\Interfaces\SubjectInterface;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +19,8 @@ class AppServiceProvider extends ServiceProvider
     private array $register = [
         NewsInterface::class => NewsRepository::class,
         CategoryInterface::class => CategoryRepository::class,
-        EmployeeJobInterface::class => EmployeeJobRepository::class
+        EmployeeJobInterface::class => EmployeeJobRepository::class,
+        SubjectRepository::class => SubjectInterface::class,
     ];
 
     /**
