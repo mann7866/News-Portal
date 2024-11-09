@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('phone-number');
             $table->string('e-mail');
             $table->text('description');
-            $table->foreignId('subject_id')->constrained('subjects')->cascadeOnUpdate()->restrictOnDelete();
-            $table->string('rank');
+            $table->string('skill');
             $table->foreignId('employee_jobs_id')->constrained('employees')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });

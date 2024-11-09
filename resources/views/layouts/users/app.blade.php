@@ -74,10 +74,6 @@
     <!-- VIDEO BG PLUGINS -->
     <script src="{{asset('users-assets/js/videobg.js')}}"></script>
 
-    <a href="#top" class="scroll-to-top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-    
 </body>
 <script>
     // Tampilkan tombol saat scroll ke bawah

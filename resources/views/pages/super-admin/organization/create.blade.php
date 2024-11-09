@@ -31,12 +31,12 @@
                                                             value="Dr. Bonnie Barstow" />
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="company" class="form-label">Kategori Pekerjaan</label>
+                                                        <label for="company" class="form-label">Pekerjaan</label>
                                                         <select class="select2 form-control"
                                                             style="width: 100%; height: 36px">
-                                                            <option>Pilih Kategori Pekerjaan</option>
+                                                            <option>Pilih Pekerjaan</option>
                                                             <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                                <option value="staf">Guru</option>
+                                                                <option value="staf">Alaska</option>
                                                                 <option value="staf">Hawaii</option>
                                                             </optgroup>
                                                             <optgroup label="Pacific Time Zone">
@@ -46,7 +46,12 @@
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="jobTitle" class="form-label">Gelar yang dimiliki</label>
+                                                        <label for="jobTitle" class="form-label">Status Pangkat</label>
+                                                        <input type="text" class="form-control" id="jobTitle"
+                                                            value="Sales Manager" />
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="jobTitle" class="form-label">Mapel Keahlian</label>
                                                         <input type="text" class="form-control" id="jobTitle"
                                                             value="Sales Manager" />
                                                     </div>
@@ -70,21 +75,21 @@
                                                     <input type="text" class="form-control" id="address"
                                                         value="Awu-Awu Kampung Baru, kec.Sempu" />
                                                 </div>
-                                                <div class="col-12 mb-9">
-                                                    <label for="notes" class="mb-2 fs-2">Bidang keahlian:</label>
-                                                <textarea class="form-control" id="notes" rows="4"></textarea>
+                                                <div class="col-4 mb-7" id="cityField">
+                                                    <label for="city" class="mb-1 fs-2">Riwayat Pendidikan</label>
+                                                    <input type="text" class="form-control" id="city"
+                                                        value="New York" />
                                                 </div>
-
+                                                <div class="col-8 mb-7" id="countryField">
+                                                    <label for="country" class="mb-1 fs-2">Negara</label>
+                                                    <input type="text" class="form-control" id="country"
+                                                        value="United States" />
+                                                </div>
                                             </div>
 
                                             <div class="border-bottom pb-7 mb-4">
                                                 <label for="notes" class="mb-2 fs-2">Catatan:</label>
-                                                <textarea class="form-control" id="notes" rows="4">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                     Quisque bibendum hendrerit lobortis. Nullam ut lacus eros.
-                                                     Sed at luctus urna, eu fermentum diam. In et tristique mauris.
-                                                     Ut id ornare metus, sed auctor enim. Pellentesque nisi magna,
-                                                     laoreet a augue eget, tempor volutpat diam.</textarea>
+                                                <textarea class="form-control" id="notes" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum diam. In et tristique mauris. Ut id ornare metus, sed auctor enim. Pellentesque nisi magna, laoreet a augue eget, tempor volutpat diam.</textarea>
                                                 <div class="d-flex justify-content-end mt-3">
                                                     <a class="d-block text-danger px-2 fs-8 bg-hover-danger nav-icon-hover position-relative z-index-5"
                                                         href="{{ route('employee.index') }}">
@@ -115,35 +120,3 @@
         </div>
     </div>
 @endsection
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var selectedValue = document.getElementById('company').value;
-        console.log('Initial selected value:', selectedValue); // Debug log untuk melihat nilai pertama
-
-        // Kondisi awal berdasarkan nilai dropdown
-        if (selectedValue === 'staf') {
-            document.getElementById('cityField').style.display = 'none';
-            document.getElementById('countryField').style.display = 'none';
-        } else if (selectedValue === 'guru') {
-            document.getElementById('cityField').style.display = 'block';
-            document.getElementById('countryField').style.display = 'block';
-        }
-
-        // Menambahkan event listener untuk perubahan nilai dropdown
-        document.getElementById('company').addEventListener('change', function() {
-            var selectedValue = this.value;
-            console.log('Selected value changed to:',
-                selectedValue); // Debug log untuk melihat perubahan nilai
-
-            if (selectedValue === 'staf') {
-                document.getElementById('cityField').style.display = 'none';
-                document.getElementById('countryField').style.display = 'none';
-            } else if (selectedValue === 'guru') {
-                document.getElementById('cityField').style.display = 'block';
-                document.getElementById('countryField').style.display = 'block';
-            }
-        });
-    });
-</script>
