@@ -39,29 +39,30 @@
   <script src="js/vendor/html5shiv.min.js"></script>
   <script src="js/vendor/respond.min.js"></script>
  <![endif]-->
-{{-- swiipers --}}
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    {{-- swiipers --}}
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <style>
- .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
- }
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+        transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+    }
 
-.sticky-top.scrolled {
-    backdrop-filter: blur(10px);
-    background-color:#000; /* Latar belakang putih dengan transparansi */
-}
-
-
+    .sticky-top.scrolled {
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        background-color: #000;
+        /* Latar belakang putih dengan transparansi */
+    }
 </style>
+
 <body>
     <!-- LOADER -->
     <div id="preloader">
@@ -79,8 +80,9 @@
                     <!-- Begin # DIV Form -->
                     <div id="div-forms">
                         <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white;">
-                                <span class="flaticon-add" aria-hidden="true"  title="ctrl+h"></span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                style="background-color: white;">
+                                <span class="flaticon-add" aria-hidden="true" title="ctrl+h"></span>
                             </button>
                             <div class="modal-body">
                                 <input class="form-control" type="text" placeholder="What you are looking for?"
@@ -115,12 +117,18 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="welcome">Home</a></li>
-                         
-                           
+
+
                             <li><a href="page-contact.html">Contact</a></li>
+                            @if (Auth::check())
+                                <li> <a href="{{ route('dashboard') }}">Dashboard</a></li>
+                            @else
+                                <li> <a href="{{ route('login') }}">Login</a></li>
+                                <li> <a href="{{ route('register') }}">Register</a></li>
+                            @endif
                             <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i
                                         class="fa fa-search"></i></a></li>
-                            
+
                         </ul>
                     </div>
                 </nav><!-- end navbar -->
@@ -130,5 +138,13 @@
         @yield('content')
 
         @include('layouts.users.footer')
-
-       
+        <script>
+            window.addEventListener("scroll", function() {
+                const navbar = document.querySelector(".sticky-top");
+                if (window.scrollY > 0) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        </script>

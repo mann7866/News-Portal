@@ -22,7 +22,7 @@
             <!-- Mengapa Bergabung -->
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Mengapa Bergabung dengan SMK Kami?</h3>
+                    <h3 class="widget-title" style="color:white;">Mengapa Bergabung dengan SMK Kami?</h3>
                     <details>
                         <summary><i class="fa fa-info-circle"></i> Pelajari lebih lanjut</summary>
                         <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
@@ -61,31 +61,118 @@
                         <div class="link-item"><a href="#">Merek Dagang</a></div>
                     </div>
                 </div>
-                <div class="col-md-5 col-sm-4 hidden-xs text-right">
+            </div>
+        </div>
+
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-md-5 col-sm-4 text-left">
+                    <div class="footer-links d-flex flex-column align-items-start">
+                        <h3 style="color: white; margin-bottom: 10px;">SMKS Al-Azhar Sempu</h3>
+                        <p>Jl. Imam Syafi'i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
+                        <p>Kode Pos: 68468</p>
+                        <p>Email: <a href="mailto:smkalazhar.sempubwi@gmail.com" style="color: #fff;">smkalazhar.sempubwi@gmail.com</a></p>
+                        <p>Telepon: <a href="tel:+6285236553650" style="color: #fff;">+62 852 3655 3650</a></p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-4 text-right">
                     <div class="social d-flex justify-content-center align-items-center">
-                        <a class="facebook" href="https://www.facebook.com/smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a class="twitter" href="https://x.com/smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="google" href="http://www.smkalazhar.sch.id" data-tooltip="tooltip"
-                            data-placement="bottom" title="Google Plus">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                        <a class="instagram" href="https://instagram.com/smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="Instagram">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <a class="tiktok" href="https://tiktok.com/@smkalazharsempu" data-tooltip="tooltip"
-                            data-placement="bottom" title="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div><!-- end social -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end clearfix -->
-    </div><!-- end container -->
-</div><!-- end copyrights -->
+                        <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i class="fa fa-facebook"></i></a>
+                        <a class="twitter" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
+                        <a class="google" href="www.smkalazhar.sch.id"><i class="fa fa-google-plus"></i></a>
+                        <a class="instagram" href="https://instagram.com/smkalazharsempu"><i class="fa fa-instagram"></i></a>
+                        <a class="tiktok" href="https://tiktok.com/@smkalazharsempu"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- CSS -->
+    <style>
+        /* Main Footer Styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+    
+        /* Grid for logos */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 10px;
+            justify-items: center;
+        }
+    
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8%;
+            transition: transform 0.3s ease;
+        }
+    
+        .logo-img:hover {
+            transform: scale(1.1);
+        }
+    
+        /* Details section */
+        details summary {
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    
+        details summary i {
+            margin-right: 5px;
+        }
+    
+        /* Tag styles */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+    
+        .tag-item a {
+            padding: 5px 8px;
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        .tag-item a:hover {
+            background-color: #555;
+        }
+    
+        /* Support links */
+        .support-links {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    
+        .link-item a {
+            color: #ccc;
+            text-decoration: none;
+        }
+    
+        .link-item a:hover {
+            color: #fff;
+        }
+    
+        /* Social icons */
+        .social a {
+            color: #fff;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+    
+        .social a:hover {
+            color: #ccc;
+        }
+    </style>
