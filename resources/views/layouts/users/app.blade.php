@@ -4,7 +4,28 @@
 <html class="no-js " lang="en"> <!--<![endif]-->
 
 <head>
+<style>
+    .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 5s ease;
+}
 
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+</style>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,9 +43,12 @@
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico" type="image/x-icon')}}" />
     <link rel="apple-touch-icon" href="{{asset('assets/images/apple-touch-icon.png')}}">
 
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Custom & Default Styles -->
     <link rel="stylesheet" href="{{ asset('users-assets/css/bootstrap.min.css') }}">
@@ -40,7 +64,7 @@
 
 </head>
 
-<body>
+<body id="top">
     @include('layouts.users.topbar')
     <script src="{{asset('users-assets/js/jquery.min.js')}}"></script>
     <script src="{{asset('users-assets/js/bootstrap.min.js')}}"></script>

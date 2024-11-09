@@ -1,90 +1,64 @@
-<footer class="section footer noover">
+<footer class="section footer noover" style="background-color: #000; padding: 40px 0; color: #fff;">
     <div class="container">
         <div class="row">
+            <!-- Tentang SMK AL-Azhar -->
             <div class="col-lg-4 col-md-4">
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>SMK kami memiliki unit usaha di masing-masing program studi, berikut adalah daftar dari unit
-                            usaha SMK kami.</p>
-                        <div style="display: flex; align-items: center; gap: 35px; flex-wrap: wrap;">
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <img src="{{ asset('logo/ALputer.jpg') }}" alt="ALputer Logo"
-                                    style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                <img src="{{ asset('logo/Almotor.png') }}" alt="Almotor Logo"
-                                    style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover; ">
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="display: flex; flex-direction: row; align-items: center;">
-                                    <img src="{{ asset('logo/Aljahit.png') }}" alt="Aljahit Logo"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                    <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                            </div>
-                            <div style="display: flex; flex-direction: row; align-items: center; margin-top: 10px;">
-                                    <img src="{{ asset('logo/Altoko.png') }}" alt="Altoko Logo"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                    <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo"
-                                        style="border-radius: 10%; width: 100px; height: 100px; object-fit: cover;">
-                                </div>
-                            </div>
+                        <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
+                        <div class="logo-grid">
+                            <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
+                            <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
+                            <img src="{{ asset('logo/Aljahit.png') }}" alt="Al Jahit" class="logo-img">
+                            <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo" class="logo-img">
+                            <img src="{{ asset('logo/Altoko.png') }}" alt="Al Toko" class="logo-img">
+                            <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo" class="logo-img">
                         </div>
-                    </div><!-- end newsletter -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                    </div>
+                </div>
+            </div>
 
+            <!-- Mengapa Bergabung -->
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Mengapa harus bergabung SMK kami?</h3>
-                    <p>Karena di SMK kami, kami memiliki unit usaha di setiap program studi, memberikan siswa kesempatan
-                        untuk belajar dan praktik langsung di dunia industri! Bergabunglah bersama kami dan rasakan
-                        pengalaman berharga ini yang akan mempersiapkan Anda menghadapi tantangan di dunia kerja. Yuk,
-                        jelajahi daftar unit usaha kami dan temukan peluang belajar yang menanti Anda.</p>
-                    <a href="#" class="readmore">Became a Teacher</a>
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                    <h3 class="widget-title">Mengapa Bergabung dengan SMK Kami?</h3>
+                    <details>
+                        <summary><i class="fa fa-info-circle"></i> Pelajari lebih lanjut</summary>
+                        <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
+                    </details>
+                    <a href="#" class="readmore" style="color: #fff; text-decoration: underline;">Bergabung Menjadi Pengajar</a>
+                </div>
+            </div>
 
+            <!-- Tag Populer -->
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Popular Tags</h3>
+                    <h3 class="widget-title">Tag Populer</h3>
                     <div class="tags-widget">
-                        <ul class="list-inline">
-                            <li><a href="#">Kacaw</a></li>
-                            <li><a href="#">Edan</a></li>
-                            <li><a href="#">Gacor</a></li>
-                            <li><a href="#">Alamak</a></li>
-                            <li><a href="#">CIhuuy</a></li>
-                        </ul>
-                    </div><!-- end list-widget -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                        <div class="tag-list">
+                            <div class="tag-item"><a href="#">Merdeka Indo</a></div>
+                            <div class="tag-item"><a href="#">FufuFafa</a></div>
+                            <div class="tag-item"><a href="#">Benjamin</a></div>
+                            <div class="tag-item"><a href="#">SchoolHd</a></div>
+                            <div class="tag-item"><a href="#">Podcasth</a></div>
+                            <div class="tag-item"><a href="#">CIhuuy</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Dukungan -->
             <div class="col-lg-2 col-md-2">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Support</h3>
-                    <div class="list-widget">
-                        <ul>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Copyrights</a></li>
-                            <li><a href="#">Create a Ticket</a></li>
-                            <li><a href="#">Pricing & Plans</a></li>
-                            <li><a href="#">Carrier</a></li>
-                            <li><a href="#">Trademark</a></li>
-                        </ul>
-                    </div><!-- end list-widget -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</footer><!-- end footer -->
-
-<div class="copyrights">
-    <div class="container">
-        <div class="clearfix">
-            <div class="row">
-                <div class="col-md-5 col-sm-4 hidden-xs text-left">
-                    <div class="footer-links d-flex align-items-center">
-                        <p class="text-center m-0">SMK AL-Azhar Sempu</p>
+                    <h3 class="widget-title">Dukungan</h3>
+                    <div class="support-links">
+                        <div class="link-item"><a href="#">Ketentuan Penggunaan</a></div>
+                        <div class="link-item"><a href="#">Hak Cipta</a></div>
+                        <div class="link-item"><a href="#">Buat Tiket</a></div>
+                        <div class="link-item"><a href="#">Harga & Paket</a></div>
+                        <div class="link-item"><a href="#">Karir</a></div>
+                        <div class="link-item"><a href="#">Merek Dagang</a></div>
                     </div>
                 </div>
             </div>
@@ -200,5 +174,5 @@
 
     .social a:hover {
         color: #ccc;
-    }
+    }
 </style>

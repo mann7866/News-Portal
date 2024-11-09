@@ -39,11 +39,30 @@
   <script src="js/vendor/html5shiv.min.js"></script>
   <script src="js/vendor/respond.min.js"></script>
  <![endif]-->
+{{-- swiipers --}}
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
+<style>
+ .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+ }
 
+.sticky-top.scrolled {
+    backdrop-filter: blur(10px);
+    background-color:#000; /* Latar belakang putih dengan transparansi */
+}
+
+
+</style>
 <body>
-
     <!-- LOADER -->
     <div id="preloader">
         <img class="preloader" src="{{ asset('users-assets/images/loader.gif') }}" alt="">
@@ -60,8 +79,8 @@
                     <!-- Begin # DIV Form -->
                     <div id="div-forms">
                         <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white;">
+                                <span class="flaticon-add" aria-hidden="true"  title="ctrl+h"></span>
                             </button>
                             <div class="modal-body">
                                 <input class="form-control" type="text" placeholder="What you are looking for?"
@@ -72,11 +91,11 @@
                 </div>
             </div>
         </div>
-        <header class="header">
+        <header class="header" style="top: 0; z-index: 1000; position: fixed">
             <!-- END # MODAL LOGIN -->
 
             <div class="container">
-                <nav class="navbar navbar-default yamm">
+                <nav class="navbar navbar-default yamm sticky-top" id="navbar">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -123,3 +142,22 @@
         @include('layouts.users.footer')
 
 
+        {{-- script Src --}}
+        <script>
+           document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'h') {
+            event.preventDefault();
+            document.getElementById('shour').click(); // Mengklik elemen untuk membuka modal
+        }
+    });
+        </script>
+       <script>
+        window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) { // Jika scroll lebih dari 50px
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+       </script>

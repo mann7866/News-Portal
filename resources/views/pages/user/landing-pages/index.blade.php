@@ -157,14 +157,14 @@
                     </h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
-            
+
             <div class="col-lg-3 col-md-6">
                 <div class="stat-count">
                     <h4 class="stat-timer">50</h4>
                     <h3><i class="fa fa-users" style="font-size: 20px; margin-right: 8px; vertical-align: middle;"></i> Karyawan</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
-            
+
 
             <div class="col-lg-3 col-md-6">
                 <div class="stat-count">
@@ -172,7 +172,7 @@
                     <h3><i class="fa fa-flask" style="font-size: 20px; margin-right: 8px; vertical-align: middle;"></i> Laboratorium</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
-            
+
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
