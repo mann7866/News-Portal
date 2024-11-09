@@ -50,5 +50,37 @@
     <!-- VIDEO BG PLUGINS -->
     <script src="{{asset('users-assets/js/videobg.js')}}"></script>
 
+    <a href="#top" class="scroll-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
 </body>
+<script>
+    // Tampilkan tombol saat scroll ke bawah
+window.onscroll = function() {
+    const scrollButton = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+};
+
+// Tambahkan event klik pada tombol
+// Mengatur kecepatan scroll yang lebih lambat
+document.querySelector('.scroll-to-top').onclick = function(event) {
+    event.preventDefault();
+    const scrollDuration = 1000; // Durasi dalam milidetik
+    const scrollStep = -window.scrollY / (scrollDuration / 15); // Menentukan langkah scroll
+
+    function smoothScroll() {
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+            requestAnimationFrame(smoothScroll);
+        }
+    }
+    requestAnimationFrame(smoothScroll);
+};
+
+</script>
 </html>
