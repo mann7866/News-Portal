@@ -43,7 +43,7 @@
                             </form>
                             <button type="button" class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary"
                                 data-bs-toggle="modal" data-bs-target="#create-modal">
-                                Tambah
+                                <i class="ti ti-plus"></i>Add Jobs
                             </button>
                         </div>
                     </div>

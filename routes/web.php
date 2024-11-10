@@ -17,8 +17,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
-
     Route::prefix('administrator')->group(function () {
 
         Route::get('dashboard', function () {
@@ -69,6 +67,12 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/account', function () {
         return view('pages.super-admin.account.index');
+    });
+    Route::get('/layouts/news', function () {
+        return view('pages.landing-pages.index');
+    });
+    Route::get('/news', function () {
+        return view('pages.landing-pages.news.index');
     });
 
 });

@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->text('image');
             $table->string('name');
             $table->string('educational-background');
             $table->string('address');
             $table->string('phone-number');
             $table->string('e-mail');
             $table->text('description');
-            $table->string('skill-subjects');
-            $table->string('rank');
+            $table->string('skill');
             $table->foreignId('employee_jobs_id')->constrained('employees')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });

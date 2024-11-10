@@ -38,10 +38,10 @@
         @method('PUT')
         <div class="card rounded-2 overflow-hidden mb-4">
             <div class="position-relative text-center p-4">
-                <input type="file" accept="image/*" id="imageInput" name="image" style="display: none;" onchange="previewImage(event)">
+                <input type="file" accept="image/*" id="imageInput" name="image" style="display: none;"
+                    onchange="previewImage(event)">
                 <label for="imageInput">
-                    <img id="imagePreview" src="{{ asset('storage/' . $news->image) }}" class="rounded"
-                        alt="Preview"
+                    <img id="imagePreview" src="{{ asset('storage/' . $news->image) }}" class="rounded" alt="Preview"
                         style="width: 100%; height: auto; max-width: 600px; cursor: pointer; object-fit: cover;">
                 </label>
                 <p class="text-muted mt-2">Klik gambar untuk mengunggah foto</p>
@@ -49,16 +49,18 @@
 
             <div class="card-body">
                 <div class="form-group mb-4">
-                    <label for="title" class="form-label fw-bold h5">Judul Berita <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
-                        placeholder="Masukkan Judul Berita" value="{{ $news->title }}" />
+                    <label for="title" class="form-label fw-bold h5">Judul Berita <span
+                            class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
+                        id="title" placeholder="Masukkan Judul Berita" value="{{ $news->title }}" />
                     @error('title')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
 
                 <div class="form-group mb-4">
-                    <label for="description" class="form-label fw-bold h5">Deskripsi Berita <span class="text-danger">*</span></label>
+                    <label for="description" class="form-label fw-bold h5">Deskripsi Berita <span
+                            class="text-danger">*</span></label>
                     <textarea name="description" class="summernote @error('description') is-invalid @enderror">
                         {{ old('description', $news->description) }}
                     </textarea>
@@ -69,8 +71,8 @@
 
                 <div class="form-group mb-4">
                     <label>Kategori Berita <span class="text-danger">*</span></label>
-                    <select class="select2 form-control @error('category_ids') is-invalid @enderror" multiple="multiple" style="height: 36px; width: 100%"
-                        name="category_ids[]">
+                    <select class="select2 form-control @error('category_ids') is-invalid @enderror" multiple="multiple"
+                        style="height: 36px; width: 100%" name="category_ids[]">
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}"
                                 {{ in_array($category->id, old('category_ids', $news->categories->pluck('id')->toArray())) ? 'selected' : '' }}>
@@ -83,10 +85,13 @@
                     @enderror
                 </div>
 
+
+
                 <div class="form-group mb-4 row">
                     <div class="col-md-6">
                         <label for="start_date" class="form-label fw-bold h6">Start Date</label>
-                        <input type="date" name="start_date" class="form-control @error('start_date') is-invalid @enderror"
+                        <input type="date" name="start_date"
+                            class="form-control @error('start_date') is-invalid @enderror"
                             value="{{ old('start_date', $news->start_date) }}" />
                         @error('start_date')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -113,7 +118,6 @@
             </div>
         </div>
     </form>
-
 @endsection
 
 <script>

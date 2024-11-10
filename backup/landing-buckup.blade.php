@@ -106,7 +106,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </section><!-- end section -->
-
+    
     <section class="section gb nopadtop" style="margin:25px;">
         <div class="container">
             <div class="row">
@@ -119,7 +119,7 @@
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
-
+    
                 <!-- Jurusan 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="box box-rekayasa">
@@ -129,7 +129,7 @@
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
-
+    
                 <!-- Jurusan 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="box box-tata-busana">
@@ -140,7 +140,7 @@
                     </div>
                 </div><!-- end col -->
             </div><!-- end row -->
-
+    
             <div class="row">
                 <!-- Jurusan 4 -->
                 <div class="col-md-4 mb-4">
@@ -151,7 +151,7 @@
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
-
+    
                 <!-- Jurusan 5 -->
                 <div class="col-md-4 mb-4">
                     <div class="box box-otomotif">
@@ -164,14 +164,14 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </section>
-
+    
     <!-- CSS untuk animasi ikon -->
     <style>
         .icon-animation {
             transition: all 0.3s ease;
             /* Menambahkan efek transisi */
         }
-
+    
         .icon-animation:hover {
             color: #007b;
             /* Ubah warna ikon saat hover */
@@ -225,6 +225,7 @@
             <h3>Testimoni</h3>
             <p>Apa kata mereka tentang SMK Al-Azhar.</p>
         </div>
+    
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -265,10 +266,12 @@
                     </div>
                 </div>
             </div>
+    
             <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    
     <!-- JS untuk Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -303,6 +306,7 @@
             },
         });
     </script>
+    
     <!-- CSS tambahan untuk penataan -->
     <style>
         .swiper-container {
@@ -310,22 +314,24 @@
             height: auto;
             overflow: hidden; /* Prevents horizontal scrollbar */
         }
+    
         .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
-
+    
         .swiper-pagination-bullet {
             background-color: #007bff;
         }
-
+    
         /* Styling for responsiveness */
         .swiper-wrapper {
             display: flex;
             justify-content: space-between;
         }
+    
         /* Prevent any overflow or horizontal scrolling */
         .section {
             overflow-x: hidden;

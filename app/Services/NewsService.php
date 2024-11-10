@@ -25,12 +25,19 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
     {
         $data = $request->validated();
         $data['user_id'] = Auth::id();
-        $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));
+        }
+
+        $categoryIds = $data['category_ids'] ?? [];
         unset($data['category_ids']);
 
-        return $data;
+        return [
+            'data' => $data,
+            'category_ids' => $categoryIds,
+        ];
     }
-
 
     public function update(NewsRequest $request, News $news): array
     {
@@ -38,12 +45,17 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
         $data['user_id'] = Auth::id();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $this->validateAndUpload(UploadDiskEnum::NEWS_IMAGE->value,$request->file('image'),$news->image);
+            $data['image'] = $this->validateAndUpload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'), $news->image);
         } else {
             $data['image'] = $news->image;
         }
+
+        $categoryIds = $data['category_ids'] ?? [];
         unset($data['category_ids']);
 
-        return $data;
+        return [
+            'data' => $data,
+            'category_ids' => $categoryIds,
+        ];
     }
 }
