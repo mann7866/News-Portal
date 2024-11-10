@@ -14,40 +14,27 @@
             width: 100%;
             border-radius: 10px;
             background-color: #f8f9fa;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             z-index: 1;
-        }
-
-       
-        .news-icon {
-            color: #4CAF50;
-            font-size: 2rem;
-        }
-
-        .login-title {
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .login-subtitle {
-            font-size: 0.9rem;
-            color: #555;
+            padding: 20px;
         }
 
         /* Background */
         body {
             background: linear-gradient(135deg, #f5f7f5 0%, #ffffff 100%);
             color: #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             overflow: hidden;
             position: relative;
         }
 
-        
-
-        /* Decorative Box */
-        .decorative-box-1 {
+         /* Decorative Box */
+         .decorative-box-1 {
             position: absolute;
             top: 5%; /* Jarak dari atas */
             right: 0%; /* Jarak dari kanan */
@@ -113,21 +100,39 @@
             transform: rotate(45deg) translate(-60%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
         }
-        
+        /* Resize decorative elements on smaller screens */
+        @media (max-width: 767px) {
+            .card {
+                max-width: 100%;
+                margin: 20px;
+            }
+
+            .decorative-box-1, .decorative-box-2, .decorative-box-3, 
+            .decorative-box-4, .decorative-box-5, .decorative-box-6 {
+                display: none;
+            }
+
+            .login-title {
+                font-size: 1.25rem;
+            }
+
+            .login-subtitle {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
-<body class="d-flex justify-content-center align-items-center vh-100">
+<body>
     <div class="decorative-box-1"></div>
     <div class="decorative-box-2"></div>
     <div class="decorative-box-3"></div>
     <div class="decorative-box-4"></div>
     <div class="decorative-box-5"></div>
     <div class="decorative-box-6"></div>
+    <!-- ... Other decorative boxes ... -->
 
-    <!-- Card Wrapper -->
     <div class="card p-4">
-        <!-- Logo and Title -->
         <div class="text-center mb-4">
             <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle"
                 style="width: 80px; height: 80px;">
@@ -135,54 +140,56 @@
             <p class="login-subtitle">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
         </div>
 
-        <!-- Session Status -->
-        @if (session('status'))
-            <div class="alert alert-success text-center">
-                {{ session('status') }}
-            </div>
-        @endif
-
         <!-- Login Form -->
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <!-- Email Address -->
             <div class="form-group">
-                <label for="email" class="text-success font-weight-bolder">{{ __('Email') }}</label>
+                <label for="email" class="text-success font-weight-bolder">
+                    <i class="fas fa-envelope"></i> {{ __('Email') }}
+                </label>
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
-                    placeholder="Masukkan email Anda" required autofocus style="border: 1px solid #ced4da;">
-                @error('email')
-                    <small class="text-danger">{{ $message }}</small>
-                @enderror
+                    placeholder="Masukkan email Anda" required autofocus>
             </div>
 
-            <!-- Password -->
             <div class="form-group mt-3">
-                <label for="password" class="text-success font-weight-bolder">{{ __('Password') }}</label>
-                <input id="password" type="password" class="form-control" name="password"
-                    placeholder="Masukkan kata sandi Anda" required style="border: 1px solid #ced4da;">
-                @error('password')
-                    <small class="text-danger">{{ $message }}</small>
-                @enderror
+                <label for="password" class="text-success font-weight-bolder">
+                    <i class="fas fa-lock"></i> {{ __('Password') }}
+                </label>
+                <div class="input-group">
+                    <input id="password" type="password" class="form-control" name="password"
+                        placeholder="Masukkan kata sandi Anda" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text" onclick="togglePassword()">
+                            <i id="togglePasswordIcon" class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Remember Me -->
-            <div class="form-check mt-3">
-                <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
-                <label for="remember_me" class="form-check-label">{{ __('Ingat saya') }}</label>
-            </div>
-
-            <!-- Login Button -->
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success btn-block">{{ __('Login') }}</button>
-            </div>
-
-            <!-- Register Link -->
-            <div class="text-center mt-3">
-                <a href="{{ route('register') }}" class="text-success">Belum punya akun? Daftar di sini.</a>
+                <button type="submit" class="btn btn-success btn-block">
+                    <i class="fas fa-sign-in-alt"></i> {{ __('Login') }}
+                </button>
             </div>
         </form>
     </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.getElementById("togglePasswordIcon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
 </body>
 
 </html>

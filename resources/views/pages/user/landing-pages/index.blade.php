@@ -225,7 +225,6 @@
             <h3>Testimoni</h3>
             <p>Apa kata mereka tentang SMK Al-Azhar.</p>
         </div>
-
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -266,12 +265,10 @@
                     </div>
                 </div>
             </div>
-
             <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
     <!-- JS untuk Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -306,7 +303,6 @@
             },
         });
     </script>
-
     <!-- CSS tambahan untuk penataan -->
     <style>
         .swiper-container {
@@ -314,7 +310,6 @@
             height: auto;
             overflow: hidden; /* Prevents horizontal scrollbar */
         }
-
         .swiper-slide {
             display: flex;
             justify-content: center;
@@ -331,7 +326,6 @@
             display: flex;
             justify-content: space-between;
         }
-
         /* Prevent any overflow or horizontal scrolling */
         .section {
             overflow-x: hidden;

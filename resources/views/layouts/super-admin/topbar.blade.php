@@ -7,10 +7,10 @@
                 </a>
             </li>
             <li class="nav-item d-none d-lg-block">
-                <a class="nav-link nav-icon-hover" href="javascript:void(0)" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    <i class="ti ti-search"></i>
-                </a>
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" data-bs-toggle="modal" id="Shortcut"
+                data-bs-target="#exampleModal">
+                <i class="ti ti-search"></i>
+            </a>
             </li>
         </ul>
         <div class="d-block d-lg-none">
@@ -133,3 +133,13 @@
         </div>
     </nav>
 </header>
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'g') {
+            event.preventDefault();
+            document.getElementById('Shortcut').click(); // Mengklik elemen untuk membuka modal
+        }
+    });
+</script>
