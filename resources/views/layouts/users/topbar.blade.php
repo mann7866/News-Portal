@@ -118,12 +118,7 @@
 
 
                             <li><a href="page-contact.html">Contact</a></li>
-                            @if (Auth::check())
                             <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        @else
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @endif
 
                             <li class="iconitem">
                                 <a href="#" data-toggle="modal" data-target="#login-modal" id="shour">
