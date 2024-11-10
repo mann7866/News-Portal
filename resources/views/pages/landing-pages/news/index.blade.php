@@ -2,8 +2,8 @@
 @section('content')
 
     <div class="body-wrapper overflow-hidden" style="background-color: rgb(238, 238, 238)">
+      
         <div class="container">
-
             <div class="card bg-success card-body mb-0 mt-5 rounded-0">
                 <div class="d-flex gap-4">
                     <a href="#" class="text-white">Olahraga</a>
