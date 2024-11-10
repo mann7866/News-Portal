@@ -13,13 +13,18 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Padding top agar konten tidak menumpuk dengan header */
+        body {
+            padding-top: 40px; /* Sesuaikan dengan tinggi header */
+        }
+
         .fixed-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 70px;
-            margin-bottom: 25px;
+            margin-bottom: 50px;
             z-index: 1000;
             background-color: rgb(251, 253, 251);
         }
@@ -49,7 +54,7 @@
 
         /* CSS tambahan untuk gambar logo */
         .navbar img {
-            width: 70px; /* Atur sesuai kebutuhan */
+            width: 70px;
             height: 70%;
             background-color: transparent;
             opacity: 0.8;
