@@ -6,7 +6,8 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
+                        <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha
+                            SMK kami.</p>
                         <div class="logo-grid">
                             <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
                             <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
@@ -25,9 +26,12 @@
                     <h3 class="widget-title" style="color:white;">Mengapa Bergabung dengan SMK Kami?</h3>
                     <details>
                         <summary><i class="fa fa-info-circle"></i> Pelajari lebih lanjut</summary>
-                        <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
+                        <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar
+                            dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan
+                            mempersiapkan Anda untuk dunia kerja.</p>
                     </details>
-                    <a href="#" class="readmore" style="color: #fff; text-decoration: underline;">Bergabung Menjadi Pengajar</a>
+                    <a href="#" class="readmore" style="color: #fff; text-decoration: underline;">Bergabung
+                        Menjadi Pengajar</a>
                 </div>
             </div>
 
