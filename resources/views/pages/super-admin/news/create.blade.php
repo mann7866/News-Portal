@@ -41,7 +41,7 @@
                 <input type="file" accept="image/*" id="imageInput" name="image" style="display: none;"
                     onchange="previewImage(event)">
                 <label for="imageInput">
-                    <img id="imagePreview" src="{{ asset('admin-assets/images/blog/blog-img5.jpg') }}" class="rounded"
+                    <img id="imagePreview" src="{{ asset('admin-assets/images/blog/no-image.png') }}" class="rounded"
                         alt="Preview"
                         style="width: 100%; height: auto; max-width: 600px; cursor: pointer; object-fit: cover;">
                 </label>

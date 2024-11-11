@@ -28,5 +28,14 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'School'
         ]);
+        Category::create([
+            'name' => 'Coding'
+        ]);
+        Category::create([
+            'name' => 'Competition'
+        ]);
+        Category::create([
+            'name' => 'Contest'
+        ]);
     }
 }

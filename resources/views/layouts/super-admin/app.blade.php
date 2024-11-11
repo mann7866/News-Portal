@@ -57,18 +57,6 @@
             <!--  Header Start -->
             @include('layouts.super-admin.topbar')
             <div class="container-fluid">
-                @if ($errors->any())
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong class="text-dark">Ada kesalahan:</strong><br>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
                 @yield('content')
             </div>
             <!--  Header End -->
