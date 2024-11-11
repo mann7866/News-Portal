@@ -57,25 +57,25 @@
     animation-delay: 2.5s; /* Penundaan agar tidak muncul bersamaan */
 }
 </style>
-<section style="background-image: url('bg/wkng.jpg'); background-size: cover; background-position: center; color: rgb(255, 255, 255); height: 100vh; position: relative;" id="home">
-    <!-- Background hitam transparan -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
-    </div>
-
-    <!-- Konten utama -->
-    <div class="home-text-wrapper container" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; height: 50%; text-align: center;">
-        <div class="home-message">
-            <p style="color: rgb(241, 241, 241); font-size: 2rem; margin: 0;">Laman Berita SMK Al-Azhar</p>
-            <small style="color: rgb(255, 255, 255); font-size: 1.2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
+    <section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255);" id="home"
+        class="video-section js-height-full">
+        <!-- Background hitam transparan -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
         </div>
-    </div>
 
-    <!-- Tombol scroll -->
-    <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2; text-align: center; position: absolute; bottom: 20px; width: 100%;">
-        <span id="down" onclick="scrollToDown()">Explore <i class="fa fa-angle-down"></i></span>
-    </div>
-</section>
-
+        <div class="home-text-wrapper relative container" style="position: relative; z-index: 2;">
+            <div class="home-message">
+                <p style="color: rgb(241, 241, 241);">Laman Berita Smk Al-Azhar</p>
+                <small style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                    molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio,
+                    vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
+            </div>
+        </div>
+        <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2;">
+            <span id="down" onclick="scrollToDown()">Explore <i class="fa fa-angle-down"></i></span>
+        </div>
+    </section>
     <script>
         function scrollToDown() {
             document.getElementById('down-target').scrollIntoView({
@@ -169,19 +169,19 @@
             <div class="row">
                 <!-- Top Row with 3 items -->
                 <div class="col-md-4 mb-4">
-                    <div class="box box-akuntansi">
-                        <i class="bi bi-database icon-animation"></i>
-                        <h4>Akuntansi</h4>
-                        <p>Menyediakan berbagai modul yang dibutuhkan untuk pembelajaran daring bidang akuntansi, membantu siswa memahami dasar-dasar pengelolaan keuangan dan pencatatan transaksi bisnis.</p>
+                    <div class="box box-rekayasa">
+                        <i class="bi bi-code-slash icon-animation"></i>
+                        <h4>Rekayasa Perangkat Lunak</h4>
+                        <p>Didesain untuk mendukung pembelajaran dalam bidang pemrograman dan pengembangan perangkat lunak. Template ini responsif dan mendukung berbagai perangkat seluler.</p>
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
     
                 <div class="col-md-4 mb-4">
-                    <div class="box box-rekayasa">
-                        <i class="bi bi-code-slash icon-animation"></i>
-                        <h4>Rekayasa Perangkat Lunak</h4>
-                        <p>Didesain untuk mendukung pembelajaran dalam bidang pemrograman dan pengembangan perangkat lunak. Template ini responsif dan mendukung berbagai perangkat seluler.</p>
+                    <div class="box box-akuntansi">
+                        <i class="bi bi-database icon-animation"></i>
+                        <h4>Akuntansi</h4>
+                        <p>Menyediakan berbagai modul yang dibutuhkan untuk pembelajaran daring bidang akuntansi, membantu siswa memahami dasar-dasar pengelolaan keuangan dan pencatatan transaksi bisnis.</p>
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->

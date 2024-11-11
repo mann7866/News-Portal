@@ -1,4 +1,4 @@
-<footer class="section footer noover" style="background-color: #0f8eb1; padding: 40px 0; color: #fff;">
+<footer class="section footer noover" style="background-color: #000000; padding: 30px 0; color: #fff; margin-top: -20px;">
     <div class="container">
         <div class="row">
             <!-- Tentang SMK AL-Azhar -->
@@ -71,19 +71,22 @@
             <div class="col-md-6 col-sm-2 text-left">
                 <div class="footer-links d-flex flex-column align-items-start">
                     <h3 style="color: white; margin-bottom: 10px;">SMKS Al-Azhar Sempu</h3>
-                    <p>Jl. Imam Syafi'i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
-                    <p>Kode Pos: 68468</p>
-                    <p>Email: <a href="mailto:smkalazhar.sempubwi@gmail.com"
+
+                    <p style="margin-bottom: 5px;">Jl. Imam Syafi'i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
+                    <p style="margin-bottom: 5px;">Kode Pos : 68468</p>
+                    <p style="margin-bottom: 5px;">Telepon : <a href="tel:+6285236553650" style="color: #fff;">+62 852
+                            3655 3650</a></p>
+                    <p style="margin-bottom: 5px;">Email : <a href="mailto:smkalazhar.sempubwi@gmail.com"
                             style="color: #fff;">smkalazhar.sempubwi@gmail.com</a></p>
-                    <p>Telepon: <a href="tel:+6285236553650" style="color: #fff;">+62 852 3655 3650</a></p>
+
                 </div>
             </div>
-            <div class="col-md-4 col-sm-4 text-right">
+            <div class="col-md-6 col-sm-7 text-right">
                 <div class="social d-flex justify-content-center align-items-center">
                     <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i
                             class="fa fa-facebook"></i></a>
                     <a class="twitter" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
-                    <a class="google" href="www.smkalazhar.sch.id"><i class="fa fa-google-plus"></i></a>
+                    <a class="google" href="https://www.smkalazhar.sch.id"><i class="fa fa-google-plus"></i></a>
                     <a class="instagram" href="https://instagram.com/smkalazharsempu"><i
                             class="fa fa-instagram"></i></a>
                     <a class="tiktok" href="https://tiktok.com/@smkalazharsempu"><i class="fab fa-tiktok"></i></a>
@@ -95,12 +98,14 @@
 
 <!-- CSS -->
 <style>
-    /* Main Footer Styles */
     footer {
         background-color: #000;
         color: #fff;
         padding: 40px 0;
-        font-size: 14px;
+        /* Mengurangi padding agar footer sedikit lebih naik */
+        font-size: 15px;
+        margin-top: -20px;
+        /* Menurunkan footer ke atas */
     }
 
     /* Grid for logos */
@@ -112,11 +117,20 @@
     }
 
     .logo-img {
-        width: 70px;
+        width: 90px;
+        /* Lebar gambar */
         height: 70px;
+        /* Tinggi gambar */
+        max-width: 100%;
+        /* Menjaga gambar tetap responsif */
+        max-height: 100%;
+        /* Menjaga gambar tetap responsif */
         object-fit: cover;
+        /* Menyesuaikan gambar agar tetap terjaga proporsinya */
         border-radius: 8%;
+        /* Sudut melengkung pada gambar */
         transition: transform 0.3s ease;
+        /* Efek transisi saat gambar di-hover */
     }
 
     .logo-img:hover {
@@ -153,6 +167,10 @@
         background-color: #555;
     }
 
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+
     /* Support links */
     .support-links {
         display: flex;
@@ -175,6 +193,19 @@
         font-size: 16px;
         margin: 0 10px;
         transition: color 0.3s;
+    }
+
+    .social a i {
+        max-width: 20px;
+        /* Menjaga ukuran logo tetap responsif */
+        max-height: 20px;
+        /* Menjaga ukuran logo tetap responsif */
+        width: 100%;
+        /* Memastikan logo mengisi elemen sesuai ukuran */
+        height: 100%;
+        /* Memastikan logo mengisi elemen sesuai ukuran */
+        object-fit: contain;
+        /* Menjaga agar logo tidak terdistorsi */
     }
 
     .social a:hover {
