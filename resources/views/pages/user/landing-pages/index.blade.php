@@ -83,6 +83,194 @@
             });
         }
     </script>
+
+<h3 style="text-align: center;">Recent News</h3>
+<section class="section gb full-vh">
+    <div class="carousel-wrapper">
+        <!-- Custom Carousel -->
+        <div class="custom-carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="blog-content">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
+                        <div class="post-meta">
+                            <ul class="list-inline">
+                                <li><a href="#">21 March 2017</a></li>
+                                <li><a href="#">by WP Destek</a></li>
+                                <li><a href="#">14 Share</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/guts.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="blog-content">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
+                        <div class="post-meta">
+                            <ul class="list-inline">
+                                <li><a href="#">21 March 2017</a></li>
+                                <li><a href="#">by WP Destek</a></li>
+                                <li><a href="#">14 Share</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-control-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-control-next" aria-label="Next slide">›</button>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Fullscreen Section */
+.full-vh {
+    height: calc(100vh - 60px); /* Sesuaikan dengan tinggi topbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 60px; /* Menghindari overlap dengan topbar */
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1140px; /* Setel lebar maksimum */
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Custom Carousel */
+.custom-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Carousel Item */
+.carousel-item {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Blog Box */
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Image Wrap */
+.image-wrap {
+    max-height: 50vh;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Navigation Buttons */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+</style>
+
+<script>
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    // Show slide by index
+    function showSlide(index) {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (index + totalItems) % totalItems;
+        items[currentIndex].classList.add('active');
+    }
+
+    // Show next slide
+    function showNextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    // Show previous slide
+    function showPrevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Auto slide every 6 seconds
+    setInterval(showNextSlide, 6000);
+
+    // Previous and Next button functionality
+    document.querySelector('.carousel-control-prev').addEventListener('click', showPrevSlide);
+    document.querySelector('.carousel-control-next').addEventListener('click', showNextSlide);
+});
+</script>
+
+
     <section class="section">
         <div class="container">
             <div class="row">
@@ -277,118 +465,8 @@
     </section>
 
 
-<section class="section gb">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Recent News</h3>
-            <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.</p>
-        </div><!-- end title -->
 
-        <!-- Custom Carousel -->
-        <div class="custom-carousel">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="blog-box">
-                    <div class="image-wrap entry">
-                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
-                        <div class="magnifier">
-                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-desc">
-                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
-                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
-                    </div>
-                    <div class="post-meta">
-                        <ul class="list-inline">
-                            <li><a href="#">21 March 2017</a></li>
-                            <li><a href="#">by WP Destek</a></li>
-                            <li><a href="#">14 Share</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="blog-box">
-                    <div class="image-wrap entry">
-                        <img src="bg/guts.jpg" alt="" class="img-responsive">
-                        <div class="magnifier">
-                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-desc">
-                        <h4><a href="blog-single.html">The most suitable web design & development tutorials</a></h4>
-                        <p>Sed suscipit neque in erat posuere tristique aliquam porta vestibulum. Cras placerat tincidunt.</p>
-                    </div>
-                    <div class="post-meta">
-                        <ul class="list-inline">
-                            <li><a href="#">20 March 2017</a></li>
-                            <li><a href="#">by WP Destek</a></li>
-                            <li><a href="#">11 Share</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="blog-box">
-                    <div class="image-wrap entry">
-                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
-                        <div class="magnifier">
-                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-desc">
-                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
-                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
-                    </div>
-                    <div class="post-meta">
-                        <ul class="list-inline">
-                            <li><a href="#">19 March 2017</a></li>
-                            <li><a href="#">by WP Destek</a></li>
-                            <li><a href="#">44 Share</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* Basic Carousel Styling */
-.custom-carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-.carousel-item {
-    display: none;
-    width: 100%;
-}
-.carousel-item.active {
-    display: block;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-
-    function showNextSlide() {
-        items[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % totalItems;
-        items[currentIndex].classList.add('active');
-    }
-
-    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
-});
-</script>
+    
 
 
 @endsection
