@@ -55,39 +55,6 @@
             <!--  Header Start -->
             @include('layouts.super-admin.topbar')
             <div class="container-fluid">
-                @if ($message = Session::get('success'))
-                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-s" role="alert"
-                        aria-live="assertive" aria-atomic="true"
-                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-                        <div class="toast-header toast-header-success">
-                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
-                            <strong class="me-auto">Success</strong>
-                            <small id="toast-time"></small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            {{ $message }}
-                        </div>
-                    </div>
-                @endif
-
-                @if ($message = Session::get('error'))
-                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-d" role="alert"
-                        aria-live="assertive" aria-atomic="true"
-                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-                        <div class="toast-header toast-header-danger">
-                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
-                            <strong class="me-auto">Error</strong>
-                            <small id="toast-time"></small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            {{ $message }}
-                        </div>
-                    </div>
-                @endif
                 @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong class="text-dark">Ada kesalahan:</strong><br>
