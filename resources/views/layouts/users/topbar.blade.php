@@ -18,6 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    
     <!-- Site Icons -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico" type="image/x-icon') }}" />
     <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}">
