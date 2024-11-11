@@ -8,6 +8,10 @@
                     <div class="newsletter-widget">
                         <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha
                             SMK kami.</p>
+
+                            <style>
+                                
+                            </style>
                         <div class="logo-grid">
                             <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
                             <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
@@ -40,12 +44,12 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title" style="color:white;">Tag Populer</h3>
                     <div class="tag-list">
-                        <div class="tag-item"><a href="#">Merdeka Indo</a></div>
-                        <div class="tag-item"><a href="#">FufuFafa</a></div>
-                        <div class="tag-item"><a href="#">Benjamin</a></div>
-                        <div class="tag-item"><a href="#">SchoolHd</a></div>
-                        <div class="tag-item"><a href="#">Podcasth</a></div>
-                        <div class="tag-item"><a href="#">Cihuuy</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
                     </div>
                 </div>
             </div>
@@ -81,7 +85,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-sm-7 text-right">
+            <div class="col-md-6 col-sm-7 text-right" >
                 <div class="social d-flex justify-content-center align-items-center">
                     <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i
                             class="fa fa-facebook"></i></a>

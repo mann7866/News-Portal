@@ -57,8 +57,8 @@
     animation-delay: 2.5s; /* Penundaan agar tidak muncul bersamaan */
 }
 </style>
-    <section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255);" id="home"
-        class="video-section js-height-full">
+    <section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255); height: 100vh;" id="home"
+        class="video-section">
         <!-- Background hitam transparan -->
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
