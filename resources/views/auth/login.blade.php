@@ -24,7 +24,7 @@
         /* Background */
         body {
             background: linear-gradient(135deg, #f5f7f5 0%, #ffffff 100%);
-            color: #4CAF50;
+            color: #000000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,7 +40,7 @@
             right: 0%; /* Jarak dari kanan */
             width: 80px; /* Sesuaikan lebar kotak */
             height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #388e3c, #66bb6a ); /* Gradasi warna hijau */
+            background: linear-gradient(135deg, #1e7822, #40c347 ); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(25%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -51,7 +51,7 @@
             right: 0%; /* Jarak dari kanan */
             width: 100px; /* Sesuaikan lebar kotak */
             height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #388e3c, #66bb6a ); /* Gradasi warna hijau */
+            background: linear-gradient(135deg, #1e7822, #40c347 ); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(-100%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -62,7 +62,7 @@
             right: 0%; /* Jarak dari kanan */
             width: 80px; /* Sesuaikan lebar kotak */
             height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg,#388e3c, #66bb6a ); /* Gradasi warna hijau */
+            background: linear-gradient(135deg,#1e7822, #40c347 ); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(-220%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -73,7 +73,7 @@
             left: 0%; /* Jarak dari kanan */
             width: 100px; /* Sesuaikan lebar kotak */
             height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(100%, 10%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -84,7 +84,7 @@
             left: 0%; /* Jarak dari kanan */
             width: 80px; /* Sesuaikan lebar kotak */
             height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(220%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -95,7 +95,7 @@
             left: 0%; /* Jarak dari kanan */
             width: 80px; /* Sesuaikan lebar kotak */
             height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #66bb6a, #388e3c); /* Gradasi warna hijau */
+            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
             border-radius: 75px; /* Ujung lonjong */
             transform: rotate(45deg) translate(-60%, 0%); /* Memutar dan menggeser kotak */
             z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
@@ -145,7 +145,7 @@
             @csrf
 
             <div class="form-group">
-                <label for="email" class="text-success font-weight-bolder">
+                <label for="email" class="text-dark font-weight-bolder">
                     <i class="fas fa-envelope"></i> {{ __('Email') }}
                 </label>
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
@@ -153,7 +153,7 @@
             </div>
 
             <div class="form-group mt-3">
-                <label for="password" class="text-success font-weight-bolder">
+                <label for="password" class="text-dark font-weight-bolder">
                     <i class="fas fa-lock"></i> {{ __('Password') }}
                 </label>
                 <div class="input-group">

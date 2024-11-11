@@ -44,12 +44,12 @@
                 <div class="widget clearfix">
                     <h3 class="widget-title" style="color:white;">Tag Populer</h3>
                     <div class="tag-list">
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
-                        <div class="tag-item"><a href="#">Paris Dontol</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
+                        <div class="tag-item"><a href="#">AlungXdyroth</a></div>
                     </div>
                 </div>
             </div>
