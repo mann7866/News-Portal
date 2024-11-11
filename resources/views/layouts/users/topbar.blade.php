@@ -130,3 +130,5 @@
         @yield('content')
 
         @include('layouts.users.footer')
+        
+        
