@@ -16,16 +16,19 @@
     <!--  Favicon -->
     <link rel="shortcut icon" type="image/png"
         href="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/favicon.ico" />
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="{{ asset('admin-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
-
-    <!-- Core Css -->
-    <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="{{ asset('admin-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
 
     {{--  summernote  --}}
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('admin-assets/libs/prismjs/themes/prism-okaidia.min.css') }}">
     {{--  select2  --}}
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/select2/dist/css/select2.min.css') }}">
+    <!-- Core Css -->
+    <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
+
+
 </head>
 
 <body>
@@ -129,16 +132,18 @@
     <script src="{{ asset('admin-assets/js/app-style-switcher.js') }}"></script>
     <script src="{{ asset('admin-assets/js/sidebarmenu.js') }}"></script>
     <script src="{{ asset('admin-assets/js/custom.js') }}"></script>
+    <script src="{{ asset('admin-assets/libs/prismjs/prism.js') }}"></script>
+
     <!-- Current page JS files -->
     <script src="{{ asset('admin-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('admin-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/dashboard.js') }}"></script>
     <script src="{{ asset('admin-assets/js/dashboard2.js') }}"></script>
 
-    {{--  select2  --}}
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.full.min.js') }}"></script>
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/forms/select2.init.js') }}"></script>
+    {{--  select2  --}}
 
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
