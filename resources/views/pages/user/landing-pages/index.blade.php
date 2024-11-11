@@ -62,18 +62,12 @@
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
     </div>
 
-    <!-- Konten utama -->
-    <div class="home-text-wrapper container" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; height: 50%; text-align: center;">
-        <div class="home-message">
-            <p style="color: rgb(241, 241, 241); font-size: 2rem; margin: 0;">Laman Berita SMK Al-Azhar</p>
-            <small style="color: rgb(255, 255, 255); font-size: 1.2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
-        </div>
-    </div>
-
-    <!-- Tombol scroll -->
-    <div class="slider-bottom" style="color: rgb(255, 255, 255); z-index: 2; text-align: center; position: absolute; bottom: 20px; width: 100%;">
-        <span id="down" onclick="scrollToDown()">Explore <i class="fa fa-angle-down"></i></span>
-    </div>
+   <div class="home-text-wrapper relative container" style="position: relative; z-index: 2;">
+            <div class="home-message">
+                <p style="color: rgb(241, 241, 241);">Laman Berita Smk Al-Azhar</p>
+                <small style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                    molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio,
+                    vitae laudantium temporibus labore qui dolores nemo voluptas et..</small>
 </section>
 
     <script>
