@@ -1,30 +1,31 @@
 @extends('layouts.super-admin.app')
 @section('content')
-    <div class="card bg-light-info shadow-none position-relative overflow-hidden mb-4">
-        <div class="card-body px-4 py-3">
-            <div class="row align-items-center">
-                <div class="col-9">
-                    <h4 class="fw-semibold mb-2">Halaman Create Berita</h4>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a class="text-muted" href="{{ route('dashboard') }}">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Create Berita
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-3">
-                    <div class="text-center">
-                        <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
-                            class="img-fluid" />
-                    </div>
+<div class="card bg-light-info shadow-none position-relative overflow-hidden">
+    <div class="card-body px-4 py-3">
+        <div class="row align-items-center">
+            <div class="col-9">
+                <h4 class="fw-semibold mb-8">Tambah Berita</h4>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a class="text-muted " href="index-2.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">
+                            Tambah Berita
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-3">
+                <div class="text-center mb-n5">
+                    <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
+                        class="img-fluid mb-n4" />
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
     @if ($message = Session::get('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">

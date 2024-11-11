@@ -4,14 +4,14 @@
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Halaman-Berita</h4>
+                        <h4 class="fw-semibold mb-8">Halaman Berita</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a class="text-muted " href="index-2.html">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item" aria-current="page">
-                                    Halaman-Berita
+                                    Halaman Berita
                                 </li>
                             </ol>
                         </nav>
@@ -41,7 +41,7 @@
                         class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
                         <a href="{{ route('news.create') }}" id="btn-add-contact"
                             class="btn btn-info d-flex align-items-center">
-                            <i class="ti ti-news text-white me-1 fs-5"></i> Add Berita
+                            <i class="ti ti-news text-white me-1 fs-5"></i> Tambah Berita
                         </a>
                     </div>
                 </div>

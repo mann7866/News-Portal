@@ -25,5 +25,8 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Event'
         ]);
+        Category::create([
+            'name' => 'School'
+        ]);
     }
 }
