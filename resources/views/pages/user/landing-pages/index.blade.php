@@ -313,7 +313,7 @@
             <div class="carousel-item">
                 <div class="blog-box">
                     <div class="image-wrap entry">
-                        <img src="bg/tes-bg.jpg" alt="" class="img-responsive">
+                        <img src="bg/guts.jpg" alt="" class="img-responsive">
                         <div class="magnifier">
                             <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                         </div>
@@ -336,7 +336,7 @@
             <div class="carousel-item">
                 <div class="blog-box">
                     <div class="image-wrap entry">
-                        <img src="bg/guts.jpg" alt="" class="img-responsive">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
                         <div class="magnifier">
                             <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                         </div>

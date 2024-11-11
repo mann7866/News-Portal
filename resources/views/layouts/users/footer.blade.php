@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <!-- Tentang SMK AL-Azhar -->
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
                     <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
@@ -70,7 +70,7 @@
 
             <!-- Footer Bottom -->
             <div class="row">
-                <div class="col-md-5 col-sm-4 text-left">
+                <div class="col-md-6 col-sm-2 text-left">
                     <div class="footer-links d-flex flex-column align-items-start">
                         <h3 style="color: white; margin-bottom: 10px;">SMKS Al-Azhar Sempu</h3>
                         <p>Jl. Imam Syafi'i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
@@ -79,7 +79,7 @@
                         <p>Telepon: <a href="tel:+6285236553650" style="color: #fff;">+62 852 3655 3650</a></p>
                     </div>
                 </div>
-                <div class="col-md-5 col-sm-4 text-right">
+                <div class="col-md-4 col-sm-4 text-right">
                     <div class="social d-flex justify-content-center align-items-center">
                         <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i class="fa fa-facebook"></i></a>
                         <a class="twitter" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
