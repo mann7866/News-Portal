@@ -4,14 +4,14 @@
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Halaman-Berita</h4>
+                        <h4 class="fw-semibold mb-8">Halaman Berita</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a class="text-muted " href="index-2.html">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item" aria-current="page">
-                                    Halaman-Berita
+                                    Halaman Berita
                                 </li>
                             </ol>
                         </nav>
@@ -27,22 +27,71 @@
         </div>
 
         <div class="section-body">
-            <div class="card card-body">
-                <div class="row">
-                    <div class="col-md-4 col-xl-3">
-                        <form class="position-relative">
-                            <input type="text" class="form-control product-search ps-5" id="input-search"
-                                placeholder="Cari Berita..." id="cari" />
-                            <i
-                                class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
-                        </form>
+            <div class="card px-3 pb-4 mb-4 pt-1 rounded-sm">
+                <div class="row g-2 mt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="row g-2">
+                            <h3 class="mx-1">Berita</h3>
+                        </div>
                     </div>
-                    <div
-                        class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                        <a href="{{ route('news.create') }}" id="btn-add-contact"
-                            class="btn btn-info d-flex align-items-center">
-                            <i class="ti ti-news text-white me-1 fs-5"></i> Add Berita
-                        </a>
+                    <div class="col-lg-8 col-md-6 col-sm-12">
+                        <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
+                            <div class="search-box col-lg-3 col-12">
+                                <form action="">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="search" value=""
+                                            placeholder="Cari Proyek">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="input-group-text rounded-end border border-1"><i
+                                                    class="ri-search-line"></i></button>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary d-lg-none mt-2 w-100">Cari</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="search-box col-lg-3 col-12">
+                                <div class="input-group">
+                                    <input type="hidden" class="form-control flatpickr-input" name="date" value=""
+                                        data-provider="flatpickr" placeholder="Pilih tanggal"><input
+                                        class="form-control flatpickr-input form-control input" placeholder="Pilih tanggal"
+                                        tabindex="0" type="text">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="input-group-text rounded-end border border-1"><i
+                                                class="ri-calendar-line"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dropdown Filter Status proyek -->
+                            <div class="dropdown col-lg-3 col-12">
+                                <button class="btn btn-outline-primary dropdown-toggle w-100" type="button"
+                                    id="filterStatusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Status Berita
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filterStatusDropdown">
+                                    <li>
+                                        <label class="dropdown-item">
+                                            <input type="checkbox" name="status[]" value="active"
+                                                onchange="this.form.submit()"> Aktif
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="dropdown-item">
+                                            <input type="checkbox" name="status[]" value="completed"
+                                                onchange="this.form.submit()"> Selesai
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="form-check form-switch gap-3 col-lg-3 col-12 d-flex justify-content-between align-items-center mt-2 mt-lg-0"
+                                style="width: auto;">
+                                <a href="{{ route('news.create') }}" class="btn btn-primary">
+                                    <i class="ti ti-news text-white me-1 fs-5"></i> Tambah Berita
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,7 +119,8 @@
                                                 <i class="ti ti-pencil text-muted me-1 fs-4"></i>Edit </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-{{ $item->id }}">
+                                            <a class="dropdown-item" data-bs-toggle="modal"
+                                                data-bs-target="#delete-{{ $item->id }}">
                                                 <i class="ti ti-trash text-muted me-1 fs-4"></i>Hapus </a>
                                         </li>
                                         <li>

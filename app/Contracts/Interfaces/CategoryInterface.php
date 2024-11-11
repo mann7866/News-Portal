@@ -11,5 +11,5 @@ use App\Contracts\Interfaces\Eloquents\EloquentInterface;
  */
 interface CategoryInterface extends EloquentInterface
 {
-    
+
 }

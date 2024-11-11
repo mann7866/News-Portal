@@ -19,13 +19,18 @@
     <!-- Owl Carousel  -->
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
 
-    <!-- Core Css -->
-    <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
     {{--  summernote  --}}
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('admin-assets/libs/prismjs/themes/prism-okaidia.min.css') }}">
     {{--  select2  --}}
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/select2/dist/css/select2.min.css') }}">
+    <!-- Core Css -->
+    <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
+
+
 </head>
 
 <body>
@@ -52,51 +57,6 @@
             <!--  Header Start -->
             @include('layouts.super-admin.topbar')
             <div class="container-fluid">
-                @if ($message = Session::get('success'))
-                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-s" role="alert"
-                        aria-live="assertive" aria-atomic="true"
-                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-                        <div class="toast-header toast-header-success">
-                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
-                            <strong class="me-auto">Success</strong>
-                            <small id="toast-time"></small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            {{ $message }}
-                        </div>
-                    </div>
-                @endif
-
-                @if ($message = Session::get('error'))
-                    <div id="myToast" class="toast show overflow-hidden mb-2 toast-d" role="alert"
-                        aria-live="assertive" aria-atomic="true"
-                        style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-                        <div class="toast-header toast-header-danger">
-                            <i class="ti ti-chart-bubble-filled me-2 fs-5"></i>
-                            <strong class="me-auto">Error</strong>
-                            <small id="toast-time"></small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            {{ $message }}
-                        </div>
-                    </div>
-                @endif
-                @if ($errors->any())
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong class="text-dark">Ada kesalahan:</strong><br>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
                 @yield('content')
             </div>
             <!--  Header End -->
@@ -129,16 +89,18 @@
     <script src="{{ asset('admin-assets/js/app-style-switcher.js') }}"></script>
     <script src="{{ asset('admin-assets/js/sidebarmenu.js') }}"></script>
     <script src="{{ asset('admin-assets/js/custom.js') }}"></script>
+    <script src="{{ asset('admin-assets/libs/prismjs/prism.js') }}"></script>
+
     <!-- Current page JS files -->
     <script src="{{ asset('admin-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('admin-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/dashboard.js') }}"></script>
     <script src="{{ asset('admin-assets/js/dashboard2.js') }}"></script>
 
-    {{--  select2  --}}
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.full.min.js') }}"></script>
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/forms/select2.init.js') }}"></script>
+    {{--  select2  --}}
 
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
