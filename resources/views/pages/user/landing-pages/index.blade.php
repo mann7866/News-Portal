@@ -464,9 +464,197 @@ document.addEventListener('DOMContentLoaded', function () {
         </div><!-- end container -->
     </section>
 
+ <section class="section bg-light py-5">
+    <div class="section-title text-center mb-5">
+        <h3>Recent News</h3>
+        <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+    </div>
 
+    <!-- Swiper untuk Recent News -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- News Item 1 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">21 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">14 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+            <!-- News Item 2 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/guts.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">The most suitable web design & development tutorials</a></h4>
+                        <p>Sed suscipit neque in erat posuere tristique aliquam porta vestibulum.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">20 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">11 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 3 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Swiper JS Configuration -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+            loop: true, // Aktifkan looping
+            slidesPerView: 3, // Menampilkan tiga testimonial dalam satu waktu
+            spaceBetween: 10, // Jarak antar slide
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2000, // Interval auto slide setiap 9 detik
+            },
+            breakpoints: {
+                // Responsive breakpoints
+                320: {
+                    slidesPerView: 1, // 1 testimonial for small screens
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2, // 2 testimonial for medium screens
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3, // 3 testimonial for larger screens
+                    spaceBetween: 30,
+                },
+            },
+        });
+</script>
+
+<style>
+     .swiper-container {
+            width: 100%;
+            height: auto;
+            overflow: hidden; /* Prevents horizontal scrollbar */
+        }
     
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .swiper-pagination-bullet {
+           display:none;
+        }
+    
+        /* Styling for responsiveness */
+        .swiper-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        /* Prevent any overflow or horizontal scrolling */
+        .section {
+            overflow-x: hidden;
+        }
+</style>
 
 
 @endsection

@@ -1,7 +1,64 @@
 @extends('layouts.users.app')
 @section('content')
-    <section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255);" id="home"
-        class="video-section js-height-full">
+<style>
+    @keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari kanan */
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari atas */
+@keyframes slideInTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animasi untuk card masuk dari bawah */
+@keyframes slideInBottom {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Menambahkan animasi ke elemen */
+.box {
+    animation-duration: 1.5s; /* Durasi lebih lama */
+    animation-timing-function: ease-in-out; /* Efek ease-in-out untuk kelancaran */
+    animation-fill-mode: both; /* Agar animasi tetap pada posisi akhir setelah selesai */
+}
+
+/* Menambahkan animasi untuk masing-masing card */
+.box-akuntansi {
+    animation-name: slideInLeft;
+    animation-delay: 0.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-tata-busana {
+    animation-name: slideInRight;
+    animation-delay: 1s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-rekayasa {
+    animation-name: slideInTop;
+    animation-delay: 1.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-komputer {
+    animation-name: slideInBottom;
+    animation-delay: 2s; /* Penundaan agar tidak muncul bersamaan */
+}
+
+.box-otomotif {
+    animation-name: slideInBottom;
+    animation-delay: 2.5s; /* Penundaan agar tidak muncul bersamaan */
+}
+</style>
+    <section style="background-image: url('bg/tes-bg.jpg'); background-size: cover; color: rgb(255, 255, 255); height: 100vh;" id="home"
+        class="video-section">
         <!-- Background hitam transparan -->
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
@@ -26,6 +83,194 @@
             });
         }
     </script>
+
+<h3 style="text-align: center;">Recent News</h3>
+<section class="section gb full-vh">
+    <div class="carousel-wrapper">
+        <!-- Custom Carousel -->
+        <div class="custom-carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="blog-content">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
+                        <div class="post-meta">
+                            <ul class="list-inline">
+                                <li><a href="#">21 March 2017</a></li>
+                                <li><a href="#">by WP Destek</a></li>
+                                <li><a href="#">14 Share</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/guts.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="blog-content">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
+                        <div class="post-meta">
+                            <ul class="list-inline">
+                                <li><a href="#">21 March 2017</a></li>
+                                <li><a href="#">by WP Destek</a></li>
+                                <li><a href="#">14 Share</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-control-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-control-next" aria-label="Next slide">›</button>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Fullscreen Section */
+.full-vh {
+    height: calc(100vh - 60px); /* Sesuaikan dengan tinggi topbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 60px; /* Menghindari overlap dengan topbar */
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1140px; /* Setel lebar maksimum */
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Custom Carousel */
+.custom-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Carousel Item */
+.carousel-item {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Blog Box */
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Image Wrap */
+.image-wrap {
+    max-height: 50vh;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Navigation Buttons */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+</style>
+
+<script>
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    // Show slide by index
+    function showSlide(index) {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (index + totalItems) % totalItems;
+        items[currentIndex].classList.add('active');
+    }
+
+    // Show next slide
+    function showNextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    // Show previous slide
+    function showPrevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Auto slide every 6 seconds
+    setInterval(showNextSlide, 6000);
+
+    // Previous and Next button functionality
+    document.querySelector('.carousel-control-prev').addEventListener('click', showPrevSlide);
+    document.querySelector('.carousel-control-next').addEventListener('click', showNextSlide);
+});
+</script>
+
+
     <section class="section">
         <div class="container">
             <div class="row">
@@ -106,21 +351,11 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </section><!-- end section -->
-    
+
     <section class="section gb nopadtop" style="margin:25px;">
         <div class="container">
             <div class="row">
-                <!-- Jurusan 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="box box-akuntansi">
-                        <i class="bi bi-database icon-animation"></i>
-                        <h4>Akuntansi</h4>
-                        <p>Menyediakan berbagai modul yang dibutuhkan untuk pembelajaran daring bidang akuntansi, membantu siswa memahami dasar-dasar pengelolaan keuangan dan pencatatan transaksi bisnis.</p>
-                        <a href="#" class="readmore">Baca selengkapnya</a>
-                    </div>
-                </div><!-- end col -->
-    
-                <!-- Jurusan 2 -->
+                <!-- Top Row with 3 items -->
                 <div class="col-md-4 mb-4">
                     <div class="box box-rekayasa">
                         <i class="bi bi-code-slash icon-animation"></i>
@@ -130,7 +365,15 @@
                     </div>
                 </div><!-- end col -->
     
-                <!-- Jurusan 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="box box-akuntansi">
+                        <i class="bi bi-database icon-animation"></i>
+                        <h4>Akuntansi</h4>
+                        <p>Menyediakan berbagai modul yang dibutuhkan untuk pembelajaran daring bidang akuntansi, membantu siswa memahami dasar-dasar pengelolaan keuangan dan pencatatan transaksi bisnis.</p>
+                        <a href="#" class="readmore">Baca selengkapnya</a>
+                    </div>
+                </div><!-- end col -->
+    
                 <div class="col-md-4 mb-4">
                     <div class="box box-tata-busana">
                         <i class="bi bi-scissors icon-animation"></i>
@@ -139,11 +382,11 @@
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
-            </div><!-- end row -->
+            </div><!-- end top row -->
     
             <div class="row">
-                <!-- Jurusan 4 -->
-                <div class="col-md-4 mb-4">
+                <!-- Bottom Row with 2 items -->
+                <div class="col-md-6 mb-4">
                     <div class="box box-komputer">
                         <i class="bi bi-globe2 icon-animation"></i>
                         <h4>Teknik Komputer & Jaringan</h4>
@@ -152,8 +395,7 @@
                     </div>
                 </div><!-- end col -->
     
-                <!-- Jurusan 5 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="box box-otomotif">
                         <i class="bi bi-tools icon-animation"></i>
                         <h4>Teknik Kendaraan Ringan Otomotif</h4>
@@ -161,17 +403,18 @@
                         <a href="#" class="readmore">Baca selengkapnya</a>
                     </div>
                 </div><!-- end col -->
-            </div><!-- end row -->
+            </div><!-- end bottom row -->
         </div><!-- end container -->
     </section>
     
+
     <!-- CSS untuk animasi ikon -->
     <style>
         .icon-animation {
             transition: all 0.3s ease;
             /* Menambahkan efek transisi */
         }
-    
+
         .icon-animation:hover {
             color: #007b;
             /* Ubah warna ikon saat hover */
@@ -220,61 +463,141 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </section>
-    <section class="section bg-light py-5">
-        <div class="section-title text-center mb-5">
-            <h3>Testimoni</h3>
-            <p>Apa kata mereka tentang SMK Al-Azhar.</p>
-        </div>
+
+ <section class="section bg-light py-5">
+    <div class="section-title text-center mb-5">
+        <h3>Recent News</h3>
+        <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+    </div>
+
+<<<<<<< Updated upstream
+
     
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Testimonial 1 -->
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column align-items-center text-center">
-                        <img src="{{ asset('assets-Guru/team-1.jpg') }}" alt="User 1" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
-                        <h5>Ahmad Fauzi</h5>
-                        <small>Siswa Jurusan RPL</small>
-                        <p class="text-muted mt-3">"Pembelajaran di SMK Al-Azhar sangat interaktif dan mendukung perkembangan saya di bidang teknologi. Guru-guru sangat membantu dan fasilitasnya memadai."</p>
+=======
+    <!-- Swiper untuk Recent News -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- News Item 1 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
                     </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column align-items-center text-center">
-                        <img src="{{ asset('assets-guru/team-2.jpg') }}" alt="User 2" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
-                        <h5>Rina Suryani</h5>
-                        <small>Alumni Jurusan Akuntansi</small>
-                        <p class="text-muted mt-3">"Setelah lulus, saya merasa sangat siap menghadapi dunia kerja. SMK Al-Azhar memberikan bekal yang sangat berguna, terutama dalam kompetensi akuntansi."</p>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
+                        <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim.</p>
                     </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column align-items-center text-center">
-                        <img src="{{ asset('assets-Guru/team-3.jpg') }}" alt="User 3" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
-                        <h5>Budi Santoso</h5>
-                        <small>Orang Tua Siswa</small>
-                        <p class="text-muted mt-3">"Sebagai orang tua, saya sangat puas dengan kemajuan dan perkembangan anak saya. Sekolah ini memberikan pendidikan berkualitas dan menanamkan nilai-nilai luhur."</p>
-                    </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column align-items-center text-center">
-                        <img src="{{ asset('assets-Guru/team-4.jpg') }}" alt="User 4" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
-                        <h5>Rudi Hartono</h5>
-                        <small>Orang Tua Siswa</small>
-                        <p class="text-muted mt-3">"Sebagai orang tua, saya sangat puas dengan kemajuan dan perkembangan anak saya. Sekolah ini memberikan pendidikan berkualitas dan menanamkan nilai-nilai luhur."</p>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">21 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">14 Share</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-    
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
+
+            <!-- News Item 2 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/guts.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">The most suitable web design & development tutorials</a></h4>
+                        <p>Sed suscipit neque in erat posuere tristique aliquam porta vestibulum.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">20 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">11 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 3 -->
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="bg/wkng.jpg" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
+                        <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus.</p>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">19 March 2017</a></li>
+                            <li><a href="#">by WP Destek</a></li>
+                            <li><a href="#">44 Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    
-    <!-- JS untuk Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Swiper JS Configuration -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
             loop: true, // Aktifkan looping
             slidesPerView: 3, // Menampilkan tiga testimonial dalam satu waktu
             spaceBetween: 10, // Jarak antar slide
@@ -287,7 +610,7 @@
                 clickable: true,
             },
             autoplay: {
-                delay: 9000, // Interval auto slide setiap 9 detik
+                delay: 2000, // Interval auto slide setiap 9 detik
             },
             breakpoints: {
                 // Responsive breakpoints
@@ -305,11 +628,11 @@
                 },
             },
         });
-    </script>
-    
-    <!-- CSS tambahan untuk penataan -->
-    <style>
-        .swiper-container {
+</script>
+>>>>>>> Stashed changes
+
+<style>
+     .swiper-container {
             width: 100%;
             height: auto;
             overflow: hidden; /* Prevents horizontal scrollbar */
@@ -323,7 +646,7 @@
         }
     
         .swiper-pagination-bullet {
-            background-color: #007bff;
+           display:none;
         }
     
         /* Styling for responsiveness */
@@ -336,93 +659,7 @@
         .section {
             overflow-x: hidden;
         }
-    </style>
+</style>
 
-    <section class="section gb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Recent News</h3>
-                <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien
-                    iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.</p>
-            </div><!-- end title -->
 
-            <div class="row">
-                <div class="col-lg-4 col-md-12">
-                    <div class="blog-box">
-                        <div class="image-wrap entry">
-                            <img src="assets/images/news.jpg" alt="" class="img-responsive">
-                            <div class="magnifier">
-                                <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                            </div>
-                        </div><!-- end image-wrap -->
-
-                        <div class="blog-desc">
-                            <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
-                            <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia
-                                auctor.</p>
-                        </div><!-- end blog-desc -->
-
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li><a href="#">21 March 2017</a></li>
-                                <li><a href="#">by WP Destek</a></li>
-                                <li><a href="#">14 Share</a></li>
-                            </ul>
-                        </div><!-- end post-meta -->
-                    </div><!-- end blog -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-12">
-                    <div class="blog-box">
-                        <div class="image-wrap entry">
-                            <img src="assets/images/news.jpg" alt="" class="img-responsive">
-                            <div class="magnifier">
-                                <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                            </div>
-                        </div><!-- end image-wrap -->
-
-                        <div class="blog-desc">
-                            <h4><a href="blog-single.html">The most suitable web design & development tutorials</a></h4>
-                            <p>Sed suscipit neque in erat posuere tristique aliquam porta vestibulum. Cras placerat
-                                tincidunt. </p>
-                        </div><!-- end blog-desc -->
-
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li><a href="#">20 March 2017</a></li>
-                                <li><a href="#">by WP Destek</a></li>
-                                <li><a href="#">11 Share</a></li>
-                            </ul>
-                        </div><!-- end post-meta -->
-                    </div><!-- end blog -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-12">
-                    <div class="blog-box">
-                        <div class="image-wrap entry">
-                            <img src="assets/images/news.jpg" alt="" class="img-responsive">
-                            <div class="magnifier">
-                                <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                            </div>
-                        </div><!-- end image-wrap -->
-
-                        <div class="blog-desc">
-                            <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a>
-                            </h4>
-                            <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui
-                                vivamus. </p>
-                        </div><!-- end blog-desc -->
-
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li><a href="#">19 March 2017</a></li>
-                                <li><a href="#">by WP Destek</a></li>
-                                <li><a href="#">44 Share</a></li>
-                            </ul>
-                        </div><!-- end post-meta -->
-                    </div><!-- end blog -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section>
 @endsection
