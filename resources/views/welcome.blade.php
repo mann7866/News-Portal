@@ -1,319 +1,792 @@
-{{-- <!doctype html>
-<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
-<head>
+@extends('layouts.landing-page.app')
 
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Site Meta -->
-    <title>Sekolah Demonic</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+@section('main')
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
 
-	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
-	
-    <!-- Custom & Default Styles -->
-	<link rel="stylesheet" href="{{asset('users-assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/style.css')}}">
-
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-	<![endif]-->
-
-</head>
-<body>  
-
-    <!-- LOADER -->
-    <div id="preloader">
-        <img class="preloader" src="assets/images/loader.gif" alt="">
-    </div><!-- end loader -->
-    <!-- END LOADER -->
-
-    <div id="wrapper">
-        <!-- BEGIN # MODAL LOGIN -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Begin # DIV Form -->
-                    <div id="div-forms">
-                        <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
-                            </button>
-                            <div class="modal-body">
-                                <input class="form-control" type="text" placeholder="What you are looking for?" required>
-                            </div>
-                        </form><!-- End # Login Form -->
-                    </div><!-- End # DIV Form -->
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">SMKS AL AZHAR SEMPU</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">Sekolah berbasis IT dan Pondok Pesantren</p>
+                    <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                            class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
+                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                    <img src="{{ asset('landing-page/img/hero-img.png') }}" class="img-fluid animated" alt="">
                 </div>
             </div>
         </div>
-        <!-- END # MODAL LOGIN -->
-            @include('layouts.users.topbar')
 
-            <div class="container">
-                <nav class="navbar navbar-default yamm">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="logo-normal">
-                            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <div class="container" data-aos="fade-up">
+            <div class="row gx-0">
+
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <h3>Who We Are</h3>
+                        <h2>Mengapa harus bergabung dengan SMK kami?</h2>
+                        <p>
+                            Karena smk kami memiliki unit usaha di masing-masing program studi, sehingga para siswa dapat langsung belajar, mempraktikkan dan merasakan secara langsung suasana di dunia industri sebelum mereka lulus, berikut adalah daftar dari Unit Usaha SMK kami.
+
+                        </p>
+                        <div class="text-center text-lg-start">
+                            <a href="#"
+                                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{route('dashboard')}}">Home</a></li>
-                            <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Mega Menu <b class="fa fa-angle-down"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="yamm-content clearfix">
-                                            <div class="row-fluid">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <h4>Course Pages</h4>
-                                                    <ul>
-                                                        <li><a href="#">Courses Name 01</a></li>
-                                                        <li><a href="#">Courses Name 02</a></li>
-                                                        <li><a href="#">Courses Name 03</a></li>
-                                                        <li><a href="#">Courses Name 04</a></li>
-                                                        <li><a href="#">Courses Name 05</a></li>
-                                                        <li><a href="#">Courses Name 06</a></li>
-                                                        <li><a href="#">Courses Name 07</a></li>
-                                                        <li><a href="#">Courses Name 08</a></li>
-                                                        <li><a href="#">Courses Name 09</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="menu-widget text-center">
-                                                        <div class="image-wrap entry">
-                                                            <img src="assets/upload/course_01.jpg" alt="" class="img-responsive">
-                                                            <div class="magnifier">
-                                                                 <a href="#" title=""><i class="flaticon-add"></i></a>
-                                                            </div>
-                                                        </div><!-- end image-wrap -->
-                                                        <h5><a href="#">Learning Bootstrap Framework</a></h5>
-                                                        <small>$22.00</small>
-                                                        <a href="#" class="menu-button">View Course</a>
-                                                    </div><!-- end widget -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="">Events</a></li>
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop <span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="shop.html">Shop Layout</a></li>
-                                    <li><a href="shop-single.html">Shop Single</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-1.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-2.html">Blog Grid Sidebar</a></li>
-                                    <li><a href="blog-3.html">Blog Grid Fullwidth</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-contact.html">Contact</a></li>
-                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
-                            <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>
-                        </ul>
-                    </div>
-                </nav><!-- end navbar -->
-            </div><!-- end container -->
-        </header>
-
-        <section id="home" class="video-section js-height-full">
-            <div class="overlay"></div>
-            <div class="home-text-wrapper relative container">
-                <div class="home-message">
-                    <p>Learning Management System</p>
-                    <small>Sekolah is the ideal choice for your organization, your business and your online education system. Create your online course now with unlimited page templates, color options, and menu features.</small>
-                    <div class="btn-wrapper">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-default wow slideInRight">Buy Now</a>
-                        </div>
-                    </div><!-- end row -->
                 </div>
-            </div>
-            <div class="slider-bottom">
-                <span>Explore <i class="fa fa-angle-down"></i></span>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 hidden-sm hidden-xs">
-                        <div class="custom-module">
-                            <img src="assets/images/p1.jpeg" alt="" class="img-responsive wow slideInLeft">
-                        </div><!-- end module -->
-                    </div><!-- end col -->
-                    <div class="col-md-8">
-                        <div class="custom-module p40l">
-                            <h2>Kami adalah <mark>sistem pembelajaran</mark> yang berdedikasi<br>
-                                dari Banyuwangi. Menyediakan desain digital & pengembangan web <br>
-                                yang mudah digunakan untuk pendidikan.</h2>
-                        
-                            <p>Temukan pengalaman belajar yang lebih baik. Kami menawarkan platform yang didesain untuk memudahkan siswa dan guru. Akses berbagai fitur dan konten pendidikan yang berkualitas.</p>
-                        
-                            <hr class="invis">
-                        
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
-                                    <ul class="check">
-                                        <li>Modul Pembelajaran Kustom</li>
-                                        <li>Pembangun Halaman Visual</li>
-                                        <li>Materi Tak Terbatas</li>
-                                        <li>Tema Responsif</li>
-                                        <li>Berbagai Tata Letak Kelas</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <ul class="check">
-                                        <li>Ikon Pendidikan Font Awesome</li>
-                                        <li>Warna yang Telah Ditentukan</li>
-                                        <li>Transisi Halaman Interaktif</li>
-                                        <li>Dukungan Berkualitas Tinggi</li>
-                                        <li>Pengaturan Tak Terbatas</li>
-                                    </ul><!-- end check -->    
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
-                                    <ul class="check">
-                                        <li>Tata Letak e-Learning</li>
-                                        <li>Font untuk Pendidikan</li>
-                                        <li>Pengubah Gaya Tema</li>
-                                        <li>Gaya Footer Sekolah</li>
-                                        <li>Gaya Header Sekolah</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 --> 
-                            </div><!-- end row -->   
-                        
-                            <hr class="invis">
-                        
-                            <div class="btn-wrapper">
-                                <a href="##" class="btn btn-primary">Pelajari Lebih Lanjut Tentang Kami</a>
+                <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="{{ asset('landing-page/img/about.jpg') }}" class="img-fluid" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </section><!-- /About Section -->
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item d-flex align-items-center w-100 h-100">
+                        <i class="bi bi-people color-blue flex-shrink-0"></i>
+                        <div>
+                            <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Siswa</p>
+                        </div>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item d-flex align-items-center w-100 h-100">
+                        <i class="bi bi-window color-orange flex-shrink-0" style="color: #ee6c20;"></i>
+                        <div>
+                            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Labolatorium</p>
+                        </div>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item d-flex align-items-center w-100 h-100">
+                        <i class="bi bi-person color-green flex-shrink-0" style="color: #15be56;"></i>
+                        <div>
+                            <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Karyawan</p>
+                        </div>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item d-flex align-items-center w-100 h-100">
+                        <i class="bi bi-journal-richtext color-pink flex-shrink-0" style="color: #bb0852;"></i>
+                        <div>
+                            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Program Studi</p>
+                        </div>
+                    </div>
+                </div><!-- End Stats Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Stats Section -->
+
+
+    <!-- Alt Features Section -->
+    <section id="alt-features" class="alt-features section">
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="row align-self-center gy-5">
+
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-award"></i>
+                            <div>
+                                <h4>Corporis voluptates sit</h4>
+                                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                             </div>
-                        
-                        </div><!-- end module -->
-                        
-                    </div><!-- end col -->
-                </div>
-            </div><!-- end container -->
-        </section>
+                        </div><!-- End Feature Item -->
 
-  @include('layouts.users.kursus')
-        
-        
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-card-checklist"></i>
+                            <div>
+                                <h4>Ullamco laboris nisi</h4>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                            </div>
+                        </div><!-- End Feature Item -->
 
-      @include('layouts.users.service')
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-dribbble"></i>
+                            <div>
+                                <h4>Labore consequatur</h4>
+                                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                            </div>
+                        </div><!-- End Feature Item -->
 
-        <section class="section db">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">2346</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Total murid sekolah</h3>
-                            <p>Ini adalah data jumlah murid yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-filter-circle"></i>
+                            <div>
+                                <h4>Beatae veritatis</h4>
+                                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                            </div>
+                        </div><!-- End Feature Item -->
 
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">331</h4>
-                            <h3><i class="flaticon-online-course"></i> Penghargaan sekolah</h3>
-                            <p>Ini adalah jumlah penghargaan yang didapatkan sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-lightning-charge"></i>
+                            <div>
+                                <h4>Molestiae dolor</h4>
+                                <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                            </div>
+                        </div><!-- End Feature Item -->
 
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">120</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Jumlah guru pengajar di sekolah</h3>
-                            <p>Ini adalah data guru pengajar yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
+                        <div class="col-md-6 icon-box">
+                            <i class="bi bi-patch-check"></i>
+                            <div>
+                                <h4>Explicabo consectetur</h4>
+                                <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                            </div>
+                        </div><!-- End Feature Item -->
 
-        @include('layouts.users.review')
-
-        @include('layouts.users.news')
-        <section class="section bgcolor1">
-            <div class="container">
-                <a href="#">
-                <div class="row callout">
-                    <div class="col-md-4 text-center">
-                        <h3><sup>$</sup>49.99</h3>
-                        <h4>Start your awesome course today!</h4>
-                    </div><!-- end col -->
-
-                    <div class="col-md-8">
-                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
                     </div>
-                </div><!-- end row -->
-                </a>
-            </div><!-- end container -->  
-        </section>
 
- @include('layouts.users.footer')
+                </div>
 
-        <div class="copyrights">
-            <div class="container">
-                <div class="clearfix">
-                    <div class="pull-left">
-                        <div class="cop-logo">
-                            <a href="#"><img src="assets/images/logo.png" alt=""></a>
+                <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img src="{{ asset('') }}landing-page/img/alt-features.png" class="img-fluid" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- /Alt Features Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <p>Layanan Kami<br></p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative">
+                        <i class="bi bi-bounding-box-circles icon"></i>
+                        <h3>Al - Azhar Mart</h3>
+                        <p>Melayani penjualan berbagai kebutuhan pokok, mulai dari kebutuhan alat tulis siswa hingga bahan pangan.</p>
+                        <a href="#" class="read-more stretched-link"><span>Read More</span> <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item item-indigo position-relative">
+                        <i class="bi bi-calendar4-week icon"></i>
+                        <h3>Al - Azhar Motor</h3>
+                        <p>Melayani penjualan Spare part mulai dari motor sampai dengan mobil, juga melayani jasa service baik mobil ataupun sepeda motor.</p>
+                        <a href="#" class="read-more stretched-link"><span>Read More</span> <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative">
+                        <i class="bi bi-easel icon"></i>
+                        <h3>Oma Mode</h3>
+                        <p>Melayani jasa pembuatan busana dan penjualan busana.</p>
+                        <a href="#" class="read-more stretched-link"><span>Read More</span> <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative">
+                        <i class="bi bi-activity icon"></i>
+                        <h3>PT ACS Multi Technology</h3>
+                        <p>Melayani berbagai jasa di bidang IT</p>
+                        <a href="#" class="read-more stretched-link"><span>Read More</span> <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div><!-- End Service Item -->
+            </div>
+
+        </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Testimonials</h2>
+            <p>What they are saying about us<br></p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
+              },
+              "1200": {
+                "slidesPerView": 3,
+                "spaceBetween": 1
+              }
+            }
+          }
+        </script>
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                                Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="{{ asset('') }}landing-page/img/testimonials/testimonials-1.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum
+                                eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim
+                                culpa.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="{{ asset('') }}landing-page/img/testimonials/testimonials-2.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                                minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="{{ asset('') }}landing-page/img/testimonials/testimonials-3.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim
+                                velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum
+                                veniam.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="{{ asset('') }}landing-page/img/testimonials/testimonials-4.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam
+                                enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore
+                                nisi cillum quid.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="{{ asset('') }}landing-page/img/testimonials/testimonials-5.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Team</h2>
+            <p>Our hard working team</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="{{ asset('') }}landing-page/img/team/team-1.jpg" class="img-fluid"
+                                alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                                exercitationem iure minima enim corporis et voluptate.</p>
                         </div>
                     </div>
+                </div><!-- End Team Member -->
 
-                    <div class="pull-right">
-                        <div class="footer-links">
-                            <ul class="list-inline">
-                                <li>Design : <a href="https://html.design">HTML.Design</a></li>
-                            </ul>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="{{ asset('') }}landing-page/img/team/team-2.jpg" class="img-fluid"
+                                alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Sarah Jhonson</h4>
+                            <span>Product Manager</span>
+                            <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit
+                                corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
                         </div>
                     </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="{{ asset('') }}landing-page/img/team/team-3.jpg" class="img-fluid"
+                                alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>William Anderson</h4>
+                            <span>CTO</span>
+                            <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates
+                                enim aut architecto porro aspernatur molestiae modi.</p>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="{{ asset('') }}landing-page/img/team/team-4.jpg" class="img-fluid"
+                                alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Amanda Jepson</h4>
+                            <span>Accountant</span>
+                            <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid
+                                doloremque ut possimus ipsum officia.</p>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Clients</h2>
+            <p>We work with best clients<br></p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 2,
+                "spaceBetween": 40
+              },
+              "480": {
+                "slidesPerView": 3,
+                "spaceBetween": 60
+              },
+              "640": {
+                "slidesPerView": 4,
+                "spaceBetween": 80
+              },
+              "992": {
+                "slidesPerView": 6,
+                "spaceBetween": 120
+              }
+            }
+          }
+        </script>
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-1.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-2.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-3.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-4.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-5.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-6.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-7.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('') }}landing-page/img/clients/client-8.png"
+                            class="img-fluid" alt=""></div>
                 </div>
-            </div><!-- end container -->
-        </div><!-- end copy -->
-    </div><!-- end wrapper -->
+                <div class="swiper-pagination"></div>
+            </div>
 
-    <!-- jQuery Files -->
-    <script src="{{asset('users-assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/carousel.js')}}"></script>
-    <script src="{{asset('users-assets/js/animate.js')}}"></script>
-    <script src="{{asset('users-assets/js/custom.js')}}"></script>
-    <!-- VIDEO BG PLUGINS -->
-    <script src="{{asset('users-assets/js/videobg.js')}}"></script>
+        </div>
 
-</body>
-</html> --}}
+    </section><!-- /Clients Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Recent Posts</h2>
+            <p>Recent posts form our Blog</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-xl-4 col-md-6">
+                    <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="post-img position-relative overflow-hidden">
+                            <img src="{{ asset('') }}landing-page/img/blog/blog-1.jpg" class="img-fluid"
+                                alt="">
+                            <span class="post-date">December 12</span>
+                        </div>
+
+                        <div class="post-content d-flex flex-column">
+
+                            <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
+
+                            <div class="meta d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                                </div>
+                                <span class="px-3 text-black-50">/</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+
+                        </div>
+
+                    </div>
+                </div><!-- End post item -->
+
+                <div class="col-xl-4 col-md-6">
+                    <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="post-img position-relative overflow-hidden">
+                            <img src="{{ asset('') }}landing-page/img/blog/blog-2.jpg" class="img-fluid"
+                                alt="">
+                            <span class="post-date">July 17</span>
+                        </div>
+
+                        <div class="post-content d-flex flex-column">
+
+                            <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
+
+                            <div class="meta d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                                </div>
+                                <span class="px-3 text-black-50">/</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+
+                        </div>
+
+                    </div>
+                </div><!-- End post item -->
+
+                <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="post-item position-relative h-100">
+
+                        <div class="post-img position-relative overflow-hidden">
+                            <img src="{{ asset('') }}landing-page/img/blog/blog-3.jpg" class="img-fluid"
+                                alt="">
+                            <span class="post-date">September 05</span>
+                        </div>
+
+                        <div class="post-content d-flex flex-column">
+
+                            <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
+
+                            <div class="meta d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
+                                </div>
+                                <span class="px-3 text-black-50">/</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+
+                        </div>
+
+                    </div>
+                </div><!-- End post item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6">
+
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="200">
+                                <i class="bi bi-geo-alt"></i>
+                                <h3>Address</h3>
+                                <p>A108 Adam Street</p>
+                                <p>New York, NY 535022</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="300">
+                                <i class="bi bi-telephone"></i>
+                                <h3>Call Us</h3>
+                                <p>+1 5589 55488 55</p>
+                                <p>+1 6678 254445 41</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="400">
+                                <i class="bi bi-envelope"></i>
+                                <h3>Email Us</h3>
+                                <p>info@example.com</p>
+                                <p>contact@example.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="500">
+                                <i class="bi bi-clock"></i>
+                                <h3>Open Hours</h3>
+                                <p>Monday - Friday</p>
+                                <p>9:00AM - 05:00PM</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                    required="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                    required="">
+                            </div>
+
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                    required="">
+                            </div>
+
+                            <div class="col-12">
+                                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                <button type="submit">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Contact Section -->
+@endsection
