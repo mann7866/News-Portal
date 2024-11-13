@@ -9,7 +9,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
 
 Route::get('/', function () {
-    return view('pages.user.landing-pages.index');
+    return view('welcome');
 });
 
 Route::middleware('auth')->group(function () {
