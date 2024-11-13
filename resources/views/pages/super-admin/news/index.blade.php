@@ -138,8 +138,8 @@
                             <div class="card-body p-4">
                                 <span
                                     class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
-                                <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul: {{ $item->title }}</span>
-                                <p class="d-block my-4 fs-5 text-dark fw-semibold">
+                                <span class="d-block mt-2 text-dark fs-4 fw-semibold">{{ Str::limit($item->title, 55) }}</span>
+                                <p class="d-block my-4 fs-4 text-dark ">
                                     {{ Str::limit(strip_tags($item->description), 60) }}
                                 </p>
                                 <div class="d-flex align-items-center gap-4">
