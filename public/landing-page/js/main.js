@@ -1,210 +1,450 @@
-/**
-* Template Name: FlexStart
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Updated: Nov 01 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* ===================================================================
 
-(function() {
-  "use strict";
+    Author          : Valid Theme
+    Template Name   : Earna - Consulting Business Template
+    Version         : 1.0
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
+* ================================================================= */
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+(function($) {
+    "use strict";
 
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+    $(document).ready(function () {
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+        /* ==================================================
+            # Wow Init
+         ===============================================*/
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true // act on asynchronously loaded content (default is true)
         });
-        if (typeof aosInit === 'function') {
-          aosInit();
+        wow.init();
+
+
+        /* ==================================================
+            # Tooltip Init
+        ===============================================*/
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+
+        /* ==================================================
+            # Smooth Scroll
+         ===============================================*/
+        $("body").scrollspy({
+            target: ".navbar-collapse",
+            offset: 200
+        });
+        $('a.smooth-menu').on('click', function(event) {
+            var $anchor = $(this);
+            var headerH = '75';
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - headerH + "px"
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
+
+
+        /* ==================================================
+            # Banner Animation
+        ===============================================*/
+        function doAnimations(elems) {
+            //Cache the animationend event in a variable
+            var animEndEv = 'webkitAnimationEnd animationend';
+            elems.each(function() {
+                var $this = $(this),
+                    $animationType = $this.data('animation');
+                $this.addClass($animationType).one(animEndEv, function() {
+                    $this.removeClass($animationType);
+                });
+            });
         }
-      }, false);
-    });
 
-  });
+        //Variables on page load
+        var $immortalCarousel = $('.animate_text'),
+            $firstAnimatingElems = $immortalCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+        //Initialize carousel
+        $immortalCarousel.carousel();
+        //Animate captions in first slide on page load
+        doAnimations($firstAnimatingElems);
+        //Other slides to be animated on carousel slide event
+        $immortalCarousel.on('slide.bs.carousel', function(e) {
+            var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+            doAnimations($animatingElems);
+        });
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
+        /* ==================================================
+            # Youtube Video Init
+         ===============================================*/
+        $('.player').mb_YTPlayer();
 
-  window.addEventListener("load", initSwiper);
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
+        /* ==================================================
+            # imagesLoaded active
+        ===============================================*/
+        $('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
+
+            /* Filter menu */
+            $('.mix-item-menu').on('click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+
+            /* filter menu active class  */
+            $('.mix-item-menu button').on('click', function(event) {
+                $(this).siblings('.active').removeClass('active');
+                $(this).addClass('active');
+                event.preventDefault();
+            });
+
+            /* Filter active */
+            var $grid = $('#portfolio-grid').isotope({
+                itemSelector: '.pf-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.pf-item',
+                }
+            });
+
+            /* Filter active */
+            $('.blog-masonry').isotope({
+                itemSelector: '.blog-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.blog-item',
+                }
+            });
+
+        });
+
+
+         /* ==================================================
+            # Fun Factor Init
+        ===============================================*/
+        $('.timer').countTo();
+        $('.fun-fact').appear(function() {
+            $('.timer').countTo();
+        }, {
+            accY: -100
+        });
+
+
+        /* ==================================================
+            # Magnific popup init
+         ===============================================*/
+        $(".popup-link").magnificPopup({
+            type: 'image',
+            // other options
+        });
+
+        $(".popup-gallery").magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            // other options
+        });
+
+        $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+
+        $('.magnific-mix-gallery').each(function() {
+            var $container = $(this);
+            var $imageLinks = $container.find('.item');
+
+            var items = [];
+            $imageLinks.each(function() {
+                var $item = $(this);
+                var type = 'image';
+                if ($item.hasClass('magnific-iframe')) {
+                    type = 'iframe';
+                }
+                var magItem = {
+                    src: $item.attr('href'),
+                    type: type
+                };
+                magItem.title = $item.data('title');
+                items.push(magItem);
+            });
+
+            $imageLinks.magnificPopup({
+                mainClass: 'mfp-fade',
+                items: items,
+                gallery: {
+                    enabled: true,
+                    tPrev: $(this).data('prev-text'),
+                    tNext: $(this).data('next-text')
+                },
+                type: 'image',
+                callbacks: {
+                    beforeOpen: function() {
+                        var index = $imageLinks.index(this.st.el);
+                        if (-1 !== index) {
+                            this.goTo(index);
+                        }
+                    }
+                }
+            });
+        });
+
+
+        /* ==================================================
+            # Testimonials Carousel
+         ===============================================*/
+        $('.testimonials-carousel').owlCarousel({
+            loop: false,
+            nav: true,
+            margin:30,
+            dots: false,
+            autoplay: false,
+            items: 1,
+            navText: [
+                "<i class='arrow_left'></i>",
+                "<i class='arrow_right'></i>"
+            ]
+        });
+
+
+
+        /* ==================================================
+            # Projects Carousel
+         ===============================================*/
+        $('.projects-carousel').owlCarousel({
+            loop: true,
+            center: true,
+            margin: 70,
+            nav: true,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: false,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1200: {
+                    items: 1,
+                    stagePadding: 200
+                },
+                1601: {
+                    items: 1,
+                    stagePadding: 250
+                },
+                1900: {
+                    items: 1,
+                    stagePadding: 400
+                }
+            }
+        });
+
+
+        /* ==================================================
+            # We Do Carousel
+         ===============================================*/
+        $('.wedo-carousel').owlCarousel({
+            loop: true,
+            nav: false,
+            margin: 30,
+            dots: true,
+            autoplay: true,
+            items: 1,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            responsive: {
+                1300: {
+                    stagePadding: 50,
+                    items: 2
+                }
+            }
+        });
+
+
+        /* ==================================================
+            # Partner Carousel
+         ===============================================*/
+        $('.partner-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: false,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: false,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+
+        /* ==================================================
+            # Services Carousel
+         ===============================================*/
+        $('.thumb-services-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: false,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+
+        /* ==================================================
+            # Company Owner Carousel Carousel
+         ===============================================*/
+         $('.compnay-owner-carousel-carousel').owlCarousel({
+            loop: false,
+            nav: true,
+            margin:30,
+            dots: false,
+            autoplay: false,
+            items: 1,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+        });
+
+
+        /* ==================================================
+		    _Progressbar Init
+		 ===============================================*/
+		function animateElements() {
+			$('.progressbar').each(function() {
+				var elementPos = $(this).offset().top;
+				var topOfWindow = $(window).scrollTop();
+				var percent = $(this).find('.circle').attr('data-percent');
+				var animate = $(this).data('animate');
+				if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+					$(this).data('animate', true);
+					$(this).find('.circle').circleProgress({
+						// startAngle: -Math.PI / 2,
+						value: percent / 100,
+						size: 110,
+						thickness: 10,
+						lineCap: 'round',
+						emptyFill: '#f1f1f1',
+						fill: {
+							gradient: ['#1273eb', '#ee2852 ']
+						}
+					}).on('circle-animation-progress', function(event, progress, stepValue) {
+						$(this).find('strong').text((stepValue * 100).toFixed(0) + "%");
+					}).stop();
+				}
+			});
+        }
+
+		animateElements();
+		$(window).scroll(animateElements);
+
+        function displayMessage(status, message) {
+            var messageHtml = '<div class="alert mt-3 alert-' + status + ' alert-dismissible" role="alert">' + message + '</div>';
+            $('#message').html(messageHtml);
+            $('#message').fadeIn('slow');
+
+            setTimeout(function() {
+                $('#message').fadeOut('slow');
+            }, 5000);
+        }
+
+
+        /* ==================================================
+            Contact Form Validations
+        ================================================== */
+        $('.contact-form').each(function() {
+            var formInstance = $(this);
+            formInstance.submit(function() {
+
+                var action = $(this).attr('action'),
+                    formData = $(this).serializeArray();
+
+                console.log(formData)
+
+                $("#message").slideUp(750, function() {
+                    $('#message').hide();
+
+                    $('#submit')
+                        .attr('disabled', 'disabled');
+
+                    $.ajax({
+                        type: "POST",
+                        url: action,
+                        data: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function({ code, status, message }) {
+                            displayMessage(status, message);
+                            document.getElementById('submit').removeAttribute('disabled');
+                        },
+                        error: function(data) {
+                            console.log(data)
+                            document.getElementById('submit').removeAttribute('disabled');
+                        }
+                    });
+                });
+                return false;
+            });
+        });
+
+    }); // end document ready function
+
+
+    /* ==================================================
+        Preloader Init
+     ===============================================*/
+    function loader() {
+        $(window).on('load', function () {
+            $('#earna-preloader').addClass('loaded');
+            $("#loading").fadeOut(500);
+
+            if ($('#earna-preloader').hasClass('loaded')) {
+                $('#preloader').delay(900).queue(function () {
+                    $(this).remove();
+                });
+            }
+        });
     }
-  });
+    loader();
 
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
-})();
+})(jQuery); // End jQuery
