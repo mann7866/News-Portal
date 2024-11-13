@@ -138,6 +138,7 @@
                         <h6 class="fw-semibold mb-0 fs-4">Cordelia Potter</h6>
                         <span class="p-1 bg-light-dark rounded-circle d-inline-block"></span>
                     </div>
+                    <p class="my-3">Huwso jewzehgu julriw niwgazep lewbob isujirmuz hemto pahop cewa zuhucze rinitba
                         etdebluj.
                         Obdevo bo fa siztes laobeir agoemugo rut sapaviw mulati do re dabelul wo tumnik wih mu.
                     </p>
