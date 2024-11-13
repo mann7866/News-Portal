@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Simple landing page</title>
+    <title>News Portal</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,6 +16,7 @@
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
 @include('pages/user/landing-pages.header')
 
+@include('pages/user/landing-pages.banner')
     <div class="content-wrapper">
         <div class="container">
 @include('pages/user/landing-pages.news')
