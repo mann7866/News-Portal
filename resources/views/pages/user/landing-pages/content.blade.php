@@ -1,7 +1,7 @@
 <section class="digital-marketing-service" id="digital-marketing-section">
     <div class="row align-items-center">
         <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
-            <h3 class="m-0">We Offer a Full Range<br>of Digital Marketing Services!</h3>
+            <h3 class="m-0">Kami menyajikan berita terkini yang dapat diakses secara online <br> kapan pun dan di mana pun Anda berada.</h3>
             <div class="col-lg-7 col-xl-6 p-0">
                 <p class="py-4 m-0 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce
                     egeabus consectetuer turpis, suspendisse.</p>
@@ -18,7 +18,7 @@
             <img src="landing-page/images/Group2.png" alt="" class="img-fluid">
         </div>
         <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">
-            <h3 class="m-0">Leading Digital Agency<br>for Business Solution.</h3>
+            <h3 class="m-0">Berita Terkini SMK Al-Azhar, Untuk Anda di Mana Saja.</h3>
             <div class="col-lg-9 col-xl-8 p-0">
                 <p class="py-4 m-0 text-muted">Power-packed with impressive features and well-optimized,
                     this template is designed to provide the best performance in all circumstances.</p>

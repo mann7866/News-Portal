@@ -1,42 +1,71 @@
-<section class="features-overview" id="features-section">
+<style>
+     .img-icons {
+            width: 80px; /* Set a small width for the image */
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+            gap: 1.5rem; /* spacing between items */
+            margin: 0 auto;
+            max-width: 1200px;
+        }    
+</style>
+<section style="margin-bottom: 5vh" class="features-overview" id="features-section">
     <div class="content-header">
-        <h2>How does it works</h2>
-        <h6 class="section-subtitle text-muted">One theme that serves as an easy-to-use operational
-            toolkit<br>that meets customer's needs.</h6>
+        <h2>Berita Terkini</h2>
+        <h6 class="section-subtitle text-muted">Ini adalah beberapa berita terkini yang ada di SMK Al-Azhar</h6>
     </div>
-    <div class="d-md-flex justify-content-between">
-        <div class="grid-margin d-flex justify-content-start">
-            <div class="features-width">
-                <img src="landing-page/images/Group12.svg" alt="" class="img-icons">
-                <h5 class="py-3">Speed<br>Optimisation</h5>
-                <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
-                    consectetuer turpis, suspendisse.</p>
-                <a href="#">
-                    <p class="readmore-link">Readmore</p>
-                </a>
-            </div>
+    <div class="news-grid">
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 1" class="img-icons">
+            <h5 class="py-3">Berita 1</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
         </div>
-        <div class="grid-margin d-flex justify-content-center">
-            <div class="features-width">
-                <img src="landing-page/images/Group7.svg" alt="" class="img-icons">
-                <h5 class="py-3">SEO and<br>Backlinks</h5>
-                <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
-                    consectetuer turpis, suspendisse.</p>
-                <a href="#">
-                    <p class="readmore-link">Readmore</p>
-                </a>
-            </div>
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 2" class="img-icons">
+            <h5 class="py-3">Berita 2</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
         </div>
-        <div class="grid-margin d-flex justify-content-end">
-            <div class="features-width">
-                <img src="landing-page/images/Group5.svg" alt="" class="img-icons">
-                <h5 class="py-3">Content<br>Marketing</h5>
-                <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
-                    consectetuer turpis, suspendisse.</p>
-                <a href="#">
-                    <p class="readmore-link">Readmore</p>
-                </a>
-            </div>
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 3" class="img-icons">
+            <h5 class="py-3">Berita 3</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
+        </div>
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 4" class="img-icons">
+            <h5 class="py-3">Berita 4</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
+        </div>
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 5" class="img-icons">
+            <h5 class="py-3">Berita 5</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
+        </div>
+        <div class="grid-margin">
+            <img src="landing-page/images/news-image.jpg" alt="News Image 6" class="img-icons">
+            <h5 class="py-3">Berita 6</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce eget consectetuer turpis, suspendisse.</p>
+            <a href="#">
+                <p class="readmore-link">Readmore</p>
+            </a>
         </div>
     </div>
 </section>
