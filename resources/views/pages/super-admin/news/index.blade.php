@@ -124,7 +124,7 @@
                                                 <i class="ti ti-trash text-muted me-1 fs-4"></i>Hapus </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item" href="{{ route('news.show', $item->id) }}">
                                                 <i class="ti ti-info-circle text-muted me-1 fs-4"></i>Detail </a>
                                         </li>
                                     </ul>
