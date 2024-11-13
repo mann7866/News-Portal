@@ -5,8 +5,6 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\EmployeeJobController;
 
 Route::get('/', function () {
     return view('pages.user.landing-pages.index');
@@ -16,6 +14,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
 
     Route::prefix('administrator')->group(function () {
 
@@ -38,25 +38,13 @@ Route::middleware('auth')->group(function () {
          Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
          Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
-        // route employee
-        Route::get('employee', action: [EmployeeController::class, 'index'])->name('employee.index');
-        Route::get('employee/create', [EmployeeController::class, 'create'])->name('employee.create');
-        Route::get('employee/show', action: [EmployeeController::class, 'show'])->name('employee.show');
-        Route::get('employee/edit', [EmployeeController::class, 'edit'])->name('employee.edit');
-        Route::post('employee', [EmployeeController::class, 'store'])->name('employee.store');
-        Route::put('employee/{employee}', [EmployeeController::class, 'update'])->name('employee.update');
-        Route::delete('employee/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
-
-        // route employeeJob
-        Route::get('employeeJob', action: [EmployeeJobController::class, 'index'])->name('employeeJob.index');
-        Route::get('employeeJob/create', [EmployeeJobController::class, 'create'])->name('employeeJob.create');
-        Route::get('employeeJob/show', action: [EmployeeJobController::class, 'show'])->name('employeeJob.show');
-        Route::get('employeeJob/edit', [EmployeeJobController::class, 'edit'])->name('employeeJob.edit');
-        Route::post('employeeJob', [EmployeeJobController::class, 'store'])->name('employeeJob.store');
-        Route::put('employeeJob/{employeeJob}', [EmployeeJobController::class, 'update'])->name('employeeJob.update');
-        Route::delete('employeeJob/{employeeJob}', [EmployeeJobController::class, 'destroy'])->name('employeeJob.destroy');
-
-        require __DIR__ . '/rohman.php';
+        // route Teacher
+        Route::get('teacher', action: [TeacherController::class, 'index'])->name('teacher.index');
+        Route::get('teacher/create', [TeacherController::class, 'create'])->name('teacher.create');
+        Route::get('teacher/show', action: [TeacherController::class, 'show'])->name('teacher.show');
+        Route::get('teacher/edit', [TeacherController::class, 'edit'])->name('teacher.edit');
+        Route::post('teacher', [TeacherController::class, 'store'])->name('teacher.store');
+        Route::put('teacher/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
 
     });
     Route::get('/approval', function () {
