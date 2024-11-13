@@ -1,12 +1,10 @@
 <section class="digital-marketing-service" id="digital-marketing-section">
     <div class="row align-items-center">
         <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
-            <h3 class="m-0">Kami menyajikan berita terkini yang dapat diakses secara online <br> kapan pun dan di mana pun Anda berada.</h3>
+            <h3 class="m-0">Berita terkini SMK Al-Azhar hadir kapan saja dan di mana saja.</h3>
             <div class="col-lg-7 col-xl-6 p-0">
-                <p class="py-4 m-0 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce
-                    egeabus consectetuer turpis, suspendisse.</p>
-                <p class="font-weight-medium text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                    Fusce egeabus consectetuer</p>
+                <p class="py-4 m-0 text-muted">Nikmati kenyamanan mendapatkan berita dan informasi penting di ujung jari Anda. Dimanapun Anda berada, informasi dari SMK Al-Azhar siap mendampingi Anda.</p>
+                <p class="font-weight-medium text-muted">Nikmati akses mudah ke semua berita dan informasi terbaru yang relevan dan inspiratif dari SMK Al-Azhar."</p>
             </div>
         </div>
         <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
@@ -20,10 +18,8 @@
         <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">
             <h3 class="m-0">Berita Terkini SMK Al-Azhar, Untuk Anda di Mana Saja.</h3>
             <div class="col-lg-9 col-xl-8 p-0">
-                <p class="py-4 m-0 text-muted">Power-packed with impressive features and well-optimized,
-                    this template is designed to provide the best performance in all circumstances.</p>
-                <p class="pb-2 font-weight-medium text-muted">Its smart features make it a powerful
-                    stand-alone website building tool.</p>
+                <p class="py-4 m-0 text-muted">Dapatkan berita terbaru dan inspirasi dari SMK Al-Azhar kapan saja dan di mana saja. Dari pendidikan hingga acara penting, kami hadir dengan informasi yang relevan dan up-to-date.</p>
+                <p class="pb-2 font-weight-medium text-muted">Didesain dengan fitur-fitur modern, platform ini memungkinkan Anda menikmati informasi dengan tampilan yang menarik dan performa optimal.</p>
             </div>
             <button class="btn btn-info">Readmore</button>
         </div>
@@ -121,134 +117,6 @@
                     <div class="card-details text-center pt-4">
                         <h6 class="m-0 pb-1">Software Development</h6>
                         <p>Developing, Designing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="customer-feedback" id="feedback-section">
-    <div class="row">
-        <div class="col-12 text-center pb-5">
-            <h2>What our customers have to say</h2>
-            <h6 class="section-subtitle text-muted m-0">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-            </h6>
-        </div>
-        <div class="owl-carousel owl-theme grid-margin">
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face2.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Tony Martinez</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face3.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Sophia Armstrong</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face20.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Cody Lambert</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face15.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Cody Lambert</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face16.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Cody Lambert</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face1.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Tony Martinez</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face2.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Tony Martinez</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face3.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Sophia Armstrong</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card customer-cards">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="landing-page/images/face20.jpg" width="89" height="89"
-                            alt="" class="img-customer">
-                        <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.
-                            Fusce egeabus consectetuer turpis, suspendisse.</p>
-                        <div class="content-divider m-auto"></div>
-                        <h6 class="card-title pt-3">Cody Lambert</h6>
-                        <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
                     </div>
                 </div>
             </div>
