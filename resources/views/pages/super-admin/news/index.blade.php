@@ -143,8 +143,10 @@
                                     {{ Str::limit(strip_tags($item->description), 60) }}
                                 </p>
                                 <div class="d-flex align-items-center gap-4">
-                                    <div class="d-flex align-items-center gap-2"><i
-                                            class="ti ti-eye text-dark fs-5"></i>9,125
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="">
+                                            <button class="btn btn-secondary">show</button>
+                                        </a>
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <i class="ti ti-message-2 text-dark fs-5"></i>3
