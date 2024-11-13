@@ -9,7 +9,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
 
 Route::get('/', function () {
-    return view('pages.user.landing-pages.index');
+    return view('welcome');
 });
 
 Route::middleware('auth')->group(function () {
@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
         Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
+        Route::get('news/{id}', [NewsController::class, 'show'])->name('news.show');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');

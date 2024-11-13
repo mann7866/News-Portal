@@ -1,319 +1,1042 @@
-{{-- <!doctype html>
-<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
-<head>
+@extends('layouts.landing-page.app')
 
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Site Meta -->
-    <title>Sekolah Demonic</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+@section('title', 'News Portal')
+@section('style')
+    <style>
+        body {}
 
-	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
-	
-    <!-- Custom & Default Styles -->
-	<link rel="stylesheet" href="{{asset('users-assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('users-assets/style.css')}}">
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #1273eb;
+            margin-top: -5px;
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(18, 115, 235, 1) 30%, rgba(4, 215, 242, 1) 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-	<![endif]-->
+        .about-us-area .thumb {
+            padding-left: unset;
+            /* padding-right: 50px; */
+        }
 
-</head>
-<body>  
+        .about-us-area .thumb::after {
+            right: 0;
+            top: 5rem !important;
+            left: unset !important;
+        }
 
-    <!-- LOADER -->
-    <div id="preloader">
-        <img class="preloader" src="assets/images/loader.gif" alt="">
-    </div><!-- end loader -->
-    <!-- END LOADER -->
+        .about-us-area .container {
+            position: relative;
+        }
 
-    <div id="wrapper">
-        <!-- BEGIN # MODAL LOGIN -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Begin # DIV Form -->
-                    <div id="div-forms">
-                        <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
-                            </button>
-                            <div class="modal-body">
-                                <input class="form-control" type="text" placeholder="What you are looking for?" required>
+        .about-us-area .about-triangle {
+            position: absolute;
+            z-index: -1;
+            top: -7.5rem;
+            right: -7.5rem;
+        }
+
+        .thumbs-services-area .item::after {
+            position: absolute;
+            left: -15px;
+            top: 80px;
+            right: -15px;
+            background: none;
+            content: "";
+            bottom: 0;
+            z-index: -1;
+            border-radius: 7px;
+        }
+
+        .rounded-container {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 992px) {
+            .owl-carousel {
+                display: block;
+            }
+        }
+    </style>
+    <style>
+        @media (max-width: 992px) {
+            .about-triangle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .team-item img {
+                max-width: 40%;
+            }
+        }
+
+        .team-item {
+            margin-right: 15px;
+        }
+
+        .team-item:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: 992px) {
+            .team-item {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .responsive-text {
+                font-size: 16px;
+                /* Ubah sesuai kebutuhan */
+            }
+
+        }
+    </style>
+
+    <style>
+        footer::after {
+            background: url(landing-page/img/map.svg);
+        }
+    </style>
+@endsection
+
+@section('content')
+
+    <!-- Start Banner -->
+    <div class="banner-area text-center text-big top-pad-50">
+        <div id="bootcarousel" class="carousel text-light slide animate_text" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+
+            <div class="carousel-inner carousel-zoom">
+                <div class="carousel-item active">
+                    <div class="slider-thumb bg-fixed" style="background-image: url(storage/section/mischool.webp);">
+                    </div>
+                    <div class="box-table">
+                        <div class="box-cell shadow dark">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="content">
+                                            <h2>MISCHOOL <span>SISTEM MANAJEMEN SEKOLAH</span></h2>
+                                            <p class="animated slideInRight">
+                                                Jadilah smart school dengan Mischool. Kelola sekolah berbasis digital.
+                                                Gratis Pendaftaran!
+                                            </p>
+                                            <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
+                                                href="https://www.mischool.id/" target="_blank">
+                                                Lihat Selengkapnya
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </form><!-- End # Login Form -->
-                    </div><!-- End # DIV Form -->
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="slider-thumb bg-fixed"
+                        style="background-image: url(storage/section/software-development.webp);"></div>
+                    <div class="box-table">
+                        <div class="box-cell shadow dark">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="content">
+                                            <h2> Developer <span>Mengubah Masalah Menjadi Solusi Digital</span></h2>
+                                            <p class="animated slideInRight">
+                                                 merupakan pengembang perangkat lunak terbaik yang mampu
+                                                menyelesaikan permasalahan Anda dengan solusi digital
+                                            </p>
+                                            <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
+                                                href="services/software-development.html" target="_blank">
+                                                Lihat Selengkapnya
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Wrapper for slides -->
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control light" href="#bootcarousel" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control light" href="#bootcarousel" data-slide="next">
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Start About Area -->
+
+    <div class="about-us-area pt-5">
+        <div class="container">
+            <img src="landing-page/img/about-polygon.svg" class="about-triangle" alt="Polygon" />
+            <div class="about-items">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6 order-first order-md-last text-center">
+                        <div class="thumb">
+                            <img src="" alt="Thumb"
+                                style="max-width: 70%; max-height: auto; display: inline-block;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 info">
+                        <h2 class="text-break">SMKS AL AZHAR SEMPU</h2>
+                        <p class="text-break">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit sequi quam autem nesciunt
+                            ullam excepturi necessitatibus iure unde in recusandae facilis, aliquam voluptatem dolore,
+                            deserunt beatae quis ab totam!
+                        </p>
+                        <a class="btn btn-gradient effect btn-md" href="about/profile.html">Selengkapnya</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- END # MODAL LOGIN -->
-            @include('layouts.users.topbar')
 
+        <!-- End About -->
+
+        <!-- Star Services Area
+                                                            ============================================= -->
+        <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
+            <div class="right-shape">
+                <img src="landing-page/img/shape/9.png" alt="Shape">
+            </div>
             <div class="container">
-                <nav class="navbar navbar-default yamm">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="logo-normal">
-                            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="site-heading text-center">
+                            <h4>Layanan kami</h4>
+                            <h2>Kami menyediakan layanan software untuk mendukung perusahaan dan bisnis anda</h2>
+                            <div class="devider"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="services-items text-center">
+                    <div class="row">
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/ofg7lJLisMLV9iEULErd4vc6ZkTZ4vxmYY1GLKFS.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Software Development</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk
+                                            yang dihasilkan adalah produk perangkat lunak berbasis
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/software-development.html"><i class="fas fa-arrow-right"></i>
+                                            Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/pF4KmNe9YTmdxpEVbkvKnXcyVyDa02jWQSEujslr.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Kelas Industri</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p><strong>Kelas Industri </strong>merupakan program kelas khusus di sekolah
+                                            vokasi (SMK) yang dikelola bersama dengan industri.
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/kelas-industri.html"><i class="fas fa-arrow-right"></i>
+                                            Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/JdY4vkyMFjXS4Ci49rUniHx3pZ3waWqAmYMkmWXc.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Pengadaan Hardware IT</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        Pengadaan Peralatan IT seperti Komputer dan alat lainnya baik itu yang
+                                        bersertifikat TKDN ataupun yang
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/pengadaan-hardware-it.html"><i class="fas fa-arrow-right"></i>
+                                            Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Magang/ PKL</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p>Perusahaan kami menerima siswa/ mahasiswa magang. Peserta magang akan
+                                            mendapatkan pengalaman berbasis industri. Peserta magang
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/magang-pkl.html"><i class="fas fa-arrow-right"></i> Lihat
+                                            Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/Kunjungan%20Industri.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Kunjungan Industri</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p>Kunjungan Industri merupakan salah satu jenis kegiatan pembelajaran di luar
+                                            lingkungan sekolah untuk menambah wawasan
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/kunjungan-industri.html"><i class="fas fa-arrow-right"></i>
+                                            Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                            <div class="item"
+                                style="background-image: url('storage/service/GetHost_%20Layanan%20Hosting%20dan%20Domain.jpg'); min-height: 20rem; max-height: 20rem;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">GetHost: Layanan Hosting dan Domain</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p><strong>Gethost.id</strong> melayani hosting dan domain dengan harga
+                                            terjangkau, performa tinggi, dan fleksibilitas berlangganan bulanan.
+                                            Gethost.id
+                                    </div>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/gethost-layanan-hosting-dan-domain.html"><i
+                                                class="fas fa-arrow-right"></i> Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
 
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{route('dashboard')}}">Home</a></li>
-                            <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Mega Menu <b class="fa fa-angle-down"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="yamm-content clearfix">
-                                            <div class="row-fluid">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <h4>Course Pages</h4>
-                                                    <ul>
-                                                        <li><a href="#">Courses Name 01</a></li>
-                                                        <li><a href="#">Courses Name 02</a></li>
-                                                        <li><a href="#">Courses Name 03</a></li>
-                                                        <li><a href="#">Courses Name 04</a></li>
-                                                        <li><a href="#">Courses Name 05</a></li>
-                                                        <li><a href="#">Courses Name 06</a></li>
-                                                        <li><a href="#">Courses Name 07</a></li>
-                                                        <li><a href="#">Courses Name 08</a></li>
-                                                        <li><a href="#">Courses Name 09</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="menu-widget text-center">
-                                                        <div class="image-wrap entry">
-                                                            <img src="assets/upload/course_01.jpg" alt="" class="img-responsive">
-                                                            <div class="magnifier">
-                                                                 <a href="#" title=""><i class="flaticon-add"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- End Services Area -->
+        <div class="partner-area bg-gray shadow-less overflow-hidden text-light">
+            <div class="container-fluid">
+                <div class="item-box">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-4 col-md-12 info">
+                            <h2 class="mx-5 text-break">Menghadirkan produk dengan kualitas dan inovasi terbaik</h2>
+                            <p class="mx-5">Kami berkomitmen untuk menghadirkan produk-produk berkualitas tinggi yang
+                                dipadukan dengan inovasi terdepan, memenuhi kebutuhan dan harapan konsumen dengan
+                                sempurna.</p>
+                        </div>
+
+                        <div class="col-lg-8 col-md-12 clients">
+                            <div class="partner-carousel owl-carousel owl-theme ">
+                                <div class="single-item">
+                                    <div class="card rounded-container" style="min-height: 500px">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-center rounded-container"
+                                                style="background-color: #E5F1FF;">
+                                                <img class="img-fluid pt-3 mb-3"
+                                                    style="margin-left: 10px; margin-right: 10px; min-height: 200px;object-fit:contain;max-height:200px"
+                                                    src="storage/product/Mischool.id1.png" width="300" height="200"
+                                                    alt="">
+                                            </div>
+                                            <h4 class="text-dark mt-3" style="font-weight:600">
+                                                Mischool.id
+                                            </h4>
+
+                                            <p class="text-dark">
+                                                Sistem informasi manajemen sekolah berbasis web dan mobile yang membantu
+                                                mengelola administrasi sekolah secara real-time dan terintegrasi.
+                                            </p>
+                                            <div class="bottom d-flex justify-content-center mt-4">
+                                                <a href="product/mischoolid.html"
+                                                    class="btn btn-primary rounded-pill py-2 px-4 ">
+                                                    Lihat Detail <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-item">
+                                    <div class="card rounded-container" style="min-height: 500px">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-center rounded-container"
+                                                style="background-color: #E5F1FF;">
+                                                <img class="img-fluid pt-3 mb-3"
+                                                    style="margin-left: 10px; margin-right: 10px; min-height: 200px;object-fit:contain;max-height:200px"
+                                                    src="storage/product/Milink.id1.png" width="300" height="200"
+                                                    alt="">
+                                            </div>
+                                            <h4 class="text-dark mt-3" style="font-weight:600">
+                                                Milink.id
+                                            </h4>
+
+                                            <p class="text-dark">
+                                                Dengan MiLink.id, Anda dapat dengan mudah memotong URL yang panjang
+                                                menjadi tautan yang singkat dan mudah diingat sesuai dengan keinginan
+                                                Anda.
+                                            </p>
+                                            <div class="bottom d-flex justify-content-center mt-4">
+                                                <a href="product/milinkid.html"
+                                                    class="btn btn-primary rounded-pill py-2 px-4 ">
+                                                    Lihat Detail <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Product Area -->
+
+        <div class="thumbs-services-area m-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="site-heading text-center">
+                            <h4>MITRA KAMI</h4>
+                            <h3>Tumbuh bersama: Kolaborasi menuju kesuksesan</h3>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!-- Start Services Items -->
+                        <div class="services-content ">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="thumb-services-carousel owl-carousel owl-theme owl-loaded owl-drag">
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/XWtn1pMR1bB3EY9MDg3qt4y9hK56OFjT2b1SvnFi.png"
+                                                alt="SMK Al Azhar Sempu" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/OMc0t2iOti0qTcgSGjnhJOYOYvsdbok8UXLY1QZY.png"
+                                                alt="SMKN 1 Kepanjen" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/a9QtlJCuWqeKkaWV2U3nO9OznThPJFEquegjr0No.jpg"
+                                                alt="SMKN 1 Probolinggo" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/bkcxgsEnapILbETxIJJY90CUrNuua2y5UvvTENuK.png"
+                                                alt="SMK Muhammadiyah 6 Rogojampi" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/izrmwFuFz0wduf1UO2obUGFkAjr8DRHpxs33qJzJ.jpg"
+                                                alt="SMK Muhammadiyah 1 Genteng" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/8iq8YE7TuolFdQtyTpsyTeq6xzEV2BrvyYQcxWI1.png"
+                                                alt="SMK Muhammadiyah 9 Gambiran" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/REy3Rg4XRVV4naAgQojwtUbdic7Ts44sxBfSa6zw.png"
+                                                alt="SMK Nurul Abror Arobbaniyyin" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/IpyNMSfUPrFJTZy7rWWJXRfsm0Tlmh0hL77BIXRh.png"
+                                                alt="SMK 17 Agustus Muncar" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/4xarpITFQS5YE18s0rebUGf7PQT6NJyrzSw9NwIO.png"
+                                                alt="SMKN 4 Bojonegoro" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/FTpYVHSEASqK4C0A4ImJ0RbcyvrC8bD31EGE9SQk.jpg"
+                                                alt="SMKN 6 Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/sP2bC9JcTZ9yNykNUOl4aZsm9oCq7B00r6cOkHrP.png"
+                                                alt="SMKN 8 Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/RSTRJssQBFjhwZW4u3Hbz29Sn2JuM1BOL6SELWGT.jpg"
+                                                alt="Politeknik Negeri Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/dx4lyfCzNVdY2fJRn4dhSDdorAL7eiujKfiXkX9B.png"
+                                                alt="Politeknik Negeri Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/1yACLhkjWyu5hhmm7RK7tBfVcqEVwDVzLMZojeaT.png"
+                                                alt="Politeknik Negeri Banyuwangi" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/uCjXnPXspohp56S3KR5bBfnYFwhdkSAZDwsqDvfD.png"
+                                                alt="Universitas Muhammadiyah Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/ldTtzl0jheCvI3L3PgAIYeg8MIx8D315DDVmg0pt.png"
+                                                alt="PT ACS Multi Technology" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Pasuruan.png" alt="Kabupaten Pasuruan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/ZQnxxk4islEhBacOkWHvUv3LCDQ2QRSk6ezjAehP.png"
+                                                alt="SMKN 2 Penajam Paser Utara" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMK%20Wali%20Songo%20Bululawang.png"
+                                                alt="SMK Wali Songo Bululawang Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%202%20Kraksaan.png" alt="SMKN 2 Kraksaan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Politeknik%20Negeri%20Madiun.png"
+                                                alt="Politeknik Negeri Madiun" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/BBPPMPV%20BOE%20Malang.png" alt="BBPPMPV BOE Malang"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Mojokerto.png" alt="Kabupaten Mojokerto"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Malang.png" alt="Kabupaten Malang"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Exp%20Inc..png" alt="Exp Inc." class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Ubig.co.id.png" alt="Ubig.co.id" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Growin%20Travel.png" alt="Growin Travel"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Dunia%20Blazzer%20Indonesia.png"
+                                                alt="Dunia Blazzer Indonesia" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Yayasan%20Sinergis%20Asa%20Professional.png"
+                                                alt="Yayasan Sinergis Asa Professional" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Institut%20Teknologi%20dan%20Bisnis%20Asia%20Malang.png"
+                                                alt="Institut Teknologi dan Bisnis Asia Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Islam%20Balitar%20Blitar.png"
+                                                alt="Universitas Islam Balitar Blitar" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Brawijaya.png"
+                                                alt="Universitas Brawijaya" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Negeri%20Malang.png"
+                                                alt="Universitas Negeri Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%201%20Pasuruan.png" alt="SMKN 1 Pasuruan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%203%20Pamekasan.png" alt="SMKN 3 Pamekasan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMK%20Negeri%20Tambakboyo%20Tuban.png"
+                                                alt="SMK Negeri Tambakboyo Tuban" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Galaxy%20Solusindo%20Malang.png"
+                                                alt="Galaxy Solusindo Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/DB%20Klik%20Surabaya.png" alt="DB Klik Surabaya"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/PT%20GITS%20Indonesia.png" alt="PT GITS Indonesia"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/PT%20Penerbit%20Jurnal%20Indonesia.png"
+                                                alt="PT Penerbit Jurnal Indonesia" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kedaireka.id.png" alt="Kedaireka.id"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/STIKOM%20Bali.png" alt="STIKOM Bali"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12 pagi-area text-center">
+                <a class="text-primary" href="mitra.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12q0-.425.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                    </svg> Lihat Selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- End collab  Area -->
+
+        <div class="bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="site-heading text-center mt-4">
+                            <h4>BERITA</h4>
+                            <h3>Melangkah Ke Depan: Kabar Terbaru Mengenai Perkembangan Perusahaan Kami</h3>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-area full-blog blog-standard full-blog grid-colum">
+                <div class="container">
+                    <div class="blog-items content-less">
+                        <div class="blog-content">
+                            <div class="blog-item-box">
+
+                                <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 mt-2">
+                                                    <div class="item">
+                                                        <div class="thumb">
+                                                            <a
+                                                                href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
+                                                                <img src="storage/news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.webp"
+                                                                    alt="SIPJAKI Buatan PT  Raih Apresiasi dari Pemerintah Provinsi Jawa Timur"
+                                                                    class="img-fluid"
+                                                                    style="width: 500px; height: 200px; object-fit: cover;">
+                                                            </a>
+
+                                                            <time class="date" datetime="">2 Mei 2024</time>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="meta">
+                                                                <ul>
+                                                                    <li>
+                                                                        <img src="mobilelogo.png" alt=" Logo" />
+                                                                        <span>By </span>
+                                                                        <a href="javascript:void(0)"></a>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
-                                                        </div><!-- end image-wrap -->
-                                                        <h5><a href="#">Learning Bootstrap Framework</a></h5>
-                                                        <small>$22.00</small>
-                                                        <a href="#" class="menu-button">View Course</a>
-                                                    </div><!-- end widget -->
+
+                                                            <h4>
+                                                                <a
+                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">SIPJAKI
+                                                                    Buatan PT  Raih Apresiasi dari Pemerintah
+                                                                    Provinsi Jawa Timur</a>
+                                                            </h4>
+
+                                                            <p class="">SIPJAKI (Sistem Informasi Pembina Jasa
+                                                                Konstruksi Kabupaten Pasuruan) yang dikembangkan oleh
+                                                                perusahaan teknologi , mendapat penghargaan
+                                                                yang tinggi dari pemerintah provinsi Jawa Timur.
+                                                                Pengh...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 mt-2">
+                                                    <div class="item">
+                                                        <div class="thumb">
+                                                            <a
+                                                                href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">
+                                                                <img src="storage/news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.webp"
+                                                                    alt="Perkuat Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE Gelar Magang dan Uji Kompetensi di "
+                                                                    class="img-fluid"
+                                                                    style="width: 500px; height: 200px; object-fit: cover;">
+                                                            </a>
+
+                                                            <time class="date" datetime="">30 April 2024</time>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="meta">
+                                                                <ul>
+                                                                    <li>
+                                                                        <img src="mobilelogo.png" alt=" Logo" />
+                                                                        <span>By </span>
+                                                                        <a href="javascript:void(0)"></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <h4>
+                                                                <a
+                                                                    href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">Perkuat
+                                                                    Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE
+                                                                    Gelar Magang dan Uji Kompetensi di </a>
+                                                            </h4>
+
+                                                            <p class="">Lima orang guru dari berbagai SMK
+                                                                melaksanakan magang industri di  sejak tanggal
+                                                                22 April 2024 hingga 30 April 2024. Kegiatan ini
+                                                                merupakan rangkaian pelatihan upskilling bagi guru yang
+                                                                disel...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 mt-2">
+                                                    <div class="item">
+                                                        <div class="thumb">
+                                                            <a
+                                                                href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">
+                                                                <img src="storage/news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.webp"
+                                                                    alt="Peserta Didik Kelas Industri  Menyabet Juara LKS Tingkat Provinsi Jawa Timur"
+                                                                    class="img-fluid"
+                                                                    style="width: 500px; height: 200px; object-fit: cover;">
+                                                            </a>
+
+                                                            <time class="date" datetime="">26 April 2024</time>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="meta">
+                                                                <ul>
+                                                                    <li>
+                                                                        <img src="mobilelogo.png" alt=" Logo" />
+                                                                        <span>By </span>
+                                                                        <a href="javascript:void(0)"></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <h4>
+                                                                <a
+                                                                    href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">Peserta
+                                                                    Didik Kelas Industri  Menyabet Juara LKS
+                                                                    Tingkat Provinsi Jawa Timur</a>
+                                                            </h4>
+
+                                                            <p class="">Untuk kesekian kalinya, peserta didik
+                                                                kelas industri  berhasil memenangkan juara LKS
+                                                                (Lomba Kompetensi Siswa) Tingkat Jawa Timur Tahun 2024
+                                                                dalam bidang Artificial Intelligence. Kali ini tim...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 pagi-area text-center mb-5 mt-3">
+                                                    <a class="text-primary" href="news.html">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                            height="32" viewBox="0 0 24 24">
+                                                            <path fill="currentColor"
+                                                                d="M16.15 13H5q-.425 0-.712-.288T4 12q0-.425.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                                                        </svg> Lihat Berita Lainnya
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="">Events</a></li>
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop <span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="shop.html">Shop Layout</a></li>
-                                    <li><a href="shop-single.html">Shop Single</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-1.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-2.html">Blog Grid Sidebar</a></li>
-                                    <li><a href="blog-3.html">Blog Grid Fullwidth</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-contact.html">Contact</a></li>
-                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
-                            <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>
-                        </ul>
-                    </div>
-                </nav><!-- end navbar -->
-            </div><!-- end container -->
-        </header>
-
-        <section id="home" class="video-section js-height-full">
-            <div class="overlay"></div>
-            <div class="home-text-wrapper relative container">
-                <div class="home-message">
-                    <p>Learning Management System</p>
-                    <small>Sekolah is the ideal choice for your organization, your business and your online education system. Create your online course now with unlimited page templates, color options, and menu features.</small>
-                    <div class="btn-wrapper">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-default wow slideInRight">Buy Now</a>
-                        </div>
-                    </div><!-- end row -->
-                </div>
-            </div>
-            <div class="slider-bottom">
-                <span>Explore <i class="fa fa-angle-down"></i></span>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 hidden-sm hidden-xs">
-                        <div class="custom-module">
-                            <img src="assets/images/p1.jpeg" alt="" class="img-responsive wow slideInLeft">
-                        </div><!-- end module -->
-                    </div><!-- end col -->
-                    <div class="col-md-8">
-                        <div class="custom-module p40l">
-                            <h2>Kami adalah <mark>sistem pembelajaran</mark> yang berdedikasi<br>
-                                dari Banyuwangi. Menyediakan desain digital & pengembangan web <br>
-                                yang mudah digunakan untuk pendidikan.</h2>
-                        
-                            <p>Temukan pengalaman belajar yang lebih baik. Kami menawarkan platform yang didesain untuk memudahkan siswa dan guru. Akses berbagai fitur dan konten pendidikan yang berkualitas.</p>
-                        
-                            <hr class="invis">
-                        
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
-                                    <ul class="check">
-                                        <li>Modul Pembelajaran Kustom</li>
-                                        <li>Pembangun Halaman Visual</li>
-                                        <li>Materi Tak Terbatas</li>
-                                        <li>Tema Responsif</li>
-                                        <li>Berbagai Tata Letak Kelas</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <ul class="check">
-                                        <li>Ikon Pendidikan Font Awesome</li>
-                                        <li>Warna yang Telah Ditentukan</li>
-                                        <li>Transisi Halaman Interaktif</li>
-                                        <li>Dukungan Berkualitas Tinggi</li>
-                                        <li>Pengaturan Tak Terbatas</li>
-                                    </ul><!-- end check -->    
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
-                                    <ul class="check">
-                                        <li>Tata Letak e-Learning</li>
-                                        <li>Font untuk Pendidikan</li>
-                                        <li>Pengubah Gaya Tema</li>
-                                        <li>Gaya Footer Sekolah</li>
-                                        <li>Gaya Header Sekolah</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 --> 
-                            </div><!-- end row -->   
-                        
-                            <hr class="invis">
-                        
-                            <div class="btn-wrapper">
-                                <a href="##" class="btn btn-primary">Pelajari Lebih Lanjut Tentang Kami</a>
+                                    </div>
+                                </div>
                             </div>
-                        
-                        </div><!-- end module -->
-                        
-                    </div><!-- end col -->
+                        </div>
+                    </div>
                 </div>
-            </div><!-- end container -->
-        </section>
+            </div>
+        </div>
 
-  @include('layouts.users.kursus')
-        
-        
-
-      @include('layouts.users.service')
-
-        <section class="section db">
+        <div class="services-details-area default-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">2346</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Total murid sekolah</h3>
-                            <p>Ini adalah data jumlah murid yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">331</h4>
-                            <h3><i class="flaticon-online-course"></i> Penghargaan sekolah</h3>
-                            <p>Ini adalah jumlah penghargaan yang didapatkan sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">120</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Jumlah guru pengajar di sekolah</h3>
-                            <p>Ini adalah data guru pengajar yang ada di sekolah. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
-
-        @include('layouts.users.review')
-
-        @include('layouts.users.news')
-        <section class="section bgcolor1">
-            <div class="container">
-                <a href="#">
-                <div class="row callout">
-                    <div class="col-md-4 text-center">
-                        <h3><sup>$</sup>49.99</h3>
-                        <h4>Start your awesome course today!</h4>
-                    </div><!-- end col -->
-
-                    <div class="col-md-8">
-                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
-                    </div>
-                </div><!-- end row -->
-                </a>
-            </div><!-- end container -->  
-        </section>
-
- @include('layouts.users.footer')
-
-        <div class="copyrights">
-            <div class="container">
-                <div class="clearfix">
-                    <div class="pull-left">
-                        <div class="cop-logo">
-                            <a href="#"><img src="assets/images/logo.png" alt=""></a>
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="site-heading text-center mt-4">
+                            <h4>portofolio</h4>
+                            <h3>Inspirasi dari Karya: Portfolio  Menggambarkan Keunggulan Produk</h3>
+                            <div class="devider"></div>
                         </div>
                     </div>
 
-                    <div class="pull-right">
-                        <div class="footer-links">
-                            <ul class="list-inline">
-                                <li>Design : <a href="https://html.design">HTML.Design</a></li>
-                            </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="services-details-items">
+                    <div class="row">
+                        <div class="col-lg-12 services-single-content">
+                            <div class="gallery-area overflow-hidden pt-3">
+                                <div class="container">
+                                    <div class="case-items-area">
+                                        <div class="masonary">
+                                            <div id="portfolio-grid" class="gallery-items colums-3 gap-2">
+
+
+                                                <div class="pf-item mx-2" style="width: 370px">
+                                                    <div class="item" style="width: 370px">
+                                                        <div class="" style="background-color: #E5F1FF;">
+                                                            <img src="storage/portfolio/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.png"
+                                                                class="object-fit-cover" style="object-fit: cover"
+                                                                alt="SIPJAKI (Sistem Informasi Pembina Jasa Konstruksi Kabupaten Pasuruan)">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="info mb-0">
+                                                                <h4 class=" mb-0"><a
+                                                                        href="product/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.html">SIPJAKI
+                                                                        (Sistem Informasi Pembina Jasa Konstr...</a>
+                                                                </h4>
+                                                                <p class="text-white mb-0">SIPJAKI merupakan singkatan
+                                                                    dari Sistem Informasi Pembina Jasa Konstruksi yang
+                                                                    m...</p>
+                                                                <div class="button">
+                                                                    <a href="storage/portfolio/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.png"
+                                                                        class="item popup-gallery">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="30" height="30"
+                                                                            viewBox="0 0 512 396.94">
+                                                                            <path fill="currentColor" fill-rule="nonzero"
+                                                                                d="M49.63 0h336.95c13.64 0 26.03 5.64 35 14.6l.82.91c8.52 8.93 13.79 21.03 13.79 34.13v182.01c-8.72-2.42-17.63-4.27-26.69-5.48V192.2l-36.96 32.61c-21.85 1.34-42.73 6.43-62.42 14.53l-40.98-39.31-27.44 78.69c-.4 2.81-1.59 5.18-3.25 7.02l-1.7 1.57c-5.12 3.94-12.95 3.92-17.94-1.81l-78.13-118.22L26.7 262.86v79.61c0 6.25 2.62 11.97 6.77 16.13 4.19 4.19 9.95 6.81 16.16 6.81H235c10.6 9.86 21.96 18.81 33.95 26.69H49.63c-13.57 0-26.02-5.61-35.03-14.63-8.96-8.96-14.6-21.37-14.6-35V49.64c0-13.66 5.59-26.09 14.57-35.07l.92-.84C24.42 5.24 36.46 0 49.63 0zm337.74 292.43c9.66 0 18.41 3.92 24.74 10.24 6.33 6.33 10.24 15.07 10.24 24.74 0 9.65-3.91 18.41-10.24 24.73-6.33 6.33-15.06 10.25-24.74 10.25-9.65 0-18.4-3.92-24.73-10.25a34.82 34.82 0 0 1-10.24-24.73c0-9.65 3.91-18.41 10.24-24.74 6.33-6.32 15.08-10.24 24.73-10.24zm-122.68 29.88c28.32-34.25 72.44-63.49 117.77-64.39 48.01-.97 96.09 29.72 127.66 64.45a7.207 7.207 0 0 1 .47 9.14c-26.32 37.15-73.49 65.2-119.34 65.43-46.78.21-97.89-28.89-126.93-65.24-2.25-2.84-2.03-6.84.37-9.39zm20.04 4.96c26.61 30.85 65.31 52.73 106.3 52.55 39.43-.19 75.09-21.01 99.09-52.07-28.24-29.46-65.39-53.54-107.15-52.72-39.06.79-73.06 23.66-98.24 52.24zM26.7 227.39c29.55-26.64 76.84-63.89 106.71-88.99 4.87-4.22 12.12-4.13 16.91-.04.97.81 1.68 1.78 2.49 2.75l67.52 105.51 26.92-75.68c1.99-10.57 14.47-14.08 22.04-7.05l62.79 60.12 77.42-72.04V49.64c0-5.94-2.36-11.48-6.2-15.61l-.6-.56c-4.16-4.15-9.88-6.77-16.12-6.77H49.63c-6.04 0-11.54 2.34-15.61 6.12l-.58.62c-4.15 4.16-6.74 9.9-6.74 16.2v177.75zM267.63 61.07c11.02 0 21.04 4.49 28.28 11.73 7.24 7.24 11.72 17.23 11.72 28.28 0 11.02-4.48 21.04-11.72 28.28-7.24 7.24-17.26 11.72-28.28 11.72-11.04 0-21.04-4.48-28.28-11.72-7.24-7.24-11.72-17.26-11.72-28.28 0-11.05 4.48-21.04 11.72-28.28 7.24-7.24 17.24-11.73 28.28-11.73zm12.21 27.8a17.249 17.249 0 0 0-12.21-5.04c-4.77 0-9.09 1.93-12.2 5.04a17.198 17.198 0 0 0-5.05 12.21c0 4.77 1.93 9.09 5.05 12.2 3.11 3.11 7.43 5.05 12.2 5.05s9.09-1.94 12.21-5.05c3.11-3.11 5.04-7.43 5.04-12.2s-1.93-9.1-5.04-12.21z" />
+                                                                        </svg>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pf-item mx-2" style="width: 370px">
+                                                    <div class="item" style="width: 370px">
+                                                        <div class="" style="background-color: #E5F1FF;">
+                                                            <img src="storage/portfolio/tracer-study-smkn-2-penajam-paser-utara.png"
+                                                                class="object-fit-cover" style="object-fit: cover"
+                                                                alt="Tracer Study SMKN 2 Penajam Paser Utara">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="info mb-0">
+                                                                <h4 class=" mb-0"><a
+                                                                        href="product/tracer-study-smkn-2-penajam-paser-utara.html">Tracer
+                                                                        Study SMKN 2 Penajam Paser Utara</a>
+                                                                </h4>
+                                                                <p class="text-white mb-0">Tracer Study SKADA adalah
+                                                                    studi pelacakan jejak lulusan/alumni dari SMK Negeri
+                                                                    2...</p>
+                                                                <div class="button">
+                                                                    <a href="storage/portfolio/tracer-study-smkn-2-penajam-paser-utara.png"
+                                                                        class="item popup-gallery">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="30" height="30"
+                                                                            viewBox="0 0 512 396.94">
+                                                                            <path fill="currentColor" fill-rule="nonzero"
+                                                                                d="M49.63 0h336.95c13.64 0 26.03 5.64 35 14.6l.82.91c8.52 8.93 13.79 21.03 13.79 34.13v182.01c-8.72-2.42-17.63-4.27-26.69-5.48V192.2l-36.96 32.61c-21.85 1.34-42.73 6.43-62.42 14.53l-40.98-39.31-27.44 78.69c-.4 2.81-1.59 5.18-3.25 7.02l-1.7 1.57c-5.12 3.94-12.95 3.92-17.94-1.81l-78.13-118.22L26.7 262.86v79.61c0 6.25 2.62 11.97 6.77 16.13 4.19 4.19 9.95 6.81 16.16 6.81H235c10.6 9.86 21.96 18.81 33.95 26.69H49.63c-13.57 0-26.02-5.61-35.03-14.63-8.96-8.96-14.6-21.37-14.6-35V49.64c0-13.66 5.59-26.09 14.57-35.07l.92-.84C24.42 5.24 36.46 0 49.63 0zm337.74 292.43c9.66 0 18.41 3.92 24.74 10.24 6.33 6.33 10.24 15.07 10.24 24.74 0 9.65-3.91 18.41-10.24 24.73-6.33 6.33-15.06 10.25-24.74 10.25-9.65 0-18.4-3.92-24.73-10.25a34.82 34.82 0 0 1-10.24-24.73c0-9.65 3.91-18.41 10.24-24.74 6.33-6.32 15.08-10.24 24.73-10.24zm-122.68 29.88c28.32-34.25 72.44-63.49 117.77-64.39 48.01-.97 96.09 29.72 127.66 64.45a7.207 7.207 0 0 1 .47 9.14c-26.32 37.15-73.49 65.2-119.34 65.43-46.78.21-97.89-28.89-126.93-65.24-2.25-2.84-2.03-6.84.37-9.39zm20.04 4.96c26.61 30.85 65.31 52.73 106.3 52.55 39.43-.19 75.09-21.01 99.09-52.07-28.24-29.46-65.39-53.54-107.15-52.72-39.06.79-73.06 23.66-98.24 52.24zM26.7 227.39c29.55-26.64 76.84-63.89 106.71-88.99 4.87-4.22 12.12-4.13 16.91-.04.97.81 1.68 1.78 2.49 2.75l67.52 105.51 26.92-75.68c1.99-10.57 14.47-14.08 22.04-7.05l62.79 60.12 77.42-72.04V49.64c0-5.94-2.36-11.48-6.2-15.61l-.6-.56c-4.16-4.15-9.88-6.77-16.12-6.77H49.63c-6.04 0-11.54 2.34-15.61 6.12l-.58.62c-4.15 4.16-6.74 9.9-6.74 16.2v177.75zM267.63 61.07c11.02 0 21.04 4.49 28.28 11.73 7.24 7.24 11.72 17.23 11.72 28.28 0 11.02-4.48 21.04-11.72 28.28-7.24 7.24-17.26 11.72-28.28 11.72-11.04 0-21.04-4.48-28.28-11.72-7.24-7.24-11.72-17.26-11.72-28.28 0-11.05 4.48-21.04 11.72-28.28 7.24-7.24 17.24-11.73 28.28-11.73zm12.21 27.8a17.249 17.249 0 0 0-12.21-5.04c-4.77 0-9.09 1.93-12.2 5.04a17.198 17.198 0 0 0-5.05 12.21c0 4.77 1.93 9.09 5.05 12.2 3.11 3.11 7.43 5.05 12.2 5.05s9.09-1.94 12.21-5.05c3.11-3.11 5.04-7.43 5.04-12.2s-1.93-9.1-5.04-12.21z" />
+                                                                        </svg>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pf-item mx-2" style="width: 370px">
+                                                    <div class="item" style="width: 370px">
+                                                        <div class="" style="background-color: #E5F1FF;">
+                                                            <img src="storage/portfolio/jajalenpas-jaringan-jalan-kabupaten-pasuruan.png"
+                                                                class="object-fit-cover" style="object-fit: cover"
+                                                                alt="JAJALENPAS (Jaringan Jalan Kabupaten Pasuruan)">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="info mb-0">
+                                                                <h4 class=" mb-0"><a
+                                                                        href="product/jajalenpas-jaringan-jalan-kabupaten-pasuruan.html">JAJALENPAS
+                                                                        (Jaringan Jalan Kabupaten Pasuruan...</a>
+                                                                </h4>
+                                                                <p class="text-white mb-0">JAJALENPAS merupakan
+                                                                    singkatan dari Jaringan Jalan Kabupaten Pasuruan
+                                                                    yang merup...</p>
+                                                                <div class="button">
+                                                                    <a href="storage/portfolio/jajalenpas-jaringan-jalan-kabupaten-pasuruan.png"
+                                                                        class="item popup-gallery">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="30" height="30"
+                                                                            viewBox="0 0 512 396.94">
+                                                                            <path fill="currentColor" fill-rule="nonzero"
+                                                                                d="M49.63 0h336.95c13.64 0 26.03 5.64 35 14.6l.82.91c8.52 8.93 13.79 21.03 13.79 34.13v182.01c-8.72-2.42-17.63-4.27-26.69-5.48V192.2l-36.96 32.61c-21.85 1.34-42.73 6.43-62.42 14.53l-40.98-39.31-27.44 78.69c-.4 2.81-1.59 5.18-3.25 7.02l-1.7 1.57c-5.12 3.94-12.95 3.92-17.94-1.81l-78.13-118.22L26.7 262.86v79.61c0 6.25 2.62 11.97 6.77 16.13 4.19 4.19 9.95 6.81 16.16 6.81H235c10.6 9.86 21.96 18.81 33.95 26.69H49.63c-13.57 0-26.02-5.61-35.03-14.63-8.96-8.96-14.6-21.37-14.6-35V49.64c0-13.66 5.59-26.09 14.57-35.07l.92-.84C24.42 5.24 36.46 0 49.63 0zm337.74 292.43c9.66 0 18.41 3.92 24.74 10.24 6.33 6.33 10.24 15.07 10.24 24.74 0 9.65-3.91 18.41-10.24 24.73-6.33 6.33-15.06 10.25-24.74 10.25-9.65 0-18.4-3.92-24.73-10.25a34.82 34.82 0 0 1-10.24-24.73c0-9.65 3.91-18.41 10.24-24.74 6.33-6.32 15.08-10.24 24.73-10.24zm-122.68 29.88c28.32-34.25 72.44-63.49 117.77-64.39 48.01-.97 96.09 29.72 127.66 64.45a7.207 7.207 0 0 1 .47 9.14c-26.32 37.15-73.49 65.2-119.34 65.43-46.78.21-97.89-28.89-126.93-65.24-2.25-2.84-2.03-6.84.37-9.39zm20.04 4.96c26.61 30.85 65.31 52.73 106.3 52.55 39.43-.19 75.09-21.01 99.09-52.07-28.24-29.46-65.39-53.54-107.15-52.72-39.06.79-73.06 23.66-98.24 52.24zM26.7 227.39c29.55-26.64 76.84-63.89 106.71-88.99 4.87-4.22 12.12-4.13 16.91-.04.97.81 1.68 1.78 2.49 2.75l67.52 105.51 26.92-75.68c1.99-10.57 14.47-14.08 22.04-7.05l62.79 60.12 77.42-72.04V49.64c0-5.94-2.36-11.48-6.2-15.61l-.6-.56c-4.16-4.15-9.88-6.77-16.12-6.77H49.63c-6.04 0-11.54 2.34-15.61 6.12l-.58.62c-4.15 4.16-6.74 9.9-6.74 16.2v177.75zM267.63 61.07c11.02 0 21.04 4.49 28.28 11.73 7.24 7.24 11.72 17.23 11.72 28.28 0 11.02-4.48 21.04-11.72 28.28-7.24 7.24-17.26 11.72-28.28 11.72-11.04 0-21.04-4.48-28.28-11.72-7.24-7.24-11.72-17.26-11.72-28.28 0-11.05 4.48-21.04 11.72-28.28 7.24-7.24 17.24-11.73 28.28-11.73zm12.21 27.8a17.249 17.249 0 0 0-12.21-5.04c-4.77 0-9.09 1.93-12.2 5.04a17.198 17.198 0 0 0-5.05 12.21c0 4.77 1.93 9.09 5.05 12.2 3.11 3.11 7.43 5.05 12.2 5.05s9.09-1.94 12.21-5.05c3.11-3.11 5.04-7.43 5.04-12.2s-1.93-9.1-5.04-12.21z" />
+                                                                        </svg>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div><!-- end container -->
-        </div><!-- end copy -->
-    </div><!-- end wrapper -->
+                <div class="d-flex justify-content-center pt-5">
+                    <a class="text-primary" href="portfolio.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M16.15 13H5q-.425 0-.712-.288T4 12q0-.425.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                        </svg> Lihat Selengkapnya
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <!-- jQuery Files -->
-    <script src="{{asset('users-assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('users-assets/js/carousel.js')}}"></script>
-    <script src="{{asset('users-assets/js/animate.js')}}"></script>
-    <script src="{{asset('users-assets/js/custom.js')}}"></script>
-    <!-- VIDEO BG PLUGINS -->
-    <script src="{{asset('users-assets/js/videobg.js')}}"></script>
 
-</body>
-</html> --}}
+
+        <script src="../code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                var itemCount = $('.thumb-services-carousel .item').length;
+                $('.thumb-services-carousel').owlCarousel({
+                    center: true,
+                    dots: false,
+                    nav: false,
+
+                    items: 5,
+                    loop: itemCount > 4 ? true : false,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                });
+            });
+        </script>
+
+    </div>
+
+@endsection
