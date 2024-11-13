@@ -22,6 +22,8 @@
 @include('pages/user/landing-pages.news')
 
 @include('pages/user/landing-pages.content')
+
+@include('pages/user/landing-pages.testimonials')
         </div>
     </div>
     @include('layouts.users.footer')
