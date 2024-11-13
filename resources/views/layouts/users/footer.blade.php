@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMK AL-Azhar Footer</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
         }
         footer {
             background-color: #000000;
             color: #ffffff;
             padding: 40px 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
         }
         .footer-grid {
             display: grid;
