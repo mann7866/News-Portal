@@ -1,6 +1,6 @@
 @extends('layouts.landing-page.app')
 
-@section('title', 'News Portal')
+@section('title', 'Landing Page')
 @section('style')
     <style>
         body {}
@@ -151,7 +151,7 @@
                                         <div class="content">
                                             <h2> Developer <span>Mengubah Masalah Menjadi Solusi Digital</span></h2>
                                             <p class="animated slideInRight">
-                                                 merupakan pengembang perangkat lunak terbaik yang mampu
+                                                merupakan pengembang perangkat lunak terbaik yang mampu
                                                 menyelesaikan permasalahan Anda dengan solusi digital
                                             </p>
                                             <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
@@ -190,16 +190,15 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="" alt="Thumb"
-                                style="max-width: 70%; max-height: auto; display: inline-block;">
+                            <img src="{{ asset('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg') }}"
+                                alt="Thumb" style="max-width: 70%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
                     <div class="col-md-6 info">
                         <h2 class="text-break">SMKS AL AZHAR SEMPU</h2>
                         <p class="text-break">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit sequi quam autem nesciunt
-                            ullam excepturi necessitatibus iure unde in recusandae facilis, aliquam voluptatem dolore,
-                            deserunt beatae quis ab totam!
+                            SMK Al-AZHAR Sempu, Sekolah Menengah Kejuruan (SMK) berbasis IT serta berbasis pondok pesantren.
+                            Status sekolah Terakreditasi A (Amat Baik).
                         </p>
                         <a class="btn btn-gradient effect btn-md" href="about/profile.html">Selengkapnya</a>
                     </div>
@@ -210,7 +209,7 @@
         <!-- End About -->
 
         <!-- Star Services Area
-                                                            ============================================= -->
+                                                                ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
                 <img src="landing-page/img/shape/9.png" alt="Shape">
@@ -283,145 +282,75 @@
                             </div>
                         </div>
                         <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">Magang/ PKL</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        <p>Perusahaan kami menerima siswa/ mahasiswa magang. Peserta magang akan
-                                            mendapatkan pengalaman berbasis industri. Peserta magang
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/magang-pkl.html"><i class="fas fa-arrow-right"></i> Lihat
-                                            Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/Kunjungan%20Industri.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">Kunjungan Industri</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        <p>Kunjungan Industri merupakan salah satu jenis kegiatan pembelajaran di luar
-                                            lingkungan sekolah untuk menambah wawasan
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/kunjungan-industri.html"><i class="fas fa-arrow-right"></i>
-                                            Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/GetHost_%20Layanan%20Hosting%20dan%20Domain.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">GetHost: Layanan Hosting dan Domain</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        <p><strong>Gethost.id</strong> melayani hosting dan domain dengan harga
-                                            terjangkau, performa tinggi, dan fleksibilitas berlangganan bulanan.
-                                            Gethost.id
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/gethost-layanan-hosting-dan-domain.html"><i
-                                                class="fas fa-arrow-right"></i> Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
                     </div>
 
                 </div>
             </div>
         </div>
-        <!-- End Services Area -->
-        <div class="partner-area bg-gray shadow-less overflow-hidden text-light">
-            <div class="container-fluid">
-                <div class="item-box">
-                    <div class="row align-items-center">
 
-                        <div class="col-lg-4 col-md-12 info">
-                            <h2 class="mx-5 text-break">Menghadirkan produk dengan kualitas dan inovasi terbaik</h2>
-                            <p class="mx-5">Kami berkomitmen untuk menghadirkan produk-produk berkualitas tinggi yang
-                                dipadukan dengan inovasi terdepan, memenuhi kebutuhan dan harapan konsumen dengan
-                                sempurna.</p>
-                        </div>
-
-                        <div class="col-lg-8 col-md-12 clients">
-                            <div class="partner-carousel owl-carousel owl-theme ">
-                                <div class="single-item">
-                                    <div class="card rounded-container" style="min-height: 500px">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-center rounded-container"
-                                                style="background-color: #E5F1FF;">
-                                                <img class="img-fluid pt-3 mb-3"
-                                                    style="margin-left: 10px; margin-right: 10px; min-height: 200px;object-fit:contain;max-height:200px"
-                                                    src="storage/product/Mischool.id1.png" width="300" height="200"
-                                                    alt="">
+        <!-- Star testimonials Area
+        ============================================= -->
+        <div class="testimonials-area bg-gray default-padding-bottom">
+            <!-- Fixed Shape -->
+            <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
+            <!-- End Fixed Shape -->
+            <div class="container">
+                <div class="testimonial-items">
+                    <div class="row align-center">
+                        <div class="col-lg-7 testimonials-content">
+                            <div class="testimonials-carousel owl-carousel owl-theme">
+                                <!-- Single Item -->
+                                <div class="item">
+                                    <div class="info">
+                                        <p>
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
+                                        </p>
+                                        <div class="provider">
+                                            <div class="thumb">
+                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="Author">
                                             </div>
-                                            <h4 class="text-dark mt-3" style="font-weight:600">
-                                                Mischool.id
-                                            </h4>
-
-                                            <p class="text-dark">
-                                                Sistem informasi manajemen sekolah berbasis web dan mobile yang membantu
-                                                mengelola administrasi sekolah secara real-time dan terintegrasi.
-                                            </p>
-                                            <div class="bottom d-flex justify-content-center mt-4">
-                                                <a href="product/mischoolid.html"
-                                                    class="btn btn-primary rounded-pill py-2 px-4 ">
-                                                    Lihat Detail <i class="fas fa-arrow-right"></i>
-                                                </a>
+                                            <div class="content">
+                                                <h4>Ahel Natasha</h4>
+                                                <span> Managing Director</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="single-item">
-                                    <div class="card rounded-container" style="min-height: 500px">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-center rounded-container"
-                                                style="background-color: #E5F1FF;">
-                                                <img class="img-fluid pt-3 mb-3"
-                                                    style="margin-left: 10px; margin-right: 10px; min-height: 200px;object-fit:contain;max-height:200px"
-                                                    src="storage/product/Milink.id1.png" width="300" height="200"
-                                                    alt="">
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="item">
+                                    <div class="info">
+                                        <p>
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
+                                        </p>
+                                        <div class="provider">
+                                            <div class="thumb">
+                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}" alt="Author">
                                             </div>
-                                            <h4 class="text-dark mt-3" style="font-weight:600">
-                                                Milink.id
-                                            </h4>
-
-                                            <p class="text-dark">
-                                                Dengan MiLink.id, Anda dapat dengan mudah memotong URL yang panjang
-                                                menjadi tautan yang singkat dan mudah diingat sesuai dengan keinginan
-                                                Anda.
-                                            </p>
-                                            <div class="bottom d-flex justify-content-center mt-4">
-                                                <a href="product/milinkid.html"
-                                                    class="btn btn-primary rounded-pill py-2 px-4 ">
-                                                    Lihat Detail <i class="fas fa-arrow-right"></i>
-                                                </a>
+                                            <div class="content">
+                                                <h4>Ahel Natasha</h4>
+                                                <span> Managing Director</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- End Single Item -->
                             </div>
+                        </div>
+                        <div class="col-lg-5 info">
+                            <h4>Testimonials</h4>
+                            <h2>Check what our satisfied clients said</h2>
+                            <p>
+                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees up bobby sloshed arse
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Product Area -->
+        <!-- End testimonials Area -->
 
-        <div class="thumbs-services-area m-5">
+        <div class="m-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
@@ -730,123 +659,165 @@
                                     <div class="carousel-inner">
                                         <div class="">
                                             <div class="row">
-                                                <div class="col-lg-4 col-md-6 mt-2">
-                                                    <div class="item">
-                                                        <div class="thumb">
-                                                            <a
-                                                                href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
-                                                                <img src="storage/news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.webp"
-                                                                    alt="SIPJAKI Buatan PT  Raih Apresiasi dari Pemerintah Provinsi Jawa Timur"
-                                                                    class="img-fluid"
-                                                                    style="width: 500px; height: 200px; object-fit: cover;">
-                                                            </a>
-
-                                                            <time class="date" datetime="">2 Mei 2024</time>
-                                                        </div>
-                                                        <div class="info">
-                                                            <div class="meta">
-                                                                <ul>
-                                                                    <li>
-                                                                        <img src="mobilelogo.png" alt=" Logo" />
-                                                                        <span>By </span>
-                                                                        <a href="javascript:void(0)"></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <h4>
+                                                @forelse ($news as $item)
+                                                    <div class="col-lg-4 col-md-6 mt-2">
+                                                        <div class="item">
+                                                            <div class="thumb">
                                                                 <a
-                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">SIPJAKI
-                                                                    Buatan PT  Raih Apresiasi dari Pemerintah
-                                                                    Provinsi Jawa Timur</a>
-                                                            </h4>
+                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
+                                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                                        alt="{{ $item->title }}" class="img-fluid"
+                                                                        style="width: 500px; height: 200px; object-fit: cover;">
+                                                                </a>
 
-                                                            <p class="">SIPJAKI (Sistem Informasi Pembina Jasa
-                                                                Konstruksi Kabupaten Pasuruan) yang dikembangkan oleh
-                                                                perusahaan teknologi , mendapat penghargaan
-                                                                yang tinggi dari pemerintah provinsi Jawa Timur.
-                                                                Pengh...</p>
+                                                                <time class="date" datetime="">2 Mei 2024</time>
+                                                            </div>
+                                                            <div class="info">
+                                                                <div class="meta">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                                                                alt=" Logo" />
+                                                                            <span>By</span>
+                                                                            <a
+                                                                                href="javascript:void(0)">{{ $item->user->name }}</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <h4>
+                                                                    <a
+                                                                        href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">{{ Str::limit($item->title, 80) }}</a>
+                                                                </h4>
+
+                                                                <p class="">
+                                                                    {{ Str::limit(strip_tags($item->description), 150) }}
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 mt-2">
-                                                    <div class="item">
-                                                        <div class="thumb">
-                                                            <a
-                                                                href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">
-                                                                <img src="storage/news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.webp"
-                                                                    alt="Perkuat Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE Gelar Magang dan Uji Kompetensi di "
-                                                                    class="img-fluid"
-                                                                    style="width: 500px; height: 200px; object-fit: cover;">
-                                                            </a>
 
-                                                            <time class="date" datetime="">30 April 2024</time>
-                                                        </div>
-                                                        <div class="info">
-                                                            <div class="meta">
-                                                                <ul>
-                                                                    <li>
-                                                                        <img src="mobilelogo.png" alt=" Logo" />
-                                                                        <span>By </span>
-                                                                        <a href="javascript:void(0)"></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                @empty
 
-                                                            <h4>
+                                                    <div class="col-lg-4 col-md-6 mt-2">
+                                                        <div class="item">
+                                                            <div class="thumb">
                                                                 <a
-                                                                    href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">Perkuat
-                                                                    Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE
-                                                                    Gelar Magang dan Uji Kompetensi di </a>
-                                                            </h4>
+                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
+                                                                    <img src="storage/news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.webp"
+                                                                        alt="SIPJAKI Buatan PT  Raih Apresiasi dari Pemerintah Provinsi Jawa Timur"
+                                                                        class="img-fluid"
+                                                                        style="width: 500px; height: 200px; object-fit: cover;">
+                                                                </a>
 
-                                                            <p class="">Lima orang guru dari berbagai SMK
-                                                                melaksanakan magang industri di  sejak tanggal
-                                                                22 April 2024 hingga 30 April 2024. Kegiatan ini
-                                                                merupakan rangkaian pelatihan upskilling bagi guru yang
-                                                                disel...</p>
+                                                                <time class="date" datetime="">2 Mei 2024</time>
+                                                            </div>
+                                                            <div class="info">
+                                                                <div class="meta">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <img src="mobilelogo.png" alt=" Logo" />
+                                                                            <span>By </span>
+                                                                            <a href="javascript:void(0)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <h4>
+                                                                    <a
+                                                                        href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">SIPJAKI
+                                                                        Buatan PT Raih Apresiasi dari Pemerintah
+                                                                        Provinsi Jawa Timur</a>
+                                                                </h4>
+
+                                                                <p class="">SIPJAKI (Sistem Informasi Pembina Jasa
+                                                                    Konstruksi Kabupaten Pasuruan) yang dikembangkan oleh
+                                                                    perusahaan teknologi , mendapat penghargaan
+                                                                    yang tinggi dari pemerintah provinsi Jawa Timur.
+                                                                    Pengh...</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 mt-2">
-                                                    <div class="item">
-                                                        <div class="thumb">
-                                                            <a
-                                                                href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">
-                                                                <img src="storage/news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.webp"
-                                                                    alt="Peserta Didik Kelas Industri  Menyabet Juara LKS Tingkat Provinsi Jawa Timur"
-                                                                    class="img-fluid"
-                                                                    style="width: 500px; height: 200px; object-fit: cover;">
-                                                            </a>
-
-                                                            <time class="date" datetime="">26 April 2024</time>
-                                                        </div>
-                                                        <div class="info">
-                                                            <div class="meta">
-                                                                <ul>
-                                                                    <li>
-                                                                        <img src="mobilelogo.png" alt=" Logo" />
-                                                                        <span>By </span>
-                                                                        <a href="javascript:void(0)"></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <h4>
+                                                    <div class="col-lg-4 col-md-6 mt-2">
+                                                        <div class="item">
+                                                            <div class="thumb">
                                                                 <a
-                                                                    href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">Peserta
-                                                                    Didik Kelas Industri  Menyabet Juara LKS
-                                                                    Tingkat Provinsi Jawa Timur</a>
-                                                            </h4>
+                                                                    href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">
+                                                                    <img src="storage/news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.webp"
+                                                                        alt="Perkuat Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE Gelar Magang dan Uji Kompetensi di "
+                                                                        class="img-fluid"
+                                                                        style="width: 500px; height: 200px; object-fit: cover;">
+                                                                </a>
 
-                                                            <p class="">Untuk kesekian kalinya, peserta didik
-                                                                kelas industri  berhasil memenangkan juara LKS
-                                                                (Lomba Kompetensi Siswa) Tingkat Jawa Timur Tahun 2024
-                                                                dalam bidang Artificial Intelligence. Kali ini tim...
-                                                            </p>
+                                                                <time class="date" datetime="">30 April 2024</time>
+                                                            </div>
+                                                            <div class="info">
+                                                                <div class="meta">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <img src="mobilelogo.png" alt=" Logo" />
+                                                                            <span>By </span>
+                                                                            <a href="javascript:void(0)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <h4>
+                                                                    <a
+                                                                        href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">Perkuat
+                                                                        Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE
+                                                                        Gelar Magang dan Uji Kompetensi di </a>
+                                                                </h4>
+
+                                                                <p class="">Lima orang guru dari berbagai SMK
+                                                                    melaksanakan magang industri di sejak tanggal
+                                                                    22 April 2024 hingga 30 April 2024. Kegiatan ini
+                                                                    merupakan rangkaian pelatihan upskilling bagi guru yang
+                                                                    disel...</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="col-lg-4 col-md-6 mt-2">
+                                                        <div class="item">
+                                                            <div class="thumb">
+                                                                <a
+                                                                    href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">
+                                                                    <img src="storage/news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.webp"
+                                                                        alt="Peserta Didik Kelas Industri  Menyabet Juara LKS Tingkat Provinsi Jawa Timur"
+                                                                        class="img-fluid"
+                                                                        style="width: 500px; height: 200px; object-fit: cover;">
+                                                                </a>
+
+                                                                <time class="date" datetime="">26 April 2024</time>
+                                                            </div>
+                                                            <div class="info">
+                                                                <div class="meta">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <img src="mobilelogo.png" alt=" Logo" />
+                                                                            <span>By </span>
+                                                                            <a href="javascript:void(0)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <h4>
+                                                                    <a
+                                                                        href="news/peserta-didik-kelas-industri--menyabet-juara-lks-tingkat-provinsi-jawa-timur.html">Peserta
+                                                                        Didik Kelas Industri Menyabet Juara LKS
+                                                                        Tingkat Provinsi Jawa Timur</a>
+                                                                </h4>
+
+                                                                <p class="">Untuk kesekian kalinya, peserta didik
+                                                                    kelas industri berhasil memenangkan juara LKS
+                                                                    (Lomba Kompetensi Siswa)
+                                                                    Tingkat Jawa Timur Tahun 2024
+                                                                    dalam bidang Artificial Intelligence. Kali ini tim...
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforelse
                                                 <div class="col-md-12 pagi-area text-center mb-5 mt-3">
                                                     <a class="text-primary" href="news.html">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="32"
@@ -874,7 +845,7 @@
                     <div class="col-lg-8 offset-lg-2">
                         <div class="site-heading text-center mt-4">
                             <h4>portofolio</h4>
-                            <h3>Inspirasi dari Karya: Portfolio  Menggambarkan Keunggulan Produk</h3>
+                            <h3>Inspirasi dari Karya: Portfolio Menggambarkan Keunggulan Produk</h3>
                             <div class="devider"></div>
                         </div>
                     </div>

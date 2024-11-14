@@ -7,10 +7,14 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
+use App\Http\Controllers\LandinPageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('', [LandinPageController::class, 'index'])->name('landing-page');
+Route::get('news', [LandinPageController::class, 'news'])->name('news');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -68,12 +72,6 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/account', function () {
         return view('pages.super-admin.account.index');
-    });
-    Route::get('/layouts/news', function () {
-        return view('pages.landing-pages.index');
-    });
-    Route::get('/news', function () {
-        return view('pages.landing-pages.news.index');
     });
 
 });

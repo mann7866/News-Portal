@@ -1,8 +1,34 @@
-<header id="home">
+<style>
+    /* Navbar brand adjustments */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        max-height: 60px; /* ukuran default logo */
+        transition: max-height 0.3s ease; /* efek transisi untuk perubahan ukuran */
+    }
+    /* Atur ukuran logo saat navbar memiliki kelas 'scrolled' */
+    .navbar-fixed.scrolled .logo {
+        max-height: 40px; /* ukuran logo saat discroll */
+    }
+    /* Kustomisasi navbar */
+    .navbar-default {
+        background-color: transparent;
+        border: none;
+    }
+    .navbar-default .navbar-nav > li > a {
+        color: #333;
+    }
+    .navbar-default .navbar-nav > .active > a {
+        color: #007bff;
+    }
+</style>
 
+<header id="home">
     <!-- Start Navigation -->
     <nav class="navbar navbar-default attr-bg navbar-fixed white no-background bootsnav">
-
         <!-- Start Top Search -->
         <div class="top-search">
             <div class="container">
@@ -16,7 +42,6 @@
         <!-- End Top Search -->
 
         <div class="container">
-
             <!-- Start Atribute Navigation -->
             <div class="attr-nav">
                 <ul>
@@ -36,11 +61,9 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand h-100" href="index.html">
-                    <img src="_Putih.png" style="width: 200px;height: auto !important"
-                        class="logo logo-display" alt="Logo">
-                    <img src="_Hitam.png" style="width: 200px;height: auto !important"
-                        class="logo logo-scrolled" alt="Logo">
+                <a class="navbar-brand h-50" href="/">
+                    <!-- Satu logo saja untuk memastikan konsistensi -->
+                    <img src="{{asset('Logo/proposal.png')}}" class="logo" alt="Logo">
                 </a>
             </div>
             <!-- End Header Navigation -->
@@ -48,71 +71,29 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
-                    <li class="active">
-                        <a href="index.html">Beranda</a>
+                    <li class="{{ Request::is('/') ? 'active' : '' }}">
+                        <a href="/">Beranda</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="about/profile.html">Profil</a>
-                            </li>
-                            <li class="">
-                                <a href="about/vision-mision.html">visi & misi</a>
-                            </li>
-                            <li class="">
-                                <a href="about/organizational-structure.html">struktur organisasi</a>
-                            </li>
-                            <li class="">
-                                <a href="about/company-structure.html">struktur perusahaan</a>
-                            </li>
-                            <li class="">
-                                <a href="about/logo.html">logo</a>
-                            </li>
-                            <li class="">
-                                <a href="about/team.html">tim</a>
-                            </li>
+                            <li><a href="about/profile.html">Profil</a></li>
+                            <li><a href="about/vision-mision.html">Visi & Misi</a></li>
+                            <li><a href="about/organizational-structure.html">Struktur Organisasi</a></li>
+                            <li><a href="about/team.html">Tim</a></li>
                         </ul>
                     </li>
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="services/software-development.html">Software Development</a>
-                            </li>
-                            <li class="">
-                                <a href="services/kelas-industri.html">Kelas Industri</a>
-                            </li>
-                            <li class="">
-                                <a href="services/pengadaan-hardware-it.html">Pengadaan Hardware IT</a>
-                            </li>
-                            <li class="">
-                                <a href="services/magang-pkl.html">Magang/ PKL</a>
-                            </li>
-                            <li class="">
-                                <a href="services/kunjungan-industri.html">Kunjungan Industri</a>
-                            </li>
-                            <li class="">
-                                <a href="services/gethost-layanan-hosting-dan-domain.html">GetHost: Layanan Hosting
-                                    dan Domain</a>
-                            </li>
-                            <li class="">
-                                <a href="services/kodelisensi-toko-lisensi-dan-akun-premium-software.html">Kodelisensi:
-                                    Toko Lisensi dan Akun Premium Software</a>
-                            </li>
+                            <li><a href="services/software-development.html">Software Development</a></li>
                         </ul>
                     </li>
-                    <li class="">
-                        <a href="news.html">Berita</a>
+                    <li class="{{ Request::is('news') ? 'active' : '' }}">
+                        <a href="{{ route('news') }}">Berita</a>
                     </li>
-                    <li class="">
-                        <a href="contact.html">Hubungi</a>
-                    </li>
-                    <li class="">
-                        <a href="job-vacancy.html">PPDB</a>
-
-                    </li>
+                    <li><a href="contact.html">Hubungi</a></li>
+                    <li><a href="job-vacancy.html">PPDB</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -121,22 +102,24 @@
         <div class="side">
             <a href="#" class="close-side"><i class="icon_close"></i></a>
             <div class="widget">
-                <img src="assets/images/LOGO-HUMMATECH_Hitam.png" style="width: 200px;height: auto !important"
-                    alt="Logo">
-                <p>
-                    Melayani jasa pengembanganperangkat lunak, baik berbasis desktop, web, dan mobile apps. Mitra
-                    kami
-                    meliputi perorangan, swasta, bahkan juga lembaga pemerintahan.
-                </p>
+                <img src="{{ asset('Logo/proposal.png') }}" style="width: 180px; height: auto;" alt="Logo">
+                <p></p>
             </div>
-
-
-            <div class="portofolio">
-            </div>
+            <div class="portfolio"></div>
         </div>
         <!-- End Side Menu -->
-
     </nav>
     <!-- End Navigation -->
-
 </header>
+
+<script>
+    // JavaScript untuk menambahkan kelas 'scrolled' ke navbar saat halaman di-scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar-fixed');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>

@@ -7,8 +7,8 @@
                         <img src="assets/images/LOGO-HUMMATECH_Putih.png" style="height: 48px;width: auto;" alt="Logo">
 
                         <p>
-                            Bertransformasi menjadi perusahaan yang mampu menjawab tantangan di era revolusi
-                            industri 4.0
+                            SMK Al-AZHAR Sempu, Sekolah Menengah Kejuruan (SMK) berbasis IT serta berbasis pondok
+                            pesantren. Status sekolah Terakreditasi A (Amat Baik).
                         </p>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                         <h4 class="widget-title">Sosial Media</h4>
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/hummatech" target="_blank"
+                                <a href="https://www.facebook.com/smkalazharsempu" target="_blank"
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
@@ -27,7 +27,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://instagram.com/hummatech" target="_blank"
+                                <a href="https://instagram.com/smkalazharsempu" target="_blank"
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
@@ -37,7 +37,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/hummatech" target="_blank"
+                                <a href="https://twitter.com/smkalazharsempu" target="_blank"
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
@@ -111,8 +111,9 @@
                                     <div class="content">
                                         <strong>Alamat:</strong>
 
-                                        Perum Permata Regency 1 Blok 10/28, Perun Gpa, Ngijo, Kec. Karang
-                                        Ploso, Kabupaten Malang, Jawa Timur 65152.
+                                        Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu
+                                        Kabupaten Banyuwangi, Jawa Timur
+                                        Kode Pos: 68468.
                                     </div>
                                 </li>
                                 <li>
@@ -121,7 +122,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Email:</strong>
-                                        <a href="mailto:info@hummatech.com">info@hummatech.com</a>
+                                        <a href="mailto:smkalazhar.sempubwi@gmail.com">smkalazhar.sempubwi@gmail.com</a>
                                     </div>
                                 </li>
                                 <li>
@@ -130,7 +131,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Phone</strong>
-                                        <a href="tel: 085176777785">085176777785</a>
+                                        <a href="tel: : 085236553650">: +62 852 3655 3650</a>
                                     </div>
                                 </li>
                             </ul>
@@ -146,7 +147,8 @@
             <div class="mt-0 p-4">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved by <a href="index.html">Admin </a></p>
+                        <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved by <a
+                                href="">Admin </a></p>
                     </div>
                 </div>
             </div>
