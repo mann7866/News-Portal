@@ -1,3 +1,6 @@
+
+
+
 <header id="home">
 
     <!-- Start Navigation -->
@@ -36,7 +39,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand h-100" href="index.html">
+                <a class="navbar-brand h-100" href="/">
                     <img src="_Putih.png" style="width: 200px;height: auto !important"
                         class="logo logo-display" alt="Logo">
                     <img src="_Hitam.png" style="width: 200px;height: auto !important"
@@ -48,8 +51,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
-                    <li class="active">
-                        <a href="index.html">Beranda</a>
+                    <li class="{{ Request::is('/') ? 'active' : '' }}">
+                        <a href="/">Beranda</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
@@ -64,12 +67,6 @@
                                 <a href="about/organizational-structure.html">struktur organisasi</a>
                             </li>
                             <li class="">
-                                <a href="about/company-structure.html">struktur perusahaan</a>
-                            </li>
-                            <li class="">
-                                <a href="about/logo.html">logo</a>
-                            </li>
-                            <li class="">
                                 <a href="about/team.html">tim</a>
                             </li>
                         </ul>
@@ -81,30 +78,10 @@
                             <li class="">
                                 <a href="services/software-development.html">Software Development</a>
                             </li>
-                            <li class="">
-                                <a href="services/kelas-industri.html">Kelas Industri</a>
-                            </li>
-                            <li class="">
-                                <a href="services/pengadaan-hardware-it.html">Pengadaan Hardware IT</a>
-                            </li>
-                            <li class="">
-                                <a href="services/magang-pkl.html">Magang/ PKL</a>
-                            </li>
-                            <li class="">
-                                <a href="services/kunjungan-industri.html">Kunjungan Industri</a>
-                            </li>
-                            <li class="">
-                                <a href="services/gethost-layanan-hosting-dan-domain.html">GetHost: Layanan Hosting
-                                    dan Domain</a>
-                            </li>
-                            <li class="">
-                                <a href="services/kodelisensi-toko-lisensi-dan-akun-premium-software.html">Kodelisensi:
-                                    Toko Lisensi dan Akun Premium Software</a>
-                            </li>
                         </ul>
                     </li>
-                    <li class="">
-                        <a href="news.html">Berita</a>
+                    <li class="{{ Request::is('news') ? 'active' : '' }}">
+                        <a href="{{ route('news') }}">Berita</a>
                     </li>
                     <li class="">
                         <a href="contact.html">Hubungi</a>
@@ -121,12 +98,10 @@
         <div class="side">
             <a href="#" class="close-side"><i class="icon_close"></i></a>
             <div class="widget">
-                <img src="assets/images/LOGO-HUMMATECH_Hitam.png" style="width: 200px;height: auto !important"
+                <img src="" style="width: 200px;height: auto !important"
                     alt="Logo">
                 <p>
-                    Melayani jasa pengembanganperangkat lunak, baik berbasis desktop, web, dan mobile apps. Mitra
-                    kami
-                    meliputi perorangan, swasta, bahkan juga lembaga pemerintahan.
+
                 </p>
             </div>
 
