@@ -1,10 +1,10 @@
 <footer class="bg-dark text-light">
     <div class="container">
         <div class="f-items default-padding">
-            <div class="row">
+            <div class="row">   
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
-                        <img src="assets/images/LOGO-HUMMATECH_Putih.png" style="height: 48px;width: auto;" alt="Logo">
+                        <img src="" style="height: 48px;width: auto;" alt="Logo">
 
                         <p>
                             SMK Al-AZHAR Sempu, Sekolah Menengah Kejuruan (SMK) berbasis IT serta berbasis pondok
@@ -21,7 +21,7 @@
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
-                                        src="storage/social-media/SNQs18FXSmIXwJfZthZzYWEq5UiiLBby44rHFrNw.png"
+                                        src="{{ asset('storage/social-media/SNQs18FXSmIXwJfZthZzYWEq5UiiLBby44rHFrNw.png')}}"
                                         height="16px" class="mb-0" width="16px" />
                                     Facebook
                                 </a>
@@ -31,7 +31,7 @@
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
-                                        src="storage/social-media/Y4cd8ZBLO5e0K26rlJ3RWL9k3kDL7SwXZijf6gcg.png"
+                                        src="{{ asset('storage/social-media/Y4cd8ZBLO5e0K26rlJ3RWL9k3kDL7SwXZijf6gcg.png')}}"
                                         height="16px" class="mb-0" width="16px" />
                                     Instagram
                                 </a>
@@ -41,7 +41,7 @@
                                     style="display: flex;gap: .5rem;align-items: center">
                                     <i class="fas fa-angle-right"></i>
                                     <img alt="Facebook Logo"
-                                        src="storage/social-media/9tFUkOesptOzwPCcSedNWo7T5Q1XeZoLeFrklVRP.png"
+                                        src="{{{ asset('storage/social-media/9tFUkOesptOzwPCcSedNWo7T5Q1XeZoLeFrklVRP.png') }}}"
                                         height="16px" class="mb-0" width="16px" />
                                     Twitter
                                 </a>
