@@ -46,8 +46,28 @@
     </style>
     <div class="body-wrapper overflow-hidden" style="background-color: rgb(255, 255, 255)">
 
+        <section >
+        <image id="home" class="d-flex align-items-center vh-100" src="{{ asset('admin-assets/images/big/imageschool.jpg') }}">
+            <!-- Background hitam transparan -->
+            <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+            <div class="container position-relative" style="z-index: 2;">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="text-light">Laman Berita SMK Al-Azhar</p>
+                        <small class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae adipisci quibusdam repellat tempore minus, expedita sapiente iste? Reiciendis sunt distinctio, vitae laudantium temporibus labore qui dolores nemo voluptas et.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-absolute w-100 text-center" style="bottom: 20px; z-index: 2;">
+                <span id="down" onclick="scrollToDown()" class="text-white">Explore <i class="fa fa-angle-down"></i></span>
+            </div>
+        </image>
+
+
         {{--  coroseul  --}}
-        <section class="hero-section  bg-success  position-relative overflow-hidden mb-0 mb-lg-11">
+        <section style="background-color: rgb(0, 151, 136)" class="hero-section  position-relative overflow-hidden mb-0 mb-lg-11">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-12">
@@ -61,10 +81,10 @@
                                                 alt="...">
                                         </div>
                                         <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
-                                            <h1 class="fw-bolder mb-8 fs-13 aos-init aos-animate" data-aos="fade-up"
+                                            <h1 class="fw-bolder mb-8 fs-13 text-white aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="400" data-aos-duration="1000">Most powerful &amp; <span
-                                                    class="text-primary">Developer friendly</span> dashboard</h1>
-                                            <p class="fs-5 mb-5 text-dark fw-normal aos-init aos-animate" data-aos="fade-up"
+                                                   style='' class="text-dark">Developer friendly</span> dashboard</h1>
+                                            <p class="fs-5 mb-5 text-white fw-normal aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="600" data-aos-duration="1000">Modernize comes with light
                                                 &amp; dark color skins, well designed dashboards, applications and pages.
                                             </p>
@@ -78,10 +98,10 @@
                                                 alt="...">
                                         </div>
                                         <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
-                                            <h1 class="fw-bolder mb-8 fs-13 aos-init aos-animate" data-aos="fade-up"
+                                            <h1 class="fw-bolder mb-8 fs-13 text-white aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="400" data-aos-duration="1000">Another powerful &amp; <span
-                                                    class="text-primary">Developer friendly</span> dashboard</h1>
-                                            <p class="fs-5 mb-5 text-dark fw-normal aos-init aos-animate" data-aos="fade-up"
+                                                    class="text-dark">Developer friendly</span> dashboard</h1>
+                                            <p class="fs-5 mb-5 text-white fw-normal aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="600" data-aos-duration="1000">This is another example of a
                                                 carousel item with text and image.</p>
                                         </div>
@@ -94,10 +114,10 @@
                                                 alt="...">
                                         </div>
                                         <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
-                                            <h1 class="fw-bolder mb-8 fs-13 aos-init aos-animate" data-aos="fade-up"
+                                            <h1 class="fw-bolder mb-8 fs-13 text-white aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="400" data-aos-duration="1000">Yet another &amp; <span
-                                                    class="text-primary">Developer friendly</span> dashboard</h1>
-                                            <p class="fs-5 mb-5 text-dark fw-normal aos-init aos-animate" data-aos="fade-up"
+                                                    class="text-dark">Developer friendly</span> dashboard</h1>
+                                            <p class="fs-5 mb-5 text-white fw-normal aos-init aos-animate" data-aos="fade-up"
                                                 data-aos-delay="600" data-aos-duration="1000">Here is some more example text
                                                 for the carousel item.</p>
                                         </div>

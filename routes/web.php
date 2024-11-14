@@ -72,7 +72,13 @@ Route::middleware('auth')->group(function () {
         return view('pages.landing-pages.index');
     });
     Route::get('/news', function () {
+        return view('pages.landing-pages.news.detail');
+    });
+    Route::get('/berita', function () {
         return view('pages.landing-pages.news.index');
+    });
+    Route::get('/organization', function () {
+        return view('pages.landing-pages.organization.index');
     });
 
 });

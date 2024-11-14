@@ -1,12 +1,12 @@
-<footer class="section footer noover bg-success" style=" padding: 40px 0; color: #fff;">
+<footer class="section footer noover " style=" padding: 40px 0; color: #fff;background-color: rgb(243, 244, 248)">
     <div class="container">
         <div class="row">
             <!-- Tentang SMK AL-Azhar -->
             <div class="col-lg-4 col-md-4">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Tentang SMK AL-Azhar</h3>
+                    <h3 style="color: rgb(0, 151, 136)" class="widget-title">Tentang SMK AL-Azhar</h3>
                     <div class="newsletter-widget">
-                        <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
+                        <p class="text-muted">SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
                         <div class="logo-grid">
                             <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
                             <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
@@ -22,27 +22,27 @@
             <!-- Mengapa Bergabung -->
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Mengapa Bergabung dengan SMK Kami?</h3>
+                    <h3 style="color: rgb(0, 151, 136)" class="widget-title">Mengapa Bergabung dengan SMK Kami?</h3>
                     <details>
-                        <summary><i class="fa fa-info-circle"></i> Pelajari lebih lanjut</summary>
-                        <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
+                        <summary class="text-muted"><i class="fa fa-info-circle text-muted"></i> Pelajari lebih lanjut</summary>
+                        <p class="text-muted">Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
                     </details>
-                    <a href="#" class="readmore" style="color: #fff; text-decoration: underline;">Bergabung Menjadi Pengajar</a>
+                    <a href="#" class="readmore text-muted" style="color: #fff; text-decoration: underline;">Bergabung Menjadi Pengajar</a>
                 </div>
             </div>
 
             <!-- Tag Populer -->
             <div class="col-lg-3 col-md-3">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Tag Populer</h3>
+                    <h3 style="color: rgb(0, 151, 136)" class="widget-title">Tag Populer</h3>
                     <div class="tags-widget">
                         <div class="tag-list">
-                            <div class="tag-item"><a href="#">Merdeka Indo</a></div>
-                            <div class="tag-item"><a href="#">FufuFafa</a></div>
-                            <div class="tag-item"><a href="#">Benjamin</a></div>
-                            <div class="tag-item"><a href="#">SchoolHd</a></div>
-                            <div class="tag-item"><a href="#">Podcasth</a></div>
-                            <div class="tag-item"><a href="#">CIhuuy</a></div>
+                            <div class="text-muted tag-item"><a href="#">Merdeka Indo</a></div>
+                            <div class="text-muted tag-item"><a href="#">FufuFafa</a></div>
+                            <div class="text-muted tag-item"><a href="#">Benjamin</a></div>
+                            <div class="text-muted tag-item"><a href="#">SchoolHd</a></div>
+                            <div class="text-muted tag-item"><a href="#">Podcasth</a></div>
+                            <div class="text-muted tag-item"><a href="#">CIhuuy</a></div>
                         </div>
                     </div>
                 </div>
@@ -51,14 +51,14 @@
             <!-- Dukungan -->
             <div class="col-lg-2 col-md-2">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Dukungan</h3>
+                    <h3 style="color: rgb(0, 151, 136)" class="widget-title">Dukungan</h3>
                     <div class="support-links">
-                        <div class="link-item"><a href="#">Ketentuan Penggunaan</a></div>
-                        <div class="link-item"><a href="#">Hak Cipta</a></div>
-                        <div class="link-item"><a href="#">Buat Tiket</a></div>
-                        <div class="link-item"><a href="#">Harga & Paket</a></div>
-                        <div class="link-item"><a href="#">Karir</a></div>
-                        <div class="link-item"><a href="#">Merek Dagang</a></div>
+                        <div class="text-muted link-item"><a class="text-muted" href="#">Ketentuan Penggunaan</a></div>
+                        <div class="link-item"><a class="text-muted"  href="#">Hak Cipta</a></div>
+                        <div class="link-item"><a class="text-muted"  href="#">Buat Tiket</a></div>
+                        <div class="link-item"><a class="text-muted"  href="#">Harga & Paket</a></div>
+                        <div class="link-item"><a class="text-muted"  href="#">Karir</a></div>
+                        <div class="link-item"><a class="text-muted" href="#">Merek Dagang</a></div>
                     </div>
                 </div>
             </div>
@@ -68,20 +68,20 @@
         <div class="row mt-2">
             <div class="col-md-4 mt-2 col-sm-4 mb-0 text-left">
                 <div class="footer-links mb-1 d-flex flex-column align-items-start">
-                    <h3 >SMKS Al-Azhar Sempu</h3>
-                    <p>Jl. Imam Syafi i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
-                    <p>Kode Pos: 68468</p>
-                    <p>Email: <a href="mailto:smkalazhar.sempubwi@gmail.com" style="color: #fff;">smkalazhar.sempubwi@gmail.com</a></p>
-                    <p>Telepon: <a href="tel:+6285236553650" style="color: #fff;">+62 852 3655 3650</a></p>
+                    <h3 class="text-muted" >SMKS Al-Azhar Sempu</h3>
+                    <p class="text-muted" >Jl. Imam Syafi i No.45, Tugung, Sempu, Banyuwangi, Jawa Timur</p>
+                    <p class="text-muted" >Kode Pos: 68468</p>
+                    <p class="text-muted" >Email: <a href="mailto:smkalazhar.sempubwi@gmail.com" class="text-muted" style="color: #fff;">smkalazhar.sempubwi@gmail.com</a></p>
+                    <p class="text-muted" >Telepon: <a href="tel:+6285236553650" class="text-muted" style="color: #fff;">+62 852 3655 3650</a></p>
                 </div>
             </div>
             <div class="col-md-8 col-sm-4 text-right">
                 <div class="social d-flex justify-content-center align-items-center">
-                    <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i class="fab fa-facebook"></i></a>
-                    <a class="twitter" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
-                    <a class="google" href="www.smkalazhar.sch.id"><i class="fab fa-google-plus"></i></a>
-                    <a class="instagram" href="https://instagram.com/smkalazharsempu"><i class="fab fa-instagram"></i></a>
-                    <a class="tiktok" href="https://tiktok.com/@smkalazharsempu"><i class="fab fa-tiktok"></i></a>
+                    <a class="facebook text-muted" href="https://www.facebook.com/smkalazharsempu"><i class="fab fa-facebook"></i></a>
+                    <a class="twitter text-muted" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
+                    <a class="google text-muted" href="www.smkalazhar.sch.id"><i class="fab fa-google-plus"></i></a>
+                    <a class="instagram text-muted" href="https://instagram.com/smkalazharsempu"><i class="fab fa-instagram"></i></a>
+                    <a class="tiktok text-muted " href="https://tiktok.com/@smkalazharsempu"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -138,14 +138,9 @@
 
     .tag-item a {
         padding: 5px 8px;
-        background-color: #eaf774;
         border-radius: 5px;
-        color: #fff;
+        color: #797979;
         text-decoration: none;
-    }
-
-    .tag-item a:hover {
-        background-color: #cce016;
     }
 
     /* Support links */
@@ -187,7 +182,7 @@
                     <img src="{{ asset('admin-assets/images/logos/favicon.ico') }}" alt=""
                         class="img-fluid pb-3">
                 </a>
-                <p class="mb-0 text-dark">Cari sekolah untuk anak anda di sini aja terjamin kualitasnya daftar disini saja  <a
+                <p class="mb-0 text-dark">Cari sekolah untuk anak anda di sini aja terjamin<a
                         class="text-dark text-hover-primary border-bottom border-primary"
                         href="https://adminmart.com/">SMK AL-AZHAR!!.</a></p>
             </div>
