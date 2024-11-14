@@ -1,105 +1,83 @@
 @extends('layouts.super-admin.app')
+
 @section('content')
-    <div class="card bg-light-info shadow-none position-relative overflow-hidden">
-        <div class="card-body px-4 py-3">
-            <div class="row align-items-center">
-                <div class="col-9">
-                    <h4 class="fw-semibold mb-8">Table-Kategori</h4>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a class="text-muted " href="index-2.html">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item" aria-current="page">
-                                Table-Kategori
-                            </li>
-                        </ol>
-                    </nav>
+    <div class="card px-3 pb-4 mb-1 pt-1 rounded-sm">
+        <div class="row g-2 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="row g-2">
+                    <h3 class="mx-1">Halaman Kategori</h3>
                 </div>
-                <div class="col-3">
-                    <div class="text-center mb-n5">
-                        <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
-                            class="img-fluid mb-n4" />
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
+                    <div class="search-box col-lg-5 col-12">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="search" value="{{ request('search') }}"
+                                    id="searchMemberList" placeholder="Cari Proyek">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text rounded-end border border-1"><i
+                                            class="ri-search-line"></i></button>
+                                </div>
+                                <button type="submit" class="btn btn-primary d-lg-none mt-2 w-100">Cari</button>
+                            </div>
+                    </div>
+                    </form>
+                    <div class="form-check form-switch gap-3 col-lg-3 col-12 d-flex justify-content-between align-items-center mt-2 mt-lg-0"
+                        style="width: auto;">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
+                            Tambah Kategori
+                        </button>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-14 d-flex align-items-strech">
-            <div class="card w-100">
-                <div class="card-body">
-                    <div class="d-sm-flex d-block align-items-center justify-content-between mb-7">
-                        <div class="mb-3 mb-sm-0">
-                            <h5 class="card-title fw-semibold">Kategori Berita</h5>
-                        </div>
-
-                        <div class="col-md-6 col-xl-5 d-flex gap-3 justify-content-end">
-                            <form class="position-relative">
-                                <input type="text" class="form-control product-search ps-5" id="input-search"
-                                    placeholder="Cari Kategori..." />
-                                <i
-                                    class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
-                            </form>
-                            <button type="button" class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary"
-                                data-bs-toggle="modal" data-bs-target="#create-modal">
-                                Tambah
-                            </button>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table align-middle text-nowrap mb-0">
-                            <thead>
-                                <tr class="text-muted fw-semibold">
-                                    <th scope="col">No</th>
-                                    <th scope="col" class="ps-0">Kategori</th>
-                                    <th scope="col" class="text-center">Opsi</th>
-                                </tr>
-                            </thead>
-                            <tbody class="border-top">
-                                @forelse ($categories as $category)
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="d-flex align-items-center">
-                                                <div>
-                                                    <h6 class="fw-semibold mb-1">{{ $loop->iteration }}.</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="ps-0">
-                                            <div class="d-flex align-items-center">
-                                                <div>
-                                                    <h6 class="fw-semibold mb-1">{{ $category->name }}</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning" data-bs-toggle="modal"
-                                                data-bs-target="#edit-modal-{{ $category->id }}">
-                                                Edit
-                                            </button>
-                                            <button class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#delete-{{ $category->id }}">
-                                            Hapus
-                                        </button>
+    <div class="card">
+        <div class="card-body border-top">
+            <div class="table-responsive table-card p-3">
+                <div class="tab-pane fade show active">
+                    <table class="table align-middle shadow-sm mb-0 ">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Name</th>
+                                <th scope="col" class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($categories as $category)
+                                <tr>
+                                    <td>{{ $loop->iteration }}.</td>
+                                    <td>{{ $category->name }}</td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <a class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit-modal-{{ $category->id }}">
+                                                <i class="ti ti-pencil" style="font-size: 1.5em;"></i>
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-{{ $category->id }}">
+                                                <i class="ti ti-trash" style="font-size: 1.5em;"></i>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @include('pages.super-admin.category.partials.edit-modal')
-                                @empty
-                                    <tr>
-                                        <td colspan="4" class="text-center">
-                                            <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid"
-                                                style="width: clamp(150px, 50vw, 300px);">
-                                            <p class="mt-3">Tidak ada data tersedia</p>
-                                        </td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
-                    @include('pages.super-admin.category.partials.create-modal')
+                            @empty
+                            <tr>
+                                <td colspan="3" class="text-center">
+                                    <img src="{{ asset('no-data.png') }}" alt="No Data" class="img-fluid" style="width: clamp(150px, 50vw, 300px);">
+                                    <p class="mt-3">Tidak ada data tersedia</p>
+                                </td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+
+    @include('pages.super-admin.category.partials.create-modal')
 @endsection

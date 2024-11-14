@@ -7,10 +7,14 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
+use App\Http\Controllers\LandinPageController;
 
-Route::get('/', function () {
-    return view('pages.user.landing-pages.index');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('', [LandinPageController::class, 'index'])->name('landing-page');
+Route::get('news', [LandinPageController::class, 'news'])->name('news');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -26,6 +30,7 @@ Route::middleware('auth')->group(function () {
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
         Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
+        Route::get('news/{id}', [NewsController::class, 'show'])->name('news.show');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');

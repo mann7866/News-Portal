@@ -38,13 +38,13 @@ Route::middleware('auth')->group(function () {
          Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
          Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
-        // route Teacher
-        Route::get('teacher', action: [TeacherController::class, 'index'])->name('teacher.index');
-        Route::get('teacher/create', [TeacherController::class, 'create'])->name('teacher.create');
-        Route::get('teacher/show', action: [TeacherController::class, 'show'])->name('teacher.show');
-        Route::get('teacher/edit', [TeacherController::class, 'edit'])->name('teacher.edit');
-        Route::post('teacher', [TeacherController::class, 'store'])->name('teacher.store');
-        Route::put('teacher/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
+        // // route Teacher
+        // Route::get('teacher', action: [TeacherController::class, 'index'])->name('teacher.index');
+        // Route::get('teacher/create', [TeacherController::class, 'create'])->name('teacher.create');
+        // Route::get('teacher/show', action: [TeacherController::class, 'show'])->name('teacher.show');
+        // Route::get('teacher/edit', [TeacherController::class, 'edit'])->name('teacher.edit');
+        // Route::post('teacher', [TeacherController::class, 'store'])->name('teacher.store');
+        // Route::put('teacher/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
 
     });
     Route::get('/approval', function () {

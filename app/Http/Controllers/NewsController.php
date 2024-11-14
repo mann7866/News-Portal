@@ -73,9 +73,14 @@ class NewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(News $news)
+    public function show($id)
     {
         //
+        {
+            $news = News::findOrFail($id);
+
+            return view('pages.super-admin.news.show', compact('news'));
+        }
     }
 
     /**
