@@ -92,7 +92,7 @@
                             </li>
                         </ul>
                     </li>  --}}
-                    <li class="{{ Request::is('news') ? 'active' : '' }}">
+                    <li class="{{ Request::is('news', 'news.detail') ? 'active' : '' }}">
                         <a href="{{ route('news') }}">Berita</a>
                     </li>
                     <li class="">

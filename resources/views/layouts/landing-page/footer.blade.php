@@ -23,7 +23,7 @@
                                     <span>Facebook</span>
                                 </a>
                             </li>
-                            
+
                             <li>
                                 <a href="https://instagram.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
@@ -31,7 +31,7 @@
                                     <span>Instagram</span>
                                 </a>
                             </li>
-                            
+
                             <li>
                                 <a href="https://twitter.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
@@ -39,7 +39,7 @@
                                     <span>Twitter</span>
                                 </a>
                             </li>
-                            
+
                             <li>
                                 <a href="https://youtube.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
@@ -47,7 +47,7 @@
                                     <span>YouTube</span>
                                 </a>
                             </li>
-                            
+
                             <li>
                                 <a href="https://tiktok.com/@smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                         </ul>
-                        
+
                         <!-- CSS untuk hover effect -->
                         <style>
                             /* Warna saat hover */
@@ -76,7 +76,7 @@
                                 color: #000000; /* Warna khas TikTok */
                             }
                         </style>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 item">
@@ -178,7 +178,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved by <a
-                                href="">Admin </a></p>
+                                href="">Admin </a>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -52,7 +52,7 @@
 
     <!-- Start Preloader
     ============================================= -->
-    {{--  <div id="preloader">
+     <div id="preloader">
         <div id="earna-preloader" class="earna-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
@@ -106,7 +106,7 @@
                 </div>
             </div>
         </div>
-    </div>  --}}
+    </div>
     <!-- End Preloader -->
 
     <!-- Header ============================================= -->
