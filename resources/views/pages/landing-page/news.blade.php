@@ -1,9 +1,11 @@
 @extends('layouts.landing-page.app')
 
+@section('title', 'Berita | News Portal')
 @section('content')
-  <!-- Start Breadcrumb
-    ============================================= -->
-    <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url(storage/Background-Berita.jpg);">
+    <!-- Start Breadcrumb
+        ============================================= -->
+    <div class="breadcrumb-area shadow dark bg-cover text-center text-light"
+        style="background-image: url(storage/Background-Berita.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -19,7 +21,7 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Blog
-    ============================================= -->
+        ============================================= -->
     <div class="blog-area right-sidebar full-blog default-padding">
         <div class="container">
             <div class="blog-items">
@@ -28,39 +30,41 @@
                         <div class="blog-item-box">
                             <!-- Single Item -->
                             @forelse ($news as $item)
-
-                            <div class="single-item">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <a href="blog-single-with-sidebar.html"><img src="{{ asset('storage/' . $item->image) }}" alt="Thumb"></a>
-                                        <div class="date">January 25, 2021</div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="meta">
-                                           <ul>
-                                               <li>
-                                                   <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="Author">
-                                                   <span>By </span>
-                                                   <a href="#">{{ $item->user->name }}</a>
-                                               </li>
-                                               <li>
-                                                   <span>In </span>
-                                                   <a href="#">{{ $item->categories->implode('name', ' | ') }}</a>
-                                               </li>
-                                           </ul>
+                                <div class="single-item">
+                                    <div class="item">
+                                        <div class="thumb">
+                                            <a href="blog-single-with-sidebar.html"><img
+                                                    src="{{ asset('storage/' . $item->image) }}" alt="Thumb"></a>
+                                            <div class="date">{{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}</div>
                                         </div>
-                                        <h3>
-                                            <a href="blog-single-with-sidebar.html">{{ $item->title }}</a>
-                                        </h3>
-                                        <p>
-                                            {{ $item->description }}
-                                        </p>
-                                        <a class="btn circle btn-theme-effect btn-sm" href="blog-single-with-sidebar.html">Read More</a>
+                                        <div class="info">
+                                            <div class="meta">
+                                                <ul>
+                                                    <li>
+                                                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                                            alt="Author">
+                                                        <span>By </span>
+                                                        <a href="#">{{ $item->user->name }}</a>
+                                                    </li>
+                                                    <li>
+                                                        <span>In </span>
+                                                        <a
+                                                            href="#">{{ $item->categories->implode('name', ' | ') }}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h3>
+                                                <a href="blog-single-with-sidebar.html">{{ $item->title }}</a>
+                                            </h3>
+                                            <p>
+                                                {{ $item->description }}
+                                            </p>
+                                            <a class="btn circle btn-theme-effect btn-sm"
+                                                href="blog-single-with-sidebar.html">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @empty
-
                             @endforelse
                         </div>
 
@@ -69,15 +73,28 @@
                             <div class="col-md-12 pagi-area text-center">
                                 <nav aria-label="navigation">
                                     <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ $news->previousPageUrl() }}">
+                                                <i class="fas fa-angle-double-left"></i>
+                                            </a>
+                                        </li>
+
+                                        @for ($i = 1; $i <= $news->lastPage(); $i++)
+                                            <li class="page-item {{ $news->currentPage() == $i ? 'active' : '' }}">
+                                                <a class="page-link" href="{{ $news->url($i) }}">{{ $i }}</a>
+                                            </li>
+                                        @endfor
+
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ $news->nextPageUrl() }}">
+                                                <i class="fas fa-angle-double-right"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
+
                     </div>
                     <!-- Start Sidebar -->
                     <div class="sidebar wow fadeInLeft col-lg-4 col-md-12">
@@ -96,31 +113,31 @@
                                 </div>
                                 <ul>
                                     @forelse ($popularNews as $item)
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#">
-                                                <img src="{{ asset('storage/' . $item->image) }}" alt="Thumb">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 12 Feb, 2020</span>
+                                        <li>
+                                            <div class="thumb">
+                                                <a href="#">
+                                                    <img src="{{ asset('storage/' . $item->image) }}" alt="Thumb">
+                                                </a>
                                             </div>
-                                            <a href="#">Commanded household smallness delivered.</a>
-                                        </div>
-                                    </li>
+                                            <div class="info">
+                                                <div class="meta-title">
+                                                    <span class="post-date"><i class="fas fa-clock"></i> {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}</span>
+                                                </div>
+                                                <a href="#">Commanded household smallness delivered.</a>
+                                            </div>
+                                        </li>
 
                                     @empty
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#">
-                                                <img src="{{ asset('no-data.png') }}" alt="Thumb">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <p class="mt-3">Tidak ada data tersedia</p>
-                                        </div>
-                                    </li>
+                                        <li>
+                                            <div class="thumb">
+                                                <a href="#">
+                                                    <img src="{{ asset('no-data.png') }}" alt="Thumb">
+                                                </a>
+                                            </div>
+                                            <div class="info">
+                                                <p class="mt-3">Tidak ada data tersedia</p>
+                                            </div>
+                                        </li>
                                     @endforelse
                                 </ul>
                             </div>
@@ -131,14 +148,14 @@
                                 <div class="sidebar-info">
                                     <ul>
                                         @forelse ($categories as $category)
-
-                                        <li>
-                                            <a href="#">{{ $category->name }} <span>{{ $category->news_count }}</span></a>
-                                        </li>
+                                            <li>
+                                                <a href="#">{{ $category->name }}
+                                                    <span>{{ $category->news_count }}</span></a>
+                                            </li>
                                         @empty
-                                        <li>
-                                            <a href="#">tidak ada data <span>69</span></a>
-                                        </li>
+                                            <li>
+                                                <a href="#">tidak ada data <span>69</span></a>
+                                            </li>
                                         @endforelse
 
                                     </ul>
@@ -150,36 +167,20 @@
                                 </div>
                                 <div class="sidebar-info">
                                     <ul>
+                                        @forelse ($galleries as $gallery)
+
                                         <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/6.jpg" alt="thumb">
+                                            <a href="">
+                                                <img src="{{ asset('storage/' . $gallery->image) }}" alt="thumb">
                                             </a>
                                         </li>
+                                        @empty
                                         <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/5.jpg" alt="thumb">
-                                            </a>
+                                            <img src="{{ asset('no-data.png') }}" alt="thumb">
+                                            <p class="text-center">Tidak ada data tersedia.</p>
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/4.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/3.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/2.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/1.jpg" alt="thumb">
-                                            </a>
-                                        </li>
+
+                                        @endforelse
                                     </ul>
                                 </div>
                             </div>

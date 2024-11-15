@@ -76,22 +76,19 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/profile-school', action: function () {
-        return view('landing-pages.about.profileSchool');
+        return view('pages.landing-page.about.profileSchool');
     });
     Route::get('/vision', action: function () {
-        return view('landing-pages.about.vision-and-mission');
+        return view('pages.landing-page.about.vision-and-mission');
     });
     Route::get('/structure', action: function () {
-        return view('landing-pages.about.organizational-structure');
-    });
-    Route::get('/news', action: function () {
-        return view('landing-pages.news.index');
+        return view('pages.landing-page.about.organizational-structure');
     });
     Route::get('/detail-news', action: function () {
-        return view('landing-pages.news.detail');
+        return view('pages.landing-page.news.detail');
     });
     Route::get('/contact', action: function () {
-        return view('landing-pages.contact.index');
+        return view('pages.landing-page.contact.index');
     });
 
 });

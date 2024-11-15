@@ -67,7 +67,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
                     <li class="{{ Request::is('/') ? 'active' : '' }}">
-                        <a href="/">Beranda</a>
+                        <a href="{{ route('landing-page') }}">Beranda</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
@@ -92,8 +92,8 @@
                             </li>
                         </ul>
                     </li>  --}}
-                    <li class="{{ Request::is('/news') ? 'active' : '' }}">
-                        <a href="/news">Berita</a>
+                    <li class="{{ Request::is('news') ? 'active' : '' }}">
+                        <a href="{{ route('news') }}">Berita</a>
                     </li>
                     <li class="">
                         <a href="/contact">Hubungi</a>
