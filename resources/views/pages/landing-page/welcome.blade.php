@@ -190,8 +190,8 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" alt="Thumb"
-                                style="max-width: 70%; max-height: auto; display: inline-block;">
+                            <img src="{{ asset('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg') }}"
+                                alt="Thumb" style="max-width: 70%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
                     <div class="col-md-6 info">
@@ -209,10 +209,10 @@
         <!-- End About -->
 
         <!-- Star Services Area
-                                                                    ============================================= -->
+                                                                ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
-                <img src="#" alt="Shape">
+                <img src="landing-page/img/shape/9.png" alt="Shape">
             </div>
             <div class="container">
                 <div class="row">
@@ -289,7 +289,7 @@
         </div>
 
         <!-- Star testimonials Area
-            ============================================= -->
+        ============================================= -->
         <div class="testimonials-area bg-gray default-padding-bottom">
             <!-- Fixed Shape -->
             <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
@@ -303,14 +303,11 @@
                                 <div class="item">
                                     <div class="info">
                                         <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
                                         </p>
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                                    alt="Author">
+                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="Author">
                                             </div>
                                             <div class="content">
                                                 <h4>Ahel Natasha</h4>
@@ -324,14 +321,11 @@
                                 <div class="item">
                                     <div class="info">
                                         <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
                                         </p>
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}"
-                                                    alt="Author">
+                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}" alt="Author">
                                             </div>
                                             <div class="content">
                                                 <h4>Ahel Natasha</h4>
@@ -347,8 +341,7 @@
                             <h4>Testimonials</h4>
                             <h2>Check what our satisfied clients said</h2>
                             <p>
-                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
-                                up bobby sloshed arse
+                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees up bobby sloshed arse
                             </p>
                         </div>
                     </div>
