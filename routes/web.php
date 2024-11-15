@@ -15,6 +15,7 @@ use App\Http\Controllers\LandinPageController;
 
 Route::get('', [LandinPageController::class, 'index'])->name('landing-page');
 Route::get('news', [LandinPageController::class, 'news'])->name('news');
+Route::get('news/{slug}', [LandinPageController::class, 'newsDetail'])->name('news.detail');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -72,6 +73,23 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/account', function () {
         return view('pages.super-admin.account.index');
+    });
+
+
+    Route::get('/profile-school', action: function () {
+        return view('pages.landing-page.about.profileSchool');
+    });
+    Route::get('/vision', action: function () {
+        return view('pages.landing-page.about.vision-and-mission');
+    });
+    Route::get('/structure', action: function () {
+        return view('pages.landing-page.about.organizational-structure');
+    });
+    Route::get('/detail-news', action: function () {
+        return view('pages.landing-page.news.detail');
+    });
+    Route::get('/contact', action: function () {
+        return view('pages.landing-page.contact.index');
     });
 
 });
