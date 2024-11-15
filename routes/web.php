@@ -84,9 +84,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/structure', action: function () {
         return view('landing-pages.about.organizational-structure');
     });
-    Route::get('/news', action: function () {
-        return view('landing-pages.news.index');
-    });
     Route::get('/detail-news', action: function () {
         return view('landing-pages.news.detail');
     });

@@ -40,9 +40,9 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand h-100" href="/">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" style="width: 80px;height: auto !important"
                         class="logo logo-display" alt="Logo">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png    ') }}" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png    ') }}" style="width: 80px;height: auto !important"
                         class="logo logo-scrolled" alt="Logo">
                 </a>
             </div>
