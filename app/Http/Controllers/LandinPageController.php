@@ -12,7 +12,7 @@ class LandinPageController extends Controller
     {
         $news = News::latest()->take(3)->get();
 
-        return view('welcome', compact('news'));
+        return view('landing-pages.welcome', compact('news'));
     }
 
     public function news()

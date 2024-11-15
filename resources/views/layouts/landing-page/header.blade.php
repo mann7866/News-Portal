@@ -40,9 +40,9 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand h-100" href="/">
-                    <img src="_Putih.png" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" style="width: 200px;height: auto !important"
                         class="logo logo-display" alt="Logo">
-                    <img src="_Hitam.png" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png    ') }}" style="width: 200px;height: auto !important"
                         class="logo logo-scrolled" alt="Logo">
                 </a>
             </div>
@@ -58,37 +58,30 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
                         <ul class="dropdown-menu">
                             <li class="">
-                                <a href="about/profile.html">Profil</a>
+                                <a href="/profile-school">Profil</a>
                             </li>
                             <li class="">
-                                <a href="about/vision-mision.html">visi & misi</a>
+                                <a href="/vision">visi & misi</a>
                             </li>
                             <li class="">
-                                <a href="about/organizational-structure.html">struktur organisasi</a>
-                            </li>
-                            <li class="">
-                                <a href="about/team.html">tim</a>
+                                <a href="/structure">struktur organisasi</a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown">
+                    {{--  <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li class="">
                                 <a href="services/software-development.html">Software Development</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="{{ Request::is('news') ? 'active' : '' }}">
-                        <a href="{{ route('news') }}">Berita</a>
-                    </li>
-                    <li class="">
-                        <a href="contact.html">Hubungi</a>
+                    </li>  --}}
+                    <li class="{{ Request::is('/news') ? 'active' : '' }}">
+                        <a href="/news">Berita</a>
                     </li>
                     <li class="">
-                        <a href="job-vacancy.html">PPDB</a>
-
+                        <a href="/contact">Hubungi</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

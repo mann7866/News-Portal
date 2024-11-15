@@ -73,17 +73,25 @@ Route::middleware('auth')->group(function () {
     Route::get('/account', function () {
         return view('pages.super-admin.account.index');
     });
-    Route::get('/layouts/news', function () {
-        return view('pages.landing-pages.index');
+
+
+    Route::get('/profile-school', action: function () {
+        return view('landing-pages.about.profileSchool');
     });
-    Route::get('/news', function () {
-        return view('pages.landing-pages.news.detail');
+    Route::get('/vision', action: function () {
+        return view('landing-pages.about.vision-and-mission');
     });
-    Route::get('/berita', function () {
-        return view('pages.landing-pages.news.index');
+    Route::get('/structure', action: function () {
+        return view('landing-pages.about.organizational-structure');
     });
-    Route::get('/organization', function () {
-        return view('pages.landing-pages.organization.index');
+    Route::get('/news', action: function () {
+        return view('landing-pages.news.index');
+    });
+    Route::get('/detail-news', action: function () {
+        return view('landing-pages.news.detail');
+    });
+    Route::get('/contact', action: function () {
+        return view('landing-pages.contact.index');
     });
 
 });
