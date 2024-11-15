@@ -368,7 +368,7 @@
                                     <div class="thumb-services-carousel owl-carousel owl-theme owl-loaded owl-drag">
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/XWtn1pMR1bB3EY9MDg3qt4y9hK56OFjT2b1SvnFi.png"
+                                            <img src="{{asset('landing-page/images/news-image.jpg')}}"
                                                 alt="SMK Al Azhar Sempu" class="img-fluid"
                                                 style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
