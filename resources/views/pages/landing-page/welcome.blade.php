@@ -99,29 +99,36 @@
         }
     </style>
 
-<style>
-@keyframes slideFromTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px); /* Dimulai dari atas */
-        visibility: hidden; /* Mulai dengan elemen tersembunyi */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Posisi akhir di tempat semula */
-        visibility: visible; /* Menampilkan elemen */
-    }
-}
+    <style>
+        @keyframes slideFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+                /* Dimulai dari atas */
+                visibility: hidden;
+                /* Mulai dengan elemen tersembunyi */
+            }
 
-/* Kelas untuk animasi masuk dari atas ke bawah dengan delay */
-.fade-in {
-    animation: slideFromTop 1s ease-in-out forwards;
-    animation-delay: 1s; /* Menunda animasi selama 1,5 detik */
-    display: block; /* Menjamin elemen tetap ada untuk animasi */
-    visibility: hidden; /* Menyembunyikan elemen saat dimulai */
-}
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                /* Posisi akhir di tempat semula */
+                visibility: visible;
+                /* Menampilkan elemen */
+            }
+        }
 
-</style>
+        /* Kelas untuk animasi masuk dari atas ke bawah dengan delay */
+        .fade-in {
+            animation: slideFromTop 1s ease-in-out forwards;
+            animation-delay: 1s;
+            /* Menunda animasi selama 1,5 detik */
+            display: block;
+            /* Menjamin elemen tetap ada untuk animasi */
+            visibility: hidden;
+            /* Menyembunyikan elemen saat dimulai */
+        }
+    </style>
     <style>
         footer::after {
             background: url(landing-page/img/map.svg);
@@ -131,31 +138,60 @@
 
 @section('content')
 
-<!-- Start Banner -->
-<div class="banner-area text-center text-big top-pad-50">
-    <div id="bootcarousel" class="carousel text-light slide animate_text" data-ride="carousel">
+    <!-- Start Banner -->
+    <div class="banner-area text-center text-big top-pad-50">
+        <div id="bootcarousel" class="carousel text-light slide animate_text" data-ride="carousel">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner carousel-zoom">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="slider-thumb bg-fixed" style="background-image: url('storage/section/school-news.webp');">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner carousel-zoom">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="slider-thumb bg-fixed" style="background-image: url('storage/section/school-news.webp');">
+                    </div>
+                    <div class="box-table">
+                        <div class="box-cell shadow dark">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="content">
+                                            <h2 class="fade-in">SMK AL-AZHAR <span>Portal Berita Sekolah</span></h2>
+                                            <p class="animated slideInRight">
+                                                Berita terbaru dan informasi penting untuk keluarga besar SMK Al-Azhar.
+                                                Tetap up-to-date dengan kegiatan sekolah kami!
+                                            </p>
+                                            <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
+                                                href="https://www.smkalazhar.id/berita" target="_blank">
+                                                Baca Berita Terbaru
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="box-table">
-                    <div class="box-cell shadow dark">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-10 offset-lg-1">
-                                    <div class="content">
-                                        <h2 class="fade-in">SMK AL-AZHAR <span>Portal Berita Sekolah</span></h2>
-                                        <p class="animated slideInRight">
-                                            Berita terbaru dan informasi penting untuk keluarga besar SMK Al-Azhar.
-                                            Tetap up-to-date dengan kegiatan sekolah kami!
-                                        </p>
-                                        <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
-                                            href="https://www.smkalazhar.id/berita" target="_blank">
-                                            Baca Berita Terbaru
-                                        </a>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="slider-thumb bg-fixed"
+                        style="background-image: url('storage/section/events-smkalazhar.webp');"></div>
+                    <div class="box-table">
+                        <div class="box-cell shadow dark">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="content">
+                                            <h2 class="fade-in">Informasi Acara <span>Aktivitas dan Event Sekolah</span>
+                                            </h2>
+                                            <p class="animated slideInRight">
+                                                Dapatkan informasi tentang acara, lomba, dan kegiatan yang diadakan di SMK
+                                                Al-Azhar.
+                                            </p>
+                                            <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
+                                                href="https://www.smkalazhar.id/acara" target="_blank">
+                                                Lihat Semua Acara
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -164,46 +200,19 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="slider-thumb bg-fixed"
-                    style="background-image: url('storage/section/events-smkalazhar.webp');"></div>
-                <div class="box-table">
-                    <div class="box-cell shadow dark">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-10 offset-lg-1">
-                                    <div class="content">
-                                        <h2 class="fade-in">Informasi Acara <span>Aktivitas dan Event Sekolah</span></h2>
-                                        <p class="animated slideInRight">
-                                            Dapatkan informasi tentang acara, lomba, dan kegiatan yang diadakan di SMK Al-Azhar.
-                                        </p>
-                                        <a data-animation="animated zoomInUp" class="btn btn-gradient effect btn-md"
-                                            href="https://www.smkalazhar.id/acara" target="_blank">
-                                            Lihat Semua Acara
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- End Wrapper for slides -->
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control light" href="#bootcarousel" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control light" href="#bootcarousel" data-slide="next">
+                <span class="sr-only">Next</span>
+            </a>
+
         </div>
-
-        <!-- End Wrapper for slides -->
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control light" href="#bootcarousel" data-slide="prev">
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control light" href="#bootcarousel" data-slide="next">
-            <span class="sr-only">Next</span>
-        </a>
-
     </div>
-</div>
-<!-- End Banner -->
+    <!-- End Banner -->
 
 
 
@@ -235,7 +244,7 @@
         <!-- End About -->
 
         <!-- Star Services Area
-                                                                ============================================= -->
+                                                                    ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
                 <img src="landing-page/img/shape/9.png" alt="Shape">
@@ -315,7 +324,7 @@
         </div>
 
         <!-- Star testimonials Area
-        ============================================= -->
+            ============================================= -->
         <div class="testimonials-area bg-gray default-padding-bottom">
             <!-- Fixed Shape -->
             <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
@@ -329,11 +338,14 @@
                                 <div class="item">
                                     <div class="info">
                                         <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
+                                            Sympathize interested simplicity at do projecting increasing terminated. As
+                                            edward settle limits at in. Chamber reached do he nothing be.
                                         </p>
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="Author">
+                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                                    alt="Author">
                                             </div>
                                             <div class="content">
                                                 <h4>Ahel Natasha</h4>
@@ -347,11 +359,14 @@
                                 <div class="item">
                                     <div class="info">
                                         <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. Chamber reached do he nothing be.
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
+                                            Sympathize interested simplicity at do projecting increasing terminated. As
+                                            edward settle limits at in. Chamber reached do he nothing be.
                                         </p>
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}" alt="Author">
+                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}"
+                                                    alt="Author">
                                             </div>
                                             <div class="content">
                                                 <h4>Ahel Natasha</h4>
@@ -367,7 +382,8 @@
                             <h4>Testimonials</h4>
                             <h2>Check what our satisfied clients said</h2>
                             <p>
-                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees up bobby sloshed arse
+                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
+                                up bobby sloshed arse
                             </p>
                         </div>
                     </div>
