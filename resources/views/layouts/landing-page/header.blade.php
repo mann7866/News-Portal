@@ -1,5 +1,17 @@
 
+<style>
+    .navbar-brand {
+    position: absolute; /* Memastikan berada di atas */
+    top: -20px;
+    left: 0;
+    z-index: 1000; /* Memastikan logo berada di atas elemen lain */
+}
 
+.navbar {
+    position: relative; /* Mengatur navbar dalam konteks yang benar */
+}
+
+</style>
 
 <header id="home">
 
@@ -40,11 +52,14 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand h-100" href="/">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" 
+                        style="width: 150px; height: auto !important;" 
                         class="logo logo-display" alt="Logo">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png    ') }}" style="width: 200px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" 
+                        style="width: 150px; height: auto !important;" 
                         class="logo logo-scrolled" alt="Logo">
                 </a>
+                
             </div>
             <!-- End Header Navigation -->
 
