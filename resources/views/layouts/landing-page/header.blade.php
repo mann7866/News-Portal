@@ -1,29 +1,16 @@
+
 <style>
-    /* Navbar brand adjustments */
     .navbar-brand {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .logo {
-        max-height: 60px; /* ukuran default logo */
-        transition: max-height 0.3s ease; /* efek transisi untuk perubahan ukuran */
-    }
-    /* Atur ukuran logo saat navbar memiliki kelas 'scrolled' */
-    .navbar-fixed.scrolled .logo {
-        max-height: 40px; /* ukuran logo saat discroll */
-    }
-    /* Kustomisasi navbar */
-    .navbar-default {
-        background-color: transparent;
-        border: none;
-    }
-    .navbar-default .navbar-nav > li > a {
-        color: #333;
-    }
-    .navbar-default .navbar-nav > .active > a {
-        color: #007bff;
-    }
+    position: absolute; /* Memastikan berada di atas */
+    top: -20px;
+    left: 0;
+    z-index: 1000; /* Memastikan logo berada di atas elemen lain */
+}
+
+.navbar {
+    position: relative; /* Mengatur navbar dalam konteks yang benar */
+}
+
 </style>
 
 <header id="home">
@@ -61,10 +48,15 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand h-50" href="/">
-                    <!-- Satu logo saja untuk memastikan konsistensi -->
-                    <img src="{{asset('Logo/proposal.png')}}" class="logo" alt="Logo">
+                <a class="navbar-brand h-100" href="/">
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}"
+                        style="width: 150px; height: auto !important;"
+                        class="logo logo-display" alt="Logo">
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}"
+                        style="width: 150px; height: auto !important;"
+                        class="logo logo-scrolled" alt="Logo">
                 </a>
+
             </div>
             <!-- End Header Navigation -->
 
@@ -72,28 +64,35 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
                     <li class="{{ Request::is('/') ? 'active' : '' }}">
-                        <a href="/">Beranda</a>
+                        <a href="{{ route('landing-page') }}">Beranda</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
                         <ul class="dropdown-menu">
-                            <li><a href="about/profile.html">Profil</a></li>
-                            <li><a href="about/vision-mision.html">Visi & Misi</a></li>
-                            <li><a href="about/organizational-structure.html">Struktur Organisasi</a></li>
-                            <li><a href="about/team.html">Tim</a></li>
+                            <li class="">
+                                <a href="/profile-school">Profil</a>
+                            </li>
+                            <li class="">
+                                <a href="/vision">visi & misi</a>
+                            </li>
+                            <li class="">
+                                <a href="/structure">struktur organisasi</a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+
+                    {{--  <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a href="services/software-development.html">Software Development</a></li>
                         </ul>
-                    </li>
-                    <li class="{{ Request::is('news') ? 'active' : '' }}">
+                    </li>  --}}
+                    <li class="{{ Request::is('news', 'news.detail') ? 'active' : '' }}">
                         <a href="{{ route('news') }}">Berita</a>
                     </li>
-                    <li><a href="contact.html">Hubungi</a></li>
-                    <li><a href="job-vacancy.html">PPDB</a></li>
+                    <li class="">
+                        <a href="/contact">Hubungi</a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

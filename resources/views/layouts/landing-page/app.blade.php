@@ -23,6 +23,8 @@
     <meta property="og:type" content="website" />
     <link rel="canonical" href="index.html" />
 
+    <!-- ========== Bootsrap Icon ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="mobilelogo.png" type="image/x-icon">
 
@@ -47,29 +49,10 @@
 </head>
 
 <body>
-<style>
-    body.no-scroll {
-    overflow: hidden;
-}
 
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    // Tambahkan class 'no-scroll' ke body
-    document.body.classList.add('no-scroll');
-
-    // Fungsi untuk menghilangkan preloader setelah waktu tertentu
-    setTimeout(function () {
-        document.getElementById("preloader").style.display = "none";
-        // Hapus class 'no-scroll' dari body
-        document.body.classList.remove('no-scroll');
-    },1000); // Misalnya 3 detik, bisa diatur sesuai kebutuhan
-});
-
-</script>
     <!-- Start Preloader
     ============================================= -->
-    <div id="preloader">
+     <div id="preloader">
         <div id="earna-preloader" class="earna-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>

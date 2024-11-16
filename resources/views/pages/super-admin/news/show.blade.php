@@ -134,9 +134,9 @@
             </div>
         </div>
         <!-- Button Kembali -->
-        <div class="text-end mt-4">
-            <a href="{{ route('news.index') }}" class="btn btn-secondary">
-                <i class="ti-arrow-left"></i> Kembali
+        <div class="text mt-4">
+            <a href="{{ route('news.index') }}" class="btn btn-danger">
+                <i class="ti ti-arrow-left"></i> Kembali
             </a>
         </div>
     </div>

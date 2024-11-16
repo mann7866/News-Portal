@@ -111,7 +111,7 @@
                                 <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
                                     <a style="margin-top: 10px" type="button" id="dropdownMenuButton"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i style="font-size: 25px;" class="ti ti-dots-vertical text-white"></i>
+                                        <i style="font-size: 25px;" class="ti ti-dots-vertical text-black"></i>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="m1">
                                         <li>
