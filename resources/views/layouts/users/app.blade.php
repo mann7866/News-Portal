@@ -26,6 +26,7 @@
 }
 
 </style>
+
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,6 +36,8 @@
 
     <!-- Site Meta -->
     <title>News Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -63,6 +66,11 @@
  <![endif]-->
 
 </head>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <body id="top">
     @include('layouts.users.topbar')

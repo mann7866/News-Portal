@@ -111,7 +111,7 @@
                                 <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
                                     <a style="margin-top: 10px" type="button" id="dropdownMenuButton"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i style="font-size: 25px;" class="ti ti-dots-vertical text-white"></i>
+                                        <i style="font-size: 25px;" class="ti ti-dots-vertical text-black"></i>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="m1">
                                         <li>
@@ -143,8 +143,10 @@
                                     {{ Str::limit(strip_tags($item->description), 60) }}
                                 </p>
                                 <div class="d-flex align-items-center gap-4">
-                                    <div class="d-flex align-items-center gap-2"><i
-                                            class="ti ti-eye text-dark fs-5"></i>9,125
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="">
+                                            <button class="btn btn-secondary">show</button>
+                                        </a>
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <i class="ti ti-message-2 text-dark fs-5"></i>3

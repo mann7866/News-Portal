@@ -19,10 +19,25 @@ class LandinPageController extends Controller
     {
         $news = News::with('categories')->latest()->paginate(3);
 
+        $galleries = News::latest()->take(6)->get();
+
         $categories = Category::withCount('news')->get();
 
         $popularNews = News::orderBy('views', 'desc')->take(3)->get();
 
-        return view('pages.landing-page.news', compact('news', 'popularNews', 'categories'));
+        return view('pages.landing-page.news.index', compact('news', 'popularNews', 'categories', 'galleries'));
+    }
+
+    public function newsDetail($slug)
+    {
+        $news = News::where('slug', $slug)->first();
+
+        $popularNews = News::orderBy('views', 'desc')->take(3)->get();
+
+        $galleries = News::latest()->take(6)->get();
+
+        $categories = Category::withCount('news')->get();
+
+        return view('pages.landing-page.news.detail', compact('news', 'popularNews', 'categories', 'galleries'));
     }
 }

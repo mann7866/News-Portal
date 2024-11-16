@@ -23,6 +23,8 @@
     <meta property="og:type" content="website" />
     <link rel="canonical" href="index.html" />
 
+    <!-- ========== Bootsrap Icon ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="mobilelogo.png" type="image/x-icon">
 
@@ -50,7 +52,7 @@
 
     <!-- Start Preloader
     ============================================= -->
-    {{--  <div id="preloader">
+     <div id="preloader">
         <div id="earna-preloader" class="earna-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
@@ -104,7 +106,7 @@
                 </div>
             </div>
         </div>
-    </div>  --}}
+    </div>
     <!-- End Preloader -->
 
     <!-- Header ============================================= -->

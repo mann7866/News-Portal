@@ -1,11 +1,21 @@
 
+<style>
+    .navbar-brand {
+    position: absolute; /* Memastikan berada di atas */
+    top: -20px;
+    left: 0;
+    z-index: 1000; /* Memastikan logo berada di atas elemen lain */
+}
 
+.navbar {
+    position: relative; /* Mengatur navbar dalam konteks yang benar */
+}
+
+</style>
 
 <header id="home">
-
     <!-- Start Navigation -->
     <nav class="navbar navbar-default attr-bg navbar-fixed white no-background bootsnav">
-
         <!-- Start Top Search -->
         <div class="top-search">
             <div class="container">
@@ -19,7 +29,6 @@
         <!-- End Top Search -->
 
         <div class="container">
-
             <!-- Start Atribute Navigation -->
             <div class="attr-nav">
                 <ul>
@@ -40,11 +49,14 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand h-100" href="/">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}" style="width: 80px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}"
+                        style="width: 150px; height: auto !important;"
                         class="logo logo-display" alt="Logo">
-                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png    ') }}" style="width: 80px;height: auto !important"
+                    <img src="{{ asset('Logo/newsPortal-removebg-preview.png') }}"
+                        style="width: 150px; height: auto !important;"
                         class="logo logo-scrolled" alt="Logo">
                 </a>
+
             </div>
             <!-- End Header Navigation -->
 
@@ -52,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
                     <li class="{{ Request::is('/') ? 'active' : '' }}">
-                        <a href="/">Beranda</a>
+                        <a href="{{ route('landing-page') }}">Beranda</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang</a>
@@ -72,13 +84,11 @@
                     {{--  <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="services/software-development.html">Software Development</a>
-                            </li>
+                            <li><a href="services/software-development.html">Software Development</a></li>
                         </ul>
                     </li>  --}}
-                    <li class="{{ Request::is('/news') ? 'active' : '' }}">
-                        <a href="/news">Berita</a>
+                    <li class="{{ Request::is('news', 'news.detail') ? 'active' : '' }}">
+                        <a href="{{ route('news') }}">Berita</a>
                     </li>
                     <li class="">
                         <a href="/contact">Hubungi</a>
@@ -91,20 +101,24 @@
         <div class="side">
             <a href="#" class="close-side"><i class="icon_close"></i></a>
             <div class="widget">
-                <img src="" style="width: 200px;height: auto !important"
-                    alt="Logo">
-                <p>
-
-                </p>
+                <img src="{{ asset('Logo/proposal.png') }}" style="width: 180px; height: auto;" alt="Logo">
+                <p></p>
             </div>
-
-
-            <div class="portofolio">
-            </div>
+            <div class="portfolio"></div>
         </div>
         <!-- End Side Menu -->
-
     </nav>
     <!-- End Navigation -->
-
 </header>
+
+<script>
+    // JavaScript untuk menambahkan kelas 'scrolled' ke navbar saat halaman di-scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar-fixed');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>

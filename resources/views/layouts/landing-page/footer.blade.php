@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
-                        <img src="assets/images/LOGO-HUMMATECH_Putih.png" style="height: 48px;width: auto;" alt="Logo">
+                        <img src="" style="height: 48px;width: auto;" alt="Logo">
 
                         <p>
                             SMK Al-AZHAR Sempu, Sekolah Menengah Kejuruan (SMK) berbasis IT serta berbasis pondok
@@ -17,36 +17,66 @@
                         <h4 class="widget-title">Sosial Media</h4>
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/smkalazharsempu" target="_blank"
-                                    style="display: flex;gap: .5rem;align-items: center">
+                                <a href="https://www.facebook.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <img alt="Facebook Logo"
-                                        src="storage/social-media/SNQs18FXSmIXwJfZthZzYWEq5UiiLBby44rHFrNw.png"
-                                        height="16px" class="mb-0" width="16px" />
-                                    Facebook
+                                    <i class="fab fa-facebook" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <span>Facebook</span>
                                 </a>
                             </li>
+
                             <li>
-                                <a href="https://instagram.com/smkalazharsempu" target="_blank"
-                                    style="display: flex;gap: .5rem;align-items: center">
+                                <a href="https://instagram.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <img alt="Facebook Logo"
-                                        src="storage/social-media/Y4cd8ZBLO5e0K26rlJ3RWL9k3kDL7SwXZijf6gcg.png"
-                                        height="16px" class="mb-0" width="16px" />
-                                    Instagram
+                                    <i class="fab fa-instagram" style="font-size: 20px; transition: color 0.3s;"></i>
+                                    <span>Instagram</span>
                                 </a>
                             </li>
+
                             <li>
-                                <a href="https://twitter.com/smkalazharsempu" target="_blank"
-                                    style="display: flex;gap: .5rem;align-items: center">
+                                <a href="https://twitter.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <img alt="Facebook Logo"
-                                        src="storage/social-media/9tFUkOesptOzwPCcSedNWo7T5Q1XeZoLeFrklVRP.png"
-                                        height="16px" class="mb-0" width="16px" />
-                                    Twitter
+                                    <i class="fab fa-twitter" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://youtube.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
+                                    <i class="fas fa-angle-right"></i>
+                                    <i class="fab fa-youtube" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://tiktok.com/@smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
+                                    <i class="fas fa-angle-right"></i>
+                                    <i class="fab fa-tiktok" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <span>TikTok</span>
                                 </a>
                             </li>
                         </ul>
+
+                        <!-- CSS untuk hover effect -->
+                        <style>
+                            /* Warna saat hover */
+                            .fab.fa-facebook:hover {
+                                color: #3b5998; /* Warna biru khas Facebook */
+                            }
+                            .fab.fa-instagram:hover {
+                                color: #E4405F; /* Warna merah muda khas Instagram */
+                            }
+                            .fab.fa-twitter:hover {
+                                color: #1DA1F2; /* Warna biru khas Twitter */
+                            }
+                            .fab.fa-youtube:hover {
+                                color: #FF0000; /* Warna merah khas YouTube */
+                            }
+                            .fab.fa-tiktok:hover {
+                                color: #000000; /* Warna khas TikTok */
+                            }
+                        </style>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 item">
@@ -112,7 +142,7 @@
                                         <strong>Alamat:</strong>
 
                                         Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu
-                                        Kabupaten Banyuwangi, Jawa Timur
+                                        Kabupaten Banyuwangi, Jawa Timur <br>
                                         Kode Pos: 68468.
                                     </div>
                                 </li>
@@ -148,7 +178,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved by <a
-                                href="">Admin </a></p>
+                                href="">Admin </a>
+                        </p>
                     </div>
                 </div>
             </div>

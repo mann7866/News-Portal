@@ -15,6 +15,7 @@ use App\Http\Controllers\LandinPageController;
 
 Route::get('', [LandinPageController::class, 'index'])->name('landing-page');
 Route::get('news', [LandinPageController::class, 'news'])->name('news');
+Route::get('news/{slug}', [LandinPageController::class, 'newsDetail'])->name('news.detail');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -1,191 +1,175 @@
-<footer class="section footer noover" style="background-color: #000; padding: 40px 0; color: #fff;">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Tentang SMK AL-Azhar -->
-            <div class="col-lg-4 col-md-4">
-                <div class="widget clearfix">
-                    <h3 class="widget-title" style="color: white">Tentang SMK AL-Azhar</h3>
-                    <div class="newsletter-widget">
-                        <p>SMK kami memiliki unit usaha di setiap program studi, berikut adalah daftar dari unit usaha SMK kami.</p>
-                        <div class="logo-grid">
-                            <img src="{{ asset('logo/ALputer.jpg') }}" alt="ACS Multi Technology" class="logo-img">
-                            <img src="{{ asset('logo/Almotor.png') }}" alt="Oma Mode" class="logo-img">
-                            <img src="{{ asset('logo/Aljahit.png') }}" alt="Al Jahit" class="logo-img">
-                            <img src="{{ asset('logo/network.jpeg') }}" alt="Network Logo" class="logo-img">
-                            <img src="{{ asset('logo/Altoko.png') }}" alt="Al Toko" class="logo-img">
-                            <img src="{{ asset('logo/hummatech.png') }}" alt="Hummatech Logo" class="logo-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mengapa Bergabung -->
-            <div class="col-lg-3 col-md-3">
-                <div class="widget clearfix">
-                    <h3 class="widget-title">Mengapa Bergabung dengan SMK Kami?</h3>
-                    <details>
-                        <summary><i class="fa fa-info-circle"></i> Pelajari lebih lanjut</summary>
-                        <p>Di SMK kami, setiap program studi memiliki unit usaha, memberikan siswa kesempatan belajar dan praktik langsung di dunia industri! Bergabunglah dan rasakan pengalaman ini yang akan mempersiapkan Anda untuk dunia kerja.</p>
-                    </details>
-                    <a href="#" class="readmore" style="color: #fff; text-decoration: underline;">Bergabung Menjadi Pengajar</a>
-                </div>
-            </div>
-
-            <!-- Tag Populer dan Dukungan -->
-            <div class="col-lg-6 col-md-6 d-flex justify-content-between">
-                <!-- Tag Populer -->
-                <div class="widget clearfix">
-                    <h3 class="widget-title" style="color:white">Tag Populer</h3>
-                    <div class="tags-widget">
-                        <div class="tag-list">
-                            <div class="tag-item"><a href="#">Merdeka Indo</a></div>
-                            <div class="tag-item"><a href="#">FufuFafa</a></div>
-                            <div class="tag-item"><a href="#">Benjamin</a></div>
-                            <div class="tag-item"><a href="#">SchoolHd</a></div>
-                            <div class="tag-item"><a href="#">Podcasth</a></div>
-                            <div class="tag-item"><a href="#">CIhuuy</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dukungan -->
-                <div class="widget clearfix">
-                    <h3 class="widget-title" style="color: white">Dukungan</h3>
-                    <div class="support-links">
-                        <div class="link-item"><a href="#">Ketentuan Penggunaan</a></div>
-                        <div class="link-item"><a href="#">Hak Cipta</a></div>
-                        <div class="link-item"><a href="#">Buat Tiket</a></div>
-                        <div class="link-item"><a href="#">Harga & Paket</a></div>
-                        <div class="link-item"><a href="#">Karir</a></div>
-                        <div class="link-item"><a href="#">Merek Dagang</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="row">
-            <!-- Informasi Kontak -->
-            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-                <div class="footer-links d-flex flex-column align-items-start">
-                  <p><h3 style="color: white">SMKS Al-Azhar Sempu</h3></p>
-                </div>
-                <p>Kode Pos :68468</p>
-                <p>Phone: +62 852 3655 3650</p>
-                <p>Email: smkalazhar.sempubwi@gmail.com</p>
-            </div>
-
-            <!-- Ikon Sosial Media -->
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end mb-4">
-                <div class="social d-flex justify-content-end align-items-center">
-                    <a class="facebook" href="https://www.facebook.com/smkalazharsempu"><i class="fa fa-facebook"></i></a>
-                    <a class="twitter" href="https://x.com/smkalazharsempu"><i class="fab fa-twitter"></i></a>
-                    <a class="google" href="https://www.smkalazhar.sch.id"><i class="fa fa-google-plus"></i></a>
-                    <a class="instagram" href="https://instagram.com/smkalazharsempu"><i class="fa fa-instagram"></i></a>
-                    <a class="tiktok" href="https://tiktok.com/@smkalazharsempu"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-    /* Main Footer Styles */
-    footer {
-        background-color: #000;
-        color: #fff;
-        padding: 40px 0;
-        font-size: 14px;
-    }
+    /* Mengatur efek hover pada bagian Products dan Useful links */
+footer .text-dark {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    /* Grid for logos */
-    .logo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-        gap: 10px;
-        justify-items: center;
-    }
+footer .text-dark:hover {
+    color: #21D192; /* Mengubah warna teks ketika hover */
+}
 
-    .logo-img {
-        width: 70px;
-        height: 70px;
-        object-fit: cover;
-        border-radius: 8%;
-        transition: transform 0.3s ease;
-    }
+footer .text-dark::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Posisi garis di bawah teks */
+    width: 0;
+    height: 2px;
+    background-color: #21D192; /* Warna hijau untuk garis */
+    transition: width 0.3s ease;
+}
 
-    .logo-img:hover {
-        transform: scale(1.1);
-    }
+footer .text-dark:hover::after {
+    width: 100%; /* Memunculkan garis di bawah teks ketika hover */
+}
 
-    /* Details section */
-    details summary {
-        font-size: 15px;
-        cursor: pointer;
-        font-weight: bold;
-    }
+/* Margin tambahan di ikon untuk memastikan jarak yang rapi */
+.bi {
+    margin-right: 6px;
+}
 
-    details summary i {
-        margin-right: 5px;
-    }
-
-    /* Tag and Support styles */
-    .d-flex {
-        display: flex;
-    }
-
-    .justify-content-between {
-        justify-content: space-between;
-    }
-
-    .widget {
-        flex: 1;
-        padding: 0 10px;
-    }
-
-    .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .tag-item a {
-        padding: 5px 8px;
-        background-color: #333;
-        border-radius: 5px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .tag-item a:hover {
-        background-color: #555;
-    }
-
-    .support-links {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .link-item a {
-        color: #ccc;
-        text-decoration: none;
-    }
-
-    .link-item a:hover {
-        color: #fff;
-    }
-
-    /* Social icons */
-    .social a {
-        color: #fff;
-        font-size: 15px;
-        margin: 0 10px;
-        transition: color 0.3s;
-    }
-
-    .social a:hover {
-        color: #ccc;
-    }
 </style>
+<div class="container-fluid my-0 p-0">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end;">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192;">
+            <!-- Left -->
+            <div style="text-align: center" class="me-5">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="https://facebook.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://google.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-google"></i>
+                </a>
+                <a href="https://instagram.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/smkalazharsempu" class="text-white me-4" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="flex-grow-1">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">School Name</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <h4 style="font: bold">SMKS Al-Azhar</h4>
+                        <p>
+               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis illo fuga nesciunt ad voluptates quibusdam mollitia temporibus natus assumenda quia molestiae accusamus, ullam, consectetur ex unde! Eveniet magnam provident voluptates.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Products</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Bootstrap Angular</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="http://smkalazhar.sch.id/" class="text-dark">Smks Al-Azhar</a>
+                        </p>
+                        <p>
+                            <a href="https://www.acsmultitechnology.com/" class="text-dark">ACS Multitechnology</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Hummatech</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Info</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    
+                        <!-- Alamat -->
+                        <p class="d-flex align-items-start">
+                            <i class="bi bi-buildings mr-2"></i>
+                            <span>Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu Kabupaten Banyuwangi, Jawa Timur</span>
+                        </p>
+                    
+                        <!-- Kode Pos -->
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-mailbox-flag mr-2"></i>
+                            <span>Kode Pos: 68468</span>
+                        </p>
+                    
+                        <!-- Email -->
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-envelope mr-2"></i>
+                            <span>smkalazhar.sempubwi@gmail.com</span>
+                        </p>
+                    
+                        <!-- Telepon -->
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-telephone mr-2"></i>
+                            <span>+62 852 3655 3650</span>
+                        </p>
+                    </div>
+                    
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">Magang</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>
+<!-- End of .container -->
