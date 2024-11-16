@@ -30,7 +30,7 @@
                             @forelse ($news as $item)
 
                             <div class="single-item">
-                                <div class="item">
+                                <div class="item">jan
                                     <div class="thumb">
                                         <a href="blog-single-with-sidebar.html"><img src="{{ asset('storage/' . $item->image) }}" alt="Thumb"></a>
                                         <div class="date">January 25, 2021</div>

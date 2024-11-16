@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('e-mail');
             $table->text('description');
             $table->string('skill');
-            $table->foreignId('employee_jobs_id')->constrained('employees')->cascadeOnUpdate()->restrictOnDelete();
+            $table->string('jobs');
             $table->timestamps();
         });
     }
