@@ -25,6 +25,7 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
     {
         $data = $request->validated();
         $data['user_id'] = Auth::id();
+        $data['status'] = 'daily';
 
         if ($request->hasFile('image')) {
             $data['image'] = $this->upload(UploadDiskEnum::NEWS_IMAGE->value, $request->file('image'));

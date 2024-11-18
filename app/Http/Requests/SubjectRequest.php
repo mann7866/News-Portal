@@ -23,6 +23,7 @@ class SubjectRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'description' => 'required',
             'subject' => ['required', 'max:255', 'string', Rule::unique('subjects', column: 'subject')->ignore($this->Subject)]
         ];
     }
@@ -30,6 +31,7 @@ class SubjectRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'description.required' => 'Deskripsi harus diisi.',
             'subject.required' => 'Mata Pelajaran kategori harus diisi.',
             'subject.max' => 'Mata Pelajaran kategori tidak boleh lebih dari 255 karakter.',
             'subject.string' => 'Mata Pelajaran kategori harus berupa teks.',

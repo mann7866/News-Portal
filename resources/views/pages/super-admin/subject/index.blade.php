@@ -53,6 +53,7 @@
                                 <tr class="text-muted fw-semibold">
                                     <th scope="col">No</th>
                                     <th scope="col" class="ps-0">Kategori</th>
+                                    <th scope="col" class="ps-0">Deskripsi</th>
                                     <th scope="col" class="text-center">Opsi</th>
                                 </tr>
                             </thead>
@@ -70,6 +71,13 @@
                                             <div class="d-flex align-items-center">
                                                 <div>
                                                     <h6 class="fw-semibold mb-1">{{ $subject->subject }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <h6 class="fw-semibold mb-1">{{ $subject->description }}</h6>
                                                 </div>
                                             </div>
                                         </td>
