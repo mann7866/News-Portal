@@ -244,7 +244,7 @@
         <!-- End About -->
 
         <!-- Star Services Area
-                                                                    ============================================= -->
+                                                                        ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
                 <img src="landing-page/img/shape/9.png" alt="Shape">
@@ -324,7 +324,7 @@
         </div>
 
         <!-- Star testimonials Area
-            ============================================= -->
+                ============================================= -->
         <div class="testimonials-area bg-gray default-padding-bottom">
             <!-- Fixed Shape -->
             <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
@@ -404,50 +404,38 @@
                     </div>
                     <div class="container">
                         <!-- Start Services Items -->
-                        <div class="services-content ">
+                        <div class="services-content">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="thumb-services-carousel owl-carousel owl-theme owl-loaded owl-drag">
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="landing-page/images/download.jpeg"
-                                                alt="SMK Al Azhar Sempu" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/acs.png" alt="SMK Al Azhar Sempu" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/OMc0t2iOti0qTcgSGjnhJOYOYvsdbok8UXLY1QZY.png"
-                                                alt="SMKN 1 Kepanjen" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/ALjahit.png" alt="SMKN 1 Kepanjen" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/a9QtlJCuWqeKkaWV2U3nO9OznThPJFEquegjr0No.jpg"
-                                                alt="SMKN 1 Probolinggo" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/ALmotor.png" alt="SMKN 1 Probolinggo" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/bkcxgsEnapILbETxIJJY90CUrNuua2y5UvvTENuK.png"
-                                                alt="SMK Muhammadiyah 6 Rogojampi" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/ALtoko.png" alt="SMK Muhammadiyah 6 Rogojampi" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/izrmwFuFz0wduf1UO2obUGFkAjr8DRHpxs33qJzJ.jpg"
-                                                alt="SMK Muhammadiyah 1 Genteng" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/riyad.jpg" alt="SMK Muhammadiyah 1 Genteng" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/8iq8YE7TuolFdQtyTpsyTeq6xzEV2BrvyYQcxWI1.png"
-                                                alt="SMK Muhammadiyah 9 Gambiran" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        <div class="item" style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="logo/hummatech.png" alt="SMK Muhammadiyah 9 Gambiran" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -739,8 +727,7 @@
                                                                     studi pelacakan jejak lulusan/alumni dari SMK Negeri
                                                                     2...</p>
                                                                 <div class="button">
-                                                                    <a href=""
-                                                                        class="item popup-gallery">
+                                                                    <a href="" class="item popup-gallery">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                                             width="30" height="30"
                                                                             viewBox="0 0 512 396.94">
