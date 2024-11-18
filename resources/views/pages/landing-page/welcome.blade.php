@@ -130,6 +130,16 @@
         }
     </style>
     <style>
+        .news-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+    </style>
+    <style>
         footer::after {
             background: url(landing-page/img/map.svg);
         }
@@ -243,85 +253,92 @@
 
         <!-- End About -->
 
-        <!-- Star Services Area
-                                                                    ============================================= -->
-        <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
-            <div class="right-shape">
-                <img src="landing-page/img/shape/9.png" alt="Shape">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <div class="site-heading text-center">
-                            <h4>Layanan kami</h4>
-                            <h2>Kami menyediakan layanan software untuk mendukung perusahaan dan bisnis anda</h2>
-                            <div class="devider"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="services-items text-center">
-                    <div class="row">
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/ofg7lJLisMLV9iEULErd4vc6ZkTZ4vxmYY1GLKFS.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">Software Development</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk
-                                            yang dihasilkan adalah produk perangkat lunak berbasis
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/software-development.html"><i class="fas fa-arrow-right"></i>
-                                            Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/pF4KmNe9YTmdxpEVbkvKnXcyVyDa02jWQSEujslr.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">Kelas Industri</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        <p><strong>Kelas Industri </strong>merupakan program kelas khusus di sekolah
-                                            vokasi (SMK) yang dikelola bersama dengan industri.
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/kelas-industri.html"><i class="fas fa-arrow-right"></i>
-                                            Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
-                            <div class="item"
-                                style="background-image: url('storage/service/JdY4vkyMFjXS4Ci49rUniHx3pZ3waWqAmYMkmWXc.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center">
-                                    <h4 class="mb-0 pb-0">Pengadaan Hardware IT</h4>
-                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
-                                        Pengadaan Peralatan IT seperti Komputer dan alat lainnya baik itu yang
-                                        bersertifikat TKDN ataupun yang
-                                    </div>
-                                    <div class="pt-5 mt-3">
-                                        <a href="services/pengadaan-hardware-it.html"><i class="fas fa-arrow-right"></i>
-                                            Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                    </div>
-
+<!-- Star Services Area
+============================================= -->
+<div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
+    <div class="right-shape">
+        <img src="landing-page/img/shape/9.png" alt="Shape">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="site-heading text-center">
+                    <h4>Layanan Kami</h4>
+                    <h2>SMK Al-Azhar Menyediakan Pendidikan Berbasis Teknologi dan Kejuruan</h2>
+                    <div class="devider"></div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="services-items text-center">
+            <div class="row">
+                <!-- Single Item -->
+                <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                    <div class="item"
+                        style="background-image: url('storage/service/ofg7lJLisMLV9iEULErd4vc6ZkTZ4vxmYY1GLKFS.jpg'); min-height: 20rem; max-height: 20rem;">
+                        <div class="d-flex flex-column align-items-center text-white p-3">
+                            <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">Kompetensi Keahlian</h4>
+                            <div class="py-2" style="min-height: 70px; max-height: 70px;">
+                                <p>SMK Al-Azhar menawarkan berbagai program keahlian berbasis teknologi seperti
+                                    Rekayasa Perangkat Lunak, Teknik Komputer Jaringan, dan Multimedia untuk membekali
+                                    siswa dengan keterampilan masa depan.</p>
+                            </div>
+                            <br><br><br>
+                            <div class="mt-3 pt-3">
+                                <a href="services/kompetensi-keahlian.html" class="text-white"><i class="fas fa-arrow-right"></i>
+                                    Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                    <div class="item"
+                        style="background-image: url('storage/service/pF4KmNe9YTmdxpEVbkvKnXcyVyDa02jWQSEujslr.jpg'); min-height: 20rem; max-height: 20rem;">
+                        <div class="d-flex flex-column align-items-center text-white p-3">
+                            <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">Kelas Industri</h4>
+                            <div class="py-2" style="min-height: 70px; max-height: 70px;">
+                                <p>Program <strong>Kelas Industri</strong> bekerja sama dengan perusahaan terkemuka
+                                    untuk memberikan pengalaman kerja nyata kepada siswa, sehingga mereka siap untuk
+                                    dunia industri.</p>
+                            </div>
+                            <br><br><br>
+                            <div class="mt-3 pt-3">
+                                <a href="services/kelas-industri.html" class="text-white"><i class="fas fa-arrow-right"></i>
+                                    Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
+                    <div class="item"
+                        style="background-image: url('storage/service/JdY4vkyMFjXS4Ci49rUniHx3pZ3waWqAmYMkmWXc.jpg'); min-height: 20rem; max-height: 20rem;">
+                        <div class="d-flex flex-column align-items-center text-white p-3">
+                            <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">Fasilitas Pendukung</h4>
+                            <div class="py-2" style="min-height: 70px; max-height: 70px;">
+                                <p>SMK Al-Azhar dilengkapi dengan laboratorium komputer, ruang praktek, dan fasilitas
+                                    lainnya untuk mendukung pembelajaran yang efektif.</p>
+                            </div>
+                            <br>
+                            <br><br>
+                            <div class="mt-3 pt-3">
+                                <a href="services/fasilitas-pendukung.html" class="text-white"><i class="fas fa-arrow-right"></i>
+                                    Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
         <!-- Star testimonials Area
             ============================================= -->
@@ -704,15 +721,18 @@
                                                 @forelse ($news as $item)
                                                     <div class="col-lg-4 col-md-6 mt-2">
                                                         <div class="item">
-                                                            <div class="thumb">
-                                                                <a
-                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
-                                                                    <img src="{{ asset('storage/' . $item->image) }}"
-                                                                        alt="{{ $item->title }}" class="img-fluid"
-                                                                        style="width: 500px; height: 200px; object-fit: cover;">
-                                                                </a>
+                                                            <div class="news-card">
 
-                                                                <time class="date" datetime="">2 Mei 2024</time>
+                                                                <div class="thumb">
+                                                                    <a
+                                                                        href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
+                                                                        <img src="{{ asset('storage/' . $item->image) }}"
+                                                                            alt="{{ $item->title }}" class="img-fluid"
+                                                                            style="width: 500px; height: 200px; object-fit: cover;">
+                                                                    </a>
+    
+                                                                    <time class="date" datetime="">2 Mei 2024</time>
+                                                                </div>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
