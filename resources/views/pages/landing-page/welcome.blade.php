@@ -130,6 +130,39 @@
         }
     </style>
     <style>
+        /* Styling untuk mengurangi jarak antar elemen */
+        .testimonials-area {
+            padding-top: 20px; /* Kurangi jarak atas */
+            padding-bottom: 20px; /* Kurangi jarak bawah */
+            margin-top: 0; /* Hindari margin tambahan */
+        }
+    
+        .fixed-shape {
+            background-image: url(assets/img/shape/10-red.png);
+            height: 100px; /* Batasi tinggi shape */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    
+        .row.align-center {
+            margin: 0; /* Hapus margin tambahan */
+        }
+    
+        /* Batas antara elemen atas dan bawah */
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    
+        /* Styling umum untuk testimonial */
+        .provider .thumb img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+    </style>
+    <style>
         footer::after {
             background: url(landing-page/img/map.svg);
         }
@@ -225,8 +258,8 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="{{ asset('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg') }}"
-                                alt="Thumb" style="max-width: 70%; max-height: auto; display: inline-block;">
+                            <img src="{{ asset('logo/sekolah.jpeg') }}"
+                                alt="Thumb" style="max-width: 120%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
                     <div class="col-md-6 info">
@@ -354,42 +387,45 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End Single Item -->
-                                <!-- Single Item -->
-                                <div class="item">
-                                    <div class="info">
-                                        <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
-                                        </p>
-                                        <div class="provider">
-                                            <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}"
-                                                    alt="Author">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Ahel Natasha</h4>
-                                                <span> Managing Director</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
                             </div>
                         </div>
-                        <div class="col-lg-5 info">
-                            <h4>Testimonials</h4>
-                            <h2>Check what our satisfied clients said</h2>
-                            <p>
-                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
-                                up bobby sloshed arse
-                            </p>
+                        <!-- End Single Item -->
+
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="info">
+                                <p>
+                                    Otherwise concealed favourite frankness on be at dashwoods defective at.
+                                    Sympathize interested simplicity at do projecting increasing terminated.
+                                    As edward settle limits at in. Chamber reached do he nothing be.
+                                </p>
+                                <div class="provider">
+                                    <div class="thumb">
+                                        <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}" alt="Author">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Ahel Natasha</h4>
+                                        <span>Managing Director</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- End Single Item -->
                     </div>
+                </div>
+                <!-- Testimonial Info -->
+                <div class="col-lg-5 info">
+                    <h4>Testimonials</h4>
+                    <h2>Check what our satisfied clients said</h2>
+                    <p>
+                        Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
+                        up bobby sloshed arse.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         <!-- End testimonials Area -->
 
         <div class="m-5">
