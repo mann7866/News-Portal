@@ -32,7 +32,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return view ('pages.super-admin.employee.index');
+        $employees = $this->interface->get();
+        return view ('pages.super-admin.employee.index', ['employees' => $employees]);
     }
 
     /**
@@ -49,12 +50,11 @@ class EmployeeController extends Controller
     public function store(EmployeeRequest $request)
     {
         try {
-            $result =$this->service->store($request);
-             $this->interface->store($result['data']);
-
-            return redirect()->route('employee.index')->with('success','Berhasil Tambah Data');
+            $data = $this->service->store($request);
+            $this->interface->store($data);
+            return redirect()->route('employee.index')->with('success','Berhasil menambah organisasi');
         } catch (\Throwable $e) {
-            return back()->with('error','Gagal Tambah Data'. $e->getMessage());
+            return redirect()->route('employee.index')->with('error','Gagal menambah organisasi' . $e->getMessage());
         }
 
     }
@@ -72,15 +72,21 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
+        return view ('pages.super-admin.employee.edit',['employee'=>$employee]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employee $employee)
+    public function update(EmployeeRequest $request, Employee $employee)
     {
-        //
+        try {
+            $data = $this->service->update($request, $employee);
+            $this->interface->update($employee->id, $data);
+            return redirect()->route('employee.index')->with('success','Berhasil mengedit organisasi');
+        } catch (\Throwable $e) {
+            return redirect()->route('employee.index')->with('error','Gagal mengedit organisasi' . $e->getMessage());
+        }
     }
 
     /**

@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
@@ -17,16 +16,16 @@ Route::get('', [LandinPageController::class, 'index'])->name('landing-page');
 Route::get('news', [LandinPageController::class, 'news'])->name('news');
 Route::get('news/{slug}', [LandinPageController::class, 'newsDetail'])->name('news.detail');
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(callback: function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::prefix('administrator')->group(function () {
+    Route::get('administrator/dashboard', function () {
+        return view('pages.super-admin.dashboard');
+    })->name('dashboard');
 
-        Route::get('dashboard', function () {
-            return view('pages.super-admin.dashboard');
-        })->name('dashboard');
+    Route::prefix('administrator')->group(function () {
 
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');

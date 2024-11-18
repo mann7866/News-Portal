@@ -29,7 +29,7 @@ class EmployeeJobController extends Controller
     public function index()
     {
         $employeeJobs = $this->interface->get();
-        return view('pages.super-admin.employee-job.index', compact('employeeJobs'));
+        return view('pages.super-admin.employee-job.index')->with('employeeJobs', $employeeJobs);
     }
 
     /**

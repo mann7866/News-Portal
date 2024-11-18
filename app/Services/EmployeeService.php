@@ -1,6 +1,6 @@
 <?php
-namespace App\Services;
 
+namespace App\Services;
 
 use App\Models\Employee;
 use App\Traits\UploadTrait;
@@ -12,8 +12,7 @@ use App\Http\Requests\EmployeeRequest;
 class EmployeeService implements ShouldHandleFileUpload, CustomUploadValidation
 {
     use UploadTrait;
-
-    public function validateAndUpload(string $disk, object $file, string $old_file): string
+    public function validateAndUpload(string $disk, object $file, string $old_file = null): string
     {
         if ($old_file) $this->remove($old_file);
         return $this->upload($disk, $file);
@@ -23,13 +22,13 @@ class EmployeeService implements ShouldHandleFileUpload, CustomUploadValidation
     {
         $data = $request->validated();
         $data['image'] = $this->upload(UploadDiskEnum::EMPLOYEE_IMAGE->value, $request->file('image'));
-
         return $data;
     }
+
+
     public function update(EmployeeRequest $request, Employee $employee): array
     {
         $data = $request->validated();
-
         if ($request->hasFile('image')) {
             $data['image'] = $this->validateAndUpload(UploadDiskEnum::EMPLOYEE_IMAGE->value,$request->file('image'),$employee->image);
         } else {
