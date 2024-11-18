@@ -52,7 +52,7 @@
                         </div>
                         <div class="content ms-3">
                             <h5>Email</h5>
-                            <p><a href="mailto:	smk_al_azhar@yahoo.com">smk_al_azhar@yahoo.com</a></p>
+                            <p><a href="mailto:smkalazhar.sempubwi@gmail.com">smkalazhar.sempubwi@gmail.com</a></p>
                         </div>
                     </li>
                 </ul>
