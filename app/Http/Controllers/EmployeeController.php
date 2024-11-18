@@ -34,6 +34,8 @@ class EmployeeController extends Controller
     {
         $employees = $this->interface->get();
         return view ('pages.super-admin.employee.index', ['employees' => $employees]);
+
+        dd($employees);
     }
 
     /**
@@ -72,7 +74,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view ('pages.super-admin.employee.edit',['employee'=>$employee]);
+        return view ('pages.super-admin.employee.edit', compact('employee'));
     }
 
     /**
