@@ -225,7 +225,7 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="{{ asset('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg') }}"
+                            <img src="{{ asset('s') }}"
                                 alt="Thumb" style="max-width: 70%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
@@ -330,41 +330,7 @@
 
 
 
-        <!-- Star testimonials Area
-            ============================================= -->
-        <div class="testimonials-area bg-gray default-padding-bottom">
-            <!-- Fixed Shape -->
-            <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
-            <!-- End Fixed Shape -->
-            <div class="container">
-                <div class="testimonial-items">
-                    <div class="row align-center">
-                        <div class="col-lg-7 testimonials-content">
-                            <div class="testimonials-carousel owl-carousel owl-theme">
-                                <!-- Single Item -->
-                                <div class="item">
-                                    <div class="info">
-                                        <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
-                                        </p>
-                                        <div class="provider">
-                                            <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                                    alt="Author">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Ahel Natasha</h4>
-                                                <span> Managing Director</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-
+      
 
 <!-- Testimonials Area -->
 <div class="testimonials-area bg-gray default-padding-bottom" style="padding-top: 50px;">
