@@ -80,4 +80,13 @@
     </div>
 
     @include('pages.super-admin.category.partials.create-modal')
+     <!-- Script untuk membuka modal jika diperlukan -->
+     @if (session('show_create_modal'))
+     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+             const createModal = new bootstrap.Modal(document.getElementById('create-modal'));
+             createModal.show();
+         });
+     </script>
+ @endif
 @endsection
