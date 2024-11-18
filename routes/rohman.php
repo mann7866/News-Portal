@@ -19,3 +19,5 @@ Route::get('organization/edit/{organization}', [organizationController::class, '
 Route::post('organization', [organizationController::class, 'store'])->name('organization.store');
 Route::put('organization/{organization}', [organizationController::class, 'update'])->name('organization.update');
 Route::delete('organization/{organization}', [organizationController::class, 'destroy'])->name('organization.destroy');
+
+    

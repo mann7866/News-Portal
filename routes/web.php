@@ -93,4 +93,16 @@ Route::get('/contact', action: function () {
     return view('pages.landing-page.contact.index');
 });
 
+Route::get('/admin/news', action: function () {
+    return view('pages.admin.news.index');
+});
+
+Route::get('/approvals', function () {
+    return view('pages.admin.news.index');
+});
+
+Route::get('/history', function () {
+    return view('pages.admin.history.index');
+});
+
 require __DIR__ . '/auth.php';
