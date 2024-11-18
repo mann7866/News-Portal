@@ -46,8 +46,8 @@ Route::middleware('auth')->group(callback: function () {
         // route employee
         Route::get('employee', action: [EmployeeController::class, 'index'])->name('employee.index');
         Route::get('employee/create', [EmployeeController::class, 'create'])->name('employee.create');
-        Route::get('employee/show', action: [EmployeeController::class, 'show'])->name('employee.show');
-        Route::get('employee/edit', [EmployeeController::class, 'edit'])->name('employee.edit');
+        Route::get('employee/show/{employee}', action: [EmployeeController::class, 'show'])->name('employee.show');
+        Route::get('employee/edit/{employee}', [EmployeeController::class, 'edit'])->name('employee.edit');
         Route::post('employee', [EmployeeController::class, 'store'])->name('employee.store');
         Route::put('employee/{employee}', [EmployeeController::class, 'update'])->name('employee.update');
         Route::delete('employee/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');

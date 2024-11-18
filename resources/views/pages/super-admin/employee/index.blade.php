@@ -50,6 +50,7 @@
             @forelse ($employees as $employee)
                 {{--  data 1  --}}
 
+
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-body">
                     <div class="w-100">

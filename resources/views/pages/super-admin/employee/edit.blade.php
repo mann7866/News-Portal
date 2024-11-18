@@ -22,8 +22,10 @@
                         @endif
 
 
-                        <form action="{{ route('employee.store', $employee->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('employee.update', $employee->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
+                        
                             <div class="position-relative overflow-hidden">
                                 <div class="position-relative">
                                     <div class="chat-box p-9" style="height: auto;" data-simplebar>
