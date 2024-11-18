@@ -410,7 +410,7 @@
                                     <div class="thumb-services-carousel owl-carousel owl-theme owl-loaded owl-drag">
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/XWtn1pMR1bB3EY9MDg3qt4y9hK56OFjT2b1SvnFi.png"
+                                            <img src="landing-page/images/download.jpeg"
                                                 alt="SMK Al Azhar Sempu" class="img-fluid"
                                                 style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
@@ -442,220 +442,6 @@
                                             style="display: flex; align-items: center; justify-content: center; ">
                                             <img src="storage/partner/8iq8YE7TuolFdQtyTpsyTeq6xzEV2BrvyYQcxWI1.png"
                                                 alt="SMK Muhammadiyah 9 Gambiran" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/REy3Rg4XRVV4naAgQojwtUbdic7Ts44sxBfSa6zw.png"
-                                                alt="SMK Nurul Abror Arobbaniyyin" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/IpyNMSfUPrFJTZy7rWWJXRfsm0Tlmh0hL77BIXRh.png"
-                                                alt="SMK 17 Agustus Muncar" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/4xarpITFQS5YE18s0rebUGf7PQT6NJyrzSw9NwIO.png"
-                                                alt="SMKN 4 Bojonegoro" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/FTpYVHSEASqK4C0A4ImJ0RbcyvrC8bD31EGE9SQk.jpg"
-                                                alt="SMKN 6 Jember" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/sP2bC9JcTZ9yNykNUOl4aZsm9oCq7B00r6cOkHrP.png"
-                                                alt="SMKN 8 Jember" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/RSTRJssQBFjhwZW4u3Hbz29Sn2JuM1BOL6SELWGT.jpg"
-                                                alt="Politeknik Negeri Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/dx4lyfCzNVdY2fJRn4dhSDdorAL7eiujKfiXkX9B.png"
-                                                alt="Politeknik Negeri Jember" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/1yACLhkjWyu5hhmm7RK7tBfVcqEVwDVzLMZojeaT.png"
-                                                alt="Politeknik Negeri Banyuwangi" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/uCjXnPXspohp56S3KR5bBfnYFwhdkSAZDwsqDvfD.png"
-                                                alt="Universitas Muhammadiyah Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/ldTtzl0jheCvI3L3PgAIYeg8MIx8D315DDVmg0pt.png"
-                                                alt="PT ACS Multi Technology" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Kabupaten%20Pasuruan.png" alt="Kabupaten Pasuruan"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/ZQnxxk4islEhBacOkWHvUv3LCDQ2QRSk6ezjAehP.png"
-                                                alt="SMKN 2 Penajam Paser Utara" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/SMK%20Wali%20Songo%20Bululawang.png"
-                                                alt="SMK Wali Songo Bululawang Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/SMKN%202%20Kraksaan.png" alt="SMKN 2 Kraksaan"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Politeknik%20Negeri%20Madiun.png"
-                                                alt="Politeknik Negeri Madiun" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/BBPPMPV%20BOE%20Malang.png" alt="BBPPMPV BOE Malang"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Kabupaten%20Mojokerto.png" alt="Kabupaten Mojokerto"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Kabupaten%20Malang.png" alt="Kabupaten Malang"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Exp%20Inc..png" alt="Exp Inc." class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Ubig.co.id.png" alt="Ubig.co.id" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Growin%20Travel.png" alt="Growin Travel"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Dunia%20Blazzer%20Indonesia.png"
-                                                alt="Dunia Blazzer Indonesia" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Yayasan%20Sinergis%20Asa%20Professional.png"
-                                                alt="Yayasan Sinergis Asa Professional" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Institut%20Teknologi%20dan%20Bisnis%20Asia%20Malang.png"
-                                                alt="Institut Teknologi dan Bisnis Asia Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Universitas%20Islam%20Balitar%20Blitar.png"
-                                                alt="Universitas Islam Balitar Blitar" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Universitas%20Brawijaya.png"
-                                                alt="Universitas Brawijaya" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Universitas%20Negeri%20Malang.png"
-                                                alt="Universitas Negeri Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/SMKN%201%20Pasuruan.png" alt="SMKN 1 Pasuruan"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/SMKN%203%20Pamekasan.png" alt="SMKN 3 Pamekasan"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/SMK%20Negeri%20Tambakboyo%20Tuban.png"
-                                                alt="SMK Negeri Tambakboyo Tuban" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Galaxy%20Solusindo%20Malang.png"
-                                                alt="Galaxy Solusindo Malang" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/DB%20Klik%20Surabaya.png" alt="DB Klik Surabaya"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/PT%20GITS%20Indonesia.png" alt="PT GITS Indonesia"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/PT%20Penerbit%20Jurnal%20Indonesia.png"
-                                                alt="PT Penerbit Jurnal Indonesia" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/Kedaireka.id.png" alt="Kedaireka.id"
-                                                class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block;">
-                                        </div>
-                                        <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center; ">
-                                            <img src="storage/partner/STIKOM%20Bali.png" alt="STIKOM Bali"
-                                                class="img-fluid"
                                                 style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                     </div>
@@ -908,7 +694,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="storage/portfolio/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.png"
+                                                            <img src="landing-page/images/im01.jpg"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="SIPJAKI (Sistem Informasi Pembina Jasa Konstruksi Kabupaten Pasuruan)">
                                                         </div>
@@ -916,7 +702,7 @@
                                                             <div class="info mb-0">
                                                                 <h4 class=" mb-0"><a
                                                                         href="product/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.html">SIPJAKI
-                                                                        (Sistem Informasi Pembina Jasa Konstr...</a>
+                                                                        Sistem Informasi Pembina Jasa Konstr...</a>
                                                                 </h4>
                                                                 <p class="text-white mb-0">SIPJAKI merupakan singkatan
                                                                     dari Sistem Informasi Pembina Jasa Konstruksi yang
@@ -939,7 +725,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="storage/portfolio/tracer-study-smkn-2-penajam-paser-utara.png"
+                                                            <img src="landing-page/images/im02.jpg"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="Tracer Study SMKN 2 Penajam Paser Utara">
                                                         </div>
@@ -953,7 +739,7 @@
                                                                     studi pelacakan jejak lulusan/alumni dari SMK Negeri
                                                                     2...</p>
                                                                 <div class="button">
-                                                                    <a href="storage/portfolio/tracer-study-smkn-2-penajam-paser-utara.png"
+                                                                    <a href=""
                                                                         class="item popup-gallery">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                                             width="30" height="30"
@@ -970,7 +756,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="storage/portfolio/jajalenpas-jaringan-jalan-kabupaten-pasuruan.png"
+                                                            <img src="landing-page/images/im02.jpg"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="JAJALENPAS (Jaringan Jalan Kabupaten Pasuruan)">
                                                         </div>
