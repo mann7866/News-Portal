@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
-                        <img src="" style="height: 48px;width: auto;" alt="Logo">
+                        <img src="{{asset('logo/logo-smk-putih.png')}}" style="height: 48px;width: auto;" alt="Logo">
 
                         <p>
                             SMK Al-AZHAR Sempu, Sekolah Menengah Kejuruan (SMK) berbasis IT serta berbasis pondok
@@ -84,46 +84,21 @@
                         <h4 class="widget-title">Layanan Kami</h4>
                         <ul>
                             <li>
-                                <a href="services/software-development.html" class="d-flex">
+                                <a href="" class="d-flex">
                                     <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Software Development</span>
+                                    <span>ACS multi technology</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="services/kelas-industri.html" class="d-flex">
+                                <a href="" class="d-flex">
                                     <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Kelas Industri</span>
+                                    <span>Al-azhar mart</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="services/pengadaan-hardware-it.html" class="d-flex">
+                                <a href="" class="d-flex">
                                     <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Pengadaan Hardware IT</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services/magang-pkl.html" class="d-flex">
-                                    <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Magang/ PKL</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services/kunjungan-industri.html" class="d-flex">
-                                    <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Kunjungan Industri</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services/gethost-layanan-hosting-dan-domain.html" class="d-flex">
-                                    <i class="fas fa-angle-right mt-2"></i>
-                                    <span>GetHost: Layanan Hosting dan Domain</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services/kodelisensi-toko-lisensi-dan-akun-premium-software.html"
-                                    class="d-flex">
-                                    <i class="fas fa-angle-right mt-2"></i>
-                                    <span>Kodelisensi: Toko Lisensi dan Akun Premium Software</span>
+                                    <span>Oma model</span>
                                 </a>
                             </li>
                         </ul>
