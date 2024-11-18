@@ -20,6 +20,19 @@
                             </div>
                         @enderror
                     </div>
+
+                    <div class="form-group mb-3">
+                    <label for="description" class="form-label fw-bold h5">Deskripsi Mapel <span class="text-danger">*</span></label>
+                    <textarea name="description" id="description" class="summernote form-control @error('description') is-invalid @enderror"
+                        placeholder="Tulis deskripsi Mapel...">
+                        {{ old('description') }}
+                    </textarea>
+                    @error('description')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light-danger text-danger" data-bs-dismiss="modal">

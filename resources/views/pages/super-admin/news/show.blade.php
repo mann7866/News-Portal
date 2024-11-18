@@ -6,12 +6,12 @@
             <div class="card-body px-4 py-3">
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <h4 class="fw-semibold mb-8">Blog Detail</h4>
+                        <h4 class="fw-semibold mb-8">Detail Berita</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a class="text-muted text-decoration-none"
                                         href="index-2.html">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                <li class="breadcrumb-item active" aria-current="page">Detail Berita</li>
                             </ol>
                         </nav>
                     </div>
@@ -31,20 +31,19 @@
                 <!-- Gambar Blog -->
                 <img src="{{ asset('storage/' . $news->image) }}" class="card-img-top rounded-0 object-fit-cover"
                     alt="Blog Image" style="width: 100%; height: 440px; object-fit: cover;">
-                <span
-                    class="badge bg-white text-dark fs-2 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">2
-                    min Read</span>
+
                 <img src="{{ asset('admin-assets/images/profile/user-5.jpg') }}" alt=""
                     class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
                     height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Esther Lindsey">
             </div>
             <div class="card-body p-4">
-                <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Lifestyle</span>
+                <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $news->user->name }}</span>
                 <h2 class="fs-9 fw-semibold my-4">{{ $news->title }}</h2>
                 <p class="mb-4">{{ $news->description }}</p>
                 <div class="d-flex align-items-center gap-4">
                     <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>2252</div>
                     <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3</div>
+
                     <div class="d-flex align-items-center fs-2"><i
                             class="ti ti-point text-dark"></i>{{ \Carbon\Carbon::parse($news->created_at)->translatedFormat('d F Y') }}
                     </div>
@@ -53,11 +52,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h4 class="mb-4 fw-semibold">Post Comments</h4>
-                <form>
-                    <textarea class="form-control mb-4" rows="5"></textarea>
-                    <button class="btn btn-primary">Post Comment</button>
-                </form>
+
                 <div class="d-flex align-items-center gap-3 mb-4 mt-7 pt-8">
                     <h4 class="mb-0 fw-semibold">Comments</h4>
                     <span class="badge bg-light-primary text-primary fs-4 fw-semibold px-6 py-8 rounded">3</span>

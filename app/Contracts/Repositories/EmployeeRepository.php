@@ -1,7 +1,6 @@
 <?php
 namespace App\Contracts\Repositories;
-
-use APP\Contracts\Interfaces\EmployeeInterface;
+use App\Contracts\Interfaces\EmployeeInterface;
 use App\Traits\EloquentTrait;
 use App\Models\Employee;
 

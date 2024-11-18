@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\OrganizationController;
+
 // Subject Route
 Route::get('subject', [SubjectController::class, 'index'])->name('subject.index');
 Route::get('subject/create', [SubjectController::class, 'create'])->name('subject.create');
@@ -18,3 +19,5 @@ Route::get('organization/edit/{organization}', [organizationController::class, '
 Route::post('organization', [organizationController::class, 'store'])->name('organization.store');
 Route::put('organization/{organization}', [organizationController::class, 'update'])->name('organization.update');
 Route::delete('organization/{organization}', [organizationController::class, 'destroy'])->name('organization.destroy');
+
+    

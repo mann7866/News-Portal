@@ -22,7 +22,7 @@ return new class extends Migration
             $table->date('end_date')->nullable();
             $table->enum('approval',['accept','reject','submit'])->nullable();
             $table->text('reason')->nullable();
-            $table->enum('status',['pending','ongoing','completed'])->default('pending');
+            $table->enum('status',['pending','ongoing','completed','daily'])->default('pending');
             $table->integer("views")->default(0);
             $table->timestamps();
         });

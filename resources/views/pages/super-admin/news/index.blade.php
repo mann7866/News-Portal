@@ -130,6 +130,10 @@
                                     </ul>
                                 </div>
 
+                                <span class="badge bg-white text-dark fs-1 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">
+                                    {{ $item->categories->pluck('name')->join(' | ') }}
+                                </span>
+
                                 <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt=""
                                     class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9"
                                     width="40" height="40" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -138,18 +142,19 @@
                             <div class="card-body p-4">
                                 <span
                                     class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
+                                <span
+                                    class="badge text-bg-warning fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $item->status }}
+                                </span>
                                 <span class="d-block mt-2 text-dark fs-4 fw-semibold">{{ Str::limit($item->title, 55) }}</span>
                                 <p class="d-block my-4 fs-4 text-dark ">
-                                    {{ Str::limit(strip_tags($item->description), 60) }}
+                                    {{ Str::limit(strip_tags($item->description), 20) }}
                                 </p>
                                 <div class="d-flex align-items-center gap-4">
+
                                     <div class="d-flex align-items-center gap-2">
-                                        <a href="">
-                                            <button class="btn btn-secondary">show</button>
+                                        <a class="text-dark" href="">
+                                            <i class="ti ti-message-2 text-dark fs-5"></i>3
                                         </a>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <i class="ti ti-message-2 text-dark fs-5"></i>3
                                     </div>
                                     <div class="d-flex align-items-center ms-auto">
                                         <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">

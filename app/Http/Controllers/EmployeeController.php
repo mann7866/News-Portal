@@ -4,15 +4,36 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Services\EmployeeService;
+use App\Http\Requests\EmployeeRequest;
+use App\Contracts\Interfaces\EmployeeInterface;
 
 class EmployeeController extends Controller
 {
+
+    private EmployeeInterface $interface;
+    private EmployeeService $service;
+
+    /**
+     * Constructor.
+     *
+     * @param  App\Contracts\Interfaces\EmployeeJobInterface  $example
+     * @return void
+     */
+    public function __construct(
+        EmployeeInterface $interface,
+        EmployeeService $service,
+    ) {
+        $this->interface = $interface;
+        $this->service = $service;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view ('pages.super-admin.employee.index');
+        $employees = $this->interface->get();
+        return view ('pages.super-admin.employee.index', ['employees' => $employees]);
     }
 
     /**
@@ -26,9 +47,16 @@ class EmployeeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(EmployeeRequest $request)
     {
-        return view ('pages.super-admin.employee.detail');
+        try {
+            $data = $this->service->store($request);
+            $this->interface->store($data);
+            return redirect()->route('employee.index')->with('success','Berhasil menambah organisasi');
+        } catch (\Throwable $e) {
+            return redirect()->route('employee.index')->with('error','Gagal menambah organisasi' . $e->getMessage());
+        }
+
     }
 
     /**
@@ -44,16 +72,21 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
-        return view('pages.super-admin.employee.edit');
+        return view ('pages.super-admin.employee.edit',['employee'=>$employee]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employee $employee)
+    public function update(EmployeeRequest $request, Employee $employee)
     {
-        //
+        try {
+            $data = $this->service->update($request, $employee);
+            $this->interface->update($employee->id, $data);
+            return redirect()->route('employee.index')->with('success','Berhasil mengedit organisasi');
+        } catch (\Throwable $e) {
+            return redirect()->route('employee.index')->with('error','Gagal mengedit organisasi' . $e->getMessage());
+        }
     }
 
     /**

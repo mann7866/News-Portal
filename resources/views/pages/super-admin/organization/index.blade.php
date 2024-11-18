@@ -52,7 +52,8 @@
                             <thead>
                                 <tr class="text-muted fw-semibold">
                                     <th scope="col">No</th>
-                                    <th scope="col" class="ps-0">Kategori</th>
+                                    <th scope="col" class="ps-0">Nama</th>
+                                    <th scope="col" class="ps-0">Deskripsi</th>
                                     <th scope="col" class="text-center">Opsi</th>
                                 </tr>
                             </thead>
