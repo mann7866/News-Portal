@@ -88,10 +88,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/detail-news', action: function () {
         return view('pages.landing-page.news.detail');
     });
-    Route::get('/contact', action: function () {
-        return view('pages.landing-page.contact.index');
-    });
-
+    
+});
+Route::get('/contact', action: function () {
+    return view('pages.landing-page.contact.index');
 });
 
 require __DIR__ . '/auth.php';

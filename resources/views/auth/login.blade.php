@@ -1,195 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - School News Portal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Style for Card */
-        .card {
-            max-width: 420px;
-            width: 100%;
-            border-radius: 10px;
-            background-color: #f8f9fa;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Login - School News Portal</title>
 
-        /* Background */
-        body {
-            background: linear-gradient(135deg, #f5f7f5 0%, #ffffff 100%);
-            color: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
+  <style>
+    /* Background */
+    body {
+      background: linear-gradient(135deg, #f5f7f5 0%, #ffffff 100%);
+      color: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+      padding: 20px;
+    }
 
-         /* Decorative Box */
-         .decorative-box-1 {
-            position: absolute;
-            top: 5%; /* Jarak dari atas */
-            right: 0%; /* Jarak dari kanan */
-            width: 80px; /* Sesuaikan lebar kotak */
-            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #1e7822, #40c347 ); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(25%, 0%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        .decorative-box-2 {
-            position: absolute;
-            top: 0%; /* Jarak dari atas */
-            right: 0%; /* Jarak dari kanan */
-            width: 100px; /* Sesuaikan lebar kotak */
-            height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #1e7822, #40c347 ); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(-100%, 0%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        .decorative-box-3 {
-            position: absolute;
-            top: 0%; /* Jarak dari atas */
-            right: 0%; /* Jarak dari kanan */
-            width: 80px; /* Sesuaikan lebar kotak */
-            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg,#1e7822, #40c347 ); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(-220%, 0%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        .decorative-box-4 {
-            position: absolute;
-            bottom: 0%; /* Jarak dari atas */
-            left: 0%; /* Jarak dari kanan */
-            width: 100px; /* Sesuaikan lebar kotak */
-            height: 390px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(100%, 10%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        .decorative-box-5 {
-            position: absolute;
-            bottom: 0%; /* Jarak dari atas */
-            left: 0%; /* Jarak dari kanan */
-            width: 80px; /* Sesuaikan lebar kotak */
-            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(220%, 0%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        .decorative-box-6 {
-            position: absolute;
-            bottom: 0%; /* Jarak dari atas */
-            left: 0%; /* Jarak dari kanan */
-            width: 80px; /* Sesuaikan lebar kotak */
-            height: 270px; /* Sesuaikan tinggi sesuai kebutuhan */
-            background: linear-gradient(135deg, #40c347, #1e7822); /* Gradasi warna hijau */
-            border-radius: 75px; /* Ujung lonjong */
-            transform: rotate(45deg) translate(-60%, 0%); /* Memutar dan menggeser kotak */
-            z-index: -1; /* Agar kotak tidak mengganggu elemen lainnya */
-        }
-        /* Resize decorative elements on smaller screens */
-        @media (max-width: 767px) {
-            .card {
-                max-width: 100%;
-                margin: 20px;
-            }
+    /* Decorative photos with improved positioning */
+    .photo {
+      position: fixed; /* Changed to fixed for better scrolling behavior */
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
 
-            .decorative-box-1, .decorative-box-2, .decorative-box-3, 
-            .decorative-box-4, .decorative-box-5, .decorative-box-6 {
-                display: none;
-            }
+    .photo:hover {
+      transform: scale(1.05);
+    }
 
-            .login-title {
-                font-size: 1.25rem;
-            }
+    .photo.top-left {
+      top: 10%;
+      left: 5%;
+      width: 200px;
+      height: auto;
+    }
 
-            .login-subtitle {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+    .photo.top-right {
+      top: 15%;
+      right: 5%;
+      width: 150px;
+      height: auto;
+    }
+
+    .photo.bottom-left {
+      bottom: 10%;
+      left: 5%;
+      width: 150px;
+      height: auto;
+    }
+
+    .photo.bottom-right {
+      bottom: 15%;
+      right: 5%;
+      width: 180px;
+      height: auto;
+    }
+
+    /* Card styles */
+    .card {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 15px;
+      background-color: rgba(248, 249, 250, 0.95);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease;
+      position: relative;
+      z-index: 2;
+      padding: 25px;
+      margin: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Form elements */
+    .form-control {
+      border-radius: 8px;
+      padding: 12px;
+      border: 1px solid #dde1e5;
+    }
+
+    .input-group-text {
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      background-color: #ffffff;
+    }
+
+    .btn-success {
+      padding: 12px;
+      border-radius: 8px;
+      width: 100%;
+      font-weight: 500;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .photo {
+        width: 120px;
+      }
+      
+      .photo.top-left {
+        width: 160px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .photo.top-right, .photo.bottom-left {
+        display: none;
+      }
+      
+      .photo.top-left, .photo.bottom-right {
+        width: 140px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .photo {
+        display: none;
+      }
+
+      .card {
+        margin: 10px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="decorative-box-1"></div>
-    <div class="decorative-box-2"></div>
-    <div class="decorative-box-3"></div>
-    <div class="decorative-box-4"></div>
-    <div class="decorative-box-5"></div>
-    <div class="decorative-box-6"></div>
-    <!-- ... Other decorative boxes ... -->
+  <!-- Decorative photos -->
+  <img src="lgin/image1.jpg" alt="Photo 1" class="photo top-left">
+  <img src="image2.jpg" alt="Photo 2" class="photo top-right">
+  <img src="image3.jpg" alt="Photo 3" class="photo bottom-left">
+  <img src="lgin/image4.jpg" alt="Photo 4" class="photo bottom-right">
 
-    <div class="card p-4">
-        <div class="text-center mb-4">
-            <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle"
-                style="width: 80px; height: 80px;">
-            <h2 class="login-title mt-2">School News Portal Login</h2>
-            <p class="login-subtitle">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
-        </div>
-
-        <!-- Login Form -->
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div class="form-group">
-                <label for="email" class="text-dark font-weight-bolder">
-                    <i class="fas fa-envelope"></i> {{ __('Email') }}
-                </label>
-                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
-                    placeholder="Masukkan email Anda" required autofocus>
-            </div>
-
-            <div class="form-group mt-3">
-                <label for="password" class="text-dark font-weight-bolder">
-                    <i class="fas fa-lock"></i> {{ __('Password') }}
-                </label>
-                <div class="input-group">
-                    <input id="password" type="password" class="form-control" name="password"
-                        placeholder="Masukkan kata sandi Anda" required>
-                    <div class="input-group-append">
-                        <span class="input-group-text" onclick="togglePassword()">
-                            <i id="togglePasswordIcon" class="fas fa-eye"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success btn-block">
-                    <i class="fas fa-sign-in-alt"></i> {{ __('Login') }}
-                </button>
-            </div>
-        </form>
+  <div class="card">
+    <div class="text-center mb-4">
+      <img src="{{ asset('logo/smkAlazhar.jpeg') }}" alt="Logo Sekolah" class="rounded-circle mb-3"
+        style="width: 80px; height: 80px; object-fit: cover;">
+      <h2 class="login-title">School News Portal Login</h2>
+      <p class="login-subtitle text-muted">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
     </div>
 
-    <script>
-        function togglePassword() {
-            const passwordField = document.getElementById("password");
-            const toggleIcon = document.getElementById("togglePasswordIcon");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-                toggleIcon.classList.remove("fa-eye");
-                toggleIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordField.type = "password";
-                toggleIcon.classList.remove("fa-eye-slash");
-                toggleIcon.classList.add("fa-eye");
-            }
-        }
-    </script>
-</body>
+    <form method="POST" action="{{ route('login') }}">
+      @csrf
+      <div class="mb-3">
+        <label for="email" class="form-label fw-bold">
+          <i class="fas fa-envelope"></i> {{ __('Email') }}
+        </label>
+        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
+          placeholder="Masukkan email Anda" required autofocus>
+      </div>
 
+      <div class="mb-4">
+        <label for="password" class="form-label fw-bold">
+          <i class="fas fa-lock"></i> {{ __('Password') }}
+        </label>
+        <div class="input-group">
+          <input id="password" type="password" class="form-control" name="password"
+            placeholder="Masukkan kata sandi Anda" required>
+          <span class="input-group-text" onclick="togglePassword()">
+            <i id="togglePasswordIcon" class="fas fa-eye"></i>
+          </span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">
+        <i class="fas fa-sign-in-alt me-2"></i>{{ __('Login') }}
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePasswordIcon");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordField.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+      }
+    }
+  </script>
+</body>
 </html>
