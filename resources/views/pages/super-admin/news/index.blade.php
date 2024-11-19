@@ -37,9 +37,9 @@
                     <div class="col-lg-8 col-md-6 col-sm-12">
                         <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
                             <div class="search-box col-lg-3 col-12">
-                                <form action="{{route('news.index')}}">
+                                <form action="{{ route('news.index') }}" method="GET">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" name="search" value=""
+                                        <input type="text" class="form-control" name="search" value="{{ request('search') }}"
                                             placeholder="Cari Berita">
                                         <div class="input-group-append">
                                             <button type="submit" class="input-group-text rounded-end border border-1"><i
@@ -141,7 +141,7 @@
                             </div>
                             <div class="card-body p-4">
                                 <span
-                                    class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ Auth::user()->name }}</span>
+                                    class="badge text-bg-light fw-semibold fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $item->user->name }}</span>
                                 <span
                                     class="badge text-bg-warning fs-2 rounded-4 py-1 px-2 lh-sm mt-3">{{ $item->status }}
                                 </span>
@@ -157,7 +157,7 @@
                                         </a>
                                     </div>
                                     <div class="d-flex align-items-center ms-auto">
-                                        <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">
+                                        <span class="fs-2 badge bg-primary text-white text-truncate">
                                             <i class="ti ti-point"></i>
                                             {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                                         </span>

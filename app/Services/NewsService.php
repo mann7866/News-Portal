@@ -21,6 +21,27 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
         return $this->upload($disk, $file);
     }
 
+    public function filterAndSearch(array $filters)
+    {
+
+        $query = News::query();
+
+        if (!empty($filters['search'])) {
+            $query->where('title', 'like', '%' . $filters['search'] . '%')
+                ->orWhere('description', 'like', '%' . $filters['search'] . '%')
+                ->orWhereHas('user', function ($q) use ($filters) {
+                    $q->where('name', 'like', '%' . $filters['search'] . '%');
+                })
+                ->orWhereHas('categories', function ($q) use ($filters) {
+                    $q->where('name', 'like', '%' . $filters['search'] . '%');
+                });
+        }
+
+        $query->orderBy('created_at', 'desc');
+
+        return $query->paginate(9);
+    }
+
     public function store(NewsRequest $request): array
     {
         $data = $request->validated();

@@ -36,24 +36,13 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
-        // Tangkap input pencarian dari request
-        $search = $request->get('search');
-        
-        // Query dengan pencarian (filter) dan pagination
-        $data = News::when($search, function ($query, $search) {
-                return $query->where('title', 'like', "%{$search}%")
-                            ->orWhereHas('categories', function ($data) use ($search) {
-                                 $data->where('name', 'like', '%' . $search . '%');
-                                })
-                             ->orWhere('description', 'like', "%{$search}%");
-            })
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-    
-        // Return view dengan data
-        return view('pages.super-admin.news.index', compact('data', 'search'));
+        $filters = $request->only(['category_id', 'search', 'start_date', 'end_date']);
+
+        $data = $this->service->filterAndSearch($filters);
+
+        return view('pages.super-admin.news.index', compact('data'));
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
