@@ -63,13 +63,21 @@
                 <div class="d-flex align-items-center mb-4">
                     <!-- Foto Profil -->
                     <div class="text-center me-4 position-relative">
+                        <!-- Foto Profil -->
                         <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" 
                              alt="Profile Photo" 
-                             class="profile-photo" style="width: 120px; height: 120px; object-fit: cover;">
+                             class="profile-photo" 
+                             style="width: 120px; height: 120px; object-fit: cover;">
+                        
+                        <!-- Ikon Edit -->
                         <div class="edit-icon">
-                            <i class="fas fa-pencil-alt"></i>
+                            <label for="uploadPhotoInput" class="d-flex align-items-center justify-content-center" style="cursor: pointer;">
+                                <i class="fas fa-pencil-alt"></i>
+                            </label>
+                            <input type="file" id="uploadPhotoInput" name="profile_photo" class="d-none" accept="image/*">
                         </div>
                     </div>
+                    
 
                     <!-- Nama dan Email -->
                     <div class="w-100">
@@ -101,6 +109,26 @@
         </div>
     </div>
 </div>
+
+<!-- Modal untuk Preview Foto Profil -->
+<div class="modal fade" id="profilePhotoModal" tabindex="-1" aria-labelledby="profilePhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profilePhotoModalLabel">{{ __('Profile Photo Preview') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" 
+                     alt="Profile Photo Preview" 
+                     id="modalProfilePhoto" 
+                     class="img-fluid rounded-circle" 
+                     style="max-width: 300px; height: auto;">
+            </div>
+        </div>
+    </div>
+</div>
+
 
             <!-- Update Password Section -->
             <div class="col-md-6">

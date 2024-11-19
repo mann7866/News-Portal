@@ -24,23 +24,27 @@
             </div>
         </div>
     </div>
-</div>
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-<div class="row">
-    <div class="col-lg-14 d-flex align-items-strech">
-        <div class="card w-100">
-            <div class="card-body">
-                <div class="d-sm-flex d-block align-items-center justify-content-between mb-7">
-                    <div class="mb-3 mb-sm-0">
-                        <h5 class="card-title fw-semibold">Kategori Berita</h5>
+    <div class="row">
+        <div class="col-lg-14 d-flex align-items-strech">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-sm-flex d-block align-items-center justify-content-between mb-7">
+                        <div class="mb-3 mb-sm-0">
+                            <h5 class="card-title fw-semibold">Kategori Berita</h5>
+                        </div>
+
+                        <div class="col-md-6 col-xl-5 d-flex gap-3 justify-content-end">
+                            <form class="position-relative">
+                                <input type="text" class="form-control product-search ps-5" id="input-search"
+                                    placeholder="Cari Kategori..." />
+                                <i
+                                    class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+                            </form>
+                            <a href="{{ route('organization.create') }}" class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary">
+                                Tambah
+                            </a>
+                            
+                        </div>
                     </div>
 
                     <div class="col-md-6 col-xl-5 d-flex gap-3 justify-content-end">
