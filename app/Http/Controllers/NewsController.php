@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Contracts\Interfaces\NewsInterface;
-use App\Contracts\Repositories\CategoryRepository;
-use App\Http\Requests\NewsRequest;
 use App\Models\News;
-use App\Services\NewsService;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Services\NewsService;
+use App\Services\FilterService;
+use App\Http\Requests\NewsRequest;
+use App\Contracts\Interfaces\NewsInterface;
+use App\Contracts\Interfaces\CategoryInterface;
 
 class NewsController extends Controller
 {
 
     private NewsInterface $news;
     private NewsService $service;
-    private CategoryRepository $categories;
+    private FilterService $filterService;
 
     /**
      * Constructor.
@@ -25,22 +27,39 @@ class NewsController extends Controller
     public function __construct(
         NewsInterface $news,
         NewsService $service,
-        CategoryRepository $categories
+        FilterService $filterService,
+        private CategoryInterface $categories
     ) {
         $this->news = $news;
         $this->service = $service;
-        $this->categories = $categories;
+        $this->filterService = $filterService;
     }
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-       
-        $data = News::orderBy('created_at', 'desc')->paginate(10);
+        $filters = $request->only(['category_names', 'search', 'date']);
 
-        return view('pages.super-admin.news.index', compact('data'));
+        $newsQuery = News::query();
+
+        $newsQuery = $this->filterService->applyFilter(
+            $newsQuery,
+            $filters,
+            ['title', 'description'],
+            'user',
+            'name'
+        );
+
+        $data = $newsQuery->paginate(9);
+
+        $categories = $this->categories->get();
+
+        return view('pages.super-admin.news.index', compact('data', 'categories', 'filters'));
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -74,22 +93,21 @@ class NewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(String $slug)
     {
-        //
-        {
-            $news = News::findOrFail($id);
+        $news = News::where('slug', $slug)->first();
 
-            return view('pages.super-admin.news.show', compact('news'));
-        }
+        return view('pages.super-admin.news.show', compact('news'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(News $news)
+    public function edit(String $slug)
     {
         $categories = $this->categories->get();
+
+        $news = News::where('slug', $slug)->first();
 
         return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }

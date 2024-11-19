@@ -21,8 +21,8 @@
                     <span class="hide-menu">Home</span>
                 </li>
                 <!-- Dashboard -->
-                <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
-                    <a class="sidebar-link" aria-expanded="false">
+                <li class="sidebar-item ">
+                    <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>
@@ -31,7 +31,7 @@
                 </li>
                 <!-- Halaman Approval -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/approvals" aria-expanded="false">
+                    <a class="sidebar-link" href="/admin/approvals" aria-expanded="false">
                         <span>
                             <i class="ti ti-news"></i>
                         </span>
@@ -40,9 +40,9 @@
                 </li>
                 <!-- Kategori Berita -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/history" aria-expanded="false">
+                    <a class="sidebar-link" href="/admin/history" aria-expanded="false">
                         <span>
-                            <i class="ti ti-tags"></i>
+                            <i class="ti ti-history"></i>
                         </span>
                         <span class="hide-menu">History</span>
                     </a>

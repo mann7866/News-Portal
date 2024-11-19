@@ -2,12 +2,16 @@
     <aside>
         <div class="sidebar-item search">
             <div class="sidebar-info">
-                <form>
-                    <input type="text" name="text" class="form-control">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                <form action="{{ route('news') }}" method="GET" class="mb-4 d-flex align-items-center">
+                    <input type="text" name="search" class="form-control" placeholder="Cari berita atau kategori..."
+                        value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
             </div>
         </div>
+
         <div class="sidebar-item recent-post">
             <div class="title">
                 <h4>Berita Populer</h4>
@@ -25,7 +29,7 @@
                                 <span class="post-date"><i class="fas fa-clock"></i>
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}</span>
                             </div>
-                            <a href="#">Commanded household smallness delivered.</a>
+                            <a href="{{ route('news.detail', $item->slug) }}">{{ Str::limit($item->title, 40) }}</a>
                         </div>
                     </li>
 
@@ -71,7 +75,7 @@
                 <ul>
                     @forelse ($galleries as $gallery)
                         <li>
-                            <a href="">
+                            <a href="{{ route('news.detail', $gallery->slug) }}">
                                 <img src="{{ asset('storage/' . $gallery->image) }}" alt="thumb">
                             </a>
                         </li>

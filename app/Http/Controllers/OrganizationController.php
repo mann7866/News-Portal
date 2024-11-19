@@ -40,7 +40,7 @@ class OrganizationController extends Controller
      */
     public function create()
     {
-        return view('pages.super-admin.organization.index');
+        return view('pages.super-admin.organization.create');
     }
 
     /**

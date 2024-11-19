@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/select2/dist/css/select2.min.css') }}">
     <!-- Core Css -->
     <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 
 </head>
@@ -102,6 +103,7 @@
     <script src="{{ asset('admin-assets/js/forms/select2.init.js') }}"></script>
     {{--  select2  --}}
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
     <script>
@@ -150,6 +152,18 @@
             airMode: true,
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            flatpickr("[data-provider='flatpickr']", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "F j, Y",
+                allowInput: true,
+            });
+        });
+    </script>
+    @yield('script')
     @yield('modal')
 </body>
 

@@ -30,14 +30,23 @@ class EmployeeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $employees = $this->interface->get();
-        return view ('pages.super-admin.employee.index', ['employees' => $employees]);
-
-        dd($employees);
+        $search = $request->get('search');
+    
+        // Pencarian dan pagination
+        $employees = Employee::when($search, function ($query, $search) {
+                return $query->where('name', 'like', "%{$search}%")
+                             ->orWhere('jobs', 'like', "%{$search}%")
+                             ->orWhere('educationalBackground', 'like', "%{$search}%")
+                             ->orWhere('address', 'like', "%{$search}%");
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+    
+        return view('pages.super-admin.employee.index', ['employees' => $employees]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */

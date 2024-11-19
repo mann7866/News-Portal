@@ -1,4 +1,4 @@
-@extends('layouts.super-admin.app')
+@extends('layouts.admin.app')
 
 @section('content')
 <div class="py-5">
@@ -83,39 +83,12 @@
                     <div class="w-100">
                         <div class="form-group">
                             <label for="name" class="font-weight-medium">{{ __('Name') }}</label>
-                            <input type="text" id="name" name="name" class="form-control w-100" 
-                                   value="{{ old('name', $user->name) }}" 
-                                   required autofocus autocomplete="name">
-                            @error('name')
-                            <div class="text-danger small mt-1">{{ $message }}</div>
-                            @enderror
+                            <input type="text" id="name" name="name" class="form-control w-100" value="John Doe" required autofocus autocomplete="name">
                         </div>
                     
                         <div class="form-group">
                             <label for="email" class="font-weight-medium">{{ __('Email') }}</label>
-                            <input type="email" id="email" name="email" class="form-control w-100" 
-                                   value="{{ old('email', $user->email) }}" 
-                                   required autocomplete="username">
-                            @error('email')
-                            <div class="text-danger small mt-1">{{ $message }}</div>
-                            @enderror
-                    
-                            @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
-                            <div class="mt-2">
-                                <p class="small text-secondary">
-                                    {{ __('Your email address is unverified.') }}
-                                    <button form="send-verification" class="btn btn-link p-0 text-decoration-none small text-primary">
-                                        {{ __('Click here to re-send the verification email.') }}
-                                    </button>
-                                </p>
-                    
-                                @if (session('status') === 'verification-link-sent')
-                                <p class="text-success small mt-2">
-                                    {{ __('A new verification link has been sent to your email address.') }}
-                                </p>
-                                @endif
-                            </div>
-                            @endif
+                            <input type="email" id="email" name="email" class="form-control w-100" value="johndoe@example.com" required autocomplete="username">
                         </div>
                     </div>
                     
@@ -124,27 +97,37 @@
                 <!-- Deskripsi -->
                 <div class="form-group">
                     <label for="description" class="font-weight-medium">{{ __('Description') }}</label>
-                    <textarea id="description" name="description" class="form-control w-100" rows="3">{{ old('description', $user->description) }}</textarea>
-                    @error('description')
-                    <div class="text-danger small mt-1">{{ $message }}</div>
-                    @enderror
+                    <textarea id="description" name="description" class="form-control w-100" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
                 </div>
 
                 <!-- Save Button and Confirmation Message -->
                 <div class="d-flex align-items-center gap-3 mt-3">
                     <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
-                    @if (session('status') === 'profile-updated')
-                    <p class="text-success small mb-0">
-                        {{ __('Saved.') }}
-                    </p>
-                    @endif
+
                 </div>
             </section>
         </div>
     </div>
 </div>
 
-
+<!-- Modal untuk Preview Foto Profil -->
+<div class="modal fade" id="profilePhotoModal" tabindex="-1" aria-labelledby="profilePhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profilePhotoModalLabel">{{ __('Profile Photo Preview') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" 
+                     alt="Profile Photo Preview" 
+                     id="modalProfilePhoto" 
+                     class="img-fluid rounded-circle" 
+                     style="max-width: 300px; height: auto;">
+            </div>
+        </div>
+    </div>
+</div>
 
 
             <!-- Update Password Section -->
@@ -156,47 +139,28 @@
                         <p class="small text-muted mb-0">{{ __('Ensure your account is using a long, random password to stay secure.') }}</p>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('password.update') }}">
-                            @csrf
-                            @method('PUT')
-
-                            <!-- Current Password -->
-                            <div class="form-group">
-                                <label for="current_password">{{ __('Current Password') }}</label>
-                                <input id="current_password" name="current_password" type="password" class="form-control" autocomplete="current-password">
-                                @error('current_password')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
-                            </div>
+                        <!-- Current Password -->
+                        <div class="form-group">
+                            <label for="current_password">{{ __('Current Password') }}</label>
+                            <input id="current_password" name="current_password" type="password" class="form-control" autocomplete="current-password">
+                        </div>
 <br>
-                            <!-- New Password -->
-                            <div class="form-group">
-                                <label for="password">{{ __('New Password') }}</label>
-                                <input id="password" name="password" type="password" class="form-control" autocomplete="new-password">
-                                @error('password')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
-                            </div>
+                        <!-- New Password -->
+                        <div class="form-group">
+                            <label for="password">{{ __('New Password') }}</label>
+                            <input id="password" name="password" type="password" class="form-control" autocomplete="new-password">
+                        </div>
 <br>
-                            <!-- Confirm Password -->
-                            <div class="form-group">
-                                <label for="password_confirmation">{{ __('Confirm Password') }}</label>
-                                <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" autocomplete="new-password">
-                                @error('password_confirmation')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
-                            </div>
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label for="password_confirmation">{{ __('Confirm Password') }}</label>
+                            <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" autocomplete="new-password">
+                        </div>
 
-                            <!-- Save Button -->
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
-                                @if (session('status') === 'password-updated')
-                                <p class="text-success mb-0">
-                                    {{ __('Saved.') }}
-                                </p>
-                                @endif
-                            </div>
-                        </form>
+                        <!-- Save Button -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                        </div>
                     </div>
                     <br>
                 </div>
@@ -213,19 +177,13 @@
                                 <h3 class="h5">{{ __('Delete Account') }}</h3>
                                 <p class="small text-muted">{{ __('Permanently delete your account.') }}</p>
                             </header>
-                            <form method="POST" action="{{ route('profile.destroy') }}">
-                                @csrf
-                                @method('DELETE')
-
+                            <form method="POST">
                                 <p>{{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}</p>
 
                                 <!-- Password Input -->
                                 <div class="form-group">
                                     <label for="delete_password" class="sr-only">{{ __('Password') }}</label>
                                     <input id="delete_password" name="password" type="password" class="form-control" placeholder="{{ __('Password') }}">
-                                    @error('password')
-                                    <div class="text-danger mt-1">{{ $message }}</div>
-                                    @enderror
                                 </div>
 
                                 <!-- Action Buttons -->

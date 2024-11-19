@@ -21,7 +21,7 @@ class News extends Model
     public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;
-        $this->attributes['slug'] = Str::slug($value); 
+        $this->attributes['slug'] = Str::slug($value);
     }
 
     public function categories()
@@ -32,5 +32,10 @@ class News extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

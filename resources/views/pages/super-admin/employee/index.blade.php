@@ -29,12 +29,19 @@
     <div class="card card-body">
         <div class="row">
             <div class="col-md-4 col-xl-3">
-                <form class="position-relative">
-                    <input type="text" class="form-control product-search ps-5" id="input-search"
-                        placeholder="Cari Guru..." />
-                    <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+                <form action="{{ route('employee.index') }}" method="GET" class="position-relative">
+                    <!-- Input field -->
+                    <input type="text" name="search" class="form-control product-search ps-5" id="input-search"
+                           placeholder="Cari Guru..." value="{{ request('search') }}" />
+            
+                    <!-- Search button -->
+                    <button type="submit" class="btn btn-transparent position-absolute top-50 start-0 translate-middle-y ms-2 p-0 border-0">
+                        <i class="ti ti-search fs-6 text-dark"></i>
+                    </button>
                 </form>
             </div>
+            
+            
             <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
                 <a href="{{ route('employee.create') }}" id="btn-add-contact"
                     class="btn btn-info d-flex align-items-center">

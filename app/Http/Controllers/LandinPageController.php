@@ -15,22 +15,38 @@ class LandinPageController extends Controller
         return view('pages.landing-page.welcome', compact('news'));
     }
 
-    public function news()
+    public function news(Request $request)
     {
-        $news = News::with('categories')->latest()->paginate(3);
-
+        $search = $request->get('search'); // Ambil input pencarian dari request
+    
+        // Query dengan pencarian
+        $news = News::with('categories')
+            ->when($search, function ($query, $search) {
+                return $query->where('title', 'like', "%{$search}%")
+                             ->orWhereHas('categories', function ($query) use ($search) {
+                                 $query->where('name', 'like', "%{$search}%");
+                             });
+            })
+            ->latest()
+            ->paginate(3);
+    
         $galleries = News::latest()->take(6)->get();
-
+    
         $categories = Category::withCount('news')->get();
-
+    
         $popularNews = News::orderBy('views', 'desc')->take(3)->get();
-
-        return view('pages.landing-page.news.index', compact('news', 'popularNews', 'categories', 'galleries'));
+    
+        return view('pages.landing-page.news.index', compact('news', 'popularNews', 'categories', 'galleries', 'search'));
     }
+    
 
     public function newsDetail($slug)
     {
         $news = News::where('slug', $slug)->first();
+        
+        if (!$news) {
+            abort(404, 'News not found');
+        }
 
         $popularNews = News::orderBy('views', 'desc')->take(3)->get();
 
