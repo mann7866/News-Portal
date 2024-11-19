@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Contracts\Interfaces\CategoryInterface;
-use App\Contracts\Interfaces\NewsInterface;
-use App\Contracts\Repositories\CategoryRepository;
-use App\Http\Requests\NewsRequest;
 use App\Models\News;
-use App\Services\FilterService;
-use App\Services\NewsService;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Services\NewsService;
+use App\Services\FilterService;
+use App\Http\Requests\NewsRequest;
+use App\Contracts\Interfaces\NewsInterface;
+use App\Contracts\Interfaces\CategoryInterface;
 
 class NewsController extends Controller
 {
@@ -39,24 +39,25 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
-        $filters = $request->only(['category_ids', 'search', 'date', 'status']);
+        $filters = $request->only(['category_names', 'search', 'date']);
 
-        $data = News::query();
+        $newsQuery = News::query();
 
-        $data = $this->filterService->applyFilter(
-            $data,
+        $newsQuery = $this->filterService->applyFilter(
+            $newsQuery,
             $filters,
-            ['title', 'description'], // Kolom
-            'user',                   // Relasi
-            'name'                    // Kolom pada relasi
+            ['title', 'description'],
+            'user',
+            'name'
         );
+
+        $data = $newsQuery->paginate(9);
 
         $categories = $this->categories->get();
 
-        $data = $data->orderBy('created_at', 'desc')->paginate(9);
-
         return view('pages.super-admin.news.index', compact('data', 'categories', 'filters'));
     }
+
 
 
 

@@ -37,12 +37,12 @@ class FilterService
                 }
             });
         }
-
-        if (isset($filters['category_ids']) && !empty($filters['category_ids'])) {
+        if (isset($filters['category_names']) && !empty($filters['category_names'])) {
             $query->whereHas('categories', function ($q) use ($filters) {
-                $q->whereIn('categories.id', $filters['category_ids']);
+                $q->whereIn('name', $filters['category_names']);
             });
         }
+
 
         if (isset($filters['status']) && !empty($filters['status'])) {
             $query->where('status', $filters['status']);

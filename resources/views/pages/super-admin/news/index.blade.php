@@ -52,8 +52,7 @@
                                     </select>
                                 </div>
 
-
-                                <!-- Filter Category -->
+                                <!-- Filter Kategori -->
                                 <div class="col-sm-auto">
                                     <button class="btn btn-outline-primary dropdown-toggle w-100" type="button"
                                         id="filterCategoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,8 +62,8 @@
                                         @forelse ($categories as $category)
                                             <li>
                                                 <label class="dropdown-item">
-                                                    <input type="checkbox" name="category_ids[]" value="{{ $category->id }}"
-                                                        {{ in_array($category->id, $filters['category_ids'] ?? []) ? 'checked' : '' }}
+                                                    <input type="checkbox" name="category_names[]" value="{{ $category->name }}"
+                                                        {{ in_array($category->name, $filters['category_names'] ?? []) ? 'checked' : '' }}
                                                         onchange="this.form.submit()">
                                                     {{ $category->name }}
                                                 </label>
@@ -79,7 +78,6 @@
                                         @endforelse
                                     </ul>
                                 </div>
-
                             </div>
                             <div class="row g-2 align-items-center justify-content-end mt-2">
                                 <!-- Form Pencarian Berita -->
