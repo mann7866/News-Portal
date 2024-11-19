@@ -34,13 +34,26 @@ class NewsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-       
-        $data = News::orderBy('created_at', 'desc')->paginate(10);
-
-        return view('pages.super-admin.news.index', compact('data'));
+        // Tangkap input pencarian dari request
+        $search = $request->get('search');
+        
+        // Query dengan pencarian (filter) dan pagination
+        $data = News::when($search, function ($query, $search) {
+                return $query->where('title', 'like', "%{$search}%")
+                            ->orWhereHas('categories', function ($data) use ($search) {
+                                 $data->where('name', 'like', '%' . $search . '%');
+                                })
+                             ->orWhere('description', 'like', "%{$search}%");
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+    
+        // Return view dengan data
+        return view('pages.super-admin.news.index', compact('data', 'search'));
     }
+    
 
     /**
      * Show the form for creating a new resource.

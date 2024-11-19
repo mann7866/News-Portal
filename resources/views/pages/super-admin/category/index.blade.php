@@ -11,7 +11,7 @@
             <div class="col-lg-8 col-md-6 col-sm-12">
                 <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
                     <div class="search-box col-lg-5 col-12">
-                        <form action="">
+                        <form action="{{route('categories.index')}}" method="GET">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="search" value="{{ request('search') }}"
                                     id="searchMemberList" placeholder="Cari Proyek">

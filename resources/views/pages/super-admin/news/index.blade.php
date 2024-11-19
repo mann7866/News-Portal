@@ -37,10 +37,10 @@
                     <div class="col-lg-8 col-md-6 col-sm-12">
                         <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
                             <div class="search-box col-lg-3 col-12">
-                                <form action="">
+                                <form action="{{route('news.index')}}">
                                     <div class="input-group">
                                         <input type="text" class="form-control" name="search" value=""
-                                            placeholder="Cari Proyek">
+                                            placeholder="Cari Berita">
                                         <div class="input-group-append">
                                             <button type="submit" class="input-group-text rounded-end border border-1"><i
                                                     class="ri-search-line"></i></button>
