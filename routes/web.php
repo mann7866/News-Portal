@@ -119,4 +119,8 @@ Route::get('/admin/profile', function () {
     return view('pages.admin.profile.edit');
 });
 
+Route::get('/admin/dashboard', function () {
+    return view('pages.admin.dashboard');
+});
+
 require __DIR__ . '/auth.php';

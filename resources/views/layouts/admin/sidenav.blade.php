@@ -21,8 +21,8 @@
                     <span class="hide-menu">Home</span>
                 </li>
                 <!-- Dashboard -->
-                <li class="sidebar-item {{ Request::is('/dashboard') ? 'selected' : '' }}">
-                    <a class="sidebar-link" aria-expanded="false">
+                <li class="sidebar-item ">
+                    <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>
@@ -42,7 +42,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="/history" aria-expanded="false">
                         <span>
-                            <i class="fa fa-history"></i>
+                            <i class="ti ti-history"></i>
                         </span>
                         <span class="hide-menu">History</span>
                     </a>
