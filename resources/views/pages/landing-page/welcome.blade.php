@@ -335,11 +335,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
         <!-- Testimonials Area -->
         <div class="testimonials-area bg-gray default-padding-bottom" style="padding-top: 50px;">
             <!-- Fixed Shape -->
@@ -428,40 +423,40 @@
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/acs.png" alt="SMK Al Azhar Sempu" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/ALjahit.png" alt="SMKN 1 Kepanjen" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/ALmotor.png" alt="SMKN 1 Probolinggo" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/ALtoko.png" alt="SMK Muhammadiyah 6 Rogojampi"
                                                 class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/genteng.jpeg" alt="SMK Muhammadiyah 9 Gambiran"
                                                 class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 40px;">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/hummatech.png" alt="SMK Nurul Abror Arobbaniyyin"
                                                 class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
                                         </div>
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="" alt="SMK 17 Agustus Muncar" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                            <img src="logo/mikrotik.png" alt="SMK 17 Agustus Muncar" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 30px;">
                                         </div>
                                     </div>
                                 </div>
