@@ -23,9 +23,8 @@
 
                     <div class="form-group mb-3">
                     <label for="description" class="form-label fw-bold h5">Deskripsi Mapel <span class="text-danger">*</span></label>
-                    <textarea name="description" id="description" class="summernote form-control @error('description') is-invalid @enderror"
-                        placeholder="Tulis deskripsi Mapel...">
-                        {{ old('description') }}
+                    <textarea name="description" class="form-control @error('description') is-invalid @enderror"
+                        placeholder="Tulis deskripsi Mapel...">{{ old('description') }} 
                     </textarea>
                     @error('description')
                         <div class="invalid-feedback">
