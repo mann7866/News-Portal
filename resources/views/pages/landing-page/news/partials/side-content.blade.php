@@ -2,10 +2,13 @@
     <aside>
         <div class="sidebar-item search">
             <div class="sidebar-info">
-                <form>
-                    <input type="text" name="text" class="form-control">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
+                <form action="{{ route('news') }}" method="GET" class="mb-4">
+                    <input type="text" name="search" class="form-control" placeholder="Cari berita atau kategori..."
+                           value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-primary mt-2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>                
             </div>
         </div>
         <div class="sidebar-item recent-post">

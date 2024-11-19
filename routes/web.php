@@ -30,7 +30,7 @@ Route::middleware('auth')->group(callback: function () {
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
         Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
-        Route::get('news/{news}', [NewsController::class, 'show'])->name('news.show');
+        Route::get('news/{id}', [NewsController::class, 'show'])->name('news.show');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');
@@ -87,37 +87,22 @@ Route::middleware('auth')->group(callback: function () {
     Route::get('/detail-news', action: function () {
         return view('pages.landing-page.news.detail');
     });
-
+    
 });
 Route::get('/contact', action: function () {
     return view('pages.landing-page.contact.index');
 });
 
-
-//Route admin
-
-Route::get('/admin/create', action: function () {
-    return view('pages.admin.news.create');
-});
-
-Route::get('/admin/edit', action: function () {
-    return view('pages.admin.news.edit');
-});
-
-Route::get('/admin/approvals', function () {
+Route::get('/admin/news', action: function () {
     return view('pages.admin.news.index');
 });
 
-Route::get('/admin/history', function () {
+Route::get('/approvals', function () {
+    return view('pages.admin.news.index');
+});
+
+Route::get('/history', function () {
     return view('pages.admin.history.index');
-});
-
-Route::get('/admin/profile', function () {
-    return view('pages.admin.profile.edit');
-});
-
-Route::get('/admin', function () {
-    return view('pages.admin.dashboard');
 });
 
 require __DIR__ . '/auth.php';
