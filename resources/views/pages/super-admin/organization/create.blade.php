@@ -8,7 +8,7 @@
                         <div class="chatting-box app-email-chatting-box">
                             <div
                                 class="p-9 py-3 border-bottom chat-meta-user d-flex align-items-center justify-content-between">
-                                <h5 class="text-dark mb-0 fw-semibold">Tambah Profile Guru</h5>
+                                <h5 class="text-dark mb-0 fw-semibold">Tambah Profile Anggota Organisasi</h5>
                             </div>
                             <div class="position-relative overflow-hidden">
                                 <div class="position-relative">
@@ -28,32 +28,36 @@
                                                     <div class="mb-3">
                                                         <label for="fullName" class="form-label">Nama Lengkap</label>
                                                         <input type="text" class="form-control" id="fullName"
-                                                            value="Dr. Bonnie Barstow" />
+                                                            value="Muhammad Fahris" />
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="company" class="form-label">Pekerjaan</label>
+                                                        <label for="company" class="form-label">Kelas</label>
                                                         <select class="select2 form-control"
                                                             style="width: 100%; height: 36px">
-                                                            <option>Pilih Pekerjaan</option>
-                                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                                <option value="staf">Alaska</option>
-                                                                <option value="staf">Hawaii</option>
+                                                            <option>Pilih Kelas</option>
+                                                            <optgroup label="Kelas">
+                                                                <option value="staf">X</option>
+                                                                <option value="staf">XI</option>
+                                                                <option value="staf">XII</option>
                                                             </optgroup>
-                                                            <optgroup label="Pacific Time Zone">
-                                                                <option value="guru">California</option>
-                                                                <option value="guru">Nevada</option>
+                                                            <optgroup label="Jurusan">
+                                                                <option value="guru">RPL</option>
+                                                                <option value="guru">TKJ</option>
+                                                                <option value="guru">TB</option>
+                                                                <option value="guru">AKL</option>
+                                                                <option value="guru">TKR</option>
                                                             </optgroup>
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="jobTitle" class="form-label">Status Pangkat</label>
+                                                        <label for="jobTitle" class="form-label">Jabatan</label>
                                                         <input type="text" class="form-control" id="jobTitle"
-                                                            value="Sales Manager" />
+                                                            value="Kelapa Sekolah" />
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="jobTitle" class="form-label">Mapel Keahlian</label>
+                                                        <label for="jobTitle" class="form-label">Nomor Telepon</label>
                                                         <input type="text" class="form-control" id="jobTitle"
-                                                            value="Sales Manager" />
+                                                            value="+62 815-4874-3796" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -61,29 +65,14 @@
                                             <!-- Teks dan alamat diganti dengan input -->
                                             <div class="row">
                                                 <div class="col-6 mb-7">
-                                                    <label for="phone" class="mb-1 fs-2">Nomor Telpon</label>
-                                                    <input type="text" class="form-control" id="phone"
-                                                        value="+6281235117136" />
+                                                    <label for="jobTitle" class="form-label">Alamat Email</label>
+                                                    <input type="text" class="form-control" id="jobTitle"
+                                                        value="Archontzy@gmail.com" />
                                                 </div>
                                                 <div class="col-6 mb-7">
-                                                    <label for="email" class="mb-1 fs-2">Alamat Email</label>
-                                                    <input type="email" class="form-control" id="email"
-                                                        value="alexandra@modernize.com" />
-                                                </div>
-                                                <div class="col-12 mb-9">
-                                                    <label for="address" class="mb-1 fs-2">Alamat</label>
-                                                    <input type="text" class="form-control" id="address"
-                                                        value="Awu-Awu Kampung Baru, kec.Sempu" />
-                                                </div>
-                                                <div class="col-4 mb-7" id="cityField">
-                                                    <label for="city" class="mb-1 fs-2">Riwayat Pendidikan</label>
-                                                    <input type="text" class="form-control" id="city"
-                                                        value="New York" />
-                                                </div>
-                                                <div class="col-8 mb-7" id="countryField">
-                                                    <label for="country" class="mb-1 fs-2">Negara</label>
-                                                    <input type="text" class="form-control" id="country"
-                                                        value="United States" />
+                                                    <label for="jobTitle" class="form-label">Alamat</label>
+                                                        <input type="text" class="form-control" id="jobTitle"
+                                                            value="Sempu, Awu Awu Kampung Baru" />
                                                 </div>
                                             </div>
 

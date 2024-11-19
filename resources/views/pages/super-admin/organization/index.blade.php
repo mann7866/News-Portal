@@ -46,19 +46,6 @@
                             
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-xl-5 d-flex gap-3 justify-content-end">
-                        <form class="position-relative">
-                            <input type="text" class="form-control product-search ps-5" id="input-search"
-                                placeholder="Cari Kategori..." />
-                            <i
-                                class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
-                        </form>
-                        <button type="button" class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary"
-                            data-bs-toggle="modal" data-bs-target="#create-modal">
-                            Tambah
-                        </button>
-                    </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-middle text-nowrap mb-0">

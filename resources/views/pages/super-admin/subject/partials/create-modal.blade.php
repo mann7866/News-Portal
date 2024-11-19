@@ -1,5 +1,5 @@
 <div class="modal fade" id="create-modal" tabindex="-1" aria-labelledby="createModal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document"> <!-- Tambahkan modal-lg -->
         <div class="modal-content">
             <div class="modal-header d-flex align-items-center">
                 <h4 class="modal-title" id="createModal">
