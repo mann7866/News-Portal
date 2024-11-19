@@ -92,8 +92,8 @@
                         </div>
                         <!-- Status Section -->
                         <div class="mt-3">
-                            <span class="badge bg-light-warning text-warning rounded-pill">
-                                in the process
+                            <span class="badge bg-light-success text-success rounded-pill">
+                          accepted
                             </span>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <div class="tab-pane" id="accepted" role="tabpanel">
+    <div class="tab-pane" id="rejected" role="tabpanel">
         <div class="row">
             {{-- Data 1 --}}
             <div class="col-lg-6 d-flex align-items-stretch">
@@ -197,7 +197,7 @@
         </div>
     </div>
 
-    <div class="tab-pane" id="rejected" role="tabpanel">
+    <div class="tab-pane" id="accepted" role="tabpanel">
         <div class="row">
             {{-- Data 1 --}}
             <div class="col-lg-6 d-flex align-items-stretch">
@@ -223,7 +223,7 @@
                         </div>
                         <!-- Status Section -->
                         <div class="mt-3">
-                            <span class="badge bg-light-danger text-danger rounded-pill">reject</span>
+                            <span class="badge bg-light-danger text-danger rounded-pill">rejected</span>
                         </div>
                     </div>
                 </div>
@@ -253,7 +253,7 @@
                         </div>
                         <!-- Status Section -->
                         <div class="mt-3">
-                            <span class="badge bg-light-danger text-danger rounded-pill">reject</span>
+                            <span class="badge bg-light-danger text-danger rounded-pill">rejected</span>
                         </div>
                     </div>
                 </div>
