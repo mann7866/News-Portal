@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\Interfaces\CategoryInterface;
 use App\Contracts\Interfaces\NewsInterface;
 use App\Contracts\Repositories\CategoryRepository;
 use App\Http\Requests\NewsRequest;
 use App\Models\News;
+use App\Services\FilterService;
 use App\Services\NewsService;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class NewsController extends Controller
 
     private NewsInterface $news;
     private NewsService $service;
-    private CategoryRepository $categories;
+    private FilterService $filterService;
 
     /**
      * Constructor.
@@ -25,23 +27,37 @@ class NewsController extends Controller
     public function __construct(
         NewsInterface $news,
         NewsService $service,
-        CategoryRepository $categories
+        FilterService $filterService,
+        private CategoryInterface $categories
     ) {
         $this->news = $news;
         $this->service = $service;
-        $this->categories = $categories;
+        $this->filterService = $filterService;
     }
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
-        $filters = $request->only(['category_id', 'search', 'start_date', 'end_date']);
+        $filters = $request->only(['category_ids', 'search', 'date', 'status']);
 
-        $data = $this->service->filterAndSearch($filters);
+        $data = News::query();
 
-        return view('pages.super-admin.news.index', compact('data'));
+        $data = $this->filterService->applyFilter(
+            $data,
+            $filters,
+            ['title', 'description'], // Kolom
+            'user',                   // Relasi
+            'name'                    // Kolom pada relasi
+        );
+
+        $categories = $this->categories->get();
+
+        $data = $data->orderBy('created_at', 'desc')->paginate(9);
+
+        return view('pages.super-admin.news.index', compact('data', 'categories', 'filters'));
     }
+
 
 
     /**
@@ -76,17 +92,21 @@ class NewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(News $news)
+    public function show(String $slug)
     {
+        $news = News::where('slug', $slug)->first();
+
         return view('pages.super-admin.news.show', compact('news'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(News $news)
+    public function edit(String $slug)
     {
         $categories = $this->categories->get();
+
+        $news = News::where('slug', $slug)->first();
 
         return view('pages.super-admin.news.edit', compact('categories', 'news'));
     }

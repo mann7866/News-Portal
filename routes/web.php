@@ -29,8 +29,8 @@ Route::middleware('auth')->group(callback: function () {
 
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
         Route::get('news/create', [NewsController::class, 'create'])->name('news.create');
-        Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
-        Route::get('news/{id}', [NewsController::class, 'show'])->name('news.show');
+        Route::get('news/edit/{slug}', [NewsController::class, 'edit'])->name('news.edit');
+        Route::get('news/{slug}', [NewsController::class, 'show'])->name('news.show');
         Route::post('news', [NewsController::class, 'store'])->name('news.store');
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');
@@ -87,7 +87,7 @@ Route::middleware('auth')->group(callback: function () {
     Route::get('/detail-news', action: function () {
         return view('pages.landing-page.news.detail');
     });
-    
+
 });
 Route::get('/contact', action: function () {
     return view('pages.landing-page.contact.index');

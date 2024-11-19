@@ -23,7 +23,6 @@ class NewsService implements ShouldHandleFileUpload, CustomUploadValidation
 
     public function filterAndSearch(array $filters)
     {
-
         $query = News::query();
 
         if (!empty($filters['search'])) {
