@@ -95,8 +95,8 @@
     <!-- Card for login -->
     <div class="card">
       <div class="text-center mb-4">
-        <img src="{{ asset('logo/proposal.png') }}" alt="Logo Sekolah" class="rounded-circle mb-3"
-          style="width: 80px; height: 80px; object-fit: cover;">
+        <img src="{{ asset('logo/logoo.png') }}" alt="Logo Sekolah" class=" mb-3"
+          style="width: 140px; height: 80px;">
         <h2 class="login-title">School News Portal Login</h2>
         <p class="login-subtitle text-muted">Masuk untuk mengakses berita dan informasi terkini dari sekolah.</p>
       </div>

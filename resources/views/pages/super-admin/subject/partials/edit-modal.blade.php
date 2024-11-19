@@ -16,7 +16,7 @@
                     <div class="mb-3">
                         <label for="subject" class="control-label fw-semibold">Pekerjaan</label>
                         <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject"
-                            id="subject" value="{{ old('subject', $subject->subject) }}" />
+                            id="subject" value="$subject->subject" />
                         @error('subject')
                             <div class="invalid-feedback">
                                 {{ $message }}
