@@ -31,6 +31,10 @@ class LandinPageController extends Controller
     public function newsDetail($slug)
     {
         $news = News::where('slug', $slug)->first();
+        
+        if (!$news) {
+            abort(404, 'News not found');
+        }
 
         $popularNews = News::orderBy('views', 'desc')->take(3)->get();
 

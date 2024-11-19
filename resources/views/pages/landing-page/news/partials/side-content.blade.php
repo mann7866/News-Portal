@@ -25,7 +25,7 @@
                                 <span class="post-date"><i class="fas fa-clock"></i>
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}</span>
                             </div>
-                            <a href="#">Commanded household smallness delivered.</a>
+                            <a href="{{ route('news.detail', $item->slug) }}">{{ Str::limit($item->title, 40) }}</a>
                         </div>
                     </li>
 
@@ -71,7 +71,7 @@
                 <ul>
                     @forelse ($galleries as $gallery)
                         <li>
-                            <a href="">
+                            <a href="{{ route('news.detail', $gallery->slug) }}">
                                 <img src="{{ asset('storage/' . $gallery->image) }}" alt="thumb">
                             </a>
                         </li>
