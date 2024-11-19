@@ -19,7 +19,7 @@
                             <li>
                                 <a href="https://www.facebook.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <i class="fab fa-facebook" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <i class="fab fa-facebook" style="font-size: 20px; transition: color 0.3s;"></i>
                                     <span>Facebook</span>
                                 </a>
                             </li>
@@ -35,7 +35,7 @@
                             <li>
                                 <a href="https://twitter.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <i class="fab fa-twitter" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <i class="fab fa-twitter" style="font-size: 20px; transition: color 0.3s;"></i>
                                     <span>Twitter</span>
                                 </a>
                             </li>
@@ -43,7 +43,7 @@
                             <li>
                                 <a href="https://youtube.com/smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <i class="fab fa-youtube" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <i class="fab fa-youtube" style="font-size: 17px; transition: color 0.3s;"></i>
                                     <span>YouTube</span>
                                 </a>
                             </li>
@@ -51,7 +51,7 @@
                             <li>
                                 <a href="https://tiktok.com/@smkalazharsempu" target="_blank" style="display: flex; gap: .5rem; align-items: center;">
                                     <i class="fas fa-angle-right"></i>
-                                    <i class="fab fa-tiktok" style="font-size: 16px; transition: color 0.3s;"></i>
+                                    <i class="fab fa-tiktok" style="font-size: 17px; transition: color 0.3s;"></i>
                                     <span>TikTok</span>
                                 </a>
                             </li>

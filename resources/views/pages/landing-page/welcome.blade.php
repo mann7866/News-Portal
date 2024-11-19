@@ -456,7 +456,7 @@
                                         <div class="item"
                                             style="display: flex; align-items: center; justify-content: center;">
                                             <img src="logo/mikrotik.png" alt="SMK 17 Agustus Muncar" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 30px;">
+                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 15px;">
                                         </div>
                                     </div>
                                 </div>
