@@ -4,266 +4,206 @@
         <div class="card-body px-4 py-3">
             <div class="row align-items-center">
                 <div class="col-9">
-                    <h4 class="fw-semibold mb-8">Halaman-Pengajuan</h4>
+                    <h4 class="fw-semibold mb-8">Pengajuan Berita</h4>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a class="text-muted" href="index-2.html">Dashboard</a>
+                                <a class="text-muted " href="index-2.html">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item" aria-current="page">
-                                Halaman-Pengajuan
+                                Berita
                             </li>
                         </ol>
                     </nav>
                 </div>
-                <div class="col-3 text-center mb-n5">
-                    <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
-                        class="img-fluid mb-n4" />
+                <div class="col-3">
+                    <div class="text-center mb-n5">
+                        <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
+                            class="img-fluid mb-n4" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card card-body">
-        <div class="row">
-            <div class="col-md-4 col-xl-3">
-                <form class="position-relative">
-                    <input type="text" class="form-control product-search ps-5" id="input-search"
-                        placeholder="Cari Pengajuan..." />
-                    <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
-                </form>
-            </div>
-            <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#pending" role="tab" aria-selected="true">
-                            <span>Ajuan</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-bs-toggle="tab" href="#accepted" role="tab" aria-selected="false"
-                            tabindex="-1">
-                            <span>Terima</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-bs-toggle="tab" href="#rejected" role="tab" aria-selected="false"
-                            tabindex="-1">
-                            <span>Tolak</span>
-                        </a>
-                    </li>
-                </ul>
+    <div class="section-body">
+        <div class="card px-3 pb-4 mb-4 pt-1 rounded-sm">
+            <div class="row g-2 mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="row g-2">
+                        <h3 class="mx-1">Berita</h3>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="d-flex flex-column flex-lg-row justify-content-end gap-2">
+                        <div class="search-box col-lg-3 col-12">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="search" value=""
+                                        placeholder="Cari Proyek">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="input-group-text rounded-end border border-1"><i
+                                                class="ri-search-line"></i></button>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary d-lg-none mt-2 w-100">Cari</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="search-box col-lg-3 col-12">
+                            <div class="input-group">
+                                <input type="hidden" class="form-control flatpickr-input" name="date" value=""
+                                    data-provider="flatpickr" placeholder="Pilih tanggal"><input
+                                    class="form-control flatpickr-input form-control input" placeholder="Pilih tanggal"
+                                    tabindex="0" type="text">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text rounded-end border border-1"><i
+                                            class="ri-calendar-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Filter Status proyek -->
+                        <div class="dropdown col-lg-3 col-12">
+                            <button class="btn btn-outline-primary dropdown-toggle w-100" type="button"
+                                id="filterStatusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Status Berita
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="filterStatusDropdown">
+                                <li>
+                                    <label class="dropdown-item">
+                                        <input type="checkbox" name="status[]" value="active" onchange="this.form.submit()">
+                                        Aktif
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="dropdown-item">
+                                        <input type="checkbox" name="status[]" value="completed"
+                                            onchange="this.form.submit()"> Selesai
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="form-check form-switch gap-3 col-lg-3 col-12 d-flex justify-content-between align-items-center mt-2 mt-lg-0"
+                            style="width: auto;">
+                            <a href="/admin/create" class="btn btn-primary">
+                                <i class="ti ti-news text-white me-1 fs-5"></i> Tambah Berita
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="tab-content mt-3">
-        <div class="tab-pane active show" id="pending" role="tabpanel">
-            <div class="row">
-                {{-- Data 1 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
-                                <div class="ms-auto">
-                                    <div class="dropdown">
-                                        <a href="#" class="link" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ti ti-menu-2 fs-6 text-dark"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                            <li><a class="dropdown-item" href="#">Terima</a></li>
-                                            <li><a class="dropdown-item" href="#">Tolak</a>
-                                            </li>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card rounded-2 overflow-hidden hover-img">
+                    <div class="position-relative">
+                        <a href="javascript:void(0)">
+                            <img src="{{ asset('landing-page/images/news-image.jpg') }}" class="card-img-top rounded-0 custom-style"
+                                alt="Berita">
+                        </a>
 
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div class="dropdown position-absolute top-0 end-0 me-3" style="margin-top: 5px;">
+                            <a style="margin-top: 10px" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i style="font-size: 25px;" class="ti ti-dots-vertical text-black"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="m1">
+                                <li>
+                                    <a class="dropdown-item" href="/admin/edit">
+                                        <i class="ti ti-pencil text-muted me-1 fs-4"></i>Edit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-modal">
+                                        <i class="ti ti-trash text-mute d me-1 fs-4"></i>Hapus
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="ti ti-info-circle text-muted me-1 fs-4"></i>Detail
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <span
+                            class="badge bg-white text-dark fs-1 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">
+                            Kategori Berita
+                        </span>
+
+                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}" alt="User"
+                            class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                            height="40" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Nama Penulis">
+                    </div>
+
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Admin</span>
+                        <span class="badge text-bg-warning fs-2 rounded-4 py-1 px-2 lh-sm mt-3">Aktif</span>
+                        <span class="d-block mt-2 text-dark fs-4 fw-semibold">Judul Berita Contoh</span>
+                        <p class="d-block my-4 fs-4 text-dark">
+                            Ini adalah contoh deskripsi berita yang dibatasi hingga 20 karakter.
+                        </p>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <a class="text-dark" href="#">
+                                    <i class="ti ti-message-2 text-dark fs-5"></i>3
+                                </a>
                             </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-warning text-warning rounded-pill">
-                                    in the process
+                            <div class="d-flex align-items-center ms-auto">
+                                <span class="fs-2 badge bg-body-tertiary text-dark text-truncate">
+                                    <i class="ti ti-point"></i> 19 November 2024
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+    @endsection
 
-        <div class="tab-pane" id="accepted" role="tabpanel">
-            <div class="row">
-                {{-- Data 1 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
+    <style>
+        .dropdown-menu a {
+            color: #000000;
+            /* Ubah warna sesuai keinginan */
+            font-size: 10px;
+            /* Ubah ukuran font sesuai keinginan */
+            padding: 10px 15px;
+            /* Tambahkan padding jika ingin */
+        }
 
-                            </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-success text-success rounded-pill">Accept</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        .dropdown-menu a:hover {
+            background-color: #f8f9fa;
+            /* Warna latar saat hover */
+            color: #dde3e9;
+            /* Warna teks saat hover */
+        }
 
-                {{-- Data 2 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
+        .custom-style {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            /* object-fix sesuaikan gambar */
+            /* height tinggi ya  */
+        }
 
-                            </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-success text-success rounded-pill">Accept</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{-- Data 3 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
+        .custom-style {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
-                            </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-success text-success rounded-pill">Accept</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        .dropdown-menu a {
+            color: #000000;
+            font-size: 10px;
+            padding: 10px 15px;
+        }
 
-            </div>
-        </div>
-
-        <div class="tab-pane" id="rejected" role="tabpanel">
-            <div class="row">
-                {{-- Data 1 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
-
-                            </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-danger text-danger rounded-pill">reject</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Data 2 --}}
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                    class="rounded-pill img-fluid" width="50">
-                                <div class="ms-3">
-                                    <h4 class="card-title">Andrew Grant</h4>
-                                    <p class="card-subtitle mb-0">Yesterday at 5:06 PM</p>
-                                </div>
-
-                            </div>
-                            <img src="{{ asset('admin-assets/images/big/img5.jpg') }}" class="img-fluid rounded-1 mt-4">
-                            <div class="mt-4">
-                                <p class="fs-4">
-                                    Your beauty is one of the things I like about you.😍 🥰
-                                    <a href="#">#beauty</a> <a href="#">#goa🏄🏽‍♀️</a> <a
-                                        href="#">#india</a>
-                                    <a href="#">#happylife</a>
-                                </p>
-                            </div>
-                            <!-- Status Section -->
-                            <div class="mt-3">
-                                <span class="badge bg-light-danger text-danger rounded-pill">reject</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
+        .dropdown-menu a:hover {
+            background-color: #f8f9fa;
+            color: #dde3e9;
+        }
+    </style>

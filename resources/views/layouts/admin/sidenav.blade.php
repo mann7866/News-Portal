@@ -42,7 +42,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="/history" aria-expanded="false">
                         <span>
-                            <i class="ti ti-tags"></i>
+                            <i class="fa fa-history"></i>
                         </span>
                         <span class="hide-menu">History</span>
                     </a>
