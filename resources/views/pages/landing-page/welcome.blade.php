@@ -244,7 +244,7 @@
         <!-- End About -->
 
         <!-- Star Services Area
-    ============================================= -->
+                                ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
                 <img src="landing-page/img/shape/9.png" alt="Shape">
@@ -336,71 +336,106 @@
             </div>
         </div>
         <!-- Testimonials Area -->
-        <div class="testimonials-area bg-gray default-padding-bottom" style="padding-top: 50px;">
-            <!-- Fixed Shape -->
+        <style>
+            body.modal-open {
+                overflow-y: scroll !important;
+                /* Scroll tetap terlihat meskipun modal terbuka */
+            }
+
+            .modal.fade .modal-dialog {
+                transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+                /* transition:  */
+            }
+        </style>
+        <div class="testimonials-area bg-gray default-padding-bottom" style="padding-top: 70px;">
             <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
-            <!-- End Fixed Shape -->
             <div class="container">
                 <div class="testimonial-items">
                     <div class="row align-center">
                         <div class="col-lg-7 testimonials-content">
                             <div class="testimonials-carousel owl-carousel owl-theme">
-                                <!-- Single Item -->
-                                <div class="item">
-                                    <div class="info">
-                                        <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
-                                        </p>
-                                        <div class="provider">
-                                            <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                                    alt="Author">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Ahel Natasha</h4>
-                                                <span> Managing Director</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                <!-- Single Item -->
-                                <div class="item">
-                                    <div class="info">
-                                        <p>
-                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
-                                            Sympathize interested simplicity at do projecting increasing terminated. As
-                                            edward settle limits at in. Chamber reached do he nothing be.
-                                        </p>
-                                        <div class="provider">
-                                            <div class="thumb">
-                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}"
-                                                    alt="Author">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Ahel Natasha</h4>
-                                                <span> Managing Director</span>
+                                @forelse ($employees as $item)
+                                    <!-- Single Item -->
+                                    <div class="item">
+                                        <div class="info">
+                                            <p>{{ $item->description }}</p>
+                                            <div class="provider">
+                                                <div class="thumb">
+                                                    <!-- Klik gambar untuk memunculkan modal -->
+                                                    <img src="{{ asset('storage/' . $item->image) }}" alt="Author"
+                                                        style="cursor: pointer;" data-bs-toggle="modal"
+                                                        data-bs-target="#detailModal"
+                                                        onclick="showModal(
+                                                            '{{ $item->name }}',
+                                                            '{{ $item->jobs }}',
+                                                            '{{ $item->description }}',
+                                                            '{{ asset('storage/' . $item->image) }}',
+                                                            '{{ $item->phoneNumber }}',
+                                                            '{{ $item->address }}'
+                                                        )">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>{{ $item->name }}</h4>
+                                                    <span>{{ $item->jobs }}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Single Item -->
+                                    <!-- End Single Item -->
+                                @empty
+                                    <p>Not Found</p>
+                                @endforelse
                             </div>
                         </div>
                         <div class="col-lg-5 info">
                             <h4>Testimonials</h4>
                             <h2>Check what our satisfied clients said</h2>
-                            <p>
-                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
-                                up bobby sloshed arse
-                            </p>
+                            <p>Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
+                                up bobby sloshed arse</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="detailModal" tabindex="1" data-bs-focus="false"
+            aria-labelledby="detailModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detailModalLabel">Detail</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img id="modalImage" src="" alt="Author" class="img-fluid mb-3"
+                                style="max-height: 200px;">
+                        </div>
+                        <h4 id="modalName"></h4>
+                        <h6 id="modalJob" class="text-muted"></h6>
+                        <p id="modalDescription"></p>
+                        <p><strong>Phone Number:</strong> <span id="modalPhoneNumber"></span></p>
+                        <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript untuk memunculkan detail ke dalam modal
+            function showModal(name, job, description, image, phoneNumber, address) {
+                document.getElementById('modalName').innerText = name;
+                document.getElementById('modalJob').innerText = job;
+                document.getElementById('modalDescription').innerText = description;
+                document.getElementById('modalImage').src = image;
+                document.getElementById('modalPhoneNumber').innerText = phoneNumber;
+                document.getElementById('modalAddress').innerText = address;
+            }
+        </script>
 
         <!-- End testimonials Area -->
 
@@ -515,7 +550,8 @@
                                                                             style="width: 500px; height: 200px; object-fit: cover;">
                                                                     </a>
 
-                                                                    <time class="date" datetime="">2 Mei 2024</time>
+                                                                    <time class="date" datetime="">2 Mei
+                                                                        2024</time>
                                                                 </div>
                                                             </div>
                                                             <div class="info">
@@ -576,8 +612,10 @@
                                                                         Provinsi Jawa Timur</a>
                                                                 </h4>
 
-                                                                <p class="">SIPJAKI (Sistem Informasi Pembina Jasa
-                                                                    Konstruksi Kabupaten Pasuruan) yang dikembangkan oleh
+                                                                <p class="">SIPJAKI (Sistem Informasi Pembina
+                                                                    Jasa
+                                                                    Konstruksi Kabupaten Pasuruan) yang dikembangkan
+                                                                    oleh
                                                                     perusahaan teknologi , mendapat penghargaan
                                                                     yang tinggi dari pemerintah provinsi Jawa Timur.
                                                                     Pengh...</p>
@@ -595,7 +633,8 @@
                                                                         style="width: 500px; height: 200px; object-fit: cover;">
                                                                 </a>
 
-                                                                <time class="date" datetime="">30 April 2024</time>
+                                                                <time class="date" datetime="">30 April
+                                                                    2024</time>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
@@ -611,14 +650,16 @@
                                                                 <h4>
                                                                     <a
                                                                         href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">Perkuat
-                                                                        Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE
+                                                                        Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV
+                                                                        BOE
                                                                         Gelar Magang dan Uji Kompetensi di </a>
                                                                 </h4>
 
                                                                 <p class="">Lima orang guru dari berbagai SMK
                                                                     melaksanakan magang industri di sejak tanggal
                                                                     22 April 2024 hingga 30 April 2024. Kegiatan ini
-                                                                    merupakan rangkaian pelatihan upskilling bagi guru yang
+                                                                    merupakan rangkaian pelatihan upskilling bagi guru
+                                                                    yang
                                                                     disel...</p>
                                                             </div>
                                                         </div>
@@ -634,7 +675,8 @@
                                                                         style="width: 500px; height: 200px; object-fit: cover;">
                                                                 </a>
 
-                                                                <time class="date" datetime="">26 April 2024</time>
+                                                                <time class="date" datetime="">26 April
+                                                                    2024</time>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
@@ -658,7 +700,8 @@
                                                                     kelas industri berhasil memenangkan juara LKS
                                                                     (Lomba Kompetensi Siswa)
                                                                     Tingkat Jawa Timur Tahun 2024
-                                                                    dalam bidang Artificial Intelligence. Kali ini tim...
+                                                                    dalam bidang Artificial Intelligence. Kali ini
+                                                                    tim...
                                                                 </p>
                                                             </div>
                                                         </div>
