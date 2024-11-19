@@ -225,7 +225,7 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="{{ asset('s') }}" alt="Thumb"
+                            <img src="{{ asset('landing-page\images\Search-rafiki.png') }}" alt="Thumb"
                                 style="max-width: 70%; max-height: auto; display: inline-block;">
                         </div>
                     </div>

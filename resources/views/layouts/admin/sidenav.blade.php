@@ -31,7 +31,7 @@
                 </li>
                 <!-- Halaman Approval -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/approvals" aria-expanded="false">
+                    <a class="sidebar-link" href="/admin/approvals" aria-expanded="false">
                         <span>
                             <i class="ti ti-news"></i>
                         </span>
@@ -40,7 +40,7 @@
                 </li>
                 <!-- Kategori Berita -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/history" aria-expanded="false">
+                    <a class="sidebar-link" href="/admin/history" aria-expanded="false">
                         <span>
                             <i class="ti ti-history"></i>
                         </span>

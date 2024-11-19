@@ -95,9 +95,6 @@ Route::get('/contact', action: function () {
 
 
 //Route admin
-Route::get('/admin/news', action: function () {
-    return view('pages.admin.news.index');
-});
 
 Route::get('/admin/create', action: function () {
     return view('pages.admin.news.create');
@@ -107,11 +104,11 @@ Route::get('/admin/edit', action: function () {
     return view('pages.admin.news.edit');
 });
 
-Route::get('/approvals', function () {
+Route::get('/admin/approvals', function () {
     return view('pages.admin.news.index');
 });
 
-Route::get('/history', function () {
+Route::get('/admin/history', function () {
     return view('pages.admin.history.index');
 });
 
@@ -119,7 +116,7 @@ Route::get('/admin/profile', function () {
     return view('pages.admin.profile.edit');
 });
 
-Route::get('/admin/dashboard', function () {
+Route::get('/admin', function () {
     return view('pages.admin.dashboard');
 });
 
