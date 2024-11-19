@@ -72,12 +72,12 @@
                     </div>
 
                     <!-- Nama dan Email -->
-                    <div>
+                    <div class="w-100">
                         <div class="form-group">
                             <label for="name" class="font-weight-medium">{{ __('Name') }}</label>
-                            <input type="text" id="name" name="name" class="form-control" 
+                            <input type="text" id="name" name="name" class="form-control w-100" 
                                    value="{{ old('name', $user->name) }}" 
-                                   required autofocus autocomplete="name" style="width: calc(100% + 30px);">
+                                   required autofocus autocomplete="name">
                             @error('name')
                             <div class="text-danger small mt-1">{{ $message }}</div>
                             @enderror
@@ -85,9 +85,9 @@
                     
                         <div class="form-group">
                             <label for="email" class="font-weight-medium">{{ __('Email') }}</label>
-                            <input type="email" id="email" name="email" class="form-control" 
+                            <input type="email" id="email" name="email" class="form-control w-100" 
                                    value="{{ old('email', $user->email) }}" 
-                                   required autocomplete="username" style="width: calc(100% + 30px);">
+                                   required autocomplete="username">
                             @error('email')
                             <div class="text-danger small mt-1">{{ $message }}</div>
                             @enderror
@@ -116,7 +116,7 @@
                 <!-- Deskripsi -->
                 <div class="form-group">
                     <label for="description" class="font-weight-medium">{{ __('Description') }}</label>
-                    <textarea id="description" name="description" class="form-control" rows="3">{{ old('description', $user->description) }}</textarea>
+                    <textarea id="description" name="description" class="form-control w-100" rows="3">{{ old('description', $user->description) }}</textarea>
                     @error('description')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                     @enderror
@@ -135,6 +135,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -189,6 +190,7 @@
                             </div>
                         </form>
                     </div>
+                    <br>
                 </div>
             </div>
         </div>
