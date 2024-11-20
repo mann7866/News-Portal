@@ -30,7 +30,6 @@
     <!-- Core Css -->
     <link id="themeColors" rel="stylesheet" href="{{ asset('admin-assets/css/style.min.css') }}" />
 
-
 </head>
 
 <body>
@@ -103,6 +102,7 @@
     <script src="{{ asset('admin-assets/libs/select2/dist/js/select2.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/forms/select2.init.js') }}"></script>
     {{--  select2  --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     {{--  summernote  --}}
     <script src="{{ asset('admin-assets/libs/summernote/dist/summernote-lite.min.js') }}"></script>
