@@ -31,16 +31,21 @@
                                                 class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-\ gap-5">
                                                 <!-- Image Upload Section -->
                                                 <div class="d-flex align-items-center justify-content-center gap-5 col-lg-6"
-                                                    style="width: 40%; height: 300px;">
-                                                    <label for="profile_image" class="rounded"
-                                                        style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
-                                                        <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}"
-                                                            alt="user4" class="rounded" id="image_preview"
-                                                            style="width: 100%; height: 100%; object-fit: cover;" />
-                                                        <input type="file" name="image" id="profile_image"
-                                                            style="display: none;" onchange="previewImage(event)" />
-                                                    </label>
-                                                </div>
+                                                style="width: 40%; height: 300px;">
+                                                <label for="profile_image" class="rounded"
+                                                    style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
+                                                    <!-- Gambar Preview -->
+                                                    <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}" 
+                                                        alt="user4" 
+                                                        class="rounded" 
+                                                        id="image_preview" 
+                                                        style="width: 100%; height: 100%; object-fit: cover;" />
+                                                    <!-- Input File -->
+                                                    <input type="file" name="image" id="profile_image" 
+                                                        style="display: none;" onchange="previewImage(event)" />
+                                                </label>
+                                            </div>
+                                            
 
                                                 <script>
                                                     function previewImage(event) {
@@ -190,4 +195,17 @@
             }
         });
     });
+</script>
+<script>
+    // Fungsi untuk menampilkan preview gambar
+    function previewImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('image_preview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
 </script>
