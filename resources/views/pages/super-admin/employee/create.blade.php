@@ -31,21 +31,19 @@
                                                 class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-\ gap-5">
                                                 <!-- Image Upload Section -->
                                                 <div class="d-flex align-items-center justify-content-center gap-5 col-lg-6"
-                                                style="width: 40%; height: 300px;">
-                                                <label for="profile_image" class="rounded"
-                                                    style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
-                                                    <!-- Gambar Preview -->
-                                                    <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}" 
-                                                        alt="user4" 
-                                                        class="rounded" 
-                                                        id="image_preview" 
-                                                        style="width: 100%; height: 100%; object-fit: cover;" />
-                                                    <!-- Input File -->
-                                                    <input type="file" name="image" id="profile_image" 
-                                                        style="display: none;" onchange="previewImage(event)" />
-                                                </label>
-                                            </div>
-                                            
+                                                    style="width: 40%; height: 300px;">
+                                                    <label for="profile_image" class="rounded"
+                                                        style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
+                                                        <label style="display: block; text-align: center;">masukan gambar</label>
+                                                        <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}"
+                                                            alt="user4" class="rounded" id="image_preview"
+                                                            style="width: 100%; height: 100%; object-fit: cover;" />
+                                                        <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="profile_image" style="display: none;" onchange="previewImage(event)" />
+                                                        @error('image')
+                                                            <div class="invalid-feedback">{{ $message }}</div>
+                                                        @enderror
+                                                    </label>
+                                                </div>
 
                                                 <script>
                                                     function previewImage(event) {
@@ -90,7 +88,7 @@
                                                             class="form-control @error('educationalBackground') is-invalid @enderror"
                                                             name="educationalBackground" id="educationalBackground"
                                                             placeholder="Masukkan Gelar"
-                                                            value="{{ old('educational-background') }}" />
+                                                            value="{{ old('educationalBackground') }}" />
                                                         @error('educational-background')
                                                             <div class="invalid-feedback">{{ $message }}</div>
                                                         @enderror
@@ -105,7 +103,7 @@
                                                         class="form-control @error('phoneNumber') is-invalid @enderror"
                                                         id="phone" name="phoneNumber"
                                                         value="{{ old('phoneNumber') }}" />
-                                                    @error('phone-number')
+                                                    @error('phoneNumber')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
@@ -114,7 +112,7 @@
                                                     <input type="text"
                                                         class="form-control @error('email') is-invalid @enderror"
                                                         id="email" name="email" value="{{ old('email') }}" />
-                                                    @error('e-mail')
+                                                    @error('email')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
@@ -129,15 +127,21 @@
                                                 </div>
                                                 <div class="col-12 mb-9">
                                                     <label for="skill" class="mb-2 fs-2">Bidang keahlian:</label>
-                                                    <textarea class="form-control" name="skill" id="skill"
+                                                    <textarea name="skill" id="skill" class="form-control @error('skill') is-infalid @enderror"
                                                         rows="4">{{ old('skill') }}</textarea>
+                                                        @error('skill')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <!-- Notes Section -->
                                             <div class="border-bottom pb-7 mb-4">
                                                 <label for="description" class="mb-2 fs-2">Catatan:</label>
-                                                <textarea class="form-control" id="description" name="description"
+                                                <textarea name="description" id="description" class="form-control @error('description') is-infalid @enderror"  
                                                     rows="4">{{ old('description') }}</textarea>
+                                                    @error('description')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
                                                 <div class="d-flex justify-content-end mt-3">
                                                     <a class="d-block text-danger px-2 fs-8 bg-hover-danger nav-icon-hover position-relative z-index-5"
                                                         href="{{ route('employee.index') }}">
