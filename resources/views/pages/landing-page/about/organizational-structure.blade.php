@@ -20,7 +20,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
                         <h4>STRUKTUR ORGANISASI</h4>
-                        <h2>Fondasi Keberhasilan dan Kolaborasi di Tempat Kerja</h2>
+                        <h2>Pilar Kesuksesan dan Kolaborasi di SMKS AL AZHAR SEMPU</h2>
                         <div class="devider"></div>
                     </div>
                 </div>
@@ -29,13 +29,13 @@
         <div class="container">
             <div class="work-process-items features-content">
                 <div class="text-center">
-                                            <div class="d-flex justify-content-center">
-                            <img src="../nodata-gif.gif" alt="Not Found" width="800px">
-                        </div>
-                        <h4 class="text-center text-dark" style="font-weight:600">
-                            Gambar struktur organisasi belum diunggah
-                        </h4>
-                                    </div>
+                    <div class="d-flex justify-content-center">
+                        <img src="../nodata-gif.gif" alt="Not Found" width="800px">
+                    </div>
+                    <h4 class="text-center text-dark" style="font-weight:600">
+                        Gambar struktur organisasi belum diunggah
+                    </h4>
+                </div>
             </div>
         </div>
     </div>

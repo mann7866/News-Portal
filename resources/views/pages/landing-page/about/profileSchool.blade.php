@@ -20,29 +20,23 @@
             <div class="about-items">
                 <div class="row align-center justify-content-center">
                     <div class="col-lg-6 info text-center text-lg-start">
-                        <h4 class="subtitle">Profile Perusahaan</h4>
-                        <h2>PT HUMMA TEKNOLOGI INDONESIA</h2>
+                        <h4 class="subtitle">Profile Sekolah</h4>
+                        <h2>SMKS AL AZHAR SEMPU</h2>
 
-                        <img src="../storage/profile/YjcXfXsfiyuOYv2qIGbAsQH3ObQ8zmTidWohA8xU.png" alt="Thumb"
+                        <img src="../storage/profile/logo-smks-al-azhar.png" alt="Logo SMKS Al Azhar"
                             class="w-75 mb-3 d-block mx-auto d-lg-none">
-                        <p class="text-justify">
-                        </p>
-                        <p class="ql-align-justify"><strong>HUMMATECH </strong>merupakan perusahaan yang bergerak di bidang
-                            teknologi informasi yang berdiri sejak 21 Mei 2013. Hummatech dinaungi oleh badan hukum
-                            <strong>PT. HUMMA TEKNOLOGI INDONESIA</strong> dan telah disahkan oleh KEMENKUMHAM Republik
-                            Indonesia Nomor AHU-0057079.AH.01.01.</p>
-                        <p class="ql-align-justify"><strong>Hummatech </strong>melayani jasa pengembangan perangkat lunak,
-                            baik berbasis desktop, web, dan mobile apps. Mitra kami meliputi perorangan, swasta, bahkan juga
-                            lembaga pemerintahan.</p>
-                        <p class="ql-align-justify">Kini <strong>Hummatech </strong>bertransformasi menjadi perusahaan yang
-                            mampu menjawab tantangan di era revolusi industri 4.0 dengan menciptakan produk berbasis
-                            <em>integrated system</em> berupa perangkat lunak berbasis web dan mobile, <em>Internet of
-                                Things</em> (IoT), <em>Artificial Intelligence</em> (AI), <em>Game</em>, dan <em>Augmented
-                                Reality</em>.</p>
-                        <p class="ql-align-justify"><strong>Hummatech </strong>juga telah melebarkan sayapnya, tidak hanya
-                            dikenal di Indonesia, tetapi juga dipercaya oleh mitra dari luar negeri, yaitu Belanda dalam
-                            mengembangan <em>software </em>dan <em>integrated system</em>.</p>
-                        <p></p>
+                        <p class="text-justify"></p>
+                        <p class="ql-align-justify"><strong>SMKS AL AZHAR SEMPU</strong> adalah sekolah kejuruan yang berkomitmen 
+                            untuk mencetak generasi unggul dan kompeten dalam berbagai bidang keahlian. Berdiri sejak tahun 2005, 
+                            SMKS Al Azhar Sempu telah mencetak lulusan-lulusan yang berkompetensi tinggi dan siap bersaing di dunia kerja.</p>
+                        <p class="ql-align-justify">Sebagai lembaga pendidikan, <strong>SMKS Al Azhar Sempu</strong> menawarkan 
+                            berbagai program keahlian seperti Teknik Komputer dan Jaringan, Akuntansi, serta Administrasi Perkantoran.</p>
+                        <p class="ql-align-justify">Didukung oleh tenaga pendidik profesional dan fasilitas lengkap, <strong>SMKS Al Azhar Sempu</strong> 
+                            bertekad untuk terus melahirkan generasi yang berakhlak mulia, kreatif, dan inovatif, serta mampu menjawab 
+                            tantangan dunia kerja di era globalisasi.</p>
+                        <p class="ql-align-justify">Selain itu, <strong>SMKS Al Azhar Sempu</strong> aktif menjalin kerja sama dengan berbagai 
+                            perusahaan dan instansi untuk meningkatkan peluang kerja bagi para lulusannya, baik di tingkat nasional 
+                            maupun internasional.</p>
 
                         <a class="btn btn-gradient effect btn-md" target="_blank"
                             href="https://drive.google.com/file/d/1BNGZNbh-rC06ljZ151sOpeDUCwtBZbyt/view">Lihat Profil
@@ -50,7 +44,7 @@
                     </div>
                     <div class="col-lg-6 d-none d-md-none d-lg-inline">
                         <div class="thumb">
-                            <img src="../storage/profile/YjcXfXsfiyuOYv2qIGbAsQH3ObQ8zmTidWohA8xU.png" alt="Thumb"
+                            <img src="../storage/profile/logo-smks-al-azhar.png" alt="Logo SMKS Al Azhar"
                                 style="max-width: 80%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
