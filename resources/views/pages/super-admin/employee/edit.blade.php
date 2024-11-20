@@ -34,9 +34,9 @@
                                                 <!-- Image Upload Section -->
                                                 <div class="d-flex align-items-center justify-content-center gap-5 col-lg-6" style="width: 40%; height: 300px;">
                                                     <label for="profile_image" class="rounded" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
+                                                        <label style="display: block; text-align: center;">edit gambar</label>
                                                         <img src="{{ asset('storage/' . $employee->image) }}"  alt="user4" class="rounded" id="image_preview" style="width: 100%; height: 100%; object-fit: cover;" />
                                                         <input type="file" name="image" id="profile_image" style="display: none;" onchange="previewImage(event)" />
-                                                        <label style="display: block; text-align: center;">edit gambar</label>
                                                     </label>
                                                 </div>
 

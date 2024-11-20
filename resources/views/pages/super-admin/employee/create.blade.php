@@ -34,6 +34,7 @@
                                                     style="width: 40%; height: 300px;">
                                                     <label for="profile_image" class="rounded"
                                                         style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
+                                                        <label style="display: block; text-align: center;">masukan gambar</label>
                                                         <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}"
                                                             alt="user4" class="rounded" id="image_preview"
                                                             style="width: 100%; height: 100%; object-fit: cover;" />
@@ -41,7 +42,6 @@
                                                         @error('image')
                                                             <div class="invalid-feedback">{{ $message }}</div>
                                                         @enderror
-                                                            <label style="display: block; text-align: center;">masukan gambar</label>
                                                     </label>
                                                 </div>
 
@@ -88,7 +88,7 @@
                                                             class="form-control @error('educationalBackground') is-invalid @enderror"
                                                             name="educationalBackground" id="educationalBackground"
                                                             placeholder="Masukkan Gelar"
-                                                            value="{{ old('educational-background') }}" />
+                                                            value="{{ old('educationalBackground') }}" />
                                                         @error('educational-background')
                                                             <div class="invalid-feedback">{{ $message }}</div>
                                                         @enderror
