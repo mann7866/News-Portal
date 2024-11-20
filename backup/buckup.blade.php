@@ -225,8 +225,8 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 order-first order-md-last text-center">
                         <div class="thumb">
-                            <img src="{{ asset('landing-page\images\Search-rafiki.png') }}" alt="Thumb"
-                                style="max-width: 70%; max-height: auto; display: inline-block;">
+                            <img src="{{ asset('storage/service/21LbkGprImu1yvAUp4Muwt74fCbM4ZOZDT5PNcvD.jpg') }}"
+                                alt="Thumb" style="max-width: 70%; max-height: auto; display: inline-block;">
                         </div>
                     </div>
                     <div class="col-md-6 info">
@@ -244,7 +244,7 @@
         <!-- End About -->
 
         <!-- Star Services Area
-                                ============================================= -->
+                                                                    ============================================= -->
         <div class="thumb-services-area inc-thumbnail default-padding bottom-less mt-5">
             <div class="right-shape">
                 <img src="landing-page/img/shape/9.png" alt="Shape">
@@ -253,8 +253,8 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="site-heading text-center">
-                            <h4>Layanan Kami</h4>
-                            <h2>SMK Al-Azhar Menyediakan Pendidikan Berbasis Teknologi dan Kejuruan</h2>
+                            <h4>Layanan kami</h4>
+                            <h2>Kami menyediakan layanan software untuk mendukung perusahaan dan bisnis anda</h2>
                             <div class="devider"></div>
                         </div>
                     </div>
@@ -267,19 +267,14 @@
                         <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
                             <div class="item"
                                 style="background-image: url('storage/service/ofg7lJLisMLV9iEULErd4vc6ZkTZ4vxmYY1GLKFS.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center text-white p-3">
-                                    <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">
-                                        Kompetensi Keahlian</h4>
-                                    <div class="py-2" style="min-height: 70px; max-height: 70px;">
-                                        <p>SMK Al-Azhar menawarkan berbagai program keahlian berbasis teknologi seperti
-                                            Rekayasa Perangkat Lunak, Teknik Komputer Jaringan, dan Multimedia untuk
-                                            membekali
-                                            siswa dengan keterampilan masa depan.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Software Development</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk
+                                            yang dihasilkan adalah produk perangkat lunak berbasis
                                     </div>
-                                    <br><br><br>
-                                    <div class="mt-3 pt-3">
-                                        <a href="services/kompetensi-keahlian.html" class="text-white"><i
-                                                class="fas fa-arrow-right"></i>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/software-development.html"><i class="fas fa-arrow-right"></i>
                                             Lihat Selengkapnya</a>
                                     </div>
                                 </div>
@@ -290,18 +285,14 @@
                         <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
                             <div class="item"
                                 style="background-image: url('storage/service/pF4KmNe9YTmdxpEVbkvKnXcyVyDa02jWQSEujslr.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center text-white p-3">
-                                    <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">Kelas
-                                        Industri</h4>
-                                    <div class="py-2" style="min-height: 70px; max-height: 70px;">
-                                        <p>Program <strong>Kelas Industri</strong> bekerja sama dengan perusahaan terkemuka
-                                            untuk memberikan pengalaman kerja nyata kepada siswa, sehingga mereka siap untuk
-                                            dunia industri.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Kelas Industri</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        <p><strong>Kelas Industri </strong>merupakan program kelas khusus di sekolah
+                                            vokasi (SMK) yang dikelola bersama dengan industri.
                                     </div>
-                                    <br><br><br>
-                                    <div class="mt-3 pt-3">
-                                        <a href="services/kelas-industri.html" class="text-white"><i
-                                                class="fas fa-arrow-right"></i>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/kelas-industri.html"><i class="fas fa-arrow-right"></i>
                                             Lihat Selengkapnya</a>
                                     </div>
                                 </div>
@@ -312,19 +303,14 @@
                         <div class="col-lg-4 col-md-6 single-item wow fadeInRight" data-wow-delay="700ms">
                             <div class="item"
                                 style="background-image: url('storage/service/JdY4vkyMFjXS4Ci49rUniHx3pZ3waWqAmYMkmWXc.jpg'); min-height: 20rem; max-height: 20rem;">
-                                <div class="d-flex flex-column align-items-center text-white p-3">
-                                    <h4 class="mb-2 pb-1 border-bottom w-100 text-center" style="margin-top: -70px;">
-                                        Fasilitas Pendukung</h4>
-                                    <div class="py-2" style="min-height: 70px; max-height: 70px;">
-                                        <p>SMK Al-Azhar dilengkapi dengan laboratorium komputer, ruang praktek, dan
-                                            fasilitas
-                                            lainnya untuk mendukung pembelajaran yang efektif.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <h4 class="mb-0 pb-0">Pengadaan Hardware IT</h4>
+                                    <div style="min-height: 70px; max-height: 70px" class="text-white py-2">
+                                        Pengadaan Peralatan IT seperti Komputer dan alat lainnya baik itu yang
+                                        bersertifikat TKDN ataupun yang
                                     </div>
-                                    <br>
-                                    <br><br>
-                                    <div class="mt-3 pt-3">
-                                        <a href="services/fasilitas-pendukung.html" class="text-white"><i
-                                                class="fas fa-arrow-right"></i>
+                                    <div class="pt-5 mt-3">
+                                        <a href="services/pengadaan-hardware-it.html"><i class="fas fa-arrow-right"></i>
                                             Lihat Selengkapnya</a>
                                     </div>
                                 </div>
@@ -332,111 +318,78 @@
                         </div>
                         <!-- End Single Item -->
                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- Testimonials Area -->
-        <style>
-            body.modal-open {
-                overflow-y: scroll !important;
-                /* Scroll tetap terlihat meskipun modal terbuka */
-            }
 
-            .modal.fade .modal-dialog {
-                transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-                /* transition:  */
-            }
-        </style>
-        <div class="testimonials-area bg-gray default-padding-bottom" style="padding-top: 70px;">
+        <!-- Star testimonials Area
+            ============================================= -->
+        <div class="testimonials-area bg-gray default-padding-bottom">
+            <!-- Fixed Shape -->
             <div class="fixed-shape" style="background-image: url(assets/img/shape/10-red.png);"></div>
+            <!-- End Fixed Shape -->
             <div class="container">
                 <div class="testimonial-items">
                     <div class="row align-center">
                         <div class="col-lg-7 testimonials-content">
                             <div class="testimonials-carousel owl-carousel owl-theme">
-                                @forelse ($employees as $item)
-                                    <!-- Single Item -->
-                                    <div class="item">
-                                        <div class="info">
-                                            <p>{{ $item->description }}</p>
-                                            <div class="provider">
-                                                <div class="thumb">
-                                                    <!-- Klik gambar untuk memunculkan modal -->
-                                                    <img src="{{ asset('storage/' . $item->image) }}" alt="Author"
-                                                        style="cursor: pointer;" data-bs-toggle="modal"
-                                                        data-bs-target="#detailModal"
-                                                        onclick="showModal(
-                                                            '{{ $item->name }}',
-                                                            '{{ $item->jobs }}',
-                                                            '{{ $item->description }}',
-                                                            '{{ asset('storage/' . $item->image) }}',
-                                                            '{{ $item->phoneNumber }}',
-                                                            '{{ $item->address }}'
-                                                        )">
-                                                </div>
-                                                <div class="content">
-                                                    <h4>{{ $item->name }}</h4>
-                                                    <span>{{ $item->jobs }}</span>
-                                                </div>
+                                <!-- Single Item -->
+                                <div class="item">
+                                    <div class="info">
+                                        <p>
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
+                                            Sympathize interested simplicity at do projecting increasing terminated. As
+                                            edward settle limits at in. Chamber reached do he nothing be.
+                                        </p>
+                                        <div class="provider">
+                                            <div class="thumb">
+                                                <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                                    alt="Author">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Ahel Natasha</h4>
+                                                <span> Managing Director</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End Single Item -->
-                                @empty
-                                    <p>Not Found</p>
-                                @endforelse
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="item">
+                                    <div class="info">
+                                        <p>
+                                            Otherwise concealed favourite frankness on be at dashwoods defective at.
+                                            Sympathize interested simplicity at do projecting increasing terminated. As
+                                            edward settle limits at in. Chamber reached do he nothing be.
+                                        </p>
+                                        <div class="provider">
+                                            <div class="thumb">
+                                                <img src="{{ asset('admin-assets/images/profile/user-2.jpg') }}"
+                                                    alt="Author">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Ahel Natasha</h4>
+                                                <span> Managing Director</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
                             </div>
                         </div>
                         <div class="col-lg-5 info">
                             <h4>Testimonials</h4>
                             <h2>Check what our satisfied clients said</h2>
-                            <p>Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
-                                up bobby sloshed arse</p>
+                            <p>
+                                Why I say old chap that is, spiffing off his nut color blimey and guvnords geeza bloke knees
+                                up bobby sloshed arse
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="detailModal" tabindex="1" data-bs-focus="false"
-            aria-labelledby="detailModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="detailModalLabel">Detail</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img id="modalImage" src="" alt="Author" class="img-fluid mb-3"
-                                style="max-height: 200px;">
-                        </div>
-                        <h4 id="modalName"></h4>
-                        <h6 id="modalJob" class="text-muted"></h6>
-                        <p id="modalDescription"></p>
-                        <p><strong>Phone Number:</strong> <span id="modalPhoneNumber"></span></p>
-                        <p><strong>Address:</strong> <span id="modalAddress"></span></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            // JavaScript untuk memunculkan detail ke dalam modal
-            function showModal(name, job, description, image, phoneNumber, address) {
-                document.getElementById('modalName').innerText = name;
-                document.getElementById('modalJob').innerText = job;
-                document.getElementById('modalDescription').innerText = description;
-                document.getElementById('modalImage').src = image;
-                document.getElementById('modalPhoneNumber').innerText = phoneNumber;
-                document.getElementById('modalAddress').innerText = address;
-            }
-        </script>
-
         <!-- End testimonials Area -->
 
         <div class="m-5">
@@ -451,53 +404,264 @@
                     </div>
                     <div class="container">
                         <!-- Start Services Items -->
-                        <div class="services-content">
+                        <div class="services-content ">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="thumb-services-carousel owl-carousel owl-theme owl-loaded owl-drag">
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/acs.png" alt="SMK Al Azhar Sempu" class="img-fluid"
-                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="{{asset('landing-page/images/news-image.jpg')}}"
+                                                alt="SMK Al Azhar Sempu" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/ALjahit.png" alt="SMKN 1 Kepanjen" class="img-fluid"
-                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/OMc0t2iOti0qTcgSGjnhJOYOYvsdbok8UXLY1QZY.png"
+                                                alt="SMKN 1 Kepanjen" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/ALmotor.png" alt="SMKN 1 Probolinggo" class="img-fluid"
-                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/a9QtlJCuWqeKkaWV2U3nO9OznThPJFEquegjr0No.jpg"
+                                                alt="SMKN 1 Probolinggo" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/ALtoko.png" alt="SMK Muhammadiyah 6 Rogojampi"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/bkcxgsEnapILbETxIJJY90CUrNuua2y5UvvTENuK.png"
+                                                alt="SMK Muhammadiyah 6 Rogojampi" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/izrmwFuFz0wduf1UO2obUGFkAjr8DRHpxs33qJzJ.jpg"
+                                                alt="SMK Muhammadiyah 1 Genteng" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/8iq8YE7TuolFdQtyTpsyTeq6xzEV2BrvyYQcxWI1.png"
+                                                alt="SMK Muhammadiyah 9 Gambiran" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/REy3Rg4XRVV4naAgQojwtUbdic7Ts44sxBfSa6zw.png"
+                                                alt="SMK Nurul Abror Arobbaniyyin" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/IpyNMSfUPrFJTZy7rWWJXRfsm0Tlmh0hL77BIXRh.png"
+                                                alt="SMK 17 Agustus Muncar" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/4xarpITFQS5YE18s0rebUGf7PQT6NJyrzSw9NwIO.png"
+                                                alt="SMKN 4 Bojonegoro" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/FTpYVHSEASqK4C0A4ImJ0RbcyvrC8bD31EGE9SQk.jpg"
+                                                alt="SMKN 6 Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/sP2bC9JcTZ9yNykNUOl4aZsm9oCq7B00r6cOkHrP.png"
+                                                alt="SMKN 8 Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/RSTRJssQBFjhwZW4u3Hbz29Sn2JuM1BOL6SELWGT.jpg"
+                                                alt="Politeknik Negeri Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/dx4lyfCzNVdY2fJRn4dhSDdorAL7eiujKfiXkX9B.png"
+                                                alt="Politeknik Negeri Jember" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/1yACLhkjWyu5hhmm7RK7tBfVcqEVwDVzLMZojeaT.png"
+                                                alt="Politeknik Negeri Banyuwangi" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/uCjXnPXspohp56S3KR5bBfnYFwhdkSAZDwsqDvfD.png"
+                                                alt="Universitas Muhammadiyah Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/ldTtzl0jheCvI3L3PgAIYeg8MIx8D315DDVmg0pt.png"
+                                                alt="PT ACS Multi Technology" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Pasuruan.png" alt="Kabupaten Pasuruan"
                                                 class="img-fluid"
-                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/genteng.jpeg" alt="SMK Muhammadiyah 9 Gambiran"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/ZQnxxk4islEhBacOkWHvUv3LCDQ2QRSk6ezjAehP.png"
+                                                alt="SMKN 2 Penajam Paser Utara" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMK%20Wali%20Songo%20Bululawang.png"
+                                                alt="SMK Wali Songo Bululawang Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%202%20Kraksaan.png" alt="SMKN 2 Kraksaan"
                                                 class="img-fluid"
-                                                style="max-width: 70%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 40px;">
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/hummatech.png" alt="SMK Nurul Abror Arobbaniyyin"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Politeknik%20Negeri%20Madiun.png"
+                                                alt="Politeknik Negeri Madiun" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/BBPPMPV%20BOE%20Malang.png" alt="BBPPMPV BOE Malang"
                                                 class="img-fluid"
-                                                style="max-width: 60%; max-height: auto; display: inline-block; filter: grayscale(100%);">
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                         <div class="item"
-                                            style="display: flex; align-items: center; justify-content: center;">
-                                            <img src="logo/mikrotik.png" alt="SMK 17 Agustus Muncar" class="img-fluid"
-                                                style="max-width: 80%; max-height: auto; display: inline-block; filter: grayscale(100%); margin-top: 15px;">
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Mojokerto.png" alt="Kabupaten Mojokerto"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kabupaten%20Malang.png" alt="Kabupaten Malang"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Exp%20Inc..png" alt="Exp Inc." class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Ubig.co.id.png" alt="Ubig.co.id" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Growin%20Travel.png" alt="Growin Travel"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Dunia%20Blazzer%20Indonesia.png"
+                                                alt="Dunia Blazzer Indonesia" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Yayasan%20Sinergis%20Asa%20Professional.png"
+                                                alt="Yayasan Sinergis Asa Professional" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Institut%20Teknologi%20dan%20Bisnis%20Asia%20Malang.png"
+                                                alt="Institut Teknologi dan Bisnis Asia Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Islam%20Balitar%20Blitar.png"
+                                                alt="Universitas Islam Balitar Blitar" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Brawijaya.png"
+                                                alt="Universitas Brawijaya" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Universitas%20Negeri%20Malang.png"
+                                                alt="Universitas Negeri Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%201%20Pasuruan.png" alt="SMKN 1 Pasuruan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMKN%203%20Pamekasan.png" alt="SMKN 3 Pamekasan"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/SMK%20Negeri%20Tambakboyo%20Tuban.png"
+                                                alt="SMK Negeri Tambakboyo Tuban" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Galaxy%20Solusindo%20Malang.png"
+                                                alt="Galaxy Solusindo Malang" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/DB%20Klik%20Surabaya.png" alt="DB Klik Surabaya"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/PT%20GITS%20Indonesia.png" alt="PT GITS Indonesia"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/PT%20Penerbit%20Jurnal%20Indonesia.png"
+                                                alt="PT Penerbit Jurnal Indonesia" class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/Kedaireka.id.png" alt="Kedaireka.id"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
+                                        </div>
+                                        <div class="item"
+                                            style="display: flex; align-items: center; justify-content: center; ">
+                                            <img src="storage/partner/STIKOM%20Bali.png" alt="STIKOM Bali"
+                                                class="img-fluid"
+                                                style="max-width: 80%; max-height: auto; display: inline-block;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -540,19 +704,15 @@
                                                 @forelse ($news as $item)
                                                     <div class="col-lg-4 col-md-6 mt-2">
                                                         <div class="item">
-                                                            <div class="news-card">
+                                                            <div class="thumb">
+                                                                <a
+                                                                    href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
+                                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                                        alt="{{ $item->title }}" class="img-fluid"
+                                                                        style="width: 500px; height: 200px; object-fit: cover;">
+                                                                </a>
 
-                                                                <div class="thumb">
-                                                                    <a
-                                                                        href="news/sipjaki-buatan-pt--raih-apresiasi-dari-pemerintah-provinsi-jawa-timur.html">
-                                                                        <img src="{{ asset('storage/' . $item->image) }}"
-                                                                            alt="{{ $item->title }}" class="img-fluid"
-                                                                            style="width: 500px; height: 200px; object-fit: cover;">
-                                                                    </a>
-
-                                                                    <time class="date" datetime="">2 Mei
-                                                                        2024</time>
-                                                                </div>
+                                                                <time class="date" datetime="">2 Mei 2024</time>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
@@ -612,10 +772,8 @@
                                                                         Provinsi Jawa Timur</a>
                                                                 </h4>
 
-                                                                <p class="">SIPJAKI (Sistem Informasi Pembina
-                                                                    Jasa
-                                                                    Konstruksi Kabupaten Pasuruan) yang dikembangkan
-                                                                    oleh
+                                                                <p class="">SIPJAKI (Sistem Informasi Pembina Jasa
+                                                                    Konstruksi Kabupaten Pasuruan) yang dikembangkan oleh
                                                                     perusahaan teknologi , mendapat penghargaan
                                                                     yang tinggi dari pemerintah provinsi Jawa Timur.
                                                                     Pengh...</p>
@@ -633,8 +791,7 @@
                                                                         style="width: 500px; height: 200px; object-fit: cover;">
                                                                 </a>
 
-                                                                <time class="date" datetime="">30 April
-                                                                    2024</time>
+                                                                <time class="date" datetime="">30 April 2024</time>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
@@ -650,16 +807,14 @@
                                                                 <h4>
                                                                     <a
                                                                         href="news/perkuat-skill-pemrograman-mobile-apps-bagi-guru-bbppmpv-boe-gelar-magang-dan-uji-kompetensi-di-.html">Perkuat
-                                                                        Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV
-                                                                        BOE
+                                                                        Skill Pemrograman Mobile Apps Bagi Guru, BBPPMPV BOE
                                                                         Gelar Magang dan Uji Kompetensi di </a>
                                                                 </h4>
 
                                                                 <p class="">Lima orang guru dari berbagai SMK
                                                                     melaksanakan magang industri di sejak tanggal
                                                                     22 April 2024 hingga 30 April 2024. Kegiatan ini
-                                                                    merupakan rangkaian pelatihan upskilling bagi guru
-                                                                    yang
+                                                                    merupakan rangkaian pelatihan upskilling bagi guru yang
                                                                     disel...</p>
                                                             </div>
                                                         </div>
@@ -675,8 +830,7 @@
                                                                         style="width: 500px; height: 200px; object-fit: cover;">
                                                                 </a>
 
-                                                                <time class="date" datetime="">26 April
-                                                                    2024</time>
+                                                                <time class="date" datetime="">26 April 2024</time>
                                                             </div>
                                                             <div class="info">
                                                                 <div class="meta">
@@ -700,8 +854,7 @@
                                                                     kelas industri berhasil memenangkan juara LKS
                                                                     (Lomba Kompetensi Siswa)
                                                                     Tingkat Jawa Timur Tahun 2024
-                                                                    dalam bidang Artificial Intelligence. Kali ini
-                                                                    tim...
+                                                                    dalam bidang Artificial Intelligence. Kali ini tim...
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -755,7 +908,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="landing-page/images/im01.jpg"
+                                                            <img src="storage/portfolio/sipjaki-sistem-informasi-pembina-jasa-konstruksi-kabupaten-pasuruan.png"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="SIPJAKI (Sistem Informasi Pembina Jasa Konstruksi Kabupaten Pasuruan)">
                                                         </div>
@@ -786,7 +939,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="landing-page/images/im02.jpg"
+                                                            <img src="storage/portfolio/tracer-study-smkn-2-penajam-paser-utara.png"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="Tracer Study SMKN 2 Penajam Paser Utara">
                                                         </div>
@@ -817,7 +970,7 @@
                                                 <div class="pf-item mx-2" style="width: 370px">
                                                     <div class="item" style="width: 370px">
                                                         <div class="" style="background-color: #E5F1FF;">
-                                                            <img src="landing-page/images/im02.jpg"
+                                                            <img src="storage/portfolio/jajalenpas-jaringan-jalan-kabupaten-pasuruan.png"
                                                                 class="object-fit-cover" style="object-fit: cover"
                                                                 alt="JAJALENPAS (Jaringan Jalan Kabupaten Pasuruan)">
                                                         </div>
