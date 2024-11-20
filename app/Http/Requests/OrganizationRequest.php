@@ -25,6 +25,7 @@ class OrganizationRequest extends FormRequest
         return [
             'name' => ['required', 'max:255', 'string', Rule::unique('subjects', column: 'subject')->ignore($this->Subject)],
             'description' => 'required',
+            'image' => 'required'
         ];
     }
 

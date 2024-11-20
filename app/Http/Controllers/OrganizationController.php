@@ -48,6 +48,7 @@ class OrganizationController extends Controller
      */
     public function store(OrganizationRequest $request)
     {
+        
         try {
             $data = $this->service->store($request);
             $this->interface->store($data);

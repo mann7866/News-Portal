@@ -93,6 +93,7 @@ Route::get('/contact', action: function () {
     return view('pages.landing-page.contact.index');
 });
 
+//route admin
 Route::get('/admin/news', action: function () {
     return view('pages.admin.news.index');
 });
