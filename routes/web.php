@@ -97,6 +97,14 @@ Route::get('/admin/news', action: function () {
     return view('pages.admin.news.index');
 });
 
+Route::get('/admin/create', action: function () {
+    return view('pages.admin.news.create');
+});
+
+Route::get('/admin/edit', action: function () {
+    return view('pages.admin.news.edit');
+});
+
 Route::get('/admin', action: function () {
     return view('pages.admin.dashboard');
 });
