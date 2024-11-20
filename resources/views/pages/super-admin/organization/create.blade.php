@@ -16,12 +16,21 @@
                                         <div class="chat-list chat active-chat" data-user-id="1">
                                             <div
                                                 class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-\ gap-5">
-                                                <!-- Gambar diubah menjadi kotak persegi panjang yang memenuhi ruang -->
-                                                <div class="d-flex align-items-center justify-content-center gap-5 col-lg-6"
-                                                    style="width: 40%; height: 300px;">
-                                                    <img src="{{ asset('admin-assets/images/profile/user-4.jpg') }}"
-                                                        alt="user4" class="rounded"
-                                                        style="width: 100%; height: 100%; object-fit: cover;" />
+                                                <div class="d-flex flex-column align-items-center justify-content-center gap-3 col-lg-6" style="width: 40%; height: 300px;">
+                                                    <!-- Label untuk Klik Gambar -->
+                                                    <label for="fileInput" 
+                                                        style="width: 100%; height: 100%; cursor: pointer; display: block;">
+                                                        <!-- Tempat Gambar -->
+                                                        <img id="preview" 
+                                                            src="{{ asset('admin-assets/images/profile/user-4.jpg') }}" 
+                                                            alt="user4" 
+                                                            class="rounded" 
+                                                            style="width: 100%; height: 100%; object-fit: cover;" />
+                                                    </label>
+                                                
+                                                    <!-- Input File Tersembunyi -->
+                                                    <input type="file" id="fileInput" class="form-control" accept="image/*" 
+                                                        style="display: none;" onchange="previewImage(event)" />
                                                 </div>
                                                 <!-- Teks akan diganti dengan input di bawah -->
                                                 <div class="col-lg-6">
@@ -40,19 +49,12 @@
                                                                 <option value="staf">XI</option>
                                                                 <option value="staf">XII</option>
                                                             </optgroup>
-                                                            <optgroup label="Jurusan">
-                                                                <option value="guru">RPL</option>
-                                                                <option value="guru">TKJ</option>
-                                                                <option value="guru">TB</option>
-                                                                <option value="guru">AKL</option>
-                                                                <option value="guru">TKR</option>
-                                                            </optgroup>
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="jobTitle" class="form-label">Jabatan</label>
                                                         <input type="text" class="form-control" id="jobTitle"
-                                                            value="Kelapa Sekolah" />
+                                                            value="Angota" />
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="jobTitle" class="form-label">Nomor Telepon</label>
@@ -107,5 +109,18 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Fungsi untuk menampilkan preview gambar
+            function previewImage(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('preview').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        </script>
     </div>
 @endsection

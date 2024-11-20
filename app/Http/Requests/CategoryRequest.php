@@ -30,7 +30,7 @@ class CategoryRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Nama kategori harus diisi.',
+            'name.required' => 'Nama kategori Wajib diisi.',
             'name.max' => 'Nama kategori tidak boleh lebih dari 255 karakter.',
             'name.string' => 'Nama kategori harus berupa teks.',
             'name.unique' => 'Nama kategori sudah digunakan, silakan pilih nama lain.',

@@ -97,11 +97,19 @@ Route::get('/admin/news', action: function () {
     return view('pages.admin.news.index');
 });
 
-Route::get('/approvals', function () {
-    return view('pages.admin.news.index');
+Route::get('/admin/create', action: function () {
+    return view('pages.admin.news.create');
 });
 
-Route::get('/history', function () {
+Route::get('/admin/edit', action: function () {
+    return view('pages.admin.news.edit');
+});
+
+Route::get('/admin', action: function () {
+    return view('pages.admin.dashboard');
+});
+
+Route::get('/admin/history', function () {
     return view('pages.admin.history.index');
 });
 
