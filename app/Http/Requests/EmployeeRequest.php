@@ -30,7 +30,7 @@ class EmployeeRequest extends FormRequest
             'description' => 'required',
             'skill' => 'required',
             'address' => 'required',
-            'image' => 'required', 'mimes:png,jpg,jpeg,webp', 'max:3048','nullable',
+            'image' => 'nullable', 'mimes:png,jpg,jpeg,webp', 'max:3048','nullable',
 
         ];
     }

@@ -412,11 +412,11 @@
                             <img id="modalImage" src="" alt="Author" class="img-fluid mb-3"
                                 style="max-height: 200px;">
                         </div>
-                        <h4 id="modalName"></h4>
-                        <h6 id="modalJob" class="text-muted"></h6>
-                        <p id="modalDescription"></p>
-                        <p><strong>Nomer:</strong> <span id="modalPhoneNumber"></span></p>
-                        <p><strong>Alamat:</strong> <span id="modalAddress"></span></p>
+                        <h4><strong>Nama: </strong><span id="modalName"></span></h4>
+                        <p><straong>Pekerjaan: </straong><span id="modalJob" class="text-muted"></span></p>
+                        <p><strong>Catatan: </strong><span id="modalDescription"></span></p>
+                        <p><strong>Nomor: </strong> <span id="modalPhoneNumber"></span></p>
+                        <p><strong>Alamat: </strong> <span id="modalAddress"></span></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
