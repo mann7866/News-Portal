@@ -38,7 +38,7 @@
                             <form class="position-relative">
                                 <input type="text" class="form-control product-search ps-5" id="input-search"
                                     placeholder="Cari Kategori..." />
-                               
+
                             </form>
                             <a href="{{ route('organization.create') }}"
                                 class="btn mb-1 btn-lg px-4 fs-4 font-medium btn-primary">
@@ -79,12 +79,13 @@
                                             {{ Str::limit(strip_tags($organization->description), 50) }}
                                         </p>
                                         <div class="d-flex justify-content-end gap-2">
-                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" 
-                                                    data-bs-target="#edit-modal-{{ $organization->id }}">
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#edit-modal-{{ $organization->id }}">
                                                 Edit
                                             </button>
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" 
-                                                    data-bs-target="#delete-{{ $organization->id }}">
+
+                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#delete-{{ $organization->id }}">
                                                 Hapus
                                             </button>
                                         </div>
@@ -93,6 +94,7 @@
                             </div>
 
                             <!-- Include delete modal for each organization -->
+                            @include('pages.super-admin.organization.partials.edit-modal')
                             @include('pages.super-admin.organization.partials.delete-modal')
                         @empty
                             <div class="col-12 text-center">
