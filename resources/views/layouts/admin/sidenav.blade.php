@@ -31,7 +31,7 @@
                 </li>
                 <!-- Halaman Approval -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/approvals" aria-expanded="false">
+                    <a class="sidebar-link" href="/admin/news" aria-expanded="false">
                         <span>
                             <i class="ti ti-news"></i>
                         </span>
