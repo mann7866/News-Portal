@@ -89,8 +89,8 @@
                                     <i class="ti ti-grid-dots text-primary fs-6"></i>
                                 </div>
                                 <div>
-                                    <h6 class="fw-semibold text-dark fs-4 mb-0">$23,450</h6>
-                                    <p class="fs-3 mb-0 fw-normal">Profit</p>
+                                    <h6 class="fw-semibold text-dark fs-4 mb-0"> ( {{ $employee }} ) </h6>
+                                    <p class="fs-3 mb-0 fw-normal">Karyawan</p>                                    
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
@@ -99,8 +99,8 @@
                                     <i class="ti ti-grid-dots text-secondary fs-6"></i>
                                 </div>
                                 <div>
-                                    <h6 class="fw-semibold text-dark fs-4 mb-0">$23,450</h6>
-                                    <p class="fs-3 mb-0 fw-normal">Expance</p>
+                                    <h6 class="fw-semibold text-dark fs-4 mb-0">( {{ $guru }} ) </h6>
+                                    <p class="fs-3 mb-0 fw-normal">Guru</p>
                                 </div>
                             </div>
                         </div>

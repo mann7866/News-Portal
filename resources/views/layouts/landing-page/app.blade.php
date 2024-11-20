@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ========== Page Title ========== -->
     <title>@yield('title')</title>
-
+    <link rel="icon" href="{{ asset('Logo/smkAlazhar.jpeg')}}" style="border-radius: 50px;">
     <meta name="title" content="News Portal - Berita Sekolah" />
     <meta name="description"
         content="" />
@@ -51,7 +51,6 @@
 </head>
 
 <body>
-
     <!-- Start Preloader
     ============================================= -->
      {{-- <div id="preloader">

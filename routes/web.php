@@ -7,7 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeJobController;
 use App\Http\Controllers\LandinPageController;
-
+use App\Models\Employee;
+use App\Models\User;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -22,9 +23,14 @@ Route::middleware('auth')->group(callback: function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('administrator/dashboard', function () {
-        return view('pages.super-admin.dashboard');
+        $employee = Employee::count();
+        $guru = User::count();
+        return view('pages.super-admin.dashboard', [
+            'employee' => $employee,
+            'guru' => $guru,
+        ]);
     })->name('dashboard');
-
+    
     Route::prefix('administrator')->group(function () {
 
         Route::get('news', [NewsController::class, 'index'])->name('news.index');
@@ -35,13 +41,13 @@ Route::middleware('auth')->group(callback: function () {
         Route::put('news/{news}', [NewsController::class, 'update'])->name('news.update');
         Route::delete('news/{news}', [NewsController::class, 'destroy'])->name('news.destroy');
 
-         // Category Route
-         Route::get('category', [CategoryController::class, 'index'])->name('categories.index');
-         Route::get('category/create', [CategoryController::class, 'create'])->name('categories.create');
-         Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
-         Route::post('category', [CategoryController::class, 'store'])->name('categories.store');
-         Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
-         Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+        // Category Route
+        Route::get('category', [CategoryController::class, 'index'])->name('categories.index');
+        Route::get('category/create', [CategoryController::class, 'create'])->name('categories.create');
+        Route::get('category/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
+        Route::post('category', [CategoryController::class, 'store'])->name('categories.store');
+        Route::put('category/{category}', [CategoryController::class, 'update'])->name('categories.update');
+        Route::delete('category/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
         // route employee
         Route::get('employee', action: [EmployeeController::class, 'index'])->name('employee.index');
@@ -62,7 +68,6 @@ Route::middleware('auth')->group(callback: function () {
         Route::delete('employeeJob/{employeeJob}', [EmployeeJobController::class, 'destroy'])->name('employeeJob.destroy');
 
         require __DIR__ . '/rohman.php';
-
     });
     Route::get('/approval', function () {
         return view('pages.super-admin.approval.index');
@@ -87,7 +92,6 @@ Route::middleware('auth')->group(callback: function () {
     Route::get('/detail-news', action: function () {
         return view('pages.landing-page.news.detail');
     });
-
 });
 Route::get('/contact', action: function () {
     return view('pages.landing-page.contact.index');

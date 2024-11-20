@@ -1,6 +1,6 @@
 @extends('layouts.landing-page.app')
 
-@section('title', 'Landing Page')
+@section('title', 'Smk-Al-Azhar')
 @section('style')
     <style>
         body {}
@@ -146,7 +146,7 @@
             <div class="carousel-inner carousel-zoom">
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
-                    <div class="slider-thumb bg-fixed" style="background-image: url('storage/section/school-news.webp');">
+                    <div class="slider-thumb bg-fixed" style="background-image: url('logo/header.jpg');">
                     </div>
                     <div class="box-table">
                         <div class="box-cell shadow dark">
@@ -174,7 +174,7 @@
                 <!-- Slide 2 -->
                 <div class="carousel-item">
                     <div class="slider-thumb bg-fixed"
-                        style="background-image: url('storage/section/events-smkalazhar.webp');"></div>
+                        style="background-image: url('logo/header.jpg');"></div>
                     <div class="box-table">
                         <div class="box-cell shadow dark">
                             <div class="container">
