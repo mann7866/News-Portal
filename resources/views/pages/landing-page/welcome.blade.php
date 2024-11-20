@@ -415,11 +415,11 @@
                         <h4 id="modalName"></h4>
                         <h6 id="modalJob" class="text-muted"></h6>
                         <p id="modalDescription"></p>
-                        <p><strong>Phone Number:</strong> <span id="modalPhoneNumber"></span></p>
-                        <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+                        <p><strong>Nomer:</strong> <span id="modalPhoneNumber"></span></p>
+                        <p><strong>Alamat:</strong> <span id="modalAddress"></span></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
