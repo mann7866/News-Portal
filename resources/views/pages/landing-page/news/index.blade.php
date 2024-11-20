@@ -29,46 +29,47 @@
                     <div class="blog-content col-lg-8 col-md-12">
                         <div class="blog-item-box">
                             <!-- Single Item -->
-                            @forelse ($news as $item)
-                                <div class="single-item">
-                                    <div class="item">
-                                        <div class="thumb">
-                                            <a href="blog-single-with-sidebar.html"><img
-                                                    src="{{ asset('storage/' . $item->image) }}" alt="Thumb"></a>
-                                            <div class="date">
-                                                {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="meta">
-                                                <ul>
-                                                    <li>
-                                                        <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
-                                                            alt="Author">
-                                                        <span>By </span>
-                                                        <a href="#">{{ $item->user->name }}</a>
-                                                    </li>
-                                                    <li>
-                                                        <span>In </span>
-                                                        <a href="#">
-                                                            {{ $item->categories->implode('name', ' | ') }}
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <h3>
-                                                <a href="{{ route('news.detail', $item->slug) }}">{{ $item->title }}</a>
-                                            </h3>
-                                            <p>
-                                                {{ $item->description }}
-                                            </p>
-                                            <a class="btn circle btn-theme-effect btn-sm"
-                                                href="{{ route('news.detail', $item->slug) }}">Read More</a>
+                            @foreach ($news as $item)
+                                
+                            <div class="single-item">
+                                <div class="item">
+                                    <div class="thumb">
+                                        <a href="blog-single-with-sidebar.html"><img
+                                                src="{{ asset('storage/' . $item->image) }}" alt="Thumb"></a>
+                                        <div class="date">
+                                            {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                                         </div>
                                     </div>
+                                    <div class="info">
+                                        <div class="meta">
+                                            <ul>
+                                                <li>
+                                                    <img src="{{ asset('admin-assets/images/profile/user-1.jpg') }}"
+                                                        alt="Author">
+                                                    <span>By </span>
+                                                    <a href="#">{{ $item->user->name }}</a>
+                                                </li>
+                                                <li>
+                                                    <span>In </span>
+                                                    <a href="#">
+                                                        {{ $item->categories->implode('name', ' | ') }}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h3>
+                                            <a href="{{ route('news.detail', $item->slug) }}">{{ $item->title }}</a>
+                                        </h3>
+                                        <p>
+                                            {{ $item->description }}
+                                        </p>
+                                        <a class="btn circle btn-theme-effect btn-sm"
+                                            href="{{ route('news.detail', $item->slug) }}">Read More</a>
+                                    </div>
                                 </div>
-                            @empty
-                            @endforelse
+                            </div>
+                            @endforeach
+
                         </div>
 
                         <!-- Pagination -->
