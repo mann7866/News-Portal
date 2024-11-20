@@ -17,28 +17,37 @@ class LandinPageController extends Controller
     }
 
     public function news(Request $request)
-    {
-        $search = $request->get('search'); // Ambil input pencarian dari request
+{
+    $search = $request->get('search'); // Ambil input pencarian dari request
+
+    // Inisialisasi variabel $news
+
+    $news = News::with('categories')->paginate(3);
     
-        // Query dengan pencarian
+    if ($search) {
+        // Jika ada pencarian, cari berita sesuai keyword
         $news = News::with('categories')
-            ->when($search, function ($query, $search) {
-                return $query->where('title', 'like', "%{$search}%")
-                             ->orWhereHas('categories', function ($query) use ($search) {
-                                 $query->where('name', 'like', "%{$search}%");
-                             });
+            ->where('title', 'like', "%{$search}%")
+            ->orWhereHas('categories', function ($query) use ($search) {
+                $query->where('name', 'like', "%{$search}%");
             })
-            ->latest()
+            ->latest() // Batasi jumlah hasil pencarian
             ->paginate(3);
-    
-        $galleries = News::latest()->take(6)->get();
-    
-        $categories = Category::withCount('news')->get();
-    
-        $popularNews = News::orderBy('views', 'desc')->take(3)->get();
-    
-        return view('pages.landing-page.news.index', compact('news', 'popularNews', 'categories', 'galleries', 'search'));
+    } else {
+        // Jika tidak ada pencarian, ambil berita populer
+        $popularNews = News::orderBy('views', 'desc')->paginate(3);
     }
+    
+    $popularNews = News::orderBy('views', 'desc')->paginate(3);
+    $galleries = News::latest()->take(6)->get();
+    $categories = Category::withCount('news')->get();
+
+    return view('pages.landing-page.news.index', compact('news', 'popularNews', 'categories', 'galleries', 'search'));
+}
+
+    
+    
+    
     
 
     public function newsDetail($slug)
