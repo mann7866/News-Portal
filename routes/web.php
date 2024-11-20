@@ -113,4 +113,8 @@ Route::get('/admin/history', function () {
     return view('pages.admin.history.index');
 });
 
+Route::get('admin/profile', function () {
+    return view('pages.admin.profile.edit');
+});
+
 require __DIR__ . '/auth.php';
