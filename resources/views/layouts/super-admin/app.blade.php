@@ -50,13 +50,13 @@
         data-sidebar-position="fixed" data-header-position="fixed">
 
         <!-- Sidebar Start -->
-        @include('layouts.admin.sidenav')
+        @include('layouts.super-admin.sidenav')
         <!--  Sidebar End -->
-        @include('layouts.admin.partials.css')
+        @include('layouts.super-admin.partials.css')
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
-            @include('layouts.admin.topbar')
+            @include('layouts.super-admin.topbar')
             <div class="container-fluid">
                 @yield('content')
             </div>
