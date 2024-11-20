@@ -14,7 +14,7 @@
                     <div class="mb-3">
                         <label for="name" class="control-label fw-semibold">Nama</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                            id="name" value="{{ $category->name }}" />
+                            id="name" value="{{ $category->name }}" required/>
                         @error('name')
                             <div class="invalid-feedback">
                                 {{ $message }}

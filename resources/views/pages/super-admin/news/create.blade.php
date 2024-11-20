@@ -1,30 +1,30 @@
 @extends('layouts.super-admin.app')
 @section('content')
-<div class="card bg-light-info shadow-none position-relative overflow-hidden">
-    <div class="card-body px-4 py-3">
-        <div class="row align-items-center">
-            <div class="col-9">
-                <h4 class="fw-semibold mb-8">Tambah Berita</h4>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a class="text-muted " href="index-2.html">Dashboard</a>
-                        </li>
-                        <li class="breadcrumb-item" aria-current="page">
-                            Tambah Berita
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="col-3">
-                <div class="text-center mb-n5">
-                    <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
-                        class="img-fluid mb-n4" />
+    <div class="card bg-light-info shadow-none position-relative overflow-hidden">
+        <div class="card-body px-4 py-3">
+            <div class="row align-items-center">
+                <div class="col-9">
+                    <h4 class="fw-semibold mb-8">Tambah Berita</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a class="text-muted " href="index-2.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page">
+                                Tambah Berita
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <div class="text-center mb-n5">
+                        <img src="{{ asset('admin-assets/images/breadcrumb/ChatBc.png') }}" alt=""
+                            class="img-fluid mb-n4" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
     @if ($message = Session::get('error'))
@@ -50,7 +50,8 @@
 
             <div class="card-body">
                 <div class="form-group mb-4">
-                    <label for="title" class="form-label fw-bold h5">Judul Berita <span class="text-danger">*</span></label>
+                    <label for="title" class="form-label fw-bold h5">Judul Berita <span
+                            class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
                         id="title" placeholder="Masukkan Judul Berita" value="{{ old('title') }}" />
                     @error('title')
@@ -59,7 +60,8 @@
                 </div>
 
                 <div class="form-group mb-4">
-                    <label for="description" class="form-label fw-bold h5">Deskripsi Berita <span class="text-danger">*</span></label>
+                    <label for="description" class="form-label fw-bold h5">Deskripsi Berita <span
+                            class="text-danger">*</span></label>
                     <textarea name="description" id="description" class="summernote form-control @error('description') is-invalid @enderror"
                         placeholder="Tulis deskripsi berita...">
                         {{ old('description') }}
@@ -86,7 +88,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-
+                
                 <div class="form-group mb-4 row">
                     <div class="col-md-6">
                         <label for="start_date" class="form-label fw-bold h6">Start Date</label>
@@ -107,6 +109,7 @@
                     </div>
                 </div>
 
+
                 <div class="d-flex justify-content-end mt-3">
                     <a href="{{ route('news.index') }}" class="btn btn-danger me-2">
                         <i class="ti ti-arrow-left"></i> Kembali
@@ -118,7 +121,6 @@
             </div>
         </div>
     </form>
-
 @endsection
 
 <script>

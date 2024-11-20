@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\News;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class LandinPageController extends Controller
@@ -11,8 +12,8 @@ class LandinPageController extends Controller
     public function index()
     {
         $news = News::latest()->take(3)->get();
-
-        return view('pages.landing-page.welcome', compact('news'));
+        $employees = Employee::latest()->take(3)->get();
+        return view('pages.landing-page.welcome', compact('news','employees'));
     }
 
     public function news(Request $request)

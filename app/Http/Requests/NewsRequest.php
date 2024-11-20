@@ -26,8 +26,8 @@ class NewsRequest extends FormRequest
             'category_ids' => 'required',
             'description' => 'required',
             'image' => ['mimes:png,jpg,jpeg,webp', 'max:3048', $this->method() == 'PUT' ? 'nullable' : 'required'],
-            'start_date' => 'nullable',
-            'end_date' => 'nullable|after_or_equal:start_date',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date|after_or_equal:start_date',
         ];
     }
 
@@ -41,9 +41,9 @@ class NewsRequest extends FormRequest
             'image.required' => 'Gambar harus diunggah.',
             'image.mimes' => 'Gambar harus berupa file dengan format: png, jpg, jpeg, atau webp.',
             'image.max' => 'Ukuran gambar tidak boleh lebih dari 3 MB.',
-            'start_date.nullable' => 'Tanggal mulai tidak wajib diisi.',
-            'end_date.nullable' => 'Tanggal selesai tidak wajib diisi.',
-            'end_date.after_or_equal' => 'Tanggal selesai harus setelah atau sama dengan tanggal mulai.',
+            'start_date.required' => 'Tanggal mulai harus diisi.',
+            'end_date.required' => 'Tanggal selesai harus diisi.',
+            'end_date.after_or_equal' => 'Tanggal selesai harus sama atau setelah tanggal mulai.',
         ];
     }
 }
