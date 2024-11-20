@@ -15,7 +15,7 @@ class EmployeeRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get the validation rules that apply to the request.  
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
@@ -30,7 +30,7 @@ class EmployeeRequest extends FormRequest
             'description' => 'required',
             'skill' => 'required',
             'address' => 'required',
-            'image' => 'mimes:png,jpg,jpeg,webp', 'max:3048','nullable',
+            'image' => 'required', 'mimes:png,jpg,jpeg,webp', 'max:3048','nullable',
 
         ];
     }
@@ -42,13 +42,13 @@ class EmployeeRequest extends FormRequest
             'jobs.required' => 'Jobs harus diisi.',
             'name.max' => 'Nama tidak boleh lebih dari 250 karakter.',
             'phoneNumber.required' => 'No telp harus diisi.',
-            'email.required' => 'Email harus diisi.',
+            'email.required' => 'Alamat email harus diisi.',
             'educationalBackground.required' => 'Pangkat harus diisi.',
             'educationalBackground.max' => 'Pangkat tidak boleh lebih dari 250 karakter.',
             'description.required' => 'Deskripsi harus diisi.',
-            'skill.required' => 'Deskripsi harus diisi.',
-            'address.required' => 'Deskripsi harus diisi.',
-            // 'image.required' => 'Foto harus diisi.',
+            'skill.required' => 'Bidang keahlian harus diisi.',
+            'address.required' => 'Alamat harus diisi.',
+            'image.required' => 'Gambar harus diisi.',
             'image.mimes' => 'Gambar harus berupa file dengan format: png, jpg, jpeg, atau webp.',
             'image.max' => 'Ukuran gambar tidak boleh lebih dari 3 MB.',
         ];
